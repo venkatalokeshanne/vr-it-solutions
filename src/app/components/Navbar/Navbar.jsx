@@ -10,28 +10,12 @@ import {
   Menu,
   X,
 } from "lucide-react";
-import SearchBar from "../SearchBar";
 import Link from "next/link";
+import { getFormattedCategories } from "@/data/courses";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const categoryList = [
-    {
-      name: "Development",
-      subcategories: [
-        "Web Development",
-        "Mobile Development",
-        "Game Development",
-      ],
-      icon: <Code className="w-5 h-5" />,
-    },
-    {
-      name: "Business",
-      subcategories: ["Entrepreneurship", "Marketing", "Finance"],
-      icon: <Building2 className="w-5 h-5" />,
-    },
-  ];
+  const categoryList = getFormattedCategories();
 
   return (
     <>
@@ -54,7 +38,7 @@ const Navbar = () => {
                   {categoryList.map((category) => (
                     <div
                       key={category.name}
-                      className="group/item px-4 py-2 hover:bg-primary-light"
+                      className="group/item px-4 py-2 hover:bg-primary-light relative"
                     >
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-3">
@@ -65,15 +49,15 @@ const Navbar = () => {
                         </div>
                         <ChevronRight className="h-4 w-4 text-primary" />
                       </div>
-                      <div className="absolute left-full top-0 w-60 bg-white shadow-lg rounded-lg py-2 invisible group-hover/item:visible">
+                      <div className="absolute left-full top-0 w-60 bg-white shadow-lg rounded-lg py-2 invisible group-hover/item:visible opacity-0 group-hover/item:opacity-100 transition-all duration-200">
                         {category.subcategories.map((sub) => (
-                          <a
-                            key={sub}
-                            href="#"
+                          <Link
+                            key={`${category.name}-${sub.name}`}
+                            href={sub.link}
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
                           >
-                            {sub}
-                          </a>
+                            {sub.name}
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -82,25 +66,29 @@ const Navbar = () => {
               </div>
             </div>
 
-            {/* Search Bar */}
-            <div className="flex-1 max-w-2xl mx-4">
-              <SearchBar />
-            </div>
-
             {/* Right Actions */}
             <div className="flex items-center space-x-6">
-              <button className="text-sm text-gray-700 hover:text-primary">
-                Blogs
-              </button>
-              <button className="text-sm text-gray-700 hover:text-primary">
-                About us
-              </button>
+              <Link href="/courses" className="text-sm text-gray-700 hover:text-primary">
+                Courses
+              </Link>
+              <Link href="/services" className="text-sm text-gray-700 hover:text-primary">
+                Services
+              </Link>
+              <Link href="/aboutus" className="text-sm text-gray-700 hover:text-primary">
+                About Us
+              </Link>
+              <Link href="/contactus" className="text-sm text-gray-700 hover:text-primary">
+                Contact Us
+              </Link>
               <button className="text-primary hover:text-primary-hover">
                 <Heart className="h-5 w-5" />
               </button>
-              <button className="text-sm font-medium text-white bg-primary px-6 py-2.5 rounded-md hover:bg-primary-hover transition-colors duration-200">
+              <Link 
+                href="/contactus"
+                className="text-sm font-medium text-white bg-primary px-6 py-2.5 rounded-md hover:bg-primary-hover transition-colors duration-200"
+              >
                 Request demo
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -127,9 +115,12 @@ const Navbar = () => {
             <Link href="/">
               <img src="/logo.png" alt="Logo" className="h-8" />
             </Link>
-            <button className="text-sm font-medium text-white bg-primary px-4 py-2 rounded-md">
+            <Link 
+              href="/demo"
+              className="text-sm font-medium text-white bg-primary px-4 py-2 rounded-md"
+            >
               Request Demo
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -137,47 +128,54 @@ const Navbar = () => {
         <div
           className={`
           fixed inset-0 top-16 bg-white z-40
-          transform transition-transform duration-300 ease-in-out
+          transform transition-transform duration-300 ease-in-out overflow-y-auto
           ${isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"}
         `}
         >
-          <div className="p-4">
-            {/* Mobile Search */}
-            <div className="mb-6">
-              <SearchBar />
-            </div>
-
+          <div className="p-4 pb-24">
             {/* Mobile Categories */}
             <div className="space-y-4">
               {categoryList.map((category) => (
-                <div key={category.name}>
-                  <span>
-                    {category.icon}
-                    {category.name}
-                  </span>
-                  {category.subcategories.map((sub) => (
-                    <button
-                      key={sub}
-                      className="w-full text-left text-sm text-gray-600 hover:text-primary hover:bg-primary-light"
-                    >
-                      {sub}
-                    </button>
-                  ))}
+                <div key={category.name} className="space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <span className="text-primary">{category.icon}</span>
+                    <span className="font-medium">{category.name}</span>
+                  </div>
+                  <div className="pl-8 space-y-2">
+                    {category.subcategories.map((sub) => (
+                      <Link
+                        key={`${category.name}-${sub.name}`}
+                        href={sub.link}
+                        className="block w-full text-left text-sm text-gray-600 hover:text-primary hover:bg-primary-light px-3 py-2 rounded-md"
+                      >
+                        {sub.name}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               ))}
             </div>
 
             {/* Mobile Actions */}
             <div className="mt-6 space-y-4 border-t pt-6">
-              <button className="text-gray-700 hover:text-primary w-full py-2 text-left">
-                Blog
-              </button>
-              <button className="text-gray-700 hover:text-primary w-full py-2 text-left">
-                About us
-              </button>
-              <button className="w-full bg-primary text-white py-2.5 rounded-md hover:bg-primary-hover">
+              <Link href="/courses" className="block text-gray-700 hover:text-primary w-full py-2 text-left">
+                Courses
+              </Link>
+              <Link href="/services" className="block text-gray-700 hover:text-primary w-full py-2 text-left">
+                Services
+              </Link>
+              <Link href="/aboutus" className="block text-gray-700 hover:text-primary w-full py-2 text-left">
+                About Us
+              </Link>
+              <Link href="/contactus" className="block text-gray-700 hover:text-primary w-full py-2 text-left">
+                Contact Us
+              </Link>
+              <Link 
+                href="/contactus"
+                className="block w-full bg-primary text-white py-2.5 rounded-md hover:bg-primary-hover text-center"
+              >
                 Request for free demo
-              </button>
+              </Link>
             </div>
           </div>
         </div>

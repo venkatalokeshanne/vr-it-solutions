@@ -9,6 +9,7 @@ import {
   GraduationCap,
   Brain,
 } from "lucide-react";
+import { redirect } from "next/navigation";
 
 export const Welcome = () => {
   const highlights = [
@@ -118,7 +119,7 @@ export const Welcome = () => {
                 Jump start your journey to dizzying heights – get the best out
                 of your investment.
               </p>
-              <button className="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-lg transition-colors">
+              <button className="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-lg transition-colors" onClick={()=> redirect("/contactus")}>
                 Start Your Journey Today
               </button>
             </div>

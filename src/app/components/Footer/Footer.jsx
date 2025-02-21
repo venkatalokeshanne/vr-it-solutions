@@ -1,7 +1,20 @@
 import Link from 'next/link'
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, ArrowRight } from 'lucide-react'
+import courses from '@/data/courses';
 
 const Footer = () => {
+  const topCategories = courses
+  .filter(course => course.trending)
+  .sort((a, b) => a.trending - b.trending)
+  .slice(0, 5)
+  .map(course => ({
+    name: course.course,
+    students: course.students || "10K+",
+    ranking: course.trending,
+    image: course.image || "https://images.unsplash.com/photo-1649180556628-9ba704115795?w=500&q=80",
+    link: course.link
+  }));
+  console.log("Saibaba",topCategories);
   return (
     <footer className="relative bg-gradient-to-b from-gray-900 to-gray-950 text-gray-300 overflow-hidden">
       {/* Background Pattern */}
@@ -41,8 +54,8 @@ const Footer = () => {
                 { text: 'Courses', href: '/courses' },
                 { text: 'Corporate Training', href: '/corporate-training' },
                 { text: 'Placements', href: '/placements' },
-                { text: 'About Us', href: '/about' },
-                { text: 'Contact', href: '/contact' },
+                { text: 'About Us', href: '/aboutus' },
+                { text: 'Contact', href: '/contactus' },
               ].map((link, index) => (
                 <li key={index}>
                   <Link
@@ -61,20 +74,14 @@ const Footer = () => {
           <div className="space-y-6">
             <h3 className="text-white text-lg font-semibold">Popular Courses</h3>
             <ul className="space-y-3">
-              {[
-                { text: 'Full Stack Development', href: '/courses/full-stack' },
-                { text: 'Data Science', href: '/courses/data-science' },
-                { text: 'Cloud Computing', href: '/courses/cloud' },
-                { text: 'DevOps', href: '/courses/devops' },
-                { text: 'Software Testing', href: '/courses/testing' },
-              ].map((course, index) => (
+              {topCategories.map((course, index) => (
                 <li key={index}>
                   <Link
-                    href={course.href}
+                    href={course.link}
                     className="group flex items-center text-gray-400 hover:text-primary transition-colors duration-300"
                   >
                     <ArrowRight className="h-4 w-4 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300" />
-                    <span>{course.text}</span>
+                    <span>{course.name}</span>
                   </Link>
                 </li>
               ))}

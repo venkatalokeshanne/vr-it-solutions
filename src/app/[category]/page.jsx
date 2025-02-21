@@ -35,7 +35,6 @@ const imageUrl = `https://vr-it-solutions.vercel.app${course.image}`
           width: 1200,
           height: 630,
           alt: course.title,
-          type: "image/png",
         },
       ],
       siteName: "VR IT Solutions",

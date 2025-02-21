@@ -1,6 +1,7 @@
 // components/KeyDifferentiators.jsx
 import { useState } from 'react';
 import { TerminalSquare, Users, Clock, BarChart2, Briefcase, CheckCircle } from 'lucide-react';
+import { redirect } from 'next/navigation';
 
 export default function KeyDifferentiators({data}) {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -107,10 +108,10 @@ export default function KeyDifferentiators({data}) {
               Join our comprehensive training program designed for real-world success.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors duration-300 shadow-lg hover:shadow-xl">
+              <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors duration-300 shadow-lg hover:shadow-xl" onClick={()=> redirect("/contactus")}>
                 Enroll Now
               </button>
-              <button className="bg-transparent text-white border-2 border-white border-opacity-30 px-8 py-3 rounded-lg font-semibold hover:bg-white hover:bg-opacity-10 transition-all duration-300">
+              <button className="bg-transparent text-white border-2 border-white border-opacity-30 px-8 py-3 rounded-lg font-semibold hover:bg-white hover:bg-opacity-10 transition-all duration-300" onClick={()=> redirect("/courses")}>
                 View Curriculum
               </button>
             </div>

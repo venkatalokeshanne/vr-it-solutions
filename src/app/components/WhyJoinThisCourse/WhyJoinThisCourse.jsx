@@ -1,5 +1,6 @@
 import React from "react";
 import TestimonialCarousel from "../CourseTestimonials/CourseTestimonials";
+import { redirect } from "next/navigation";
 
 const WhyJoinThisCourse = ({ data }) => {
   return (
@@ -49,7 +50,7 @@ const WhyJoinThisCourse = ({ data }) => {
               <p className="mb-6">
                 Join our next batch and start your {data.course} journey today.
               </p>
-              <button className="bg-white text-primary font-medium py-2 px-6 rounded-lg mt-auto hover:bg-primary-light transition duration-300">
+              <button className="bg-white text-primary font-medium py-2 px-6 rounded-lg mt-auto hover:bg-primary-light transition duration-300" onClick={()=> redirect("/contactus")}>
                 Enroll Now
               </button>
             </div>

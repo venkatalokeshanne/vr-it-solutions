@@ -1,5 +1,6 @@
 import { MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
 import Image from "next/image";
+import { redirect } from "next/navigation";
 
 export const Hero = () => {
   const stats = [
@@ -39,7 +40,6 @@ export const Hero = () => {
                   <span className="px-3 py-1.5 text-sm font-medium text-white bg-primary/30 rounded-lg border border-primary/40">
                     Since 2015
                   </span>
-
                 </div>
               </div>
 
@@ -62,7 +62,7 @@ export const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4">
-              <button className="group bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-lg font-medium transition-all duration-200">
+              <button className="group bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-lg font-medium transition-all duration-200" onClick={()=> redirect("/courses")}>
                 <div className="flex items-center gap-2">
                   Start Learning
                   <svg
@@ -80,7 +80,7 @@ export const Hero = () => {
                   </svg>
                 </div>
               </button>
-              <button className="group bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg font-medium backdrop-blur-sm transition-all duration-200 border border-white/20">
+              <button className="group bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg font-medium backdrop-blur-sm transition-all duration-200 border border-white/20" onClick={() => redirect("/contactus")}>
                 <div className="flex items-center gap-2">
                   Schedule Consultation
                   <svg
@@ -101,40 +101,40 @@ export const Hero = () => {
             </div>
 
             {/* Contact Details */}
-{/* Contact Details */}
-<div className="pt-8 border-t border-white/10">
-  <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300">
-    {/* Phone */}
-    <div className="flex items-center gap-3 group">
-      <div className="shrink-0 p-2 rounded-lg bg-white/5 group-hover:bg-white/10 transition-colors">
-        <PhoneIcon className="h-5 w-5" />
-      </div>
-      <span className="truncate group-hover:text-white transition-colors">
-      +91-9032734343
-      </span>
-    </div>
-    
-    {/* Email */}
-    <div className="flex items-center gap-3 group">
-      <div className="shrink-0 p-2 rounded-lg bg-white/5 group-hover:bg-white/10 transition-colors">
-        <MailIcon className="h-5 w-5" />
-      </div>
-      <span className=" group-hover:text-white transition-colors">
-      info@vritsol.com
-      </span>
-    </div>
-    
-    {/* Address */}
-    <div className="flex items-center gap-3 group">
-      <div className="shrink-0 p-2 rounded-lg bg-white/5 group-hover:bg-white/10 transition-colors">
-        <MapPinIcon className="h-5 w-5" />
-      </div>
-      <span className="truncate group-hover:text-white transition-colors">
-        Hyderabad, India - 500016
-      </span>
-    </div>
-  </div>
-</div>
+            {/* Contact Details */}
+            <div className="pt-8 border-t border-white/10">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300">
+                {/* Phone */}
+                <div className="flex items-center gap-3 group">
+                  <div className="shrink-0 p-2 rounded-lg bg-white/5 group-hover:bg-white/10 transition-colors">
+                    <PhoneIcon className="h-5 w-5" />
+                  </div>
+                  <span className="truncate group-hover:text-white transition-colors">
+                    +91-9032734343
+                  </span>
+                </div>
+
+                {/* Email */}
+                <div className="flex items-center gap-3 group">
+                  <div className="shrink-0 p-2 rounded-lg bg-white/5 group-hover:bg-white/10 transition-colors">
+                    <MailIcon className="h-5 w-5" />
+                  </div>
+                  <span className=" group-hover:text-white transition-colors">
+                    info@vritsol.com
+                  </span>
+                </div>
+
+                {/* Address */}
+                <div className="flex items-center gap-3 group">
+                  <div className="shrink-0 p-2 rounded-lg bg-white/5 group-hover:bg-white/10 transition-colors">
+                    <MapPinIcon className="h-5 w-5" />
+                  </div>
+                  <span className="truncate group-hover:text-white transition-colors">
+                    Hyderabad, India - 500016
+                  </span>
+                </div>
+              </div>
+            </div>
 
             {/* Mobile Stats */}
             <div className="lg:hidden pt-8 border-t border-white/10">
