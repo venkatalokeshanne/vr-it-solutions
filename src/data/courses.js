@@ -1,15 +1,20 @@
 import { TrendingUp, Globe, DollarSign, Award, Zap } from "lucide-react";
 
-const courseData = {
-  salesforce: {
+const courses = [{
     title: "Salesforce Training in Hyderabad",
+    course: "Salesforce",
+    link: "salesforce",
     image: "/images/courses/salesforce.png",
     description:
       "Salesforce is a leading cloud-based CRM platform that helps businesses manage customer relationships, streamline processes, and improve productivity. This comprehensive training program covers both Salesforce Administration and Development, equipping you with the skills needed to manage and customize Salesforce applications effectively. Whether you're an aspiring administrator or a developer, this course will prepare you for real-world scenarios and help you achieve Salesforce certification.",
     instructor: "VR IT Solutions",
     language: "English",
-    hoursContent: 50,
-    articles: 90,
+    hoursContent: '70h',
+    coursePrerequisites: [
+      "Working computer with internet access, valid email address, and understanding of English language.",
+      "Basic computer literacy, familiarity with Microsoft Word and Excel, and general internet usage skills.",
+      "The course is divided into modules covering setup, sales processes, channels, and forecasting over approximately five weeks."
+    ],
     sections: [
       {
         title: "Introduction to Salesforce & Cloud Computing",
@@ -279,10 +284,10 @@ const courseData = {
       "Gain hands-on experience with real-world projects and case studies",
     ],
     whyJoin: {
+      course: "Salesforce",
       title: "Why Join This Course?",
       description: [
-        "Salesforce is one of the most widely used CRM platforms globally, offering excellent career opportunities for professionals.",
-        "With the increasing adoption of Salesforce across industries, certified professionals are in high demand.",
+        "With rapid technological advancements, this course is slowly gaining importance in the market. The uniqueness of this course is it teaches you mule in step by step manner starting from basics to advanced without the requirement of any previous integration background.",
         "VR IT Solutions provides a structured and practical approach to Salesforce training, ensuring you gain the skills needed to excel in your career.",
       ],
       benefits: [
@@ -338,7 +343,6 @@ const courseData = {
         },
       ],
     },
-  },
-};
+}];
 
-export default courseData;
+export default courses;

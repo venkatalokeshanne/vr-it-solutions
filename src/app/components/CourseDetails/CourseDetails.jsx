@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Image from 'next/image';
+import Image from "next/image";
 import {
   Star,
   Play,
@@ -13,6 +13,9 @@ import {
   Check,
   Share2,
   Award,
+  Book,
+  Info,
+  Lightbulb,
 } from "lucide-react";
 import WhyJoinThisCourse from "../WhyJoinThisCourse/WhyJoinThisCourse";
 import KeyDifferentiators from "../KeyDifferentiators/KeyDifferentiators";
@@ -66,11 +69,11 @@ const CourseDetails = ({ courseData }) => {
               <div className="bg-white rounded-lg shadow-lg p-3">
                 <div className="relative mb-4">
                   <div className="relative aspect-video rounded overflow-hidden">
-                  <Image
-        src={courseData.image} // Path to your image in the public folder
-        alt="Site Logo"
-        fill
-      />
+                    <Image
+                      src={courseData.image} // Path to your image in the public folder
+                      alt="Site Logo"
+                      fill
+                    />
                   </div>
                 </div>
                 <div>
@@ -86,7 +89,7 @@ const CourseDetails = ({ courseData }) => {
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-4 py-8">
+      <div className="max-w-7xl mx-auto px-4 py-6">
         <h2 className="text-xl font-bold mb-4">What you'll learn</h2>
         <div className="border border-gray-200 rounded-lg p-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -99,13 +102,53 @@ const CourseDetails = ({ courseData }) => {
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-4 py-8">
+      <div className="max-w-7xl mx-auto px-4 py-6">
+        <div className="bg-gradient-to-br from-gray-50 to-white border border-gray-100 rounded-2xl p-8 shadow-sm">
+          <div className="flex items-center space-x-3 mb-6">
+            <div className="p-2 bg-primary/10 rounded-lg">
+              <Book className="h-6 w-6 text-primary" />
+            </div>
+            <h2 className="text-2xl font-bold text-gray-900">Pre-requisites</h2>
+          </div>
+
+          <div className="space-y-6">
+            <div className="grid">
+              {courseData.coursePrerequisites.map((point, index) => (
+                <p key={index} className="text-gray-600 leading-relaxed">
+                  {point}
+                </p>
+              ))}
+            </div>
+
+            <div className="mt-6 bg-gradient-to-r from-primary/5 to-primary/10 rounded-xl p-6 border border-primary/20">
+              <div className="flex items-start space-x-4">
+                <div className="p-2 bg-white/80 rounded-lg">
+                  <Lightbulb className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-1">
+                    Looking for {courseData.title} training?
+                  </h3>
+                  <p className="text-gray-600">
+                    If you are looking for{" "}
+                    <span className="text-primary font-medium">
+                      {courseData.title}
+                    </span>
+                    , VR IT Solutions is the right institute for you.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="max-w-7xl mx-auto px-4 py-6">
         <h2 className="font-bold mb-4">This course includes:</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="flex flex-col md:block space-y-0 md:space-y-3">
             <div className="flex items-center mb-3 md:mb-0">
               <Play className="h-5 w-5 text-gray-600 mr-3" />
-              <span>40 hours</span>
+              <span>{courseData.hoursContent}</span>
             </div>
             <div className="flex items-center mb-3 md:mb-0">
               <ClipboardCheck className="h-5 w-5 text-gray-600 mr-3" />
@@ -117,13 +160,13 @@ const CourseDetails = ({ courseData }) => {
             </div>
             <div className="flex items-center">
               <FileText className="h-5 w-5 text-gray-600 mr-3" />
-              <span>1 article</span>
+              <span>Articles</span>
             </div>
           </div>
           <div className="flex flex-col md:block space-y-0 md:space-y-3">
             <div className="flex items-center mb-3 md:mb-0">
               <Smartphone className="h-5 w-5 text-gray-600 mr-3" />
-              <span>Access on mobile and TV</span>
+              <span>Online & Offline</span>
             </div>
             <div className="flex items-center">
               <Award className="h-5 w-5 text-gray-600 mr-3" />
@@ -133,7 +176,7 @@ const CourseDetails = ({ courseData }) => {
         </div>
       </div>
       {/* Course Content */}
-      <div className="max-w-7xl mx-auto px-4 py-8">
+      <div className="max-w-7xl mx-auto px-4 py-6">
         <h2 className="text-2xl font-bold mb-4">Course content</h2>
         <div className="mb-4">
           <span className="text-sm text-gray-600">
@@ -142,7 +185,7 @@ const CourseDetails = ({ courseData }) => {
               (acc, section) => acc + section.lectures.length,
               0
             )}{" "}
-            lectures • {courseData.hoursContent}h total length
+            lectures • {courseData.hoursContent} total length
           </span>
         </div>
         <div className="border rounded-lg">
@@ -186,7 +229,7 @@ const CourseDetails = ({ courseData }) => {
         </div>
       </div>
       <WhyJoinThisCourse data={courseData.whyJoin} />
-      <KeyDifferentiators />
+      <KeyDifferentiators data={courseData}/>
     </div>
   );
 };

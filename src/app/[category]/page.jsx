@@ -1,18 +1,18 @@
 import Script from "next/script";
 import { notFound } from "next/navigation";
 import CourseDetails from "../components/CourseDetails/CourseDetails";
-import courseData from "@/data/courses";
+import courses from "@/data/courses";
 
 export async function generateStaticParams() {
-  return Object.keys(courseData).map((category) => ({
-    category,
+  return courses.map((course) => ({
+    category: course.link,
   }));
 }
 
 export async function generateMetadata({ params }) {
   // Wait for params to be available
   const category = await params.category;
-  const course = courseData[category];
+  const course = courses.find(course => course.link === category);
 
   if (!course) {
     notFound();
@@ -63,7 +63,7 @@ const imageUrl = `https://vr-it-solutions.vercel.app${course.image}`
 export default async function Page({ params }) {
   // Wait for params to be available
   const category = await params.category;
-  const course = courseData[category];
+  const course = courses.find(course => course.link === category);
 
   if (!course) {
     notFound();

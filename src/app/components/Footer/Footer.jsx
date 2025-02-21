@@ -1,99 +1,127 @@
 import Link from 'next/link'
-import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react'
+import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, ArrowRight } from 'lucide-react'
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="relative bg-gradient-to-b from-gray-900 to-gray-950 text-gray-300 overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-[radial-gradient(#ffffff10_1px,transparent_1px)] [background-size:20px_20px] opacity-20" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
-          <div>
-            <h3 className="text-white text-xl font-bold mb-4">AchieversIT</h3>
-            <p className="mb-4">
-              Leading IT training institute providing quality education and placement assistance.
+          <div className="space-y-6">
+            <h3 className="text-white text-2xl font-bold">VR IT Solutions</h3>
+            <p className="text-gray-400 leading-relaxed">
+            A premier software training institute in Hyderabad offering comprehensive online and classroom training programs. We've successfully trained and placed thousands of professionals in leading MNCs including Infosys, Wipro, Accenture, Deloitte, Cognizant, and Capgemini, launching countless successful careers in IT.
             </p>
-            <div className="flex space-x-4">
-              <Link href="#" className="hover:text-white">
-                <Facebook className="h-5 w-5" />
-              </Link>
-              <Link href="#" className="hover:text-white">
-                <Twitter className="h-5 w-5" />
-              </Link>
-              <Link href="#" className="hover:text-white">
-                <Linkedin className="h-5 w-5" />
-              </Link>
-              <Link href="#" className="hover:text-white">
-                <Instagram className="h-5 w-5" />
-              </Link>
+            <div className="flex space-x-5">
+              {[
+                { icon: <Facebook />, href: '#' },
+                { icon: <Twitter />, href: '#' },
+                { icon: <Linkedin />, href: '#' },
+                { icon: <Instagram />, href: '#' },
+              ].map((social, index) => (
+                <Link
+                  key={index}
+                  href={social.href}
+                  className="transform hover:scale-110 hover:text-primary transition-all duration-300"
+                >
+                  {social.icon}
+                </Link>
+              ))}
             </div>
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h3 className="text-white text-xl font-bold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/courses" className="hover:text-white">Courses</Link>
-              </li>
-              <li>
-                <Link href="/corporate-training" className="hover:text-white">Corporate Training</Link>
-              </li>
-              <li>
-                <Link href="/placements" className="hover:text-white">Placements</Link>
-              </li>
-              <li>
-                <Link href="/about" className="hover:text-white">About Us</Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:text-white">Contact</Link>
-              </li>
+          <div className="space-y-6">
+            <h3 className="text-white text-lg font-semibold">Quick Links</h3>
+            <ul className="space-y-3">
+              {[
+                { text: 'Courses', href: '/courses' },
+                { text: 'Corporate Training', href: '/corporate-training' },
+                { text: 'Placements', href: '/placements' },
+                { text: 'About Us', href: '/about' },
+                { text: 'Contact', href: '/contact' },
+              ].map((link, index) => (
+                <li key={index}>
+                  <Link
+                    href={link.href}
+                    className="group flex items-center text-gray-400 hover:text-primary transition-colors duration-300"
+                  >
+                    <ArrowRight className="h-4 w-4 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300" />
+                    <span>{link.text}</span>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Popular Courses */}
-          <div>
-            <h3 className="text-white text-xl font-bold mb-4">Popular Courses</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/courses/full-stack" className="hover:text-white">Full Stack Development</Link>
-              </li>
-              <li>
-                <Link href="/courses/data-science" className="hover:text-white">Data Science</Link>
-              </li>
-              <li>
-                <Link href="/courses/cloud" className="hover:text-white">Cloud Computing</Link>
-              </li>
-              <li>
-                <Link href="/courses/devops" className="hover:text-white">DevOps</Link>
-              </li>
-              <li>
-                <Link href="/courses/testing" className="hover:text-white">Software Testing</Link>
-              </li>
+          <div className="space-y-6">
+            <h3 className="text-white text-lg font-semibold">Popular Courses</h3>
+            <ul className="space-y-3">
+              {[
+                { text: 'Full Stack Development', href: '/courses/full-stack' },
+                { text: 'Data Science', href: '/courses/data-science' },
+                { text: 'Cloud Computing', href: '/courses/cloud' },
+                { text: 'DevOps', href: '/courses/devops' },
+                { text: 'Software Testing', href: '/courses/testing' },
+              ].map((course, index) => (
+                <li key={index}>
+                  <Link
+                    href={course.href}
+                    className="group flex items-center text-gray-400 hover:text-primary transition-colors duration-300"
+                  >
+                    <ArrowRight className="h-4 w-4 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300" />
+                    <span>{course.text}</span>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Contact Info */}
-          <div>
-            <h3 className="text-white text-xl font-bold mb-4">Contact Us</h3>
+          <div className="space-y-6">
+            <h3 className="text-white text-lg font-semibold">Get in Touch</h3>
             <ul className="space-y-4">
-              <li className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 mt-1" />
-                <span>BTM Layout, 2nd Stage, Bangalore - 560076</span>
+              <li className="flex items-start space-x-3 group">
+                <MapPin className="h-5 w-5 mt-1 text-primary" />
+                <span className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                  506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Hyderabad - 500016
+                </span>
               </li>
-              <li className="flex items-center space-x-3">
-                <Phone className="h-5 w-5" />
-                <span>+91 8880 4444 22</span>
+              <li className="flex items-center space-x-3 group">
+                <Phone className="h-5 w-5 text-primary" />
+                <span className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                +91-9032734343
+                </span>
               </li>
-              <li className="flex items-center space-x-3">
-                <Mail className="h-5 w-5" />
-                <span>info@achieversit.com</span>
+              <li className="flex items-center space-x-3 group">
+                <Mail className="h-5 w-5 text-primary" />
+                <span className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                info@vritsol.com
+                </span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center">
-          <p>&copy; {new Date().getFullYear()} AchieversIT. All rights reserved.</p>
+        {/* Bottom Bar */}
+        <div className="mt-16 pt-8 border-t border-gray-800">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <p className="text-gray-400">
+              &copy; {new Date().getFullYear()} VR IT Solutions. All rights reserved.
+            </p>
+            <div className="flex space-x-6 text-gray-400">
+              <Link href="/privacy" className="hover:text-primary transition-colors duration-300">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="hover:text-primary transition-colors duration-300">
+                Terms of Service
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

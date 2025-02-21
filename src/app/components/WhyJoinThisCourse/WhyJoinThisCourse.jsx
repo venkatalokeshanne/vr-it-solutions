@@ -20,7 +20,7 @@ const WhyJoinThisCourse = ({ data }) => {
           </div>
 
           {/* Main content */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
+          <div className="bg-white rounded-2xl shadow-xl p-8 md:mx-0 lg:mx-0 mx-4">
             <div className="prose prose-lg max-w-none text-gray-700">
               {data.description.map((paragraph, index) => (
                 <p
@@ -38,7 +38,7 @@ const WhyJoinThisCourse = ({ data }) => {
           </div>
 
           {/* Key benefits cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 md:mx-0 lg:mx-0 mx-4">
             {data.benefits.map((benefit, index) => (
               <BenefitCard key={index} {...benefit} />
             ))}
@@ -47,7 +47,7 @@ const WhyJoinThisCourse = ({ data }) => {
                 Ready to Transform Your Career?
               </h3>
               <p className="mb-6">
-                Join our next batch and start your ServiceNow journey today.
+                Join our next batch and start your {data.course} journey today.
               </p>
               <button className="bg-white text-primary font-medium py-2 px-6 rounded-lg mt-auto hover:bg-primary-light transition duration-300">
                 Enroll Now

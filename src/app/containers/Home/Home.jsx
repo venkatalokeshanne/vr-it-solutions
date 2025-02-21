@@ -4,9 +4,10 @@ import AdvantageOfVRITSolutions from "@/app/components/Advantages/Advantages";
 import Testimonials from "@/app/components/Testimonials/Testimonials";
 import TopCategories from "@/app/components/Topcategories/Topcategories";
 import FeaturedCourses from "@/app/components/FeaturedCourses/FeaturedCourses";
-import { Fearures } from "@/app/components/Features/Features";
-import { TrustedCompanies } from "@/app/components/TrustedCompanies/TrustedCompanies";
+import { Features } from "@/app/components/Features/Features";
+import { Welcome } from "@/app/components/Welcome/Welcome";
 import { Hero } from "@/app/components/Hero/Hero";
+import { Map } from "@/app/components/Map/Map";
 
 const VRITSolutions = () => {
 
@@ -15,7 +16,7 @@ const VRITSolutions = () => {
       {/* Hero Section */}
       <Hero />
       {/* Trusted Companies */}
-      <TrustedCompanies />
+      <Welcome />
       {/* Top Categories */}
       <TopCategories />
       {/* Advantages */}
@@ -23,9 +24,10 @@ const VRITSolutions = () => {
       {/* Featured Courses */}
       <FeaturedCourses />
       {/* Features Section */}
-      <Fearures />
+      <Features />
       {/* Testimonials */}
       <Testimonials />
+      <Map />
       {/* Footer */}
     </div>
   );

@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { TerminalSquare, Users, Clock, BarChart2, Briefcase, CheckCircle } from 'lucide-react';
 
-export default function KeyDifferentiators() {
+export default function KeyDifferentiators({data}) {
   const [hoveredCard, setHoveredCard] = useState(null);
   
   const differentiators = [
@@ -10,7 +10,7 @@ export default function KeyDifferentiators() {
       id: 1,
       icon: <TerminalSquare className="h-8 w-8" />,
       title: "Comprehensive Practical Sessions",
-      description: "Every theory session includes hands-on practice with real ServiceNow interview questions, allowing you to master concepts at your own pace."
+      description: `Every theory session includes hands-on practice with real ${data.course} interview questions, allowing you to master concepts at your own pace.`
     },
     {
       id: 2,
@@ -22,7 +22,7 @@ export default function KeyDifferentiators() {
       id: 3,
       icon: <Users className="h-8 w-8" />,
       title: "Industry Expert Instructors",
-      description: "Learn from active professionals including mid-level managers and technical specialists with real-world ServiceNow expertise."
+      description: `Learn from active professionals including mid-level managers and technical specialists with real-world ${data.course} expertise.`
     },
     {
       id: 4,
@@ -34,7 +34,7 @@ export default function KeyDifferentiators() {
       id: 5,
       icon: <BarChart2 className="h-8 w-8" />,
       title: "Always Current Curriculum",
-      description: "Course content updated every 6 months to align with the latest ServiceNow technologies and industry best practices."
+      description: `Course content updated every 6 months to align with the latest ${data.course} technologies and industry best practices.`
     },
     {
       id: 6,
@@ -54,7 +54,7 @@ export default function KeyDifferentiators() {
 
     <div className="container mx-auto px-4 relative z-10">
       {/* Section Header */}
-      <div className="max-w-3xl mx-auto text-center mb-16">
+      <div className="max-w-3xl mx-auto text-center mb-8">
         <div className="inline-block py-1 px-3 rounded-full bg-primary-light text-primary font-medium text-sm mb-4">
           Why Choose Our Training
         </div>
@@ -62,7 +62,7 @@ export default function KeyDifferentiators() {
           Our Key <span className="bg-gradient-to-r from-primary to-primary-hover bg-clip-text text-transparent">Differentiators</span>
         </h2>
         <p className="text-lg text-gray-600">
-          What makes our ServiceNow training the preferred choice for aspiring professionals
+          What makes our {data.course} training the preferred choice for aspiring professionals
         </p>
       </div>
 
@@ -102,7 +102,7 @@ export default function KeyDifferentiators() {
           {/* ...existing decorative shapes... */}
           
           <div className="p-10 md:p-12 text-center relative z-10">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Ready to Advance Your ServiceNow Career?</h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Ready to Advance Your {data.course} Career?</h3>
             <p className="text-lg text-primary-light mb-8 max-w-2xl mx-auto">
               Join our comprehensive training program designed for real-world success.
             </p>
@@ -122,7 +122,7 @@ export default function KeyDifferentiators() {
       <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
         {[
           { value: "98%", label: "Placement Rate" },
-          { value: "40h", label: "Training Duration" },
+          { value: data.hoursContent, label: "Training Duration" },
           { value: "24/7", label: "Support Access" },
           { value: "100%", label: "Practical Focus" }
         ].map((stat, index) => (
