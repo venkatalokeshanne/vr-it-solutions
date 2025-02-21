@@ -36,7 +36,7 @@ const AllCourses = ({courses}) => {
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-2 text-sm text-gray-600">
                       <Clock className="w-4 h-4" />
-                      <span>{course.duration} hours</span>
+                      <span>{course.hoursContent}</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-gray-600">
                       <Target className="w-4 h-4" />

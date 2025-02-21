@@ -19,10 +19,138 @@ import {
 } from "lucide-react";
 import WhyJoinThisCourse from "../WhyJoinThisCourse/WhyJoinThisCourse";
 import KeyDifferentiators from "../KeyDifferentiators/KeyDifferentiators";
+import { redirect } from "next/navigation";
+
+export const courseFiles = [
+  {
+    name: "AWS & DevOps",
+    syllabus: "/pdfs/Azure-Devops-AWS-Cloud-Syllabus.pdf",
+  },
+  {
+    name: "Clinical SAS",
+    syllabus: "/pdfs/clinical-sas-training-content.pdf",
+  },
+  {
+    name: "Data Science",
+    syllabus: "/pdfs/datascience.pdf",
+  },
+  {
+    name: "DevOps",
+    syllabus: "/pdfs/devops.pdf",
+  },
+  {
+    name: "EDI & SI",
+    syllabus: "/pdfs/edi-si-course-content.pdf",
+  },
+  {
+    name: "Google Cloud",
+    syllabus: "/pdfs/google-cloud.pdf",
+  },
+  {
+    name: "Hadoop",
+    syllabus: "/pdfs/hadoop-online-training.pdf",
+  },
+  {
+    name: "Informatica MDM",
+    syllabus: "/pdfs/informatica-mdm-training.pdf",
+  },
+  {
+    name: "Java Full Stack",
+    syllabus: "/pdfs/Java-full-stack-development-Syllabus.pdf",
+  },
+  {
+    name: "MuleSoft",
+    syllabus: "/pdfs/mulesoft-course-content.pdf",
+  },
+  {
+    name: "Pega",
+    syllabus: "/pdfs/pega.pdf",
+  },
+  {
+    name: "Python with AWS",
+    syllabus: "/pdfs/python-with-AWS.pdf",
+  },
+  {
+    name: "Python with Django",
+    syllabus: "/pdfs/python-with-django.pdf",
+  },
+  {
+    name: "Python with Machine Learning",
+    syllabus: "/pdfs/python-with-machine-learning.pdf",
+  },
+  {
+    name: "Salesforce",
+    syllabus: "/pdfs/salesforce-course-content.pdf",
+  },
+  {
+    name: "SAP Basis",
+    syllabus: "/pdfs/sap-basis-online-training.pdf",
+  },
+  {
+    name: "SAP EWM",
+    syllabus: "/pdfs/sap-ewm.pdf",
+  },
+  {
+    name: "SAP FICO",
+    syllabus: "/pdfs/sap-fico-online-training-in-hyderabad.pdf",
+  },
+  {
+    name: "SAP HANA Administration",
+    syllabus: "/pdfs/sap-hana-administration.pdf",
+  },
+  {
+    name: "SAP Leonardo",
+    syllabus: "/pdfs/sap-leonardo-training-hyderabad.pdf",
+  },
+  {
+    name: "SAP MM",
+    syllabus: "/pdfs/sap-mm-online-training.pdf",
+  },
+  {
+    name: "SAP S/4HANA Logistics",
+    syllabus: "/pdfs/sap-s4Hana-simple-logistics-training.pdf",
+  },
+  {
+    name: "SAP SD",
+    syllabus: "/pdfs/sap-sd-online-training-in-hyderabad.pdf",
+  },
+  {
+    name: "SAP Security & GRC",
+    syllabus: "/pdfs/SAP-Security-and-SAP-GRC-Training-Course.pdf",
+  },
+  {
+    name: "ServiceNow",
+    syllabus: "/pdfs/servicenow.pdf",
+  },
+  {
+    name: "SAP S/4HANA Finance",
+    syllabus: "/pdfs/simple-finance-training-in-hyderabad.pdf",
+  },
+  {
+    name: "Snowflake",
+    syllabus: "/pdfs/snowflake-training-in-hyderabad.pdf",
+  },
+  {
+    name: "Workday",
+    syllabus: "/pdfs/workday.pdf",
+  },
+];
 
 const CourseDetails = ({ courseData }) => {
   const [selectedSection, setSelectedSection] = useState(0);
+  const handleDownload = () => {
+    // Find the matching course file
+    const courseFile = courseFiles.find(
+      (course) => course.name.toLowerCase() === courseData.course.toLowerCase()
+    );
 
+    if (courseFile) {
+      // Open PDF in new tab
+      window.open(courseFile.syllabus, "_blank");
+    } else {
+      console.error("Course syllabus not found");
+    }
+  };
   const handleShare = async () => {
     if (navigator.share) {
       try {
@@ -77,10 +205,16 @@ const CourseDetails = ({ courseData }) => {
                   </div>
                 </div>
                 <div>
-                  <button className="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-primary-hover mb-4 transition-colors duration-200">
+                  <button
+                    className="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-primary-hover mb-4 transition-colors duration-200"
+                    onClick={() => redirect("/contactus")}
+                  >
                     Enroll now
                   </button>
-                  <button className="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-primary-hover mb-4 transition-colors duration-200">
+                  <button
+                    onClick={handleDownload}
+                    className="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-primary-hover mb-4 transition-colors duration-200"
+                  >
                     Download Course Content
                   </button>
                 </div>
@@ -229,7 +363,7 @@ const CourseDetails = ({ courseData }) => {
         </div>
       </div>
       <WhyJoinThisCourse data={courseData.whyJoin} />
-      <KeyDifferentiators data={courseData}/>
+      <KeyDifferentiators data={courseData} />
     </div>
   );
 };

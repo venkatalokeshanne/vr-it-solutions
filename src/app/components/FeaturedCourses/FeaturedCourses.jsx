@@ -75,58 +75,59 @@ const FeaturedCourses = () => {
             transition={{ duration: 0.3 }}
           >
             {visibleCourses.map((course, index) => (
-  <motion.div
-    key={course.id}
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ delay: index * 0.1 }}
-    className="group relative bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden flex flex-col h-full" // Added h-full
-  >
-    {/* Image Section */}
-    <div className="relative h-48 overflow-hidden">
-      <img
-        src={course.image}
-        alt={course.title}
-        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent" />
-    </div>
+              <motion.div
+                key={course.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="group relative bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden flex flex-col h-full" // Added h-full
+              >
+                {/* Image Section */}
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={course.image}
+                    alt={course.title}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent" />
+                </div>
 
-    {/* Content Section */}
-{/* Content Section */}
-<div className="p-6 flex flex-col flex-1">
-  <h3 className="font-bold text-lg text-gray-900 group-hover:text-primary transition-colors mb-2">
-    {course.title}
-  </h3>
-  
-  <p className="text-sm text-gray-600 line-clamp-2 mb-4">
-    {course.description}
-  </p>
-  
-  <div className="flex-1 flex flex-col justify-end mt-auto">
-    <div className="flex items-center justify-between mb-4">
-      <div className="flex items-center gap-2 text-sm text-gray-600">
-        <Clock className="w-4 h-4" />
-        <span>{course.duration} hours</span>
-      </div>
-      <div className="flex items-center gap-2 text-sm text-gray-600">
-        <Target className="w-4 h-4" />
-        <span>{course.level}</span>
-      </div>
-    </div>
+                {/* Content Section */}
+                {/* Content Section */}
+                <div className="p-6 flex flex-col flex-1">
+                  <h3 className="font-bold text-lg text-gray-900 group-hover:text-primary transition-colors mb-2">
+                    {course.title}
+                  </h3>
 
-    <button onClick={() => redirect(`/${course.link}`)} // Added onClick event
-      className="w-full py-3 px-4 bg-primary/10 text-primary font-medium rounded-lg 
+                  <p className="text-sm text-gray-600 line-clamp-2 mb-4">
+                    {course.description}
+                  </p>
+
+                  <div className="flex-1 flex flex-col justify-end mt-auto">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center gap-2 text-sm text-gray-600">
+                        <Clock className="w-4 h-4" />
+                        <span>{course.hoursContent}</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm text-gray-600">
+                        <Target className="w-4 h-4" />
+                        <span>{course.level}</span>
+                      </div>
+                    </div>
+
+                    <button
+                      onClick={() => redirect(`/${course.link}`)} // Added onClick event
+                      className="w-full py-3 px-4 bg-primary/10 text-primary font-medium rounded-lg 
         transition-all duration-300 
         hover:bg-primary hover:text-white 
         group-hover:bg-primary group-hover:text-white"
-    >
-      Explore Course
-    </button>
-  </div>
-</div>
-  </motion.div>
-))}
+                    >
+                      Explore Course
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </motion.div>
         </AnimatePresence>
       </div>
