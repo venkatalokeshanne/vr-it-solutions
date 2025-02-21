@@ -1,0 +1,94 @@
+import Script from "next/script";
+import { notFound } from "next/navigation";
+import CourseDetails from "../components/CourseDetails/CourseDetails";
+import courseData from "@/data/courses";
+
+export async function generateStaticParams() {
+  return Object.keys(courseData).map((category) => ({
+    category,
+  }));
+}
+
+export async function generateMetadata({ params }) {
+  // Wait for params to be available
+  const category = await params.category;
+  const course = courseData[category];
+
+  if (!course) {
+    notFound();
+  }
+
+  const fullUrl = `https://vrit-solutions.vercel.app/${category}`;
+
+  return {
+    title: course.title,
+    description: course.description,
+    openGraph: {
+      title: course.title,
+      description: course.description,
+      type: "article",
+      url: fullUrl,
+      images: [
+        {
+          url: course.image,
+          width: 1200,
+          height: 630,
+          alt: course.title,
+        },
+      ],
+      siteName: "VR IT Solutions",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: course.title,
+      description: course.description,
+      images: [course.image],
+    },
+    authors: [{ name: "VR IT Solutions" }],
+    keywords: [
+      `${category} Training`,
+      `${category} Development`,
+      "IT Training",
+      "Hyderabad IT Training",
+      course.title,
+    ],
+    alternates: {
+      canonical: fullUrl,
+    },
+  };
+}
+
+export default async function Page({ params }) {
+  // Wait for params to be available
+  const category = await params.category;
+  const course = courseData[category];
+
+  if (!course) {
+    notFound();
+  }
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: course.title,
+    description: course.description,
+    provider: {
+      "@type": "Organization",
+      name: "VR IT Solutions",
+      sameAs: "https://vrit-solutions.vercel.app",
+    },
+    courseWorkload: `${course.hoursContent} hours`,
+    teaches: course.learningPoints.join(", "),
+  };
+
+  return (
+    <>
+      <Script
+        id="structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <CourseDetails courseData={course} />
+    </>
+  );
+}
