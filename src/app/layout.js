@@ -20,7 +20,7 @@ export const viewport = {
 };
 
 export const metadata = {
-  metadataBase: new URL('https://vrit-solutions.vercel.app/'),
+  metadataBase: new URL('https://vr-it-solutions.vercel.app/'),
   title: {
     default: 'VR IT Solutions - Professional Training Institute',
     template: '%s | VR IT Solutions'
@@ -45,7 +45,7 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://vrit.com',
+    url: 'https://vr-it-solutions.vercel.app.com',
     siteName: 'VR IT Solutions',
     title: 'VR IT Solutions - Professional Training Institute',
     description: 'Leading training institute offering professional IT courses in Hyderabad. Expert-led training in Salesforce, ServiceNow, and more.',

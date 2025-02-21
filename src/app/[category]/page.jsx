@@ -18,7 +18,8 @@ export async function generateMetadata({ params }) {
     notFound();
   }
 
-  const fullUrl = `https://vrit-solutions.vercel.app/${category}`;
+  const fullUrl = `https://vr-it-solutions.vercel.app/${category}`;
+const imageUrl = `https://vrit-solutions.vercel.app${course.image}`
 
   return {
     title: course.title,
@@ -30,10 +31,11 @@ export async function generateMetadata({ params }) {
       url: fullUrl,
       images: [
         {
-          url: course.image,
+          url: imageUrl,
           width: 1200,
           height: 630,
           alt: course.title,
+          type: "image/png",
         },
       ],
       siteName: "VR IT Solutions",
