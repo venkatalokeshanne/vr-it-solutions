@@ -19,7 +19,7 @@ export async function generateMetadata({ params }) {
   }
 
   const fullUrl = `https://vr-it-solutions.vercel.app/${category}`;
-const imageUrl = `https://vrit-solutions.vercel.app${course.image}`
+const imageUrl = `https://vr-it-solutions.vercel.app${course.image}`
 
   return {
     title: course.title,
