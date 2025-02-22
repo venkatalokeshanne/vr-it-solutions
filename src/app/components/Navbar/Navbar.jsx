@@ -122,7 +122,7 @@ const Navbar = () => {
               <img src="/logo.png" alt="Logo" className="h-8" />
             </Link>
             <Link 
-              href="/demo"
+              href="/contactus"
               onClick={handleMenuItemClick}
               className="text-sm font-medium text-white bg-primary px-4 py-2 rounded-md"
             >
