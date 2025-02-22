@@ -1,6 +1,9 @@
+"use client";
+import { protectEmail } from "@/app/util";
 import { MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
 import Image from "next/image";
 import { redirect } from "next/navigation";
+import Script from "next/script";
 
 export const Hero = () => {
   const stats = [
@@ -10,9 +13,80 @@ export const Hero = () => {
     { value: "50+", label: "Corporate Clients" },
   ];
 
+  // Organization structured data
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "VR IT Solutions",
+    "foundingDate": "2015",
+    "description": "Transform Your Career with Expert-Led Training at VR IT Solutions. Industry-focused courses with proven placement success.",
+    "url": "https://vr-it-solutions.vercel.app",
+    "telephone": "+91-9032734343",
+    "email": "info@vritsol.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hyderabad",
+      "postalCode": "500016",
+      "addressCountry": "IN"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "15000",
+      "bestRating": "5"
+    },
+    "knowsAbout": [
+      "IT Training",
+      "Software Development",
+      "Professional Development",
+      "Career Transformation"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Training Programs",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Expert-Led Training Programs",
+            "description": "Industry-focused courses with placement assistance"
+          }
+        }
+      ]
+    },
+    "sameAs": [
+      "https://www.facebook.com/vritsolutions",
+      "https://twitter.com/vritsolutions",
+      "https://www.linkedin.com/company/vr-it-solutions"
+    ]
+  };
+
+  // Statistics structured data
+  const statsSchema = {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "VR IT Solutions Statistics",
+    "description": "Key performance metrics of VR IT Solutions",
+    "variableMeasured": stats.map(stat => ({
+      "@type": "PropertyValue",
+      "name": stat.label,
+      "value": stat.value
+    }))
+  };
+
   return (
     <div className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-primary/90 min-h-[85vh] flex items-center">
-      {/* Background Effects */}
+      <Script
+        id="organization-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <Script
+        id="stats-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(statsSchema) }}
+      />{/* Background Effects */}
       <div className="absolute inset-0 bg-grid-white/[0.05] bg-grid-16" />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-900/50" />
 

@@ -9,6 +9,7 @@ import {
   Lightbulb, 
   HandshakeIcon 
 } from 'lucide-react';
+import Script from 'next/script';
 
 const AdvantageCard = ({ title, description, icon, index }) => (
   <motion.div
@@ -66,9 +67,39 @@ const AdvantageOfVRITSolutions = () => {
     },
   ];
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "VR IT Solutions",
+    "description": "Industry-leading IT training institute combining expertise with innovative teaching methods",
+    "url": "https://vr-it-solutions.vercel.app",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Training Advantages",
+      "itemListElement": advantages.map((advantage, index) => ({
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": advantage.title,
+          "description": advantage.description,
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "VR IT Solutions"
+          }
+        },
+        "position": index + 1
+      }))
+    },
+    "knowsAbout": advantages.map(advantage => advantage.title)
+  };
+
   return (
     <section className="py-8 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
-      
+            <Script
+        id="advantages-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div 
           className="text-center max-w-3xl mx-auto mb-16"

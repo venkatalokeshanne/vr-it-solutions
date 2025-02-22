@@ -1,6 +1,7 @@
 "use client";
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { protectEmail } from '@/app/util';
 
 export const Map = () => {
   return (

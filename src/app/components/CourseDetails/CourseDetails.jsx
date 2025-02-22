@@ -20,6 +20,8 @@ import {
 import WhyJoinThisCourse from "../WhyJoinThisCourse/WhyJoinThisCourse";
 import KeyDifferentiators from "../KeyDifferentiators/KeyDifferentiators";
 import { redirect } from "next/navigation";
+import SocialShare from "../SocialShare/SocialShare";
+import Script from "next/script";
 
 export const courseFiles = [
   {
@@ -138,19 +140,78 @@ export const courseFiles = [
 
 const CourseDetails = ({ courseData }) => {
   const [selectedSection, setSelectedSection] = useState(0);
+
+  // Create structured data for the course
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": courseData.title,
+    "description": courseData.description,
+    "provider": {
+      "@type": "Organization",
+      "name": "VR IT Solutions",
+      "sameAs": "https://vr-it-solutions.vercel.app"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "100",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "coursePrerequisites": courseData.coursePrerequisites.join(", "),
+    "educationalLevel": courseData.level,
+    "timeRequired": courseData.hoursContent,
+    "teaches": courseData.learningPoints.join(", "),
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": ["online", "onsite"],
+      "location": {
+        "@type": "Place",
+        "name": "VR IT Solutions Training Center",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Hyderabad",
+          "addressRegion": "Telangana",
+          "addressCountry": "IN"
+        }
+      }
+    }
+  };
+
+
+
+  // Course content structured data
+  const courseContentStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": courseData.sections.map((section, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "Course",
+        "name": section.title,
+        "hasCourseInstance": {
+          "@type": "CourseInstance",
+          "courseMode": ["online", "onsite"],
+          "teaches": section.lectures.map(lecture => lecture.title).join(", ")
+        }
+      }
+    }))
+  };
+
   const handleDownload = () => {
-    // Find the matching course file
     const courseFile = courseFiles.find(
       (course) => course.name.toLowerCase() === courseData.course.toLowerCase()
     );
 
     if (courseFile) {
-      // Open PDF in new tab
       window.open(courseFile.syllabus, "_blank");
     } else {
       console.error("Course syllabus not found");
     }
   };
+
   const handleShare = async () => {
     if (navigator.share) {
       try {
@@ -167,6 +228,16 @@ const CourseDetails = ({ courseData }) => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Script
+        id="course-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <Script
+        id="course-content-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseContentStructuredData) }}
+      />
       {/* Course Header */}
       <div className="bg-gray-900 text-white mt-14 md:mt-0">
         <div className="max-w-7xl mx-auto px-4 py-8">
@@ -183,13 +254,29 @@ const CourseDetails = ({ courseData }) => {
                   </div>
                 </div>
               </div>
-              <button
-                onClick={handleShare}
-                className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200"
-              >
-                <Share2 className="h-5 w-5" />
-                <span className="text-sm">Share</span>
-              </button>
+
+                
+                <div className="flex items-center space-x-4 mb-6">
+                  <span className="flex items-center">
+                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"/>
+                    </svg>
+                    {courseData.hoursContent}
+                  </span>
+                  <span className="flex items-center">
+                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+                    </svg>
+                    {courseData.level}
+                  </span>
+                </div>
+                <div>
+                  <SocialShare
+                    url={`https://vr-it-solutions.vercel.app/${courseData.link}`}
+                    title={courseData.title}
+                    description={courseData.description}
+                  />
+                </div>
             </div>
 
             {/* Course Card */}

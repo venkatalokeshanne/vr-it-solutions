@@ -26,7 +26,7 @@ export const metadata = {
     default: 'VR IT Solutions - Professional Training Institute',
     template: '%s | VR IT Solutions'
   },
-  description: 'Leading training institute offering professional courses in Salesforce, ServiceNow, and more. Join our expert-led training programs in Hyderabad.',
+  description: 'Transform your career with VR IT Solutions, Hyderabad\'s premier IT training institute. Expert-led courses in Salesforce, ServiceNow, Cloud Computing, and more. Get hands-on experience, placement assistance, and industry-recognized certification. Join our professional training programs today!',
   keywords: [
     'IT Training',
     'Professional Courses',
@@ -101,7 +101,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden w-full`}
       >
-        <div className="relative w-full">
+        <div className="relative w-full mt-20 md:mt-0">
           <Navbar />
           {children}
           <Footer />

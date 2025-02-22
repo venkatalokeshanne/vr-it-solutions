@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import {
   Book,
   Building2,
@@ -17,6 +17,10 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const categoryList = getFormattedCategories();
 
+  const handleMenuItemClick = useCallback(() => {
+    setIsMobileMenuOpen(false);
+  }, []);
+
   return (
     <>
       {/* Desktop Navigation */}
@@ -25,7 +29,7 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-16">
             {/* Logo and Categories */}
             <div className="flex items-center space-x-8">
-              <Link href="/">
+              <Link href="/" onClick={handleMenuItemClick}>
                 <img src="/logo.png" alt="Logo" className="h-8" />
               </Link>
               <div className="relative group">
@@ -54,6 +58,7 @@ const Navbar = () => {
                           <Link
                             key={`${category.name}-${sub.name}`}
                             href={sub.link}
+                            onClick={handleMenuItemClick}
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
                           >
                             {sub.name}
@@ -68,16 +73,16 @@ const Navbar = () => {
 
             {/* Right Actions */}
             <div className="flex items-center space-x-6">
-              <Link href="/courses" className="text-sm text-gray-700 hover:text-primary">
+              <Link href="/courses" onClick={handleMenuItemClick} className="text-sm text-gray-700 hover:text-primary">
                 Courses
               </Link>
-              <Link href="/services" className="text-sm text-gray-700 hover:text-primary">
+              <Link href="/services" onClick={handleMenuItemClick} className="text-sm text-gray-700 hover:text-primary">
                 Services
               </Link>
-              <Link href="/aboutus" className="text-sm text-gray-700 hover:text-primary">
+              <Link href="/aboutus" onClick={handleMenuItemClick} className="text-sm text-gray-700 hover:text-primary">
                 About Us
               </Link>
-              <Link href="/contactus" className="text-sm text-gray-700 hover:text-primary">
+              <Link href="/contactus" onClick={handleMenuItemClick} className="text-sm text-gray-700 hover:text-primary">
                 Contact Us
               </Link>
               <button className="text-primary hover:text-primary-hover">
@@ -85,6 +90,7 @@ const Navbar = () => {
               </button>
               <Link 
                 href="/contactus"
+                onClick={handleMenuItemClick}
                 className="text-sm font-medium text-white bg-primary px-6 py-2.5 rounded-md hover:bg-primary-hover transition-colors duration-200"
               >
                 Request demo
@@ -112,11 +118,12 @@ const Navbar = () => {
                 <Menu className="h-6 w-6" />
               )}
             </button>
-            <Link href="/">
+            <Link href="/" onClick={handleMenuItemClick}>
               <img src="/logo.png" alt="Logo" className="h-8" />
             </Link>
             <Link 
               href="/demo"
+              onClick={handleMenuItemClick}
               className="text-sm font-medium text-white bg-primary px-4 py-2 rounded-md"
             >
               Request Demo
@@ -146,6 +153,7 @@ const Navbar = () => {
                       <Link
                         key={`${category.name}-${sub.name}`}
                         href={sub.link}
+                        onClick={handleMenuItemClick}
                         className="block w-full text-left text-sm text-gray-600 hover:text-primary hover:bg-primary-light px-3 py-2 rounded-md"
                       >
                         {sub.name}
@@ -158,20 +166,37 @@ const Navbar = () => {
 
             {/* Mobile Actions */}
             <div className="mt-6 space-y-4 border-t pt-6">
-              <Link href="/courses" className="block text-gray-700 hover:text-primary w-full py-2 text-left">
+              <Link 
+                href="/courses" 
+                onClick={handleMenuItemClick}
+                className="block text-gray-700 hover:text-primary w-full py-2 text-left"
+              >
                 Courses
               </Link>
-              <Link href="/services" className="block text-gray-700 hover:text-primary w-full py-2 text-left">
+              <Link 
+                href="/services" 
+                onClick={handleMenuItemClick}
+                className="block text-gray-700 hover:text-primary w-full py-2 text-left"
+              >
                 Services
               </Link>
-              <Link href="/aboutus" className="block text-gray-700 hover:text-primary w-full py-2 text-left">
+              <Link 
+                href="/aboutus" 
+                onClick={handleMenuItemClick}
+                className="block text-gray-700 hover:text-primary w-full py-2 text-left"
+              >
                 About Us
               </Link>
-              <Link href="/contactus" className="block text-gray-700 hover:text-primary w-full py-2 text-left">
+              <Link 
+                href="/contactus" 
+                onClick={handleMenuItemClick}
+                className="block text-gray-700 hover:text-primary w-full py-2 text-left"
+              >
                 Contact Us
               </Link>
               <Link 
                 href="/contactus"
+                onClick={handleMenuItemClick}
                 className="block w-full bg-primary text-white py-2.5 rounded-md hover:bg-primary-hover text-center"
               >
                 Request for free demo

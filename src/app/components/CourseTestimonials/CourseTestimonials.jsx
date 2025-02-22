@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import Script from "next/script";
 
 const Testimonial = ({ testimonial, isActive }) => (
   <div
@@ -38,8 +39,48 @@ const TestimonialCarousel = ({ testimonials }) => {
     return () => clearInterval(timer);
   }, [testimonials.length]);
 
+  // Structured data for testimonials
+  const testimonialStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "VR IT Solutions",
+    "review": testimonials.map((testimonial, index) => ({
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": testimonial.author
+      },
+      "reviewBody": testimonial.quote,
+      "position": index + 1,
+      "datePublished": new Date().toISOString().split('T')[0],
+      "publisher": {
+        "@type": "Organization",
+        "name": "VR IT Solutions",
+        "sameAs": "https://vr-it-solutions.vercel.app"
+      }
+    })),
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": testimonials.length.toString(),
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  };
+
   return (
     <div className="mt-16 relative h-[225px]">
+      <Script
+        id="testimonials-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(testimonialStructuredData) }}
+      />
+      
       {testimonials.map((testimonial, index) => (
         <Testimonial
           key={index}
@@ -47,6 +88,7 @@ const TestimonialCarousel = ({ testimonials }) => {
           isActive={index === activeIndex}
         />
       ))}
+      
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {testimonials.map((_, index) => (
           <button
@@ -55,6 +97,7 @@ const TestimonialCarousel = ({ testimonials }) => {
               index === activeIndex ? "bg-primary" : "bg-gray-300"
             }`}
             onClick={() => setActiveIndex(index)}
+            aria-label={`Show testimonial ${index + 1}`}
           />
         ))}
       </div>

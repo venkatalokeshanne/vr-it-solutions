@@ -1,4 +1,5 @@
 "use client";
+import { protectEmail } from '@/app/util';
 import { Mail, Phone, X } from 'lucide-react';
 import { useState } from 'react';
 

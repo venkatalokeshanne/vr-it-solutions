@@ -1,5 +1,6 @@
-// components/KeyDifferentiators.jsx
+"use client";
 import { useState } from 'react';
+import Script from 'next/script';
 import { TerminalSquare, Users, Clock, BarChart2, Briefcase, CheckCircle } from 'lucide-react';
 import { redirect } from 'next/navigation';
 
@@ -45,9 +46,97 @@ export default function KeyDifferentiators({data}) {
     }
   ];
 
+  const differentiatorSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": differentiators.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "Service",
+        "name": item.title,
+        "description": item.description
+      }
+    }))
+  };
+
+  // Course offering structured data
+  const courseOfferingSchema = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": `${data.course} Training Program`,
+    "description": `Professional ${data.course} training with industry expert instructors`,
+    "provider": {
+      "@type": "Organization",
+      "name": "VR IT Solutions",
+      "sameAs": "https://vr-it-solutions.vercel.app"
+    },
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": ["online", "onsite"],
+      "duration": data.hoursContent,
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    "coursePrerequisites": "Basic understanding of programming concepts",
+    "educationalLevel": "Professional",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "500",
+      "bestRating": "5"
+    }
+  };
+
+  // Stats structured data
+  const statsSchema = {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": `${data.course} Training Statistics`,
+    "description": "Key performance metrics for our training program",
+    "variableMeasured": [
+      {
+        "@type": "PropertyValue",
+        "name": "Placement Rate",
+        "value": "98%"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Training Duration",
+        "value": data.hoursContent
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Support Access",
+        "value": "24/7"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Practical Focus",
+        "value": "100%"
+      }
+    ]
+  };
+
   return (
     <section className="max-w-7xl mx-auto px-4 py-8 overflow-hidden bg-gradient-to-b from-white to-primary-light/20 relative">
-    {/* Background decorative elements */}
+      <Script
+        id="differentiators-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(differentiatorSchema) }}
+      />
+      <Script
+        id="course-offering-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseOfferingSchema) }}
+      />
+      <Script
+        id="stats-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(statsSchema) }}
+      />{/* Background decorative elements */}
     <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
       <div className="absolute -top-64 -right-64 w-96 h-96 bg-primary-light rounded-full opacity-50 blur-3xl"></div>
       <div className="absolute top-96 -left-64 w-96 h-96 bg-primary-light rounded-full opacity-50 blur-3xl"></div>

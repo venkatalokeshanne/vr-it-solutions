@@ -2,6 +2,7 @@ import Script from "next/script";
 import { notFound } from "next/navigation";
 import CourseDetails from "../components/CourseDetails/CourseDetails";
 import courses from "@/data/courses";
+import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 
 export async function generateStaticParams() {
   return courses.map((course) => ({
@@ -137,13 +138,13 @@ export default async function Page({ params }) {
   };
 
   return (
-    <>
+    <ErrorBoundary>
       <Script
         id="structured-data"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <CourseDetails courseData={course} />
-    </>
+    </ErrorBoundary>
   );
 }

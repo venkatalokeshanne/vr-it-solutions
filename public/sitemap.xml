@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://vr-it-solutions.vercel.app/src\app\</loc>
+    <lastmod>2025-02-22T10:43:12.881Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://vr-it-solutions.vercel.app/src\app\\x</loc>
+    <lastmod>2025-02-22T10:43:12.881Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://vr-it-solutions.vercel.app/src\app\services\x</loc>
+    <lastmod>2025-02-22T10:43:12.881Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://vr-it-solutions.vercel.app/src\app\placements\x</loc>
+    <lastmod>2025-02-22T10:43:12.881Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://vr-it-solutions.vercel.app/src\app\courses\x</loc>
+    <lastmod>2025-02-22T10:43:12.881Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://vr-it-solutions.vercel.app/src\app\contactus\x</loc>
+    <lastmod>2025-02-22T10:43:12.881Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://vr-it-solutions.vercel.app/src\app\aboutus\x</loc>
+    <lastmod>2025-02-22T10:43:12.881Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
