@@ -1,5 +1,5 @@
 import React from "react";
-import TestimonialCarousel from "../CourseTestimonials/CourseTestimonials";
+import TestimonialCarousel from "../../CourseTestimonials/CourseTestimonials";
 import { redirect } from "next/navigation";
 
 const WhyJoinThisCourse = ({ data }) => {

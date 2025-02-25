@@ -1,11 +1,18 @@
-import { TrendingUp, Globe, DollarSign, Award, Zap,  Code, 
-  Building2, 
-  Database, 
-  Network, 
+import {
+  TrendingUp,
+  Globe,
+  DollarSign,
+  Award,
+  Zap,
+  Code,
+  Building2,
+  Database,
+  Network,
   Settings,
   Cloud,
   Shield,
-  Box } from "lucide-react";
+  Box,
+} from "lucide-react";
 
 const courses = [
   {
@@ -14,17 +21,26 @@ const courses = [
     link: "salesforce",
     trending: 1,
     image: "/images/courses/salesforce.png",
-    description:
-      "Salesforce is a leading cloud-based CRM platform that helps businesses manage customer relationships, streamline processes, and improve productivity. This comprehensive training program covers both Salesforce Administration and Development, equipping you with the skills needed to manage and customize Salesforce applications effectively. Whether you're an aspiring administrator or a developer, this course will prepare you for real-world scenarios and help you achieve Salesforce certification.",
+    description: [
+      "VRIT Solutions distinguished itself as the leading Salesforce Training institute in Hyderabad and Salesforce Online Trainings.",
+      "Our trainers are highly qualified and have extensive experience in providing quality classroom and online training on Salesforce.",
+      "Salesforce is known for being one of the most versatile CRM platforms, helping companies manage customer relationships, sales channels, and tasks efficiently.",
+      "This platform is highly beneficial for entrepreneurs looking to expand their businesses.",
+      "However, learning how to use Salesforce effectively can be challenging.",
+      "At VRIT Solutions, we offer the best Salesforce training and coaching in the city.",
+      "Our trainers are experienced professionals who will teach you everything you need to know about this powerful CRM system.",
+      "VR IT Solutions is one of the best Salesforce training providers in Hyderabad, offering a well-focused and career-oriented training program in Salesforce.",
+    ],
     instructor: "VR IT Solutions",
     language: "English",
-    hoursContent: '70h',
+    hoursContent: "70h",
     category: "DevOps & Cloud",
     level: "Beginner to Advanced",
     coursePrerequisites: [
-      "Working computer with internet access, valid email address, and understanding of English language.",
-      "Basic computer literacy, familiarity with Microsoft Word and Excel, and general internet usage skills.",
-      "The course is divided into modules covering setup, sales processes, channels, and forecasting over approximately five weeks."
+      "If you are looking to take up an online Salesforce course 66, then the prerequisites you will need are a working computer with internet access, a valid email address, and a desire to learn. Additionally, you will need to understand the English language, as this is the language of the course.",
+      "This course is designed for people who want to learn how to use Salesforce for their business. Therefore, the prerequisites for this course include understanding how to use a computer, using Microsoft Word and Excel, and being familiar with internet usage.",
+      "The course starts with an introduction to Salesforce and how it can be used in business. You will then move on to learn how to create and manage a Salesforce account. After that, you will learn to use Salesforce features such as leads, contacts, and deals. You will also learn how to use Salesforce for marketing purposes. The last part of the course focuses on learning how to use Salesforce for enterprise-scale deployments.",
+      "The course is divided into different modules, and each module is roughly five weeks long. Each module covers a different topic: setting up Salesforce, creating and managing sales processes, creating and managing sales channels, and forecasting and managing sales results. Upon completing the course, you will be able to use Salesforce to manage your business and achieve your goals.",
     ],
     sections: [
       {
@@ -283,6 +299,13 @@ const courses = [
         ],
       },
     ],
+    courseHighlights: [
+      "VR IT Solutions provides complete knowledge of Salesforce and the opportunity to work with the best and most experienced trainers in your field.",
+      "We offer you an excellent platform for career growth.",
+      "The complete Salesforce training is customized with real-time online sessions and project work.",
+      "Added to these highlights, We provide a 100% guarantee of your success.",
+      "We have a record of working closely with trainers who are industry experts.",
+    ],
     learningPoints: [
       "Master Salesforce Administration and Development skills",
       "Understand Salesforce architecture and multi-tenant environment",
@@ -298,8 +321,9 @@ const courses = [
       course: "Salesforce",
       title: "Why Join This Course?",
       description: [
-        "With rapid technological advancements, this course is slowly gaining importance in the market. The uniqueness of this course is it teaches you mule in step by step manner starting from basics to advanced without the requirement of any previous integration background.",
-        "VR IT Solutions provides a structured and practical approach to Salesforce training, ensuring you gain the skills needed to excel in your career.",
+        "With rapid technological advancements, this course is slowly gaining importance in the market.",
+        "The uniqueness of this course is it teaches you Mule in a step-by-step manner, starting from basics to advanced, without the requirement of any previous integration background.",
+        "VR IT Solutions is one of the few institutes in Hyderabad to offer the best and most innovative training in Salesforce online training that is well suited to help you get started and embark on a fruitful journey. So, get started by clicking here.",
       ],
       benefits: [
         {
@@ -354,7 +378,7 @@ const courses = [
         },
       ],
     },
-},
+  },
   {
     title: "Azure DevOps Training in Hyderabad",
     course: "Azure DevOps",
@@ -363,10 +387,10 @@ const courses = [
     trending: 2,
     category: "DevOps & Cloud",
     description:
-      "This comprehensive course is designed to help learners develop proficient skills in Azure DevOps and subsequently leverage their skills to implement solutions in Azure. The training covers various on-demand aspects of both Azure DevOps [AZ400] and Azure admin [AZ104], including case studies and hands-on projects to ensure mastery of DevOps and Azure concepts.",
+      "VRIT Solutions is recognized for providing Realtime Azure Devops Training in Hyderabad and Azure Devops Online Training throughout world.\n\nVR IT Solutions is one of the best software training institute in Hyderabad. Azure Devops (previously known as Visual Studio Team Services (VSTS) or Visual Studio Online) is the cloud based Devops dashboard and provided by Microsoft. Azure Devops captures over 15 years of investment and learnings in providing tools to support software development teams.",
     instructor: "VR IT Solutions",
     language: "English",
-    hoursContent: '70h',
+    hoursContent: "70h",
     level: "Beginner to Advanced",
     coursePrerequisites: [
       "Basic understanding of cloud computing concepts.",
@@ -409,7 +433,10 @@ const courses = [
           { title: "Virtual Machine instances" },
           { title: "Azure VM types and Pricing" },
           { title: "Disks & Images" },
-          { title: "Setting up VM in Availability set using Load Balanced Endpoint" },
+          {
+            title:
+              "Setting up VM in Availability set using Load Balanced Endpoint",
+          },
           { title: "VM Availability using Availability Sets" },
           { title: "Provisioning the Linux & windows VM" },
           { title: "Importance of Jumphost" },
@@ -457,7 +484,10 @@ const courses = [
           { title: "Branching strategy on the Azure Repos" },
           { title: "Branching policies on the Azure Repos" },
           { title: "Branch locking" },
-          { title: "Setting up the Global Branching Policies on the Release Folder" },
+          {
+            title:
+              "Setting up the Global Branching Policies on the Release Folder",
+          },
           { title: "Maintain the security on the Repos" },
         ],
       },
@@ -487,7 +517,9 @@ const courses = [
           { title: "Understanding on the Pods and pod lifecycle" },
           { title: "Writing yaml from the scratch including syntaxes" },
           { title: "Types of Kubernetes Exposed Services" },
-          { title: "Differences among Cluster IP vs Node Port vs Load Balancer" },
+          {
+            title: "Differences among Cluster IP vs Node Port vs Load Balancer",
+          },
           { title: "BoM Preparation for AKS components" },
           { title: "Architecture for Cluster IP, Node Port and Load Balancer" },
           { title: "Creating a Deployment in Kubernetes using YAML" },
@@ -497,8 +529,14 @@ const courses = [
           { title: "Security on the AKS setup process" },
           { title: "Difference between the AKS public and private cluster" },
           { title: "Deploying to Multiple clusters using same VM" },
-          { title: "How to connect to the VM to Private DNS zone of AKS API Server" },
-          { title: "Importance VNet Link and Vnet peering in the AKS multi cluster connection" },
+          {
+            title:
+              "How to connect to the VM to Private DNS zone of AKS API Server",
+          },
+          {
+            title:
+              "Importance VNet Link and Vnet peering in the AKS multi cluster connection",
+          },
           { title: "Creating a Service in Kubernetes using YAML" },
           { title: "Creating a Secrets in Kubernetes using YAML" },
           { title: "Accessing the secrets in the Kubernetes Deployment yaml" },
@@ -507,10 +545,15 @@ const courses = [
           { title: "External Load Balancer vs Internal Load balancer" },
           { title: "Importance and Drawbacks of the Kubernetes services" },
           { title: "Introduction to Ingress" },
-          { title: "Provisioning the Application Gateway [Ingress Controller]" },
+          {
+            title: "Provisioning the Application Gateway [Ingress Controller]",
+          },
           { title: "Path/Host Mapping Techniques" },
           { title: "Security on the Application Gateway" },
-          { title: "Setting up the Realtime project using AKS along with APGW Ingress Controller" },
+          {
+            title:
+              "Setting up the Realtime project using AKS along with APGW Ingress Controller",
+          },
         ],
       },
       {
@@ -521,13 +564,22 @@ const courses = [
           { title: "Selenium Target locators" },
           { title: "Techniques in Writing XPath" },
           { title: "Understanding on the Web-elements in the webpage" },
-          { title: "Selenium commands to handle the Web-elements in the webpage" },
+          {
+            title:
+              "Selenium commands to handle the Web-elements in the webpage",
+          },
           { title: "Selenium commands to handle alerts, windows & Frames" },
           { title: "Understanding the Selenium Real time Framework" },
           { title: "Understanding the POM Framework" },
           { title: "Importance of Wrapper Methods" },
-          { title: "Writing the Business understandable scenarios in BDD format using Cucumber Plugin" },
-          { title: "Exporting the Reports using Extent Reports with screen shots" },
+          {
+            title:
+              "Writing the Business understandable scenarios in BDD format using Cucumber Plugin",
+          },
+          {
+            title:
+              "Exporting the Reports using Extent Reports with screen shots",
+          },
         ],
       },
       {
@@ -538,8 +590,14 @@ const courses = [
           { title: "Understanding the Terraform Commands" },
           { title: "Creating a Resource Group using Terraform" },
           { title: "Creating Network components in Azure using Terraform" },
-          { title: "Deploying VM inside a custom Virtual Network in Azure using Terraform" },
-          { title: "Deploying DB inside a custom Virtual Network in Azure using Terraform" },
+          {
+            title:
+              "Deploying VM inside a custom Virtual Network in Azure using Terraform",
+          },
+          {
+            title:
+              "Deploying DB inside a custom Virtual Network in Azure using Terraform",
+          },
         ],
       },
       {
@@ -585,7 +643,10 @@ const courses = [
           { title: "Helm Repo add" },
           { title: "Develop on Azure Kubernetes Service (AKS) with Helm" },
           { title: "Generate Helm Chart and update the Chart (template)" },
-          { title: "Send Helm Chart to Azure Kubernetes Service (AKS) to deploy the Java application" },
+          {
+            title:
+              "Send Helm Chart to Azure Kubernetes Service (AKS) to deploy the Java application",
+          },
         ],
       },
       {
@@ -611,19 +672,22 @@ const courses = [
       },
     ],
     learningPoints: [
-      "Master Azure DevOps and Azure administration skills",
-      "Understand Azure networking, virtual machines, and storage",
-      "Implement CI/CD pipelines using Azure Pipelines",
-      "Containerize applications using Docker and Kubernetes",
-      "Automate infrastructure deployment using Terraform and Ansible",
-      "Gain hands-on experience with real-world projects and case studies",
+      "Azure DevOps is an agnostic DevOps toolchain – a language, platform, and cloud provider from Microsoft. It is a software as a service (SaaS) platform that offers an end-to-end DevOps toolchain for developing and installing software. It is highly flexible concerning application integration, which implies it can easily integrate with almost all the leading applications in the market, making it highly desirable from development and cost perspectives.",
+      "Coming to its architecture, Azure DevOps is developed on a multi-tier and scalable architecture and using Windows Communications Foundations web services. With Azure DevOps, users can plan smarter, collaborate efficiently, and ship quickly with a set of state-of-the-art dev services. DevOps lets users unify resources, processes, and technology to develop innovative products for their clients quickly.",
+      "Azure DevOps comes with a unique set of services such as Azure Boards, Azure Pipelines, Azure Repos, Azure Artifacts, and Azure Test Plans. This means users' productivity and efficiency are enhanced manifold without being worried about the complex nitty-gritty of technical paradigms or purchasing costly third-party extension tools. And the best part of Azure DevOps is it is highly flexible and platform agnostic, which means it can work on any platform (such as Linux or MacOS), any language (such as C, C++, Java, Python, and more), and any Cloud platform. Moreover, it easily supports the most popular tools in the market.",
+      "Some of the key benefits offered by DevOps include reliability, scalability, access to the latest features (every 3 weeks), and an end to the upgrade process. Above all, it is backed by an SLA of 99.9% uptime with round-the-clock support to readily address any users' queries. Because of its huge flexibility of language, platform, and cloud vendors' support, it has become the best option for most organizations.",
     ],
     whyJoin: {
       course: "Azure DevOps",
       title: "Why Join This Course?",
       description: [
-        "This course provides a comprehensive understanding of Azure DevOps and Azure administration, equipping you with the skills needed to implement solutions in Azure. The training includes hands-on projects and case studies to ensure practical knowledge.",
-        "VR IT Solutions offers a structured and practical approach to Azure DevOps training, ensuring you gain the skills needed to excel in your career.",
+        "With ever-increasing opportunities in all facets of application development, it becomes imperative for professionals and students alike to do this course and reap huge benefits out of their investment. Certification in Microsoft Azure from VRIT solutions can help boost your earning potential manifold while providing high-level job security. As per a recent prediction, around 80% of all enterprise workloads will eventually migrate to the cloud by 2025, which implies generating a huge demand for Devops professionals in the coming years. A typical Devops professional is an expert in developing cloud applications and managing cloud infrastructures, and this training provides the right platform to get started in these areas.",
+        "This course is best suited for fresh graduates, who intend to get into the booming Azure job market or professionals with around 2 years of experience who want to make a shift to cloud security for better job prospects.",
+        "VRIT Solutions offers the best Devops training in Ameerpet, Hyderabad. Become an industry-ready professional with our highly intensive course, backed by strong hands-on live projects. This course covers all the requisite concepts and applications needed to become a thoroughbred professional and make you job-ready. So, what are you waiting for?",
+        "Make VRIT Solutions your first choice for Azure Devops training in Hyderabad due to its time-tested training methodology coupled with hands-on practical sessions and live projects. We offer the best-in-class Azure Devops training and Azure Devops job support to offer the right platform to power your career to the next level.",
+        "So, don't stay behind. Join now for a lucrative career.",
+        "After successful completion of the Azure Devops Training course we have successfully placed our students in major MNC companies. We offer 100% placement support to our students.",
+        "VRIT Solutions offers 100% placement Guaranteed program for deserving students.",
       ],
       benefits: [
         {
@@ -685,17 +749,37 @@ const courses = [
     link: "servicenow",
     trending: 3,
     image: "/images/courses/servicenow.png",
-    description:
-      "ServiceNow is a leading cloud-based platform that helps organizations automate IT service management, streamline processes, and improve productivity. This comprehensive training program covers both ServiceNow Administration and Development, equipping you with the skills needed to manage and customize ServiceNow applications effectively. Whether you're an aspiring administrator or a developer, this course will prepare you for real-world scenarios and help you achieve ServiceNow certification.",
+    description: [
+      "VRIT Solutions is a prominent name in Hyderabad's best ServiceNow training. We are a one-stop solution for people looking for top and best ServiceNow Training.",
+      "Our trainers are highly qualified and experienced in providing high-quality training in Hyderabad.",
+      "The Certified Expert Group has created our content and curriculum of ServiceNow based on current industry needs.",
+      "This allows students to become industry-ready professionals, where they can handle most real-time scenarios.",
+    ],
+    aboutTheCourse: [
+      "ServiceNow is a cloud company that is evolving rapidly and offers its products to companies of all sizes – large, medium, and small.",
+      "It is a major player in the Information Technology Service Management (ITSM) arena.",
+      "ServiceNow has a robust cloud platform on which any application can be built quickly.",
+      "Learning ServiceNow helps users in various organizational roles working within the ServiceNow platform.",
+      "This platform is continuously evolving and has a promising future in the long term.",
+      "VR IT Solutions is one of the best ServiceNow training providers, offering a well-focused and career-oriented training program in ServiceNow. So, get started by clicking here.",
+    ],
     instructor: "VR IT Solutions",
     language: "English",
-    hoursContent: '70h',
+    hoursContent: "70h",
     category: "DevOps & Cloud",
     level: "Beginner to Advanced",
     coursePrerequisites: [
-      "Basic understanding of IT service management (ITSM) concepts.",
-      "Familiarity with cloud computing and web technologies.",
-      "Knowledge of basic scripting and programming concepts.",
+      "VR IT Solutions hasn’t specified any key prerequisites for this course.",
+      "However, participants with prior knowledge of similar platforms may better appreciate this course.",
+      "If you are looking for ServiceNow online training, VR IT Solutions is the right institute for you.",
+    ],
+    whoShouldAttend: [
+      "Graduates interested in entering this field",
+      "Professionals working on ITIL and using the ServiceNow tool to further enhance their knowledge",
+      "Software professionals looking for lucrative careers in ServiceNow",
+      "Middle-level managers interested in switching their careers",
+      "Business Analysts",
+      "Technical Managers",
     ],
     sections: [
       {
@@ -778,21 +862,35 @@ const courses = [
       },
     ],
     learningPoints: [
-      "Master ServiceNow Administration and Development skills",
-      "Understand ServiceNow architecture and licensing",
-      "Manage user access, security, and data effectively",
-      "Automate workflows and processes using ServiceNow tools",
-      "Create custom tables, forms, and scripts",
-      "Develop and deploy ServiceNow applications",
-      "Integrate ServiceNow with external systems",
-      "Gain hands-on experience with real-world projects and case studies",
+      "Explore lists and forms",
+      "Identify the significance of branding and learn how to apply it to the platform",
+      "Learn how to add users, groups, and roles",
+      "Identify best practices pertaining to task management",
+      "Learn how to configure notifications",
+      "Get hands-on experience managing data with tables, the Configuration Management Database (CMDB), and import sets",
+      "Learn how to run basic reports and appreciate the benefits of performance analytics",
+      "Know how to protect ServiceNow data",
+      "Learn how to work with two key ServiceNow process applications: Knowledge Base and Service Catalog",
+      "Understand how to create workflow activities and approvals",
+      "Get an overview of how to implement Service Level Agreements",
+      "Identify various available script types",
+      "Upgrade and clone instances, as well as create baseline performance metrics",
+      "Capture and move configurations between instances",
+      "Live Project",
+    ],
+    learningNotes: [
+      "The syllabus listed above is indicative in nature and may include more topics for comprehensive learning.",
+      "This course is supplemented by relevant lab exercises, ServiceNow interview questions, lectures, and group discussions, as well as extensive hands-on practice.",
+      "VR IT Solutions is one of the best software training institutes in Hyderabad, offering excellent ServiceNow online training.",
     ],
     whyJoin: {
       course: "ServiceNow",
       title: "Why Join This Course?",
       description: [
-        "ServiceNow is a rapidly growing platform used by organizations worldwide to automate IT service management. This course provides a comprehensive understanding of ServiceNow, equipping you with the skills needed to excel in your career.",
-        "VR IT Solutions offers a structured and practical approach to ServiceNow training, ensuring you gain the skills needed to excel in your career.",
+        "With ServiceNow having a great future in both India and abroad, it offers excellent value for professionals working on this platform and also for existing technocrats who are interested in migrating to this new platform.",
+        "ServiceNow is being used by most of the world’s top multinationals, where professionals in this field earn very high salaries compared to other technologies.",
+        "Make VR IT Solutions your first choice for ServiceNow training in Hyderabad due to its systematic training methodology and state-of-the-art practical sessions!",
+        "So, don’t stay behind. Join now for a lucrative career.",
       ],
       benefits: [
         {
@@ -854,32 +952,55 @@ const courses = [
     link: "pega",
     image: "/images/courses/pega.png",
     trending: 4,
-    description:
-      "Pega is a leading Business Process Management (BPM) tool that helps organizations automate workflows, streamline processes, and improve productivity. This comprehensive training program covers both Pega Administration and Development, equipping you with the skills needed to manage and customize Pega applications effectively. Whether you're an aspiring administrator or a developer, this course will prepare you for real-world scenarios and help you achieve Pega certification.",
+    description: [
+      "VRIT Solutions is a prominent name among Hyderabad's best PEGA training institutes.",
+      "We are a one-stop solution for people looking for top and best PEGA Training in Hyderabad and PEGA Online Training.",
+      "Our trainers are highly qualified and experienced in providing high-quality training in Hyderabad.",
+      "The Certified Expert Group has created our content and curriculum for PEGA based on current industry needs.",
+      "This allows students to become industry-ready professionals, capable of handling most real-time scenarios.",
+    ],
     instructor: "VR IT Solutions",
     language: "English",
-    hoursContent: '70h',
+    hoursContent: "70h",
     category: "Automation",
     level: "Beginner to Advanced",
+    aboutTheCourse: [
+      "PEGA is an application development tool used in BPM and CRM Applications, developed by Pega Systems Inc., Cambridge, Massachusetts.",
+      "The uniqueness of this software is it doesn’t use any programming/coding to develop web & enterprise applications, and it has a Java backend engine.",
+      "Pega comes with a drag and drop UI and offers easily configurable settings, which in turn helps to develop applications faster and with higher quality, compared to Java.",
+      "This platform offers the capability by streamlining, automating, and documenting business processes in a way that enables easy consolidation of multi-stream processing into one system.",
+      "VR IT Solutions is one of the Pega training centers in Hyderabad offering a well-focused and career-oriented training program in Pega. So, get started by clicking here.",
+    ],
+    learningNotes: [
+      "The syllabus listed above is indicative in nature and may include more topics for comprehensive learning.",
+      "VR IT Solutions is one of the few institutes in Hyderabad to offer excellent Online Pega training in hyderabad and pega classroom training in Hyderabad.",
+    ],
     coursePrerequisites: [
-      "Basic understanding of business process management (BPM) concepts.",
-      "Familiarity with programming and scripting concepts.",
-      "Knowledge of basic database and web technologies.",
+      "VR IT solutions haven't prescribed any specific prerequisites. However, knowledge of CRM and BPM would be an added advantage and helps the participants to better appreciate the course.",
     ],
     sections: [
       {
         title: "Introduction to Pega",
         lectures: [
           { title: "What is BPM, BRE, and BPMS" },
-          { title: "Ruleset, Version, Application, Access group, and Operator ID" },
+          {
+            title:
+              "Ruleset, Version, Application, Access group, and Operator ID",
+          },
           { title: "Class, Inheritance, and Types of Classes" },
         ],
       },
       {
         title: "User Interface Design",
         lectures: [
-          { title: "Designing User Interface using Section, Harness, Control, and Layouts" },
-          { title: "Lab Session: Using UI Rules like Section, Harness, Control, and Layouts" },
+          {
+            title:
+              "Designing User Interface using Section, Harness, Control, and Layouts",
+          },
+          {
+            title:
+              "Lab Session: Using UI Rules like Section, Harness, Control, and Layouts",
+          },
         ],
       },
       {
@@ -892,7 +1013,10 @@ const courses = [
       {
         title: "Flow Basics",
         lectures: [
-          { title: "Flow Basic Shapes: Assignment, Connector, Decision Shape, Utility, Ticket, etc." },
+          {
+            title:
+              "Flow Basic Shapes: Assignment, Connector, Decision Shape, Utility, Ticket, etc.",
+          },
         ],
       },
       {
@@ -927,19 +1051,32 @@ const courses = [
       },
     ],
     learningPoints: [
-      "Master Pega Administration and Development skills",
-      "Understand Pega architecture and rulesets",
-      "Design user interfaces using Pega tools",
-      "Automate workflows and processes using Pega",
-      "Implement advanced Pega concepts like declarative rules and validations",
-      "Gain hands-on experience with real-world projects and case studies",
+      "Overview of BPM",
+      "Project implementation methodology, class structures and hierarchy",
+      "Data modelling",
+      "Process flow",
+      "User Interface",
+      "Declarative rules",
+      "Case Management",
+      "Database Concepts of PRPC",
+      "Activities",
+      "Integration with external systems",
+      "Rule Management & Security",
+      "Performance, PRPC Guardrails & Topics revision",
+      "And a live project",
+    ],
+    whoShouldAttend: [
+      "Beginners",
+      "Business consultants",
+      "Corporate managers who intend to switch their careers",
+      "Project managers who want to understand the concepts for providing realistic effort estimates for projects",
+      "Software engineers who have a penchant for getting into the business domain",
     ],
     whyJoin: {
       course: "Pega",
       title: "Why Join This Course?",
       description: [
-        "Pega is a rapidly growing platform used by organizations worldwide to automate business processes. This course provides a comprehensive understanding of Pega, equipping you with the skills needed to excel in your career.",
-        "VR IT Solutions offers a structured and practical approach to Pega training, ensuring you gain the skills needed to excel in your career.",
+        "Organizations across the world are developing applications in Pega on a greater scale, compared to any other tools and hence it makes sense to get hands-on on this tool to make an excellent career in Pega. VR IT solutions offers Pega online training also the most comprehensive, practical and upto date Pega training. It should be appreciated that several frameworks are build on Pega Process Commander to support various aspects of business requirements.",
       ],
       benefits: [
         {
@@ -1005,13 +1142,26 @@ const courses = [
       "DevOps is a set of practices that combines software development (Dev) and IT operations (Ops) to shorten the development lifecycle and deliver high-quality software continuously. This comprehensive training program covers DevOps principles, tools, and practices, equipping you with the skills needed to implement CI/CD pipelines, automate infrastructure, and manage cloud environments effectively.",
     instructor: "VR IT Solutions",
     language: "English",
-    hoursContent: '70h',
+    aboutTheCourse: [
+      "DevOps is considered as the practice that accentuates the collaboration and communication of both software developers as well as IT Professionals. It computerizes the process of infrastructure and software delivery changes.",
+      "DevOps combines cultural philosophies, practices and tools that enhances a company’s ability to offer applications and services at a greater agility and at the same time, lets in evolving and enhancing products at a brisker pace, compared to traditional software engineering practices. More precisely, in the DevOps model, both development and operations team work in tandem, where the engineers work across the entire lifecycle, right from development, testing, deployment to operations; and develop skill sets, which are not limited to a specific function.",
+      "VR IT Solutions is one of the best devops training in hyderabad we offer devops online training with well focused and career-oriented training program in DevOps. So, get started by clicking here.",
+    ],
+
+    hoursContent: "70h",
     category: "DevOps & Cloud",
     level: "Beginner to Advanced",
     coursePrerequisites: [
-      "Basic understanding of software development and IT operations.",
-      "Familiarity with Linux commands and scripting.",
-      "Knowledge of basic networking and cloud concepts.",
+      "VR IT solutions haven’t prescribed any specific pre-requisites for this course, though basic knowledge of object-oriented programming is good enough to start and appreciate this course.",
+    ],
+    whoShouldAttend: [
+      "Software architects",
+      "Project managers",
+      "Business analysts",
+      "System analysts",
+      "IT managers",
+      "Software developers",
+      "Fresh graduates with a passion to get into this domain.",
     ],
     sections: [
       {
@@ -1079,7 +1229,9 @@ const courses = [
         lectures: [
           { title: "Amazon CloudWatch: Metrics, Alarms, and Logs" },
           { title: "AWS CloudTrail: Auditing & Logging" },
-          { title: "AWS Config: Resource Inventory & Configuration Management" },
+          {
+            title: "AWS Config: Resource Inventory & Configuration Management",
+          },
           { title: "AWS Systems Manager: Automation & Patching" },
           { title: "AWS Trusted Advisor & Security Hub" },
         ],
@@ -1158,7 +1310,9 @@ const courses = [
           { title: "Deploying Kubernetes Clusters on AWS (EKS)" },
           { title: "Kubernetes Networking (Services, Ingress)" },
           { title: "Helm Charts for Kubernetes Application Deployment" },
-          { title: "Kubernetes Monitoring & Logging with Prometheus & Grafana" },
+          {
+            title: "Kubernetes Monitoring & Logging with Prometheus & Grafana",
+          },
         ],
       },
       {
@@ -1213,26 +1367,46 @@ const courses = [
       {
         title: "Project Work & Real-World Scenarios",
         lectures: [
-          { title: "End-to-End CI/CD Pipeline on AWS with Jenkins, Docker, and Kubernetes" },
+          {
+            title:
+              "End-to-End CI/CD Pipeline on AWS with Jenkins, Docker, and Kubernetes",
+          },
           { title: "Multi-Region, Multi-AZ Deployment & Disaster Recovery" },
           { title: "Advanced Security Practices & Compliance Automation" },
-          { title: "Real-Time Monitoring & Alerting for Large-Scale Applications" },
+          {
+            title:
+              "Real-Time Monitoring & Alerting for Large-Scale Applications",
+          },
         ],
       },
     ],
     learningPoints: [
-      "Master DevOps principles and practices",
-      "Implement CI/CD pipelines using Jenkins, Docker, and Kubernetes",
-      "Automate infrastructure using Terraform and Ansible",
-      "Manage cloud environments on AWS",
-      "Gain hands-on experience with real-world projects and case studies",
+      "Introduction to DevOps",
+      "Concepts in Linux and Automation",
+      "Basic concepts in Revision Controls System",
+      "Overview of Configuration Management",
+      "Understanding Environments",
+      "Working on Build Automation",
+      "Basic overview of Tomcat Web Server",
+      "Overview of Nexus Artifacts/Proxy Tool",
+      "Advanced concepts in Jenkins Framework",
+      "Setting up of LAMP",
+      "Advanced concepts of Apache/HTTPD Web Service",
+      "Overview of MySQL Database",
+      "Installation of WordPress with LAMP",
+      "Working with Docker",
+      "Overview of System Monitoring",
+      "Live project",
+    ],
+    learningNotes: [
+      "The syllabus listed above is indicative in nature and may include more topics for comprehensive learning.",
+      "VR IT Solutions is one of the few institutes in Hyderabad to offer excellent DevOps online training and DevOps classroom training.",
     ],
     whyJoin: {
       course: "DevOps",
       title: "Why Join This Course?",
       description: [
-        "DevOps is a rapidly growing field that combines software development and IT operations to deliver high-quality software continuously. This course provides a comprehensive understanding of DevOps, equipping you with the skills needed to excel in your career.",
-        "VR IT Solutions offers a structured and practical approach to DevOps training, ensuring you gain the skills needed to excel in your career.",
+        "With speed, rapid delivery, and reliability being the key benefits of DevOps practice, this course is assuming significance in every spectrum of software development across a wide range of organizations – large, medium or small. Hence, it makes sense for professionals to learn this course to contribute immensely in this new age software development that drives greater value and offers immense benefits for the organizations. This course is offered by real-time professionals to help you understand the actual scenarios and problems. This training helps you master various concepts including principles of continuous development and deployment, software development operations, continuous integration, automation and configuration management. In addition to these concepts, you will also gain hands-on experience on various tools like Git, Docker, Jenkins, etc.",
       ],
       benefits: [
         {
@@ -1294,17 +1468,41 @@ const courses = [
     link: "mulesoft",
     trending: 6,
     image: "/images/courses/mulesoft.png",
-    description:
-      "MuleSoft is a leading integration platform that helps organizations connect applications, data, and devices seamlessly. This comprehensive training program covers MuleSoft's Anypoint Platform, equipping you with the skills needed to design, develop, and manage APIs and integrations effectively. Whether you're an aspiring developer or an integration specialist, this course will prepare you for real-world scenarios and help you achieve MuleSoft certification.",
+    description: [
+      "VRIT Solutions distinguished itself as the leading MuleSoft Training institute in Hyderabad and MuleSoft Online Trainings. Our Trainers are highly qualified and have high experience in providing quality classroom and online training on MuleSoft.",
+      "Mule the prominent section at MuleSoft. As it is an event based architecture, the actions in the Mule Network are generated through the actions taking place in Mule or through external systems. Payload is the data from each event. In order to connect applications, devices, and data from around the world, MuleSoft allows you to easily connect anything with the Anypoint platform.",
+      "Students and professionals who intend to expand their careers with their interest in analysis can take this course with MuleSoft Classroom Training in Hyderabad or MuleSoft Online Training.",
+    ],
+    aboutTheCourse: [
+      "Mulesoft training in hyderabad",
+      "MuleSoft’s Anypoint Platform™ is the world’s leading integration platform for SOA, SaaS and APIs. Mulesoft offers exceptional business agility to organizations by easily integrating applications, services and managing events in real time with universal connectivity in both the modes – on premise and in the cloud, which is executed with an API-led approach. Using this platform, organizations can re-architect their SOA infrastructure from legacy systems, proprietary platforms and customer integration code to generate business agility. Organizations can also migrate technology infrastructure to the public or private cloud and prioritize adoption of SaaS applications and other cloud based technologies.",
+      "VR IT Solutions is one of the best Mulesoft training in Hyderabad to offer well focused and career-oriented training program in MuleSoft. So, get started by clicking here.",
+    ],
     instructor: "VR IT Solutions",
     language: "English",
-    hoursContent: '70h',
+    hoursContent: "70h",
     category: "Integration & API Management",
     level: "Beginner to Advanced",
     coursePrerequisites: [
-      "Basic understanding of integration concepts.",
-      "Familiarity with web services and APIs.",
-      "Knowledge of basic programming and scripting concepts.",
+      "There are no specific pre-requisites for doing this course.",
+      "However, basic knowledge in SOAP, REST and Messaging would surely help.",
+      "Learn MuleSoft training online and offline modes by real-time experts from VR IT Solutions with practical scenarios and in-depth explanation of each and every topic.",
+    ],
+    courseHighlights: [
+      "Free Demo sessions to get to know how the course is conducted.",
+      "Flexible and customized timings – we plan our schedule as per your convenience, so no need to disturb your regular work schedule.",
+      "Easy to follow, since most of the course is practical oriented with live industry cases.",
+      "Classes driven by real time experts - experienced professionals and faculty from reputed institutes.",
+      "Provides notes and recorded videos, so you can follow the course anywhere, anytime without any location hassles.",
+      "Complete assistance to help you crack interviews – we provide mulesoft interview questions, sample resumes and tips.",
+      "Get trained in MuleSoft in just 45 hours - select either weekend or weekday mode.",
+      "Industry relevant curriculum - Our curriculum is constantly updated to meet the growing needs of the industry.",
+    ],
+    practicalExecution: [
+      "In order to work on practicals, some basic pre-requisites are required. You need a good internet connection, along with the required software that needs to be installed. This software can easily run on all operating systems such as Windows OS.",
+      "Please forward these details to your colleagues and friends, who may be interested in upgrading their skills and knowledge for better job opportunities.",
+      "After successful completion of the MuleSoft Training course we have successfully placed our students in major MNC companies. We offer 100% placement support to our students.",
+      "VRIT Solutions offers 100% placement Guaranteed program for deserving students.",
     ],
     sections: [
       {
@@ -1467,17 +1665,37 @@ const courses = [
       },
     ],
     learningPoints: [
-      "Master MuleSoft's Anypoint Platform and API Management",
-      "Design and develop RESTful and SOAP APIs",
-      "Implement API-led connectivity and integration solutions",
-      "Gain hands-on experience with real-world projects and case studies",
+      "Overview of Mule – Getting started",
+      "Introduction to ESB",
+      "Lab Documentation and WorkSpace Downloads",
+      "Basics of Mule",
+      "Standalone Deployments and MMC",
+      "Consumption of REST and SOAP Webservices",
+      "Leveraging Database Endpoint, Externalizing properties and Domains",
+      "Leveraging File End point and JMS endpoint",
+      "Implementing Splitter Aggregator Pattern and Tuning Performance",
+      "Transformers",
+      "Learn how to handle exceptions in Mule",
+      "Live Project",
+    ],
+    learningNotes: [
+      "This course is 70% practical and 30% theory.",
+      "VR IT solutions is one of the best institutes for Mulesoft online training. So, click here to get started.",
+    ],
+    whoShouldAttend: [
+      "Developers (various languages)",
+      "Business Architects",
+      "Program Managers",
+      "System Integrators",
+      "Solution Consultants",
+      "Fresh graduates, who are looking for a career in MuleSoft.",
     ],
     whyJoin: {
       course: "MuleSoft",
       title: "Why Join This Course?",
       description: [
-        "MuleSoft is a rapidly growing platform used by organizations worldwide to connect applications, data, and devices. This course provides a comprehensive understanding of MuleSoft, equipping you with the skills needed to excel in your career.",
-        "VR IT Solutions offers a structured and practical approach to MuleSoft training, ensuring you gain the skills needed to excel in your career.",
+        "With rapid technological advancements, this course is slowly gaining importance in the market. The uniqueness of this course is it teaches you mule in step by step manner starting from basics to advanced without the requirement of any previous integration background.",
+        "VR IT Solutions is one of the few institutes in Hyderabad to offer the best and innovative training in MuleSoft training that is well suited to help you get started and embark on a fruitful journey. So, get started by clicking here.",
       ],
       benefits: [
         {
@@ -1542,19 +1760,33 @@ const courses = [
       "Workday is a leading cloud-based Human Capital Management (HCM) platform that helps organizations manage HR, payroll, and financial processes. This comprehensive training program covers both Workday Functional and Technical aspects, equipping you with the skills needed to manage and customize Workday applications effectively. Whether you're an aspiring HR professional or a technical specialist, this course will prepare you for real-world scenarios and help you achieve Workday certification.",
     instructor: "VR IT Solutions",
     language: "English",
-    hoursContent: '70h',
+    hoursContent: "70h",
     category: "SAP, HCM & ERP",
     level: "Beginner to Advanced",
+    aboutTheCourse: [
+      "VR IT Solutions is one of the best Workday training institutes in Hyderabad.",
+      "Workday is an on-demand cloud-based financial management and human capital management software.",
+      "It helps organizations in all industries to achieve stupendous success, be it mid-level or top-rung companies.",
+      "Its cloud-based system offers superior insights for any business and provides the agility to adapt to change.",
+      "It integrates finance and HR in a seamless system to offer superior performance.",
+      "Are you looking to start a new learning journey?",
+      "If yes, one should surely take Workday Training in Hyderabad at VR IT Solutions to get the best job in reputed companies.",
+      "Workday is considered as the human capital management and financial management software solution providing real-time visibility into data that supports smart decision-making.",
+    ],
     coursePrerequisites: [
-      "Basic understanding of Human Capital Management (HCM) concepts.",
-      "Familiarity with cloud-based platforms and web technologies.",
-      "Knowledge of basic database and reporting concepts.",
+      "Though VRIT solutions hasn’t prescribed any specific pre-requisites for doing this course, however, it is preferred to have knowledge in the following topics to better understand and appreciate the course.",
+      "Basic knowledge of accounts and financial flows",
+      "Basic knowledge of HR functions",
+      "Basic knowledge of data",
     ],
     sections: [
       {
         title: "Core Concepts and Navigation Basics",
         lectures: [
-          { title: "Organization Types: Supervisory Organizations, Cost Center, Location, Region" },
+          {
+            title:
+              "Organization Types: Supervisory Organizations, Cost Center, Location, Region",
+          },
           { title: "Reorganization and Setup of Supervisory Org Structure" },
           { title: "Creating and Dividing Subordinate Orgs" },
           { title: "Organization Hierarchies and Assignments" },
@@ -1586,7 +1818,10 @@ const courses = [
       {
         title: "Security Groups",
         lectures: [
-          { title: "Domain Security Policies and Business Process Security Policies" },
+          {
+            title:
+              "Domain Security Policies and Business Process Security Policies",
+          },
           { title: "Configuring Role-Based and Job-Based Security" },
         ],
       },
@@ -1599,9 +1834,7 @@ const courses = [
       },
       {
         title: "Reports",
-        lectures: [
-          { title: "Building Simple, Advanced, and Matrix Reports" },
-        ],
+        lectures: [{ title: "Building Simple, Advanced, and Matrix Reports" }],
       },
       {
         title: "Calculated Fields",
@@ -1613,8 +1846,14 @@ const courses = [
       {
         title: "Workday Technical",
         lectures: [
-          { title: "Integration: Enterprise Interface Builder (Inbound and Outbound)" },
-          { title: "Core Connectors: Worker, Sequence Generators, and Integration System User" },
+          {
+            title:
+              "Integration: Enterprise Interface Builder (Inbound and Outbound)",
+          },
+          {
+            title:
+              "Core Connectors: Worker, Sequence Generators, and Integration System User",
+          },
           { title: "BP Configuration for Integration" },
           { title: "PICOF Integration: Build" },
           { title: "ADP Payforce and Overview of XSLT" },
@@ -1623,18 +1862,53 @@ const courses = [
       },
     ],
     learningPoints: [
-      "Master Workday Functional and Technical skills",
-      "Understand Workday architecture and navigation",
-      "Manage HR, payroll, and financial processes using Workday",
-      "Implement advanced Workday concepts like calculated fields and reports",
-      "Gain hands-on experience with real-world projects and case studies",
+      "Introduction to Workday: This module provides the basics of Workday and helps you get started with the interface, navigation, menus, hyperlinks, etc.",
+      "Organizations in Workday: Covers varied organization types in Workday, its hierarchies, how to set up and manage the supervisory organization structure.",
+      "Workday Staffing modules: This module provides you an overview of different types of Workday staffing models, hiring restrictions, and how to execute complex management functions in Workday.",
+      "Jobs and Profiles in Workday Suite: This module covers concepts such as job profiles, job families, creation of job positions, and much more.",
+      "Compensation in Workday: This module provides an overview of the components of compensation, how compensation packages are designed based on certain rules, grades, and how to set up security and initiate the compensated event.",
+      "Workday Security Groups: This module provides an overview of security group types, components of configurable security, its functional areas in Workday, and also the domain security policies.",
+      "Workday Business Process: This module provides an overview of business processes, its functionality, varied sub-processes, and generating business process reports in Workday.",
+      "WorkDay reports: Provides advanced concepts about what standard and custom reports are, different data sources, its objects, fields, order columns, and the filter criteria in Workday.",
+      "Calculated Fields: This module lets you learn how to create various kinds of calculated fields, text functions, extract single and multi-instances in Workday.",
+      "iLoads: This module provides an overview of iLoads and other topics such as data extractions and how to lay a foundation, master, and implement suites on Workday.",
+      "Transactions: This module lets you know how to assign user-based security, what and why staffing movement is done, hiring supervisory organizations, and finally workday accounts and viewing personal data.",
+      "Live Project: A practical hands-on project to implement concepts learned during the course.",
+    ],
+    practicalExecution: [
+      "In order to work on practicals, some basic pre-requisites are required. You need a good internet connection, along with the required software that needs to be installed. This software can easily run on all operating systems such as Windows, OS, Linux, and Unix.",
+      "VR IT Solutions is one of the best workday training to offer excellent online and classroom training in WorkDay.",
+    ],
+
+    whoShouldAttend: [
+      "In the current IT industry, Workday technology is considered the most valued and respected professional requirement for Finance and HR roles.",
+      "People interested in HRMS technology, Finance, and HR Professionals, as well as recent MBA graduates with Finance or HR backgrounds, can benefit from this course.",
+      "Evaluating an IT career stream in Finance and HR organizations will be an added advantage for those taking up the Workday Course in Hyderabad at VR IT Solutions.",
+      "MBA in Finance & HR",
+      "Professionals having experience in accounts and finance domain",
+      "Experienced HR Professionals",
+      "Fresh graduates interested to make a career in Finance & accounting",
+      "Fresh graduates interested to make a career in HR",
+      "Software professionals, looking to switch their careers",
+      "Project managers",
+      "Business analysts"
+    ],
+    careerOpportunities: [
+      "There is a great demand for the Workday Expertise to get into top-notch companies with highest paid salary range and to boost the business growth.",
+      "Most of the organizations are looking for the Workday Certified Expertise to solve the business solutions with ease and to enhance career graph in the best way.",
+      "To know the complete details, simply avail free Workday technology demo to ensure other training classes and decide to opt the VR IT Solutions - The Best Workday training in Hyderabad.",
     ],
     whyJoin: {
       course: "Workday",
       title: "Why Join This Course?",
       description: [
-        "Workday is a rapidly growing platform used by organizations worldwide to manage HR, payroll, and financial processes. This course provides a comprehensive understanding of Workday, equipping you with the skills needed to excel in your career.",
-        "VR IT Solutions offers a structured and practical approach to Workday training, ensuring you gain the skills needed to excel in your career.",
+        "VR IT Solutions is one of the best Workday online training institutes in Hyderabad.",
+        "With Finance being one of the fastest-growing sectors of the economy, it offers one of the best job opportunities to build a strong career.",
+        "With automation making inroads in almost all segments of business, learning Workday can make you a better professional and a quick decision-maker, whether you are in the HR or Finance area.",
+        "If you are already an HR or finance professional, we highly recommend this course to boost your career.",
+        "We also recommend this course to youngsters interested in making Finance or HR their career.",
+        "VR IT Solutions is one of the best software training institutes in Hyderabad, offering Workday online training with a well-focused and career-oriented training program.",
+        "So, get started by clicking here.",
       ],
       benefits: [
         {
@@ -1699,7 +1973,28 @@ const courses = [
       "Snowflake is a leading cloud-based data warehousing platform that helps organizations store, analyze, and share data efficiently. This comprehensive training program covers Snowflake's architecture, data warehousing, and advanced features, equipping you with the skills needed to manage and optimize data solutions effectively. Whether you're an aspiring data engineer or a data analyst, this course will prepare you for real-world scenarios and help you achieve Snowflake certification.",
     instructor: "VR IT Solutions",
     language: "English",
-    hoursContent: '70h',
+    hoursContent: "70h",
+    aboutTheCourse:[
+      "Cloud computing and cloud storage has revolutionized the way mundane data sources are managed and maintained.",
+      "In this context, a cloud-based storage and analytics service – Snowflake is rapidly creating inroads and is transforming the way data is managed across organizations.",
+      "Snowflake is the proprietary platform of Snowflake Inc., a cloud computing-based data warehousing company, based in Bozeman, Montana.",
+      "Snowflake offers a single, global platform of your complete database ecosystem, offering seamless collaboration across multiple business entities.",
+      "This platform offers the right mix of performance, flexibility and near-infinite scalability to easily upload, combine, analyze and authentically share your data anywhere, anytime.",
+      "It is a fully managed service that is easy to work while letting you power a myriad number of concurrent workloads.",
+      "And the best part is it can run on multiple cloud platforms like Amazon S3, Microsoft Azure, and Google Cloud Platform."
+    ]
+,
+courseHighlights: [
+  "With booming opportunities in data analytics and warehousing, now is the right opportunity for professionals and students to get trained in this rapidly innovative platform to reap huge benefits in terms of career growth, newer job roles, and of course hefty pay packages.",
+  "Several companies are currently running snowflake on their platforms, having more than 4000 active accounts.",
+  "Above all, with 4000+ active customers and 450+ million jobs in Snowflake getting listed daily, the future looks extremely bright in this technology segment.",
+  "We at VRIT Solutions have designed a comprehensive Snowflake online training program for professionals and students alike to jump-start their careers in this area of specialization.",
+  "This course covers all the requisite concepts and applications needed to become a thoroughbred professional and make you job-ready.",
+  "Make VRIT Solutions your first choice for Snowflake training in Hyderabad due to its time-tested training methodology coupled with hands-on practical sessions and live projects.",
+  "We offer the best-in-class Snowflake training and Snowflake job support to offer the right platform to power your career to the next level.",
+  "So, don't stay behind. Join now for a lucrative career."
+]
+,    
     category: "Data Warehousing & Management",
     level: "Beginner to Advanced",
     coursePrerequisites: [
@@ -1713,8 +2008,14 @@ const courses = [
         lectures: [
           { title: "Overview of Snowflake Architecture" },
           { title: "Snowflake Multi-Cluster Shared Data Architecture" },
-          { title: "Key Concepts: Virtual Warehouses, Databases, Schemas, and Tables" },
-          { title: "Snowflake Editions: Standard, Enterprise, Business Critical, and VPS" },
+          {
+            title:
+              "Key Concepts: Virtual Warehouses, Databases, Schemas, and Tables",
+          },
+          {
+            title:
+              "Snowflake Editions: Standard, Enterprise, Business Critical, and VPS",
+          },
         ],
       },
       {
@@ -1723,7 +2024,10 @@ const courses = [
           { title: "Data Storage and Compression Techniques" },
           { title: "Micro-partitioning and Columnar Storage" },
           { title: "Time Travel and Data Retention Strategies" },
-          { title: "Zero-Copy Cloning: Creating Test and Development Environments" },
+          {
+            title:
+              "Zero-Copy Cloning: Creating Test and Development Environments",
+          },
           { title: "Data Sharing: Secure and Cross-Account Data Sharing" },
         ],
       },
@@ -1753,7 +2057,9 @@ const courses = [
           { title: "Role-Based Access Control (RBAC) & Privilege Management" },
           { title: "Network Security: IP Whitelisting & Network Policies" },
           { title: "Data Encryption: In-Transit and At-Rest" },
-          { title: "Managing and Auditing Access with Snowflake Account Usage" },
+          {
+            title: "Managing and Auditing Access with Snowflake Account Usage",
+          },
           { title: "Using Snowflake’s Security Features: MFA, SSO, OAuth" },
         ],
       },
@@ -1780,11 +2086,18 @@ const courses = [
       {
         title: "Data Integration & ETL/ELT",
         lectures: [
-          { title: "Snowflake with ETL Tools (Informatica, Talend, Matillion)" },
+          {
+            title: "Snowflake with ETL Tools (Informatica, Talend, Matillion)",
+          },
           { title: "Building ELT Pipelines with Snowflake and SQL" },
           { title: "Data Transformation with Snowflake Streams and Tasks" },
-          { title: "Continuous Data Integration with Snowpipe and Event-Based Ingestion" },
-          { title: "Integrating Snowflake with Apache Kafka for Real-Time Data" },
+          {
+            title:
+              "Continuous Data Integration with Snowpipe and Event-Based Ingestion",
+          },
+          {
+            title: "Integrating Snowflake with Apache Kafka for Real-Time Data",
+          },
         ],
       },
       {
@@ -1831,7 +2144,9 @@ const courses = [
         title: "Real-World Projects & Case Studies",
         lectures: [
           { title: "End-to-End Data Warehousing Project with Snowflake" },
-          { title: "Implementing Real-Time Analytics with Snowflake and Kafka" },
+          {
+            title: "Implementing Real-Time Analytics with Snowflake and Kafka",
+          },
           { title: "Data Governance and Compliance Project in Snowflake" },
           { title: "BI Integration and Dashboarding Project using Snowflake" },
           { title: "Machine Learning Model Deployment with Snowflake" },
@@ -1839,11 +2154,30 @@ const courses = [
       },
     ],
     learningPoints: [
-      "Master Snowflake's architecture and data warehousing concepts",
-      "Implement data loading, unloading, and transformation techniques",
-      "Optimize query performance and manage virtual warehouses",
-      "Gain hands-on experience with real-world projects and case studies",
-    ],
+      "An overview of Snowflake Platform and its applications in the business",
+      "Getting started",
+      "Some basic terminology",
+      "Snowflake Eco-system and related concepts",
+      "Service Billing model and its practical applications",
+      "An overview of Snowflake Editions",
+      "Snowflake architecture",
+      "Virtual Warehouse",
+      "Database objects",
+      "Few Demo sessions including installation and using SnowSQL",
+      "Data import and export with practical demos",
+      "Querying feature in Snowflake",
+      "Monitoring Snowflake with a few live examples",
+      "Course Summary and evaluation"
+    ]
+    ,
+    learningNotes:[
+      "The syllabus listed above is indicative and may include more topics for comprehensive learning.",
+      "This course is supplemented by relevant lab exercises, lectures, group discussions as well as extensive hands-on practice sessions.",
+      "After successful completion of the Snowflake Training course we have successfully placed our students in major MNC companies.",
+      "We offer 100% placement support to our students.",
+      "VRIT Solutions offers 100% snowflake training placement Guaranteed program for deserving students."
+    ]
+,    
     whyJoin: {
       course: "Snowflake",
       title: "Why Join This Course?",
@@ -1914,7 +2248,7 @@ const courses = [
       "This comprehensive course covers Python programming fundamentals, data handling, and machine learning concepts. It equips you with the skills needed to build, evaluate, and deploy machine learning models using Python. Whether you're a beginner or an experienced programmer, this course will prepare you for real-world machine learning challenges.",
     instructor: "VR IT Solutions",
     language: "English",
-    hoursContent: '70h',
+    hoursContent: "70h",
     category: "Data Science & Machine Learning",
     level: "Beginner to Advanced",
     coursePrerequisites: [
@@ -1960,10 +2294,16 @@ const courses = [
         title: "Machine Learning Fundamentals",
         lectures: [
           { title: "Introduction to Machine Learning" },
-          { title: "Supervised Learning: Linear Regression, Logistic Regression" },
+          {
+            title:
+              "Supervised Learning: Linear Regression, Logistic Regression",
+          },
           { title: "Classification Algorithms: k-NN, SVM, Decision Trees" },
           { title: "Ensemble Methods: Bagging, Boosting, XGBoost" },
-          { title: "Unsupervised Learning: Clustering, Dimensionality Reduction" },
+          {
+            title:
+              "Unsupervised Learning: Clustering, Dimensionality Reduction",
+          },
           { title: "Anomaly Detection and Reinforcement Learning" },
         ],
       },
@@ -2077,7 +2417,7 @@ const courses = [
       "Hadoop is a leading big data framework that helps organizations store, process, and analyze large datasets efficiently. This comprehensive training program covers Hadoop's core components, ecosystem tools, and advanced concepts, equipping you with the skills needed to manage big data solutions effectively.",
     instructor: "VR IT Solutions",
     language: "English",
-    hoursContent: '70h',
+    hoursContent: "70h",
     category: "Big Data & Analytics",
     level: "Beginner to Advanced",
     coursePrerequisites: [
@@ -2225,7 +2565,7 @@ const courses = [
       "Data Science is a multidisciplinary field that combines statistics, programming, and domain expertise to extract insights from data. This comprehensive training program covers data science fundamentals, machine learning, and advanced analytics, equipping you with the skills needed to solve real-world data problems.",
     instructor: "VR IT Solutions",
     language: "English",
-    hoursContent: '70h',
+    hoursContent: "70h",
     category: "Data Science & Machine Learning",
     level: "Beginner to Advanced",
     coursePrerequisites: [
@@ -2247,7 +2587,10 @@ const courses = [
         title: "Descriptive Statistics and Probability Distributions",
         lectures: [
           { title: "Measures of Central Tendency: Mean, Mode, Median" },
-          { title: "Measures of Dispersion: Range, Variance, Standard Deviation" },
+          {
+            title:
+              "Measures of Dispersion: Range, Variance, Standard Deviation",
+          },
           { title: "Probability Basics and Distributions" },
         ],
       },
@@ -2286,9 +2629,7 @@ const courses = [
       },
       {
         title: "Time Series Analysis",
-        lectures: [
-          { title: "Forecasting Techniques: ARIMA, SARIMA, LSTM" },
-        ],
+        lectures: [{ title: "Forecasting Techniques: ARIMA, SARIMA, LSTM" }],
       },
       {
         title: "Text Analytics",
@@ -2299,9 +2640,7 @@ const courses = [
       },
       {
         title: "Data Visualization with Tableau",
-        lectures: [
-          { title: "Generating Reports and Charts with Tableau" },
-        ],
+        lectures: [{ title: "Generating Reports and Charts with Tableau" }],
       },
       {
         title: "R Programming",
@@ -2403,7 +2742,7 @@ const courses = [
       "Django is a high-level Python web framework that enables rapid development of secure and maintainable websites. This comprehensive training program covers Python programming fundamentals, Django framework, and web development concepts, equipping you with the skills needed to build and deploy web applications effectively.",
     instructor: "VR IT Solutions",
     language: "English",
-    hoursContent: '70h',
+    hoursContent: "70h",
     category: "Web Development",
     level: "Beginner to Advanced",
     coursePrerequisites: [
@@ -2544,7 +2883,7 @@ const courses = [
       "This course provides a comprehensive understanding of Python programming and AWS cloud services. It covers Python fundamentals, AWS services, and how to integrate Python with AWS for automating cloud operations. Whether you're a beginner or an experienced developer, this course will prepare you for real-world cloud automation challenges.",
     instructor: "VR IT Solutions",
     language: "English",
-    hoursContent: '70h',
+    hoursContent: "70h",
     category: "DevOps & Cloud",
     level: "Beginner to Advanced",
     coursePrerequisites: [
@@ -2699,7 +3038,7 @@ const courses = [
       "SAP Basis is the technical foundation that enables SAP applications to function. This comprehensive training program covers SAP system administration, installation, configuration, and performance tuning. Whether you're an aspiring SAP Basis administrator or an IT professional, this course will prepare you for real-world SAP Basis challenges.",
     instructor: "VR IT Solutions",
     language: "English",
-    hoursContent: '70h',
+    hoursContent: "70h",
     category: "SAP, HCM & ERP",
     level: "Beginner to Advanced",
     coursePrerequisites: [
@@ -2869,7 +3208,7 @@ const courses = [
       "SAP Extended Warehouse Management (EWM) is a comprehensive solution for managing warehouse operations. This training program covers SAP EWM configuration, processes, and integration with other SAP modules. Whether you're an aspiring SAP EWM consultant or a warehouse manager, this course will prepare you for real-world SAP EWM challenges.",
     instructor: "VR IT Solutions",
     language: "English",
-    hoursContent: '70h',
+    hoursContent: "70h",
     category: "SAP, HCM & ERP",
     level: "Beginner to Advanced",
     coursePrerequisites: [
@@ -3012,7 +3351,7 @@ const courses = [
       "SAP Sales and Distribution (SD) is a key module in SAP ERP that handles sales, shipping, and billing processes. This comprehensive training program covers SAP SD configuration, processes, and integration with other SAP modules. Whether you're an aspiring SAP SD consultant or a sales professional, this course will prepare you for real-world SAP SD challenges.",
     instructor: "VR IT Solutions",
     language: "English",
-    hoursContent: '70h',
+    hoursContent: "70h",
     category: "SAP, HCM & ERP",
     level: "Beginner to Advanced",
     coursePrerequisites: [
@@ -3065,7 +3404,10 @@ const courses = [
         lectures: [
           { title: "Customizing Sales Document Types" },
           { title: "Configuring Item Categories and Schedule Line Categories" },
-          { title: "Advanced Sales Order Scenarios: Contracts, Scheduling Agreements" },
+          {
+            title:
+              "Advanced Sales Order Scenarios: Contracts, Scheduling Agreements",
+          },
           { title: "Sales Order Enhancement and User Exits" },
           { title: "Advanced Document Flow and Copy Controls" },
         ],
@@ -3161,119 +3503,142 @@ const courses = [
     course: "SAP Leonardo",
     link: "sap-leonardo-training-hyderabad",
     image: "/images/courses/sap-leonardo.jpg",
-    description: "SAP Leonardo is a digital innovation system that integrates emerging technologies like IoT, Machine Learning, Blockchain, and Big Data. This training covers the fundamentals of SAP Leonardo, including its architecture, deployment models, and integration with SAP Cloud Platform and S/4HANA. It also delves into advanced topics like IoT data management, machine learning models, and blockchain applications.",
+    description:
+      "SAP Leonardo is a digital innovation system that integrates emerging technologies like IoT, Machine Learning, Blockchain, and Big Data. This training covers the fundamentals of SAP Leonardo, including its architecture, deployment models, and integration with SAP Cloud Platform and S/4HANA. It also delves into advanced topics like IoT data management, machine learning models, and blockchain applications.",
     instructor: "VR IT Solutions",
     language: "English",
-    hoursContent: '70h',
+    hoursContent: "70h",
     level: "Beginner to Advanced",
     category: "SAP, HCM & ERP",
     coursePrerequisites: [
       "Basic understanding of SAP navigation and concepts.",
       "Familiarity with emerging technologies like IoT, Machine Learning, and Blockchain.",
-      "No prior SAP Leonardo experience required."
+      "No prior SAP Leonardo experience required.",
     ],
     sections: [
       {
         title: "Introduction to SAP Leonardo",
         lectures: [
           { title: "Overview of SAP Leonardo and Its Components" },
-          { title: "Key Technologies and Innovations: IoT, Machine Learning, Blockchain, Big Data" },
-          { title: "SAP Leonardo Architecture and Deployment Models" }
-        ]
+          {
+            title:
+              "Key Technologies and Innovations: IoT, Machine Learning, Blockchain, Big Data",
+          },
+          { title: "SAP Leonardo Architecture and Deployment Models" },
+        ],
       },
       {
         title: "SAP Leonardo IoT (Internet of Things)",
         lectures: [
           { title: "Introduction to IoT and Its Applications" },
-          { title: "IoT Architecture: Devices, Connectivity, and Data Processing" },
+          {
+            title:
+              "IoT Architecture: Devices, Connectivity, and Data Processing",
+          },
           { title: "IoT Use Cases and Industry Applications" },
-          { title: "Integration with SAP Cloud Platform and S/4HANA" }
-        ]
+          { title: "Integration with SAP Cloud Platform and S/4HANA" },
+        ],
       },
       {
         title: "SAP Leonardo Machine Learning",
         lectures: [
           { title: "Overview of Machine Learning and AI Concepts" },
-          { title: "Types of Machine Learning: Supervised, Unsupervised, Reinforcement Learning" },
+          {
+            title:
+              "Types of Machine Learning: Supervised, Unsupervised, Reinforcement Learning",
+          },
           { title: "Building Machine Learning Models with SAP Leonardo" },
-          { title: "Advanced Topics: Natural Language Processing, Image Recognition" }
-        ]
+          {
+            title:
+              "Advanced Topics: Natural Language Processing, Image Recognition",
+          },
+        ],
       },
       {
         title: "SAP Leonardo Blockchain",
         lectures: [
-          { title: "Basics of Blockchain: Concepts, Structure, and Cryptography" },
+          {
+            title:
+              "Basics of Blockchain: Concepts, Structure, and Cryptography",
+          },
           { title: "Blockchain Networks: Public vs. Private Blockchains" },
           { title: "Building Blockchain Applications with SAP Leonardo" },
-          { title: "Use Cases: Supply Chain Transparency, Smart Contracts" }
-        ]
-      }
+          { title: "Use Cases: Supply Chain Transparency, Smart Contracts" },
+        ],
+      },
     ],
     learningPoints: [
       "Understand the core concepts of SAP Leonardo and its integration with emerging technologies.",
       "Master IoT data management and analytics for real-time decision-making.",
       "Learn how to build and deploy machine learning models using SAP Leonardo.",
       "Gain expertise in blockchain applications for supply chain and finance.",
-      "Explore advanced topics like predictive analytics and data intelligence."
+      "Explore advanced topics like predictive analytics and data intelligence.",
     ],
     whyJoin: {
       course: "SAP Leonardo",
       title: "Why Join This Course?",
       description: [
         "SAP Leonardo is at the forefront of digital innovation, and mastering it opens up numerous career opportunities in IoT, Machine Learning, and Blockchain.",
-        "This course provides a comprehensive understanding of SAP Leonardo, from basic concepts to advanced applications, ensuring you are job-ready."
+        "This course provides a comprehensive understanding of SAP Leonardo, from basic concepts to advanced applications, ensuring you are job-ready.",
       ],
       benefits: [
         {
           icon: "📈",
           title: "High Demand",
-          description: "SAP Leonardo professionals are in high demand across various industries."
+          description:
+            "SAP Leonardo professionals are in high demand across various industries.",
         },
         {
           icon: "💰",
           title: "Lucrative Salaries",
-          description: "SAP Leonardo experts command high salaries due to their specialized skills."
+          description:
+            "SAP Leonardo experts command high salaries due to their specialized skills.",
         },
         {
           icon: "🌍",
           title: "Global Opportunities",
-          description: "SAP Leonardo skills are recognized globally, offering international career opportunities."
+          description:
+            "SAP Leonardo skills are recognized globally, offering international career opportunities.",
         },
         {
           icon: "🏆",
           title: "Industry Recognition",
-          description: "SAP Leonardo is used by leading companies worldwide, making it a highly respected platform."
-        }
+          description:
+            "SAP Leonardo is used by leading companies worldwide, making it a highly respected platform.",
+        },
       ],
       testimonials: [
         {
-          quote: "The SAP Leonardo training at VR IT Solutions was comprehensive and practical. I landed a job as an SAP Leonardo consultant within two months of completing the course.",
+          quote:
+            "The SAP Leonardo training at VR IT Solutions was comprehensive and practical. I landed a job as an SAP Leonardo consultant within two months of completing the course.",
           author: "Ravi K.",
-          role: "SAP Leonardo Consultant, MNC"
+          role: "SAP Leonardo Consultant, MNC",
         },
         {
-          quote: "The hands-on projects and real-world scenarios helped me gain confidence in SAP Leonardo. I highly recommend this course to anyone looking to upskill.",
+          quote:
+            "The hands-on projects and real-world scenarios helped me gain confidence in SAP Leonardo. I highly recommend this course to anyone looking to upskill.",
           author: "Priya S.",
-          role: "SAP Leonardo Analyst, Tech Company"
-        }
-      ]
-    }
+          role: "SAP Leonardo Analyst, Tech Company",
+        },
+      ],
+    },
   },
   {
     title: "SAP S/4HANA Simple Finance Training in Hyderabad",
     course: "SAP S/4HANA Finance",
     link: "simple-finance-training-in-hyderabad",
     image: "/images/courses/sap-s4hana-finance.jpg",
-    description: "SAP S/4HANA Finance is a next-generation financial management solution that leverages the power of SAP HANA for real-time financial processing and reporting. This training covers the fundamentals of SAP S/4HANA Finance, including general ledger accounting, accounts payable, accounts receivable, and asset accounting. It also delves into advanced topics like financial closing, reporting, and integration with other SAP modules.",
+    description:
+      "SAP S/4HANA Finance is a next-generation financial management solution that leverages the power of SAP HANA for real-time financial processing and reporting. This training covers the fundamentals of SAP S/4HANA Finance, including general ledger accounting, accounts payable, accounts receivable, and asset accounting. It also delves into advanced topics like financial closing, reporting, and integration with other SAP modules.",
     instructor: "VR IT Solutions",
     language: "English",
-    hoursContent: '80h',
+    hoursContent: "80h",
     level: "Beginner to Advanced",
     category: "SAP, HCM & ERP",
     coursePrerequisites: [
       "Basic understanding of accounting principles.",
       "Familiarity with SAP navigation and basic concepts.",
-      "No prior SAP S/4HANA Finance experience required."
+      "No prior SAP S/4HANA Finance experience required.",
     ],
     sections: [
       {
@@ -3282,8 +3647,8 @@ const courses = [
           { title: "Overview of SAP S/4HANA and its Architecture" },
           { title: "Key Differences between SAP ECC and S/4HANA Finance" },
           { title: "Benefits of SAP HANA Database for Financial Management" },
-          { title: "Migration Path from ECC to S/4HANA Finance" }
-        ]
+          { title: "Migration Path from ECC to S/4HANA Finance" },
+        ],
       },
       {
         title: "General Ledger Accounting (FI-GL)",
@@ -3291,17 +3656,20 @@ const courses = [
           { title: "Universal Journal (ACDOCA) Overview" },
           { title: "Document Splitting: Configuration and Use" },
           { title: "Parallel Accounting and Ledger Setup" },
-          { title: "Real-Time Financial Reporting with SAP Fiori Apps" }
-        ]
+          { title: "Real-Time Financial Reporting with SAP Fiori Apps" },
+        ],
       },
       {
         title: "Accounts Payable (FI-AP)",
         lectures: [
           { title: "Configuring Vendor Master Data and Partner Functions" },
           { title: "Invoice Processing: Automatic and Manual Methods" },
-          { title: "Integration with MM for Goods Receipt and Invoice Verification" },
-          { title: "Payment Run Configuration and Electronic Payments" }
-        ]
+          {
+            title:
+              "Integration with MM for Goods Receipt and Invoice Verification",
+          },
+          { title: "Payment Run Configuration and Electronic Payments" },
+        ],
       },
       {
         title: "Accounts Receivable (FI-AR)",
@@ -3309,75 +3677,82 @@ const courses = [
           { title: "Configuring Customer Master Data and Customer Groups" },
           { title: "Credit Management and Risk Assessment" },
           { title: "Invoice Creation and Management" },
-          { title: "Cash Application and Automatic Payment Matching" }
-        ]
-      }
+          { title: "Cash Application and Automatic Payment Matching" },
+        ],
+      },
     ],
     learningPoints: [
       "Understand the core concepts of SAP S/4HANA Finance and its architecture.",
       "Master financial accounting processes, including general ledger, accounts payable, and accounts receivable.",
       "Learn advanced topics like financial closing, reporting, and integration with other SAP modules.",
       "Gain expertise in real-time financial reporting using SAP Fiori apps.",
-      "Explore advanced topics like multi-entity consolidation and compliance reporting."
+      "Explore advanced topics like multi-entity consolidation and compliance reporting.",
     ],
     whyJoin: {
       course: "SAP S/4HANA Finance",
       title: "Why Join This Course?",
       description: [
         "SAP S/4HANA Finance is a critical module for financial management, and mastering it opens up numerous career opportunities in finance and accounting.",
-        "This course provides a comprehensive understanding of SAP S/4HANA Finance, from basic concepts to advanced configurations, ensuring you are job-ready."
+        "This course provides a comprehensive understanding of SAP S/4HANA Finance, from basic concepts to advanced configurations, ensuring you are job-ready.",
       ],
       benefits: [
         {
           icon: "📈",
           title: "High Demand",
-          description: "SAP S/4HANA Finance professionals are in high demand across various industries."
+          description:
+            "SAP S/4HANA Finance professionals are in high demand across various industries.",
         },
         {
           icon: "💰",
           title: "Lucrative Salaries",
-          description: "SAP S/4HANA Finance experts command high salaries due to their specialized skills."
+          description:
+            "SAP S/4HANA Finance experts command high salaries due to their specialized skills.",
         },
         {
           icon: "🌍",
           title: "Global Opportunities",
-          description: "SAP S/4HANA Finance skills are recognized globally, offering international career opportunities."
+          description:
+            "SAP S/4HANA Finance skills are recognized globally, offering international career opportunities.",
         },
         {
           icon: "🏆",
           title: "Industry Recognition",
-          description: "SAP S/4HANA is used by leading companies worldwide, making it a highly respected platform."
-        }
+          description:
+            "SAP S/4HANA is used by leading companies worldwide, making it a highly respected platform.",
+        },
       ],
       testimonials: [
         {
-          quote: "The SAP S/4HANA Finance training at VR IT Solutions was comprehensive and practical. I landed a job as an SAP S/4HANA Finance consultant within two months of completing the course.",
+          quote:
+            "The SAP S/4HANA Finance training at VR IT Solutions was comprehensive and practical. I landed a job as an SAP S/4HANA Finance consultant within two months of completing the course.",
           author: "Ravi K.",
-          role: "SAP S/4HANA Finance Consultant, MNC"
+          role: "SAP S/4HANA Finance Consultant, MNC",
         },
         {
-          quote: "The hands-on projects and real-world scenarios helped me gain confidence in SAP S/4HANA Finance. I highly recommend this course to anyone looking to upskill.",
+          quote:
+            "The hands-on projects and real-world scenarios helped me gain confidence in SAP S/4HANA Finance. I highly recommend this course to anyone looking to upskill.",
           author: "Priya S.",
-          role: "SAP S/4HANA Finance Analyst, Tech Company"
-        }
-      ]
-    }
+          role: "SAP S/4HANA Finance Analyst, Tech Company",
+        },
+      ],
+    },
   },
   {
     title: "SAP Security and SAP GRC Training",
     course: "SAP Security & GRC",
     link: "sap-security-training",
     image: "/images/courses/sap-security.jpg",
-    description: "SAP Security and GRC (Governance, Risk, and Compliance) are critical for ensuring the security and compliance of SAP systems. This training covers the fundamentals of SAP Security, including user administration, role management, and troubleshooting access issues. It also delves into advanced topics like SAP GRC Access Control, risk analysis, and emergency access management.",
+    description:
+      "SAP Security and GRC (Governance, Risk, and Compliance) are critical for ensuring the security and compliance of SAP systems. This training covers the fundamentals of SAP Security, including user administration, role management, and troubleshooting access issues. It also delves into advanced topics like SAP GRC Access Control, risk analysis, and emergency access management.",
     instructor: "VR IT Solutions",
     language: "English",
-    hoursContent: '70h',
+    hoursContent: "70h",
     level: "Beginner to Advanced",
     category: "SAP, HCM & ERP",
     coursePrerequisites: [
       "Basic understanding of SAP navigation and concepts.",
       "Familiarity with security and compliance principles.",
-      "No prior SAP Security or GRC experience required."
+      "No prior SAP Security or GRC experience required.",
     ],
     sections: [
       {
@@ -3385,9 +3760,11 @@ const courses = [
         lectures: [
           { title: "Introduction to ERP and SAP R/3" },
           { title: "Overview of SAP Security and Its Importance" },
-          { title: "User Administration: User Creation, Locking, and Unlocking" },
-          { title: "Role Administration: Role Creation and Assignment" }
-        ]
+          {
+            title: "User Administration: User Creation, Locking, and Unlocking",
+          },
+          { title: "Role Administration: Role Creation and Assignment" },
+        ],
       },
       {
         title: "SAP GRC Access Control",
@@ -3395,8 +3772,8 @@ const courses = [
           { title: "Introduction to GRC and Compliance Tools" },
           { title: "Access Risk Analysis (ARA) and Risk Mitigation" },
           { title: "Emergency Access Management (EAM) and Firefighting" },
-          { title: "Access Request Management (ARM) and Workflow Setup" }
-        ]
+          { title: "Access Request Management (ARM) and Workflow Setup" },
+        ],
       },
       {
         title: "Advanced SAP Security",
@@ -3404,75 +3781,84 @@ const courses = [
           { title: "Troubleshooting Access Issues with SU53 and ST01" },
           { title: "SAP Security Reporting for Audit Compliance" },
           { title: "BI Security: Authorization Concepts and Role Structures" },
-          { title: "Advanced Topics: Change Management and System Validations" }
-        ]
-      }
+          {
+            title: "Advanced Topics: Change Management and System Validations",
+          },
+        ],
+      },
     ],
     learningPoints: [
       "Understand the core concepts of SAP Security and GRC.",
       "Master user administration and role management in SAP.",
       "Learn how to troubleshoot access issues and mitigate risks.",
       "Gain expertise in SAP GRC Access Control and emergency access management.",
-      "Explore advanced topics like audit compliance and BI security."
+      "Explore advanced topics like audit compliance and BI security.",
     ],
     whyJoin: {
       course: "SAP Security & GRC",
       title: "Why Join This Course?",
       description: [
         "SAP Security and GRC are critical for ensuring the security and compliance of SAP systems, and mastering them opens up numerous career opportunities.",
-        "This course provides a comprehensive understanding of SAP Security and GRC, from basic concepts to advanced configurations, ensuring you are job-ready."
+        "This course provides a comprehensive understanding of SAP Security and GRC, from basic concepts to advanced configurations, ensuring you are job-ready.",
       ],
       benefits: [
         {
           icon: "📈",
           title: "High Demand",
-          description: "SAP Security and GRC professionals are in high demand across various industries."
+          description:
+            "SAP Security and GRC professionals are in high demand across various industries.",
         },
         {
           icon: "💰",
           title: "Lucrative Salaries",
-          description: "SAP Security and GRC experts command high salaries due to their specialized skills."
+          description:
+            "SAP Security and GRC experts command high salaries due to their specialized skills.",
         },
         {
           icon: "🌍",
           title: "Global Opportunities",
-          description: "SAP Security and GRC skills are recognized globally, offering international career opportunities."
+          description:
+            "SAP Security and GRC skills are recognized globally, offering international career opportunities.",
         },
         {
           icon: "🏆",
           title: "Industry Recognition",
-          description: "SAP Security and GRC are used by leading companies worldwide, making them highly respected platforms."
-        }
+          description:
+            "SAP Security and GRC are used by leading companies worldwide, making them highly respected platforms.",
+        },
       ],
       testimonials: [
         {
-          quote: "The SAP Security and GRC training at VR IT Solutions was comprehensive and practical. I landed a job as an SAP Security consultant within two months of completing the course.",
+          quote:
+            "The SAP Security and GRC training at VR IT Solutions was comprehensive and practical. I landed a job as an SAP Security consultant within two months of completing the course.",
           author: "Ravi K.",
-          role: "SAP Security Consultant, MNC"
+          role: "SAP Security Consultant, MNC",
         },
         {
-          quote: "The hands-on projects and real-world scenarios helped me gain confidence in SAP Security and GRC. I highly recommend this course to anyone looking to upskill.",
+          quote:
+            "The hands-on projects and real-world scenarios helped me gain confidence in SAP Security and GRC. I highly recommend this course to anyone looking to upskill.",
           author: "Priya S.",
-          role: "SAP Security Analyst, Tech Company"
-        }
-      ]
-    }
+          role: "SAP Security Analyst, Tech Company",
+        },
+      ],
+    },
   },
   {
     title: "SAP S/4HANA Simple Logistics Training",
     course: "SAP S/4HANA Logistics",
     link: "sap-s4Hana-simple-logistics-training",
     image: "/images/courses/sap-s4hana-logistics.png",
-    description: "SAP S/4HANA Simple Logistics is a next-generation logistics solution that leverages the power of SAP HANA for real-time logistics processing and optimization. This training covers the fundamentals of SAP S/4HANA Simple Logistics, including material management, procurement, sales, and distribution. It also delves into advanced topics like production planning, quality management, and warehouse management.",
+    description:
+      "SAP S/4HANA Simple Logistics is a next-generation logistics solution that leverages the power of SAP HANA for real-time logistics processing and optimization. This training covers the fundamentals of SAP S/4HANA Simple Logistics, including material management, procurement, sales, and distribution. It also delves into advanced topics like production planning, quality management, and warehouse management.",
     instructor: "VR IT Solutions",
     language: "English",
-    hoursContent: '80h',
+    hoursContent: "80h",
     level: "Beginner to Advanced",
     category: "SAP, HCM & ERP",
     coursePrerequisites: [
       "Basic understanding of logistics and supply chain management.",
       "Familiarity with SAP navigation and basic concepts.",
-      "No prior SAP S/4HANA Logistics experience required."
+      "No prior SAP S/4HANA Logistics experience required.",
     ],
     sections: [
       {
@@ -3481,8 +3867,10 @@ const courses = [
           { title: "Overview of SAP S/4HANA Simple Logistics" },
           { title: "Key Features and Innovations in S/4HANA" },
           { title: "SAP Fiori User Experience and Its Role in Logistics" },
-          { title: "Integration with Other SAP Modules and S/4HANA Components" }
-        ]
+          {
+            title: "Integration with Other SAP Modules and S/4HANA Components",
+          },
+        ],
       },
       {
         title: "Material Management (MM)",
@@ -3490,8 +3878,8 @@ const courses = [
           { title: "Configuration and Maintenance of Material Master Data" },
           { title: "Purchase Order Management and Processing" },
           { title: "Inventory Transactions and Document Types" },
-          { title: "Logistics Invoice Verification and Integration" }
-        ]
+          { title: "Logistics Invoice Verification and Integration" },
+        ],
       },
       {
         title: "Sales and Distribution (SD)",
@@ -3499,84 +3887,94 @@ const courses = [
           { title: "Sales Order Creation, Processing, and Delivery" },
           { title: "Billing Document Creation and Management" },
           { title: "Pricing Procedure Configuration and Maintenance" },
-          { title: "Delivery and Shipment Processing" }
-        ]
+          { title: "Delivery and Shipment Processing" },
+        ],
       },
       {
         title: "Production Planning (PP)",
         lectures: [
-          { title: "Master Data: Bill of Materials (BOM), Routings, Work Centers" },
+          {
+            title:
+              "Master Data: Bill of Materials (BOM), Routings, Work Centers",
+          },
           { title: "Production Order Processing and Execution" },
           { title: "Capacity Planning and Scheduling" },
-          { title: "Integration with Inventory Management" }
-        ]
-      }
+          { title: "Integration with Inventory Management" },
+        ],
+      },
     ],
     learningPoints: [
       "Understand the core concepts of SAP S/4HANA Simple Logistics and its architecture.",
       "Master material management, procurement, and inventory processes.",
       "Learn advanced topics like production planning, quality management, and warehouse management.",
       "Gain expertise in real-time logistics reporting using SAP Fiori apps.",
-      "Explore advanced topics like IoT integration and predictive analytics."
+      "Explore advanced topics like IoT integration and predictive analytics.",
     ],
     whyJoin: {
       course: "SAP S/4HANA Logistics",
       title: "Why Join This Course?",
       description: [
         "SAP S/4HANA Simple Logistics is a critical module for logistics and supply chain management, and mastering it opens up numerous career opportunities.",
-        "This course provides a comprehensive understanding of SAP S/4HANA Simple Logistics, from basic concepts to advanced configurations, ensuring you are job-ready."
+        "This course provides a comprehensive understanding of SAP S/4HANA Simple Logistics, from basic concepts to advanced configurations, ensuring you are job-ready.",
       ],
       benefits: [
         {
           icon: "📈",
           title: "High Demand",
-          description: "SAP S/4HANA Logistics professionals are in high demand across various industries."
+          description:
+            "SAP S/4HANA Logistics professionals are in high demand across various industries.",
         },
         {
           icon: "💰",
           title: "Lucrative Salaries",
-          description: "SAP S/4HANA Logistics experts command high salaries due to their specialized skills."
+          description:
+            "SAP S/4HANA Logistics experts command high salaries due to their specialized skills.",
         },
         {
           icon: "🌍",
           title: "Global Opportunities",
-          description: "SAP S/4HANA Logistics skills are recognized globally, offering international career opportunities."
+          description:
+            "SAP S/4HANA Logistics skills are recognized globally, offering international career opportunities.",
         },
         {
           icon: "🏆",
           title: "Industry Recognition",
-          description: "SAP S/4HANA is used by leading companies worldwide, making it a highly respected platform."
-        }
+          description:
+            "SAP S/4HANA is used by leading companies worldwide, making it a highly respected platform.",
+        },
       ],
       testimonials: [
         {
-          quote: "The SAP S/4HANA Simple Logistics training at VR IT Solutions was comprehensive and practical. I landed a job as an SAP S/4HANA Logistics consultant within two months of completing the course.",
+          quote:
+            "The SAP S/4HANA Simple Logistics training at VR IT Solutions was comprehensive and practical. I landed a job as an SAP S/4HANA Logistics consultant within two months of completing the course.",
           author: "Ravi K.",
-          role: "SAP S/4HANA Logistics Consultant, MNC"
+          role: "SAP S/4HANA Logistics Consultant, MNC",
         },
         {
-          quote: "The hands-on projects and real-world scenarios helped me gain confidence in SAP S/4HANA Simple Logistics. I highly recommend this course to anyone looking to upskill.",
+          quote:
+            "The hands-on projects and real-world scenarios helped me gain confidence in SAP S/4HANA Simple Logistics. I highly recommend this course to anyone looking to upskill.",
           author: "Priya S.",
-          role: "SAP S/4HANA Logistics Analyst, Tech Company"
-        }
-      ]
-    }
+          role: "SAP S/4HANA Logistics Analyst, Tech Company",
+        },
+      ],
+    },
   },
   {
     title: "Google Cloud Platform Training",
     course: "Google Cloud",
     link: "google-cloud-training",
     image: "/images/courses/google-cloud.png",
-    description: "Google Cloud Platform (GCP) is a suite of cloud computing services offered by Google. This training covers the fundamentals of GCP, including compute, storage, networking, and big data services. It also delves into advanced topics like security, DevOps, and migration strategies to GCP.",
+    description:
+      "Google Cloud Platform (GCP) is a suite of cloud computing services offered by Google. This training covers the fundamentals of GCP, including compute, storage, networking, and big data services. It also delves into advanced topics like security, DevOps, and migration strategies to GCP.",
     instructor: "VR IT Solutions",
     language: "English",
-    hoursContent: '70h',
+    hoursContent: "70h",
     level: "Beginner to Advanced",
     category: "DevOps & Cloud",
     coursePrerequisites: [
       "Basic understanding of cloud computing concepts.",
       "Familiarity with IT infrastructure and networking.",
-      "No prior GCP experience required."
+      "No prior GCP experience required.",
     ],
     sections: [
       {
@@ -3585,99 +3983,106 @@ const courses = [
           { title: "What is Cloud Computing?" },
           { title: "Overview of GCP Services" },
           { title: "Setting Up a GCP Account" },
-          { title: "Introduction to Primitive Roles" }
-        ]
+          { title: "Introduction to Primitive Roles" },
+        ],
       },
       {
         title: "Managing GCP Services",
         lectures: [
           { title: "Using GCP Console and Cloud Shell" },
           { title: "Managing GCP with Goloud and Gsutil" },
-          { title: "Installing and Configuring Cloud SDK" }
-        ]
+          { title: "Installing and Configuring Cloud SDK" },
+        ],
       },
       {
         title: "GCP Networking Services",
         lectures: [
           { title: "Understanding VPC and VPN" },
           { title: "Creating and Managing Firewall Policies" },
-          { title: "Configuring Cloud Router and Endpoints" }
-        ]
+          { title: "Configuring Cloud Router and Endpoints" },
+        ],
       },
       {
         title: "GCP Compute Services",
         lectures: [
           { title: "Creating and Managing VM Instances" },
           { title: "Understanding Compute Engine" },
-          { title: "Load Balancing and Persistent Disks" }
-        ]
-      }
+          { title: "Load Balancing and Persistent Disks" },
+        ],
+      },
     ],
     learningPoints: [
       "Understand the core concepts of Google Cloud Platform and its services.",
       "Master GCP networking, compute, and storage services.",
       "Learn advanced topics like security, DevOps, and data processing.",
       "Gain expertise in GCP migration strategies and hybrid cloud models.",
-      "Explore real-world use cases and hands-on projects."
+      "Explore real-world use cases and hands-on projects.",
     ],
     whyJoin: {
       course: "Google Cloud",
       title: "Why Join This Course?",
       description: [
         "Google Cloud Platform is one of the leading cloud service providers, and mastering it opens up numerous career opportunities in cloud computing.",
-        "This course provides a comprehensive understanding of GCP, from basic concepts to advanced configurations, ensuring you are job-ready."
+        "This course provides a comprehensive understanding of GCP, from basic concepts to advanced configurations, ensuring you are job-ready.",
       ],
       benefits: [
         {
           icon: "📈",
           title: "High Demand",
-          description: "GCP professionals are in high demand across various industries."
+          description:
+            "GCP professionals are in high demand across various industries.",
         },
         {
           icon: "💰",
           title: "Lucrative Salaries",
-          description: "GCP experts command high salaries due to their specialized skills."
+          description:
+            "GCP experts command high salaries due to their specialized skills.",
         },
         {
           icon: "🌍",
           title: "Global Opportunities",
-          description: "GCP skills are recognized globally, offering international career opportunities."
+          description:
+            "GCP skills are recognized globally, offering international career opportunities.",
         },
         {
           icon: "🏆",
           title: "Industry Recognition",
-          description: "Google Cloud is used by leading companies worldwide, making it a highly respected platform."
-        }
+          description:
+            "Google Cloud is used by leading companies worldwide, making it a highly respected platform.",
+        },
       ],
       testimonials: [
         {
-          quote: "The Google Cloud training at VR IT Solutions was comprehensive and practical. I landed a job as a GCP engineer within two months of completing the course.",
+          quote:
+            "The Google Cloud training at VR IT Solutions was comprehensive and practical. I landed a job as a GCP engineer within two months of completing the course.",
           author: "Ravi K.",
-          role: "GCP Engineer, MNC"
+          role: "GCP Engineer, MNC",
         },
         {
-          quote: "The hands-on projects and real-world scenarios helped me gain confidence in GCP. I highly recommend this course to anyone looking to upskill.",
+          quote:
+            "The hands-on projects and real-world scenarios helped me gain confidence in GCP. I highly recommend this course to anyone looking to upskill.",
           author: "Priya S.",
-          role: "Cloud Architect, Tech Company"
-        }
-      ]
-    }
+          role: "Cloud Architect, Tech Company",
+        },
+      ],
+    },
   },
   {
     title: "Full Stack Developer Training in Hyderabad",
     course: "Full Stack Development",
     link: "full-stack-developer-training-in-hyderabad",
     image: "/images/courses/full-stack.png",
-    description: "Full Stack Development involves building both the front-end and back-end of web applications. This training covers the fundamentals of full-stack development, including HTML, CSS, JavaScript, Java, Spring Boot, and database management. It also delves into advanced topics like microservices, RESTful APIs, and DevOps.",
+    description:
+      "Full Stack Development involves building both the front-end and back-end of web applications. This training covers the fundamentals of full-stack development, including HTML, CSS, JavaScript, Java, Spring Boot, and database management. It also delves into advanced topics like microservices, RESTful APIs, and DevOps.",
     instructor: "VR IT Solutions",
     language: "English",
-    hoursContent: '100h',
+    hoursContent: "100h",
     level: "Beginner to Advanced",
     category: "Web Development",
     coursePrerequisites: [
       "Basic understanding of programming concepts.",
       "Familiarity with web development basics.",
-      "No prior full-stack development experience required."
+      "No prior full-stack development experience required.",
     ],
     sections: [
       {
@@ -3685,99 +4090,106 @@ const courses = [
         lectures: [
           { title: "Overview of Full Stack Development" },
           { title: "Role of a Full Stack Developer" },
-          { title: "Tools and Technologies Overview" }
-        ]
+          { title: "Tools and Technologies Overview" },
+        ],
       },
       {
         title: "Front-End Development",
         lectures: [
           { title: "HTML5 and CSS3 Fundamentals" },
           { title: "JavaScript and DOM Manipulation" },
-          { title: "Front-End Frameworks: Angular or React" }
-        ]
+          { title: "Front-End Frameworks: Angular or React" },
+        ],
       },
       {
         title: "Back-End Development",
         lectures: [
           { title: "Core Java and OOP Concepts" },
           { title: "Java Web Development with JSP and Servlets" },
-          { title: "Spring Framework and Spring Boot" }
-        ]
+          { title: "Spring Framework and Spring Boot" },
+        ],
       },
       {
         title: "Database Management",
         lectures: [
           { title: "SQL with MySQL/PostgreSQL" },
           { title: "NoSQL with MongoDB" },
-          { title: "Database Transactions and ACID Properties" }
-        ]
-      }
+          { title: "Database Transactions and ACID Properties" },
+        ],
+      },
     ],
     learningPoints: [
       "Understand the core concepts of full-stack development and its components.",
       "Master front-end technologies like HTML, CSS, JavaScript, and Angular/React.",
       "Learn back-end development with Java, Spring Boot, and database management.",
       "Gain expertise in building RESTful APIs and microservices architecture.",
-      "Explore advanced topics like DevOps, Docker, and Kubernetes."
+      "Explore advanced topics like DevOps, Docker, and Kubernetes.",
     ],
     whyJoin: {
       course: "Full Stack Development",
       title: "Why Join This Course?",
       description: [
         "Full Stack Development is a highly sought-after skill, and mastering it opens up numerous career opportunities in web development.",
-        "This course provides a comprehensive understanding of full-stack development, from basic concepts to advanced configurations, ensuring you are job-ready."
+        "This course provides a comprehensive understanding of full-stack development, from basic concepts to advanced configurations, ensuring you are job-ready.",
       ],
       benefits: [
         {
           icon: "📈",
           title: "High Demand",
-          description: "Full Stack Developers are in high demand across various industries."
+          description:
+            "Full Stack Developers are in high demand across various industries.",
         },
         {
           icon: "💰",
           title: "Lucrative Salaries",
-          description: "Full Stack Developers command high salaries due to their specialized skills."
+          description:
+            "Full Stack Developers command high salaries due to their specialized skills.",
         },
         {
           icon: "🌍",
           title: "Global Opportunities",
-          description: "Full Stack Development skills are recognized globally, offering international career opportunities."
+          description:
+            "Full Stack Development skills are recognized globally, offering international career opportunities.",
         },
         {
           icon: "🏆",
           title: "Industry Recognition",
-          description: "Full Stack Developers are essential for building modern web applications, making it a highly respected role."
-        }
+          description:
+            "Full Stack Developers are essential for building modern web applications, making it a highly respected role.",
+        },
       ],
       testimonials: [
         {
-          quote: "The Full Stack Development training at VR IT Solutions was comprehensive and practical. I landed a job as a Full Stack Developer within two months of completing the course.",
+          quote:
+            "The Full Stack Development training at VR IT Solutions was comprehensive and practical. I landed a job as a Full Stack Developer within two months of completing the course.",
           author: "Ravi K.",
-          role: "Full Stack Developer, MNC"
+          role: "Full Stack Developer, MNC",
         },
         {
-          quote: "The hands-on projects and real-world scenarios helped me gain confidence in full-stack development. I highly recommend this course to anyone looking to upskill.",
+          quote:
+            "The hands-on projects and real-world scenarios helped me gain confidence in full-stack development. I highly recommend this course to anyone looking to upskill.",
           author: "Priya S.",
-          role: "Web Developer, Tech Company"
-        }
-      ]
-    }
+          role: "Web Developer, Tech Company",
+        },
+      ],
+    },
   },
   {
     title: "Informatica MDM Training",
     course: "Informatica MDM",
     link: "informatica-mdm-training",
     image: "/images/courses/informatica-mdm.png",
-    description: "Informatica Master Data Management (MDM) is a comprehensive solution for managing and integrating master data across an organization. This training covers the fundamentals of Informatica MDM, including data modeling, data integration, and data governance. It also delves into advanced topics like data matching, merging, and performance tuning.",
+    description:
+      "Informatica Master Data Management (MDM) is a comprehensive solution for managing and integrating master data across an organization. This training covers the fundamentals of Informatica MDM, including data modeling, data integration, and data governance. It also delves into advanced topics like data matching, merging, and performance tuning.",
     instructor: "VR IT Solutions",
     language: "English",
-    hoursContent: '80h',
+    hoursContent: "80h",
     level: "Beginner to Advanced",
     category: "Data Warehousing & Management",
     coursePrerequisites: [
       "Basic understanding of data management concepts.",
       "Familiarity with databases and ETL processes.",
-      "No prior Informatica MDM experience required."
+      "No prior Informatica MDM experience required.",
     ],
     sections: [
       {
@@ -3785,99 +4197,106 @@ const courses = [
         lectures: [
           { title: "Overview of Master Data Management (MDM)" },
           { title: "Key Features and Benefits of Informatica MDM" },
-          { title: "Architecture and Components of Informatica MDM" }
-        ]
+          { title: "Architecture and Components of Informatica MDM" },
+        ],
       },
       {
         title: "Data Modeling in Informatica MDM",
         lectures: [
           { title: "Designing and Configuring Master Data Models" },
           { title: "Creating and Managing Hierarchies" },
-          { title: "Handling Parent-Child Relationships" }
-        ]
+          { title: "Handling Parent-Child Relationships" },
+        ],
       },
       {
         title: "Data Integration and ETL",
         lectures: [
           { title: "Integrating Data from Various Sources" },
           { title: "Designing ETL Processes with Informatica PowerCenter" },
-          { title: "Data Quality Management and Cleansing" }
-        ]
+          { title: "Data Quality Management and Cleansing" },
+        ],
       },
       {
         title: "Data Governance and Quality Management",
         lectures: [
           { title: "Implementing Data Governance Policies" },
           { title: "Configuring Data Quality Rules and Standards" },
-          { title: "Data Validation, Cleansing, and Matching" }
-        ]
-      }
+          { title: "Data Validation, Cleansing, and Matching" },
+        ],
+      },
     ],
     learningPoints: [
       "Understand the core concepts of Informatica MDM and its architecture.",
       "Master data modeling, integration, and governance in Informatica MDM.",
       "Learn advanced topics like data matching, merging, and performance tuning.",
       "Gain expertise in implementing end-to-end MDM solutions.",
-      "Explore real-world use cases and hands-on projects."
+      "Explore real-world use cases and hands-on projects.",
     ],
     whyJoin: {
       course: "Informatica MDM",
       title: "Why Join This Course?",
       description: [
         "Informatica MDM is a critical tool for managing master data, and mastering it opens up numerous career opportunities in data management.",
-        "This course provides a comprehensive understanding of Informatica MDM, from basic concepts to advanced configurations, ensuring you are job-ready."
+        "This course provides a comprehensive understanding of Informatica MDM, from basic concepts to advanced configurations, ensuring you are job-ready.",
       ],
       benefits: [
         {
           icon: "📈",
           title: "High Demand",
-          description: "Informatica MDM professionals are in high demand across various industries."
+          description:
+            "Informatica MDM professionals are in high demand across various industries.",
         },
         {
           icon: "💰",
           title: "Lucrative Salaries",
-          description: "Informatica MDM experts command high salaries due to their specialized skills."
+          description:
+            "Informatica MDM experts command high salaries due to their specialized skills.",
         },
         {
           icon: "🌍",
           title: "Global Opportunities",
-          description: "Informatica MDM skills are recognized globally, offering international career opportunities."
+          description:
+            "Informatica MDM skills are recognized globally, offering international career opportunities.",
         },
         {
           icon: "🏆",
           title: "Industry Recognition",
-          description: "Informatica MDM is used by leading companies worldwide, making it a highly respected platform."
-        }
+          description:
+            "Informatica MDM is used by leading companies worldwide, making it a highly respected platform.",
+        },
       ],
       testimonials: [
         {
-          quote: "The Informatica MDM training at VR IT Solutions was comprehensive and practical. I landed a job as an MDM consultant within two months of completing the course.",
+          quote:
+            "The Informatica MDM training at VR IT Solutions was comprehensive and practical. I landed a job as an MDM consultant within two months of completing the course.",
           author: "Ravi K.",
-          role: "MDM Consultant, MNC"
+          role: "MDM Consultant, MNC",
         },
         {
-          quote: "The hands-on projects and real-world scenarios helped me gain confidence in Informatica MDM. I highly recommend this course to anyone looking to upskill.",
+          quote:
+            "The hands-on projects and real-world scenarios helped me gain confidence in Informatica MDM. I highly recommend this course to anyone looking to upskill.",
           author: "Priya S.",
-          role: "Data Analyst, Tech Company"
-        }
-      ]
-    }
+          role: "Data Analyst, Tech Company",
+        },
+      ],
+    },
   },
   {
     title: "EDI Training",
     course: "EDI",
     link: "edi-training",
     image: "/images/courses/edi.png",
-    description: "Electronic Data Interchange (EDI) is a key technology for automating business transactions. This training covers the fundamentals of EDI, including standards, components, and mapping. It also delves into advanced topics like EDI integration, security, and future trends.",
+    description:
+      "Electronic Data Interchange (EDI) is a key technology for automating business transactions. This training covers the fundamentals of EDI, including standards, components, and mapping. It also delves into advanced topics like EDI integration, security, and future trends.",
     instructor: "VR IT Solutions",
     language: "English",
-    hoursContent: '60h',
+    hoursContent: "60h",
     level: "Beginner to Advanced",
     category: "Automation",
     coursePrerequisites: [
       "Basic understanding of business processes and data exchange.",
       "Familiarity with IT systems and data formats.",
-      "No prior EDI experience required."
+      "No prior EDI experience required.",
     ],
     sections: [
       {
@@ -3885,105 +4304,111 @@ const courses = [
         lectures: [
           { title: "Understanding Electronic Data Interchange (EDI)" },
           { title: "History and Evolution of EDI" },
-          { title: "Benefits of Using EDI in Business" }
-        ]
+          { title: "Benefits of Using EDI in Business" },
+        ],
       },
       {
         title: "EDI Standards",
         lectures: [
           { title: "Exploring ANSI X12 and UN/EDIFACT Standards" },
           { title: "Understanding EDI Message Structure" },
-          { title: "Comparing Industry-Specific EDI Standards" }
-        ]
+          { title: "Comparing Industry-Specific EDI Standards" },
+        ],
       },
       {
         title: "EDI Components",
         lectures: [
           { title: "Understanding EDI Transaction Sets and Envelopes" },
           { title: "Exploring Communication Protocols: AS2, FTP, VANs" },
-          { title: "Role of EDI Translators in Data Conversion" }
-        ]
+          { title: "Role of EDI Translators in Data Conversion" },
+        ],
       },
       {
         title: "EDI Mapping",
         lectures: [
           { title: "Learning Data Mapping Techniques" },
           { title: "Hands-On Mapping Exercises" },
-          { title: "Importance of Data Mapping in EDI" }
-        ]
-      }
+          { title: "Importance of Data Mapping in EDI" },
+        ],
+      },
     ],
     learningPoints: [
       "Understand the core concepts of EDI and its role in business automation.",
       "Master EDI standards, components, and mapping techniques.",
       "Learn advanced topics like EDI integration, security, and compliance.",
       "Gain expertise in implementing EDI solutions for various industries.",
-      "Explore real-world use cases and hands-on projects."
+      "Explore real-world use cases and hands-on projects.",
     ],
     whyJoin: {
       course: "EDI",
       title: "Why Join This Course?",
       description: [
         "EDI is a critical technology for automating business transactions, and mastering it opens up numerous career opportunities in business automation.",
-        "This course provides a comprehensive understanding of EDI, from basic concepts to advanced configurations, ensuring you are job-ready."
+        "This course provides a comprehensive understanding of EDI, from basic concepts to advanced configurations, ensuring you are job-ready.",
       ],
       benefits: [
         {
           icon: "📈",
           title: "High Demand",
-          description: "EDI professionals are in high demand across various industries."
+          description:
+            "EDI professionals are in high demand across various industries.",
         },
         {
           icon: "💰",
           title: "Lucrative Salaries",
-          description: "EDI experts command high salaries due to their specialized skills."
+          description:
+            "EDI experts command high salaries due to their specialized skills.",
         },
         {
           icon: "🌍",
           title: "Global Opportunities",
-          description: "EDI skills are recognized globally, offering international career opportunities."
+          description:
+            "EDI skills are recognized globally, offering international career opportunities.",
         },
         {
           icon: "🏆",
           title: "Industry Recognition",
-          description: "EDI is used by leading companies worldwide, making it a highly respected technology."
-        }
+          description:
+            "EDI is used by leading companies worldwide, making it a highly respected technology.",
+        },
       ],
       testimonials: [
         {
-          quote: "The EDI training at VR IT Solutions was comprehensive and practical. I landed a job as an EDI specialist within two months of completing the course.",
+          quote:
+            "The EDI training at VR IT Solutions was comprehensive and practical. I landed a job as an EDI specialist within two months of completing the course.",
           author: "Ravi K.",
-          role: "EDI Specialist, MNC"
+          role: "EDI Specialist, MNC",
         },
         {
-          quote: "The hands-on projects and real-world scenarios helped me gain confidence in EDI. I highly recommend this course to anyone looking to upskill.",
+          quote:
+            "The hands-on projects and real-world scenarios helped me gain confidence in EDI. I highly recommend this course to anyone looking to upskill.",
           author: "Priya S.",
-          role: "Business Analyst, Tech Company"
-        }
-      ]
-    }
-  }
+          role: "Business Analyst, Tech Company",
+        },
+      ],
+    },
+  },
 ];
 
 const getCategoryIcon = (category) => {
   switch (category) {
     case "SAP, HCM & ERP":
       return <Building2 className="w-5 h-5" />;
-    
+
     case "DevOps & Cloud":
       return <Cloud className="w-5 h-5" />;
-    
+
     case "Data Science & Machine Learning":
     case "Data Science & Analytics":
     case "Data Warehousing & Management":
     case "Big Data & Analytics":
       return <Database className="w-5 h-5" />;
-    
+
     case "Web Development":
       return <Code className="w-5 h-5" />;
-    
+
     case "Integration & API Management":
-    case "Integration & Middleware": 
+    case "Integration & Middleware":
       return <Network className="w-5 h-5" />;
 
     case "Automation":
@@ -4000,22 +4425,22 @@ const getCategoryIcon = (category) => {
 
 export const getFormattedCategories = () => {
   const groupedCourses = {};
-  
-  courses.forEach(course => {
+
+  courses.forEach((course) => {
     if (!groupedCourses[course.category]) {
       groupedCourses[course.category] = [];
     }
     groupedCourses[course.category].push({
       name: course.course,
       link: course.link,
-      title: course.title
+      title: course.title,
     });
   });
-  
+
   return Object.entries(groupedCourses).map(([category, subcategories]) => ({
     name: category,
     subcategories,
-    icon: getCategoryIcon(category)
+    icon: getCategoryIcon(category),
   }));
 };
 
