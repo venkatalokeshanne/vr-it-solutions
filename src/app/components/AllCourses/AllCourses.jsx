@@ -2,9 +2,12 @@
 import { motion } from "framer-motion";
 import { Clock, Target, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import Script from "next/script";
 
 const AllCourses = ({ courses }) => {
+  const router = useRouter(); // Use the router hook instead of redirect
+  
   const courseListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -26,6 +29,12 @@ const AllCourses = ({ courses }) => {
       },
     })),
   };
+  
+  // Handle course navigation with proper history management
+  const handleCourseClick = (courseLink) => {
+    router.push(`/${courseLink}`);
+  };
+  
   return (
     <section className="py-16">
       <Script
@@ -40,7 +49,10 @@ const AllCourses = ({ courses }) => {
               key={index}
               className="group bg-gradient-to-r from-primary/15 via-primary/10 to-transparent backdrop-blur-sm rounded-2xl border border-primary/5 shadow-lg shadow-primary/5 hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col"
             >
-              <div className="relative h-48 overflow-hidden">
+              <div 
+                className="relative h-48 overflow-hidden cursor-pointer" 
+                onClick={() => handleCourseClick(course.link)}
+              >
                 <img
                   src={course.image}
                   alt={course.title}
@@ -49,7 +61,10 @@ const AllCourses = ({ courses }) => {
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent" />
               </div>
 
-              <div className="p-6 flex flex-col flex-1">
+              <div 
+                className="p-6 flex flex-col flex-1 cursor-pointer" 
+                onClick={() => handleCourseClick(course.link)}
+              >
                 <h3 className="font-bold text-lg text-gray-900 group-hover:text-primary transition-colors mb-2">
                   {course.title}
                 </h3>

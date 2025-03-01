@@ -24,7 +24,7 @@ const Navbar = () => {
   return (
     <>
       {/* Desktop Navigation */}
-      <nav className="hidden md:block border-b border-primary/10 sticky top-0 bg-white z-50">
+      <nav className="hidden md:block border-b border-primary/10 sticky top-[38px] bg-white z-40 shadow-sm">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo and Categories */}
@@ -76,6 +76,7 @@ const Navbar = () => {
               <Link href="/courses" onClick={handleMenuItemClick} className="text-sm text-gray-700 hover:text-primary">
                 Courses
               </Link>
+              <Link href="/blogs" onClick={handleMenuItemClick} className="text-sm text-gray-700 hover:text-primary">Blogs</Link>
               <Link href="/services" onClick={handleMenuItemClick} className="text-sm text-gray-700 hover:text-primary">
                 Services
               </Link>
@@ -103,7 +104,7 @@ const Navbar = () => {
       {/* Mobile Navigation */}
       <nav className="md:hidden">
         {/* Mobile Header */}
-        <div className="fixed top-0 left-0 right-0 h-16 bg-white border-b border-gray-200 z-50">
+        <div className="fixed top-[38px] left-0 right-0 h-16 bg-white border-b border-gray-200 z-40">
           <div
             className="flex items-center justify-between px-4 h-full"
             style={{ maxWidth: "100vw" }}
@@ -134,7 +135,7 @@ const Navbar = () => {
         {/* Mobile Menu Panel */}
         <div
           className={`
-          fixed inset-0 top-16 bg-white z-40
+          fixed inset-0 top-[calc(38px+64px)] bg-white z-30
           transform transition-transform duration-300 ease-in-out overflow-y-auto
           ${isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"}
         `}
@@ -172,6 +173,13 @@ const Navbar = () => {
                 className="block text-gray-700 hover:text-primary w-full py-2 text-left"
               >
                 Courses
+              </Link>
+              <Link 
+                href="/blogs" 
+                onClick={handleMenuItemClick}
+                className="block text-gray-700 hover:text-primary w-full py-2 text-left"
+              >
+                Blogs
               </Link>
               <Link 
                 href="/services" 

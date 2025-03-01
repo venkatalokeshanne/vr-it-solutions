@@ -8,6 +8,9 @@ import { Features } from "@/app/components/Features/Features";
 import { Welcome } from "@/app/components/Welcome/Welcome";
 import { Hero } from "@/app/components/Hero/Hero";
 import { Map } from "@/app/components/Map/Map";
+import { Proficiencies } from "@/app/components/Proficiencies/Proficiencies";
+import { PlacementAssistance } from "@/app/components/PlacementAssistance/PlacementAssistance";
+import FeaturedBlogs from "@/app/components/FeaturedBlogs/FeaturedBlogs";
 
 const VRITSolutions = () => {
 
@@ -19,14 +22,17 @@ const VRITSolutions = () => {
       <Welcome />
       {/* Top Categories */}
       <TopCategories />
+      <Proficiencies />
       {/* Advantages */}
       <AdvantageOfVRITSolutions />
+      <PlacementAssistance />
       {/* Featured Courses */}
       <FeaturedCourses />
       {/* Features Section */}
       <Features />
       {/* Testimonials */}
       <Testimonials />
+      <FeaturedBlogs />
       <Map />
       {/* Footer */}
     </div>

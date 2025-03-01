@@ -37,32 +37,32 @@ const AdvantageOfVRITSolutions = () => {
   const advantages = [
     {
       title: 'Flexible Learning Modes',
-      description: 'Choose from online, classroom, or corporate training tailored to your needs.',
+      description: 'Select any mode of training. You can have online training, classroom training and we deliver trainings for your corporate needs too. Here you get Classroom Training and Online Training also.',
       icon: <Laptop className="h-6 w-6" />,
     },
     {
-      title: 'Industry Expert Trainers',
-      description: 'Learn directly from professionals with extensive real-world experience.',
+      title: '20+ Technology and Non Tech Courses',
+      description: "Train your professional team from VR IT Solution's 20+ technology and Non Tech Courses. From Artificial Intelligence, Python to Data Science or from Soft skill to Digital Marketing Training.",
       icon: <Users className="h-6 w-6" />,
     },
     {
-      title: 'Hands-on Experience',
-      description: 'Master skills through practical projects and real-world applications.',
+      title: 'Hands-On Learning',
+      description: "Learning can only be effective if there is a Hand-on learning knowledge available. We provide live projects and real time case studies by which it is easy to understand each and every concept practically.",
       icon: <BookOpen className="h-6 w-6" />,
     },
     {
-      title: 'Career-Focused Training',
-      description: 'Curriculum designed to meet current industry requirements.',
+      title: 'Get trained by Industry Experts',
+      description: "Our professional trainers have real time industry experience in particular domain. We have the expert trainers with ample amount of training experience.",
       icon: <Target className="h-6 w-6" />,
     },
     {
-      title: 'Innovative Methodology',
-      description: 'Accelerated learning through proven teaching techniques.',
+      title: 'Unique Method of Training',
+      description: 'We follow some unique approach in each and every training by which we can achieve our outcome in less time. Also we focus on improving knowledge of students and professionals by easiest techniques.',
       icon: <Lightbulb className="h-6 w-6" />,
     },
     {
-      title: 'Lifetime Support',
-      description: 'Ongoing assistance and placement support for career growth.',
+      title: 'True Partnership',
+      description: 'Our goal is to build an honest relationship with our valuable students, corporate team and provide them best training and business solutions with lifetime support and placements.',
       icon: <HandshakeIcon className="h-6 w-6" />,
     },
   ];

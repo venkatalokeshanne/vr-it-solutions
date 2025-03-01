@@ -1,9 +1,4 @@
 import {
-  TrendingUp,
-  Globe,
-  DollarSign,
-  Award,
-  Zap,
   Code,
   Building2,
   Database,
@@ -326,36 +321,11 @@ const courses = [
         "VR IT Solutions is one of the few institutes in Hyderabad to offer the best and most innovative training in Salesforce online training that is well suited to help you get started and embark on a fruitful journey. So, get started by clicking here.",
       ],
       benefits: [
-        {
-          icon: <TrendingUp className="h-6 w-6" />,
-          title: "High Demand",
-          description:
-            "Salesforce skills are highly sought after by companies worldwide, offering numerous job opportunities.",
-        },
-        {
-          icon: <DollarSign className="h-6 w-6" />,
-          title: "Lucrative Salaries",
-          description:
-            "Salesforce professionals command premium salaries due to their specialized skills.",
-        },
-        {
-          icon: <Globe className="h-6 w-6" />,
-          title: "Global Opportunities",
-          description:
-            "Salesforce certifications are recognized globally, opening doors to international career opportunities.",
-        },
-        {
-          icon: <Award className="h-6 w-6" />,
-          title: "Industry Recognition",
-          description:
-            "Salesforce is used by 90% of Fortune 100 companies, making it a highly respected platform.",
-        },
-        {
-          icon: <Zap className="h-6 w-6" />,
-          title: "Career Growth",
-          description:
-            "Salesforce certifications can significantly accelerate your career growth and open up leadership roles.",
-        },
+        "Salesforce skills are highly sought after by companies worldwide, offering numerous job opportunities.",
+        "Salesforce professionals command premium salaries due to their specialized skills.",
+        "Salesforce certifications are recognized globally, opening doors to international career opportunities.",
+        "Salesforce is used by 90% of Fortune 100 companies, making it a highly respected platform.",
+        "Salesforce certifications can significantly accelerate your career growth and open up leadership roles.",
       ],
       testimonials: [
         {
@@ -690,36 +660,11 @@ const courses = [
         "VRIT Solutions offers 100% placement Guaranteed program for deserving students.",
       ],
       benefits: [
-        {
-          icon: <TrendingUp className="h-6 w-6" />,
-          title: "High Demand",
-          description:
-            "Azure DevOps skills are highly sought after by companies worldwide, offering numerous job opportunities.",
-        },
-        {
-          icon: <DollarSign className="h-6 w-6" />,
-          title: "Lucrative Salaries",
-          description:
-            "Azure DevOps professionals command premium salaries due to their specialized skills.",
-        },
-        {
-          icon: <Globe className="h-6 w-6" />,
-          title: "Global Opportunities",
-          description:
-            "Azure certifications are recognized globally, opening doors to international career opportunities.",
-        },
-        {
-          icon: <Award className="h-6 w-6" />,
-          title: "Industry Recognition",
-          description:
-            "Azure is used by 90% of Fortune 100 companies, making it a highly respected platform.",
-        },
-        {
-          icon: <Zap className="h-6 w-6" />,
-          title: "Career Growth",
-          description:
-            "Azure certifications can significantly accelerate your career growth and open up leadership roles.",
-        },
+        "Azure DevOps skills are highly sought after by companies worldwide, offering numerous job opportunities.",
+        "Azure DevOps professionals command premium salaries due to their specialized skills.",
+        "Azure certifications are recognized globally, opening doors to international career opportunities.",
+        "Azure is used by 90% of Fortune 100 companies, making it a highly respected platform.",
+        "Azure certifications can significantly accelerate your career growth and open up leadership roles.",
       ],
       testimonials: [
         {
@@ -893,36 +838,11 @@ const courses = [
         "So, don’t stay behind. Join now for a lucrative career.",
       ],
       benefits: [
-        {
-          icon: <TrendingUp className="h-6 w-6" />,
-          title: "High Demand",
-          description:
-            "ServiceNow skills are highly sought after by companies worldwide, offering numerous job opportunities.",
-        },
-        {
-          icon: <DollarSign className="h-6 w-6" />,
-          title: "Lucrative Salaries",
-          description:
-            "ServiceNow professionals command premium salaries due to their specialized skills.",
-        },
-        {
-          icon: <Globe className="h-6 w-6" />,
-          title: "Global Opportunities",
-          description:
-            "ServiceNow certifications are recognized globally, opening doors to international career opportunities.",
-        },
-        {
-          icon: <Award className="h-6 w-6" />,
-          title: "Industry Recognition",
-          description:
-            "ServiceNow is used by 90% of Fortune 100 companies, making it a highly respected platform.",
-        },
-        {
-          icon: <Zap className="h-6 w-6" />,
-          title: "Career Growth",
-          description:
-            "ServiceNow certifications can significantly accelerate your career growth and open up leadership roles.",
-        },
+        "ServiceNow skills are highly sought after by companies worldwide, offering numerous job opportunities.",
+        "ServiceNow professionals command premium salaries due to their specialized skills.",
+        "ServiceNow certifications are recognized globally, opening doors to international career opportunities.",
+        "ServiceNow is used by 90% of Fortune 100 companies, making it a highly respected platform.",
+        "ServiceNow certifications can significantly accelerate your career growth and open up leadership roles.",
       ],
       testimonials: [
         {
@@ -1079,36 +999,11 @@ const courses = [
         "Organizations across the world are developing applications in Pega on a greater scale, compared to any other tools and hence it makes sense to get hands-on on this tool to make an excellent career in Pega. VR IT solutions offers Pega online training also the most comprehensive, practical and upto date Pega training. It should be appreciated that several frameworks are build on Pega Process Commander to support various aspects of business requirements.",
       ],
       benefits: [
-        {
-          icon: <TrendingUp className="h-6 w-6" />,
-          title: "High Demand",
-          description:
-            "Pega skills are highly sought after by companies worldwide, offering numerous job opportunities.",
-        },
-        {
-          icon: <DollarSign className="h-6 w-6" />,
-          title: "Lucrative Salaries",
-          description:
-            "Pega professionals command premium salaries due to their specialized skills.",
-        },
-        {
-          icon: <Globe className="h-6 w-6" />,
-          title: "Global Opportunities",
-          description:
-            "Pega certifications are recognized globally, opening doors to international career opportunities.",
-        },
-        {
-          icon: <Award className="h-6 w-6" />,
-          title: "Industry Recognition",
-          description:
-            "Pega is used by 90% of Fortune 100 companies, making it a highly respected platform.",
-        },
-        {
-          icon: <Zap className="h-6 w-6" />,
-          title: "Career Growth",
-          description:
-            "Pega certifications can significantly accelerate your career growth and open up leadership roles.",
-        },
+        "Pega skills are highly sought after by companies worldwide, offering numerous job opportunities.",
+        "Pega professionals command premium salaries due to their specialized skills.",
+        "Pega certifications are recognized globally, opening doors to international career opportunities.",
+        "Pega is used by 90% of Fortune 100 companies, making it a highly respected platform.",
+        "Pega certifications can significantly accelerate your career growth and open up leadership roles.",
       ],
       testimonials: [
         {
@@ -1409,36 +1304,11 @@ const courses = [
         "With speed, rapid delivery, and reliability being the key benefits of DevOps practice, this course is assuming significance in every spectrum of software development across a wide range of organizations – large, medium or small. Hence, it makes sense for professionals to learn this course to contribute immensely in this new age software development that drives greater value and offers immense benefits for the organizations. This course is offered by real-time professionals to help you understand the actual scenarios and problems. This training helps you master various concepts including principles of continuous development and deployment, software development operations, continuous integration, automation and configuration management. In addition to these concepts, you will also gain hands-on experience on various tools like Git, Docker, Jenkins, etc.",
       ],
       benefits: [
-        {
-          icon: <TrendingUp className="h-6 w-6" />,
-          title: "High Demand",
-          description:
-            "DevOps skills are highly sought after by companies worldwide, offering numerous job opportunities.",
-        },
-        {
-          icon: <DollarSign className="h-6 w-6" />,
-          title: "Lucrative Salaries",
-          description:
-            "DevOps professionals command premium salaries due to their specialized skills.",
-        },
-        {
-          icon: <Globe className="h-6 w-6" />,
-          title: "Global Opportunities",
-          description:
-            "DevOps certifications are recognized globally, opening doors to international career opportunities.",
-        },
-        {
-          icon: <Award className="h-6 w-6" />,
-          title: "Industry Recognition",
-          description:
-            "DevOps is used by 90% of Fortune 100 companies, making it a highly respected field.",
-        },
-        {
-          icon: <Zap className="h-6 w-6" />,
-          title: "Career Growth",
-          description:
-            "DevOps certifications can significantly accelerate your career growth and open up leadership roles.",
-        },
+        "DevOps skills are highly sought after by companies worldwide, offering numerous job opportunities.",
+        "DevOps professionals command premium salaries due to their specialized skills.",
+        "DevOps certifications are recognized globally, opening doors to international career opportunities.",
+        "DevOps is used by 90% of Fortune 100 companies, making it a highly respected field.",
+        "DevOps certifications can significantly accelerate your career growth and open up leadership roles.",
       ],
       testimonials: [
         {
@@ -1698,36 +1568,11 @@ const courses = [
         "VR IT Solutions is one of the few institutes in Hyderabad to offer the best and innovative training in MuleSoft training that is well suited to help you get started and embark on a fruitful journey. So, get started by clicking here.",
       ],
       benefits: [
-        {
-          icon: <TrendingUp className="h-6 w-6" />,
-          title: "High Demand",
-          description:
-            "MuleSoft skills are highly sought after by companies worldwide, offering numerous job opportunities.",
-        },
-        {
-          icon: <DollarSign className="h-6 w-6" />,
-          title: "Lucrative Salaries",
-          description:
-            "MuleSoft professionals command premium salaries due to their specialized skills.",
-        },
-        {
-          icon: <Globe className="h-6 w-6" />,
-          title: "Global Opportunities",
-          description:
-            "MuleSoft certifications are recognized globally, opening doors to international career opportunities.",
-        },
-        {
-          icon: <Award className="h-6 w-6" />,
-          title: "Industry Recognition",
-          description:
-            "MuleSoft is used by 90% of Fortune 100 companies, making it a highly respected platform.",
-        },
-        {
-          icon: <Zap className="h-6 w-6" />,
-          title: "Career Growth",
-          description:
-            "MuleSoft certifications can significantly accelerate your career growth and open up leadership roles.",
-        },
+        "MuleSoft skills are highly sought after by companies worldwide, offering numerous job opportunities.",
+        "MuleSoft professionals command premium salaries due to their specialized skills.",
+        "MuleSoft certifications are recognized globally, opening doors to international career opportunities.",
+        "MuleSoft is used by 90% of Fortune 100 companies, making it a highly respected platform.",
+        "MuleSoft certifications can significantly accelerate your career growth and open up leadership roles.",
       ],
       testimonials: [
         {
@@ -1891,7 +1736,7 @@ const courses = [
       "Fresh graduates interested to make a career in HR",
       "Software professionals, looking to switch their careers",
       "Project managers",
-      "Business analysts"
+      "Business analysts",
     ],
     careerOpportunities: [
       "There is a great demand for the Workday Expertise to get into top-notch companies with highest paid salary range and to boost the business growth.",
@@ -1911,36 +1756,11 @@ const courses = [
         "So, get started by clicking here.",
       ],
       benefits: [
-        {
-          icon: <TrendingUp className="h-6 w-6" />,
-          title: "High Demand",
-          description:
-            "Workday skills are highly sought after by companies worldwide, offering numerous job opportunities.",
-        },
-        {
-          icon: <DollarSign className="h-6 w-6" />,
-          title: "Lucrative Salaries",
-          description:
-            "Workday professionals command premium salaries due to their specialized skills.",
-        },
-        {
-          icon: <Globe className="h-6 w-6" />,
-          title: "Global Opportunities",
-          description:
-            "Workday certifications are recognized globally, opening doors to international career opportunities.",
-        },
-        {
-          icon: <Award className="h-6 w-6" />,
-          title: "Industry Recognition",
-          description:
-            "Workday is used by 90% of Fortune 100 companies, making it a highly respected platform.",
-        },
-        {
-          icon: <Zap className="h-6 w-6" />,
-          title: "Career Growth",
-          description:
-            "Workday certifications can significantly accelerate your career growth and open up leadership roles.",
-        },
+        "Workday skills are highly sought after by companies worldwide, offering numerous job opportunities.",
+        "Workday professionals command premium salaries due to their specialized skills.",
+        "Workday certifications are recognized globally, opening doors to international career opportunities.",
+        "Workday is used by 90% of Fortune 100 companies, making it a highly respected platform.",
+        "Workday certifications can significantly accelerate your career growth and open up leadership roles.",
       ],
       testimonials: [
         {
@@ -1974,27 +1794,25 @@ const courses = [
     instructor: "VR IT Solutions",
     language: "English",
     hoursContent: "70h",
-    aboutTheCourse:[
+    aboutTheCourse: [
       "Cloud computing and cloud storage has revolutionized the way mundane data sources are managed and maintained.",
       "In this context, a cloud-based storage and analytics service – Snowflake is rapidly creating inroads and is transforming the way data is managed across organizations.",
       "Snowflake is the proprietary platform of Snowflake Inc., a cloud computing-based data warehousing company, based in Bozeman, Montana.",
       "Snowflake offers a single, global platform of your complete database ecosystem, offering seamless collaboration across multiple business entities.",
       "This platform offers the right mix of performance, flexibility and near-infinite scalability to easily upload, combine, analyze and authentically share your data anywhere, anytime.",
       "It is a fully managed service that is easy to work while letting you power a myriad number of concurrent workloads.",
-      "And the best part is it can run on multiple cloud platforms like Amazon S3, Microsoft Azure, and Google Cloud Platform."
-    ]
-,
-courseHighlights: [
-  "With booming opportunities in data analytics and warehousing, now is the right opportunity for professionals and students to get trained in this rapidly innovative platform to reap huge benefits in terms of career growth, newer job roles, and of course hefty pay packages.",
-  "Several companies are currently running snowflake on their platforms, having more than 4000 active accounts.",
-  "Above all, with 4000+ active customers and 450+ million jobs in Snowflake getting listed daily, the future looks extremely bright in this technology segment.",
-  "We at VRIT Solutions have designed a comprehensive Snowflake online training program for professionals and students alike to jump-start their careers in this area of specialization.",
-  "This course covers all the requisite concepts and applications needed to become a thoroughbred professional and make you job-ready.",
-  "Make VRIT Solutions your first choice for Snowflake training in Hyderabad due to its time-tested training methodology coupled with hands-on practical sessions and live projects.",
-  "We offer the best-in-class Snowflake training and Snowflake job support to offer the right platform to power your career to the next level.",
-  "So, don't stay behind. Join now for a lucrative career."
-]
-,    
+      "And the best part is it can run on multiple cloud platforms like Amazon S3, Microsoft Azure, and Google Cloud Platform.",
+    ],
+    courseHighlights: [
+      "With booming opportunities in data analytics and warehousing, now is the right opportunity for professionals and students to get trained in this rapidly innovative platform to reap huge benefits in terms of career growth, newer job roles, and of course hefty pay packages.",
+      "Several companies are currently running snowflake on their platforms, having more than 4000 active accounts.",
+      "Above all, with 4000+ active customers and 450+ million jobs in Snowflake getting listed daily, the future looks extremely bright in this technology segment.",
+      "We at VRIT Solutions have designed a comprehensive Snowflake online training program for professionals and students alike to jump-start their careers in this area of specialization.",
+      "This course covers all the requisite concepts and applications needed to become a thoroughbred professional and make you job-ready.",
+      "Make VRIT Solutions your first choice for Snowflake training in Hyderabad due to its time-tested training methodology coupled with hands-on practical sessions and live projects.",
+      "We offer the best-in-class Snowflake training and Snowflake job support to offer the right platform to power your career to the next level.",
+      "So, don't stay behind. Join now for a lucrative career.",
+    ],
     category: "Data Warehousing & Management",
     level: "Beginner to Advanced",
     coursePrerequisites: [
@@ -2167,17 +1985,15 @@ courseHighlights: [
       "Data import and export with practical demos",
       "Querying feature in Snowflake",
       "Monitoring Snowflake with a few live examples",
-      "Course Summary and evaluation"
-    ]
-    ,
-    learningNotes:[
+      "Course Summary and evaluation",
+    ],
+    learningNotes: [
       "The syllabus listed above is indicative and may include more topics for comprehensive learning.",
       "This course is supplemented by relevant lab exercises, lectures, group discussions as well as extensive hands-on practice sessions.",
       "After successful completion of the Snowflake Training course we have successfully placed our students in major MNC companies.",
       "We offer 100% placement support to our students.",
-      "VRIT Solutions offers 100% snowflake training placement Guaranteed program for deserving students."
-    ]
-,    
+      "VRIT Solutions offers 100% snowflake training placement Guaranteed program for deserving students.",
+    ],
     whyJoin: {
       course: "Snowflake",
       title: "Why Join This Course?",
@@ -2186,36 +2002,11 @@ courseHighlights: [
         "VR IT Solutions offers a structured and practical approach to Snowflake training, ensuring you gain the skills needed to excel in your career.",
       ],
       benefits: [
-        {
-          icon: <TrendingUp className="h-6 w-6" />,
-          title: "High Demand",
-          description:
-            "Snowflake skills are highly sought after by companies worldwide, offering numerous job opportunities.",
-        },
-        {
-          icon: <DollarSign className="h-6 w-6" />,
-          title: "Lucrative Salaries",
-          description:
-            "Snowflake professionals command premium salaries due to their specialized skills.",
-        },
-        {
-          icon: <Globe className="h-6 w-6" />,
-          title: "Global Opportunities",
-          description:
-            "Snowflake certifications are recognized globally, opening doors to international career opportunities.",
-        },
-        {
-          icon: <Award className="h-6 w-6" />,
-          title: "Industry Recognition",
-          description:
-            "Snowflake is used by 90% of Fortune 100 companies, making it a highly respected platform.",
-        },
-        {
-          icon: <Zap className="h-6 w-6" />,
-          title: "Career Growth",
-          description:
-            "Snowflake certifications can significantly accelerate your career growth and open up leadership roles.",
-        },
+        "Snowflake skills are highly sought after by companies worldwide, offering numerous job opportunities.",
+        "Snowflake professionals command premium salaries due to their specialized skills.",
+        "Snowflake certifications are recognized globally, opening doors to international career opportunities.",
+        "Snowflake is used by 90% of Fortune 100 companies, making it a highly respected platform.",
+        "Snowflake certifications can significantly accelerate your career growth and open up leadership roles.",
       ],
       testimonials: [
         {
@@ -2244,13 +2035,65 @@ courseHighlights: [
     course: "Machine Learning with Python",
     link: "machine-learning-with-python",
     image: "/images/courses/machine-learning-python.png",
-    description:
-      "This comprehensive course covers Python programming fundamentals, data handling, and machine learning concepts. It equips you with the skills needed to build, evaluate, and deploy machine learning models using Python. Whether you're a beginner or an experienced programmer, this course will prepare you for real-world machine learning challenges.",
+    description: [
+      "Arthur Samuel, a pioneer in the field of artificial intelligence and computer gaming, coined the term 'Machine Learning'. He defined machine learning as – 'Field of study that gives computers the capability to learn without being explicitly programmed'. In a very layman manner, Machine Learning (ML) can be explained as automating and improving the learning process of computers based on their experiences without being actually programmed, i.e., without any human assistance. The process starts with feeding good quality data and then training our machines (computers) by building machine learning models using the data and different algorithms. The choice of algorithms depends on what type of data we have and what kind of task we are trying to automate.",
+    ],
     instructor: "VR IT Solutions",
     language: "English",
     hoursContent: "70h",
     category: "Data Science & Machine Learning",
     level: "Beginner to Advanced",
+    aboutTheCourse: [
+      "Header:Introduction To Machine Learning",
+      "Machine learning is a type of artificial intelligence (AI) that provides computers with the ability to learn without being explicitly programmed. Machine learning focuses on the development of Computer Programs that can change when exposed to new data. In this article, we’ll see basics of Machine Learning, and implementation of a simple machine learning algorithm using python.",
+      "Best Python libraries for Machine Learning",
+      "Machine Learning, as the name suggests, is the science of programming a computer by which they are able to learn from different kinds of data. A more general definition given by Arthur Samuel is - 'Machine Learning is the field of study that gives computers the ability to learn without being explicitly programmed. They are typically used to solve various types of life problems.",
+      "In the older days, people used to perform Machine Learning tasks by manually coding all the algorithms and mathematical and statistical formula. This made the process time consuming, tedious and inefficient. But in the modern days, it is become very much easy and efficient compared to the olden days by various python libraries, frameworks, and modules.",
+      "Today, Python is one of the most popular programming languages for this task and it has replaced many languages in the industry, one of the reason is its vast collection of libraries.",
+      "Python libraries that used in Machine Learning are:",
+      [
+        "Numpy",
+        "Scipy",
+        "Scikit-learn",
+        "Theano",
+        "TensorFlow",
+        "Keras",
+        "PyTorch",
+        "Pandas",
+        "Matplotlib",
+      ],
+      "Header:Overview",
+      "Data science is a collection of research-based methods and processes often with difficulty insights from data. machine learning in data science is a activity will become ever more important as the amount of data available continues to increase, and the challenge of extracting discernment from the data follows.",
+      "This observation defines of the difference among these three fields:",
+      [
+        "Data science produces insights.",
+        "Machine learning produces predictions.",
+        "Artificial intelligence produces actions.",
+      ],
+      "Header:The Components Of Data Science",
+      "Data science contents like machine learning, R, python and Deep learning..etc.. is a combination of mathematics, programming, problem-solving, and data capturing in 'inventive ways'. It is also the ability to find patterns, along with cleaning, preparing, and aligning data.",
+      "Data science is a field that encompasses anything related to data cleansing, preparation, and analysis. It is an umbrella term for techniques used when trying to extract insights and information from data.",
+      "Header:Artificial Intelligence(AI)",
+      "An artificial intelligence (AI) tools to find an accurate and deep understanding that they are looking for.",
+      "The fabulous data science as an occupation is that it does not necessarily need a degree to get into the field, Skills in maths , statistics or operations research, business or many others, can be leveraged as long as they are supported by a base knowledge of mathematics and programming.",
+      "This role to play as data and AI evolve, and its complexities multiply.",
+      "The increasing intelligence of AI has a lot to do with how neural networks are being applied within the field.",
+      "Header:Neural Network",
+      "A neural network is either a system software or hardware that works similar to the tasks performed by neurons of human brain. Neural networks include various technologies like deep learning, and machine learning as a part of Artificial Intelligence (AI).",
+      "Header:Proposed three properties",
+      "Most professionals in these fields have been classified as data science, machine learning, or artificial intelligence, even if these are very hard tie together. But they're not interchangeable , The fields do have a great deal of overlap, and there's enough promotion around each of them that the possibility can feel like a matter of marketing.",
+      "Header:Data Science Produces Insights",
+      "Data science is prominent from the other two fields because its agenda is to gain insight and understanding. It is descriptive , exploratory and causal, not everything that produces insights qualifies as data science. Traditionally data science involves a combination of statistics, software engineering, and domain expertise.",
+      [
+        "Communication",
+        "Data visualization",
+        "Domain knowledge",
+        "Experiment design",
+        "Statistical inference",
+      ],
+      "Data scientists might use simple tools on SQL queries. They could also use very complex methods. They might work with distributed data stores to illustrates of records, developing most advanced statistical techniques, and build interactive with set of information as a chart or other image. Whatever they use, the hope strongly to achieve to gain a better understanding of their data.",
+    ],
+
     coursePrerequisites: [
       "Basic understanding of programming concepts.",
       "Familiarity with Python is a plus but not mandatory.",
@@ -2355,36 +2198,11 @@ courseHighlights: [
         "VR IT Solutions offers a structured and practical approach to machine learning training, ensuring you gain the skills needed to excel in your career.",
       ],
       benefits: [
-        {
-          icon: <TrendingUp className="h-6 w-6" />,
-          title: "High Demand",
-          description:
-            "Machine Learning skills are highly sought after by companies worldwide, offering numerous job opportunities.",
-        },
-        {
-          icon: <DollarSign className="h-6 w-6" />,
-          title: "Lucrative Salaries",
-          description:
-            "Machine Learning professionals command premium salaries due to their specialized skills.",
-        },
-        {
-          icon: <Globe className="h-6 w-6" />,
-          title: "Global Opportunities",
-          description:
-            "Machine Learning certifications are recognized globally, opening doors to international career opportunities.",
-        },
-        {
-          icon: <Award className="h-6 w-6" />,
-          title: "Industry Recognition",
-          description:
-            "Machine Learning is used by 90% of Fortune 100 companies, making it a highly respected field.",
-        },
-        {
-          icon: <Zap className="h-6 w-6" />,
-          title: "Career Growth",
-          description:
-            "Machine Learning certifications can significantly accelerate your career growth and open up leadership roles.",
-        },
+        "Machine Learning skills are highly sought after by companies worldwide, offering numerous job opportunities.",
+        "Machine Learning professionals command premium salaries due to their specialized skills.",
+        "Machine Learning certifications are recognized globally, opening doors to international career opportunities.",
+        "Machine Learning is used by 90% of Fortune 100 companies, making it a highly respected field.",
+        "Machine Learning certifications can significantly accelerate your career growth and open up leadership roles.",
       ],
       testimonials: [
         {
@@ -2421,9 +2239,37 @@ courseHighlights: [
     category: "Big Data & Analytics",
     level: "Beginner to Advanced",
     coursePrerequisites: [
-      "Basic understanding of big data concepts.",
-      "Familiarity with Linux commands and scripting.",
-      "Knowledge of basic database and programming concepts.",
+      "Good analytical thinking",
+      "Basic knowledge of quantitative techniques (a basic course in statistics would be great)",
+      "Sound knowledge in core Java concepts, which is a must to understand the foundations of Hadoop. However, essential concepts of Java will also be covered to understand the foundations of Hadoop.",
+      "Some knowledge of Pig programming to enable you to execute Hadoop programs easier.",
+      "Knowledge of Hive can be useful in understanding the concepts of Data warehousing.",
+      "Basic knowledge of Linux commands for day-to-day execution of the software",
+    ],
+    practicalExecution: [
+      "VR IT solutions is one of the best institutes in providing adequate practical training to complement your theory knowledge, which is worth your investment and comparatively better than other similar institutes in Hyderabad.",
+      "We help you in successfully accomplishing practical training using state-of-the-art Hadoop virtual software installed in your system (Desktop or Laptop).",
+      "A good internet connection is required to get any help from the software support team.",
+      "You have the option to execute practical sessions and Hadoop interview questions either from your system or leveraging our remote training sessions to get an enriched learning experience.",
+    ],
+    aboutTheCourse: [
+      "Header:Basic Overview",
+      "With Hadoop, you can run applications with thousands of commodity hardware nodes and manage thousands of terabytes of data.",
+      "It is an open-source software framework used for distributed storage and processing of big data.",
+      "This is done using the MapReduce programming model.",
+      "It offers a distributed file system that enables swift data transfer rates among nodes and allows the system to continue operating even if a node fails.",
+      "This approach minimizes the risk of catastrophic system failure and data loss, even if a sizeable number of nodes remain inoperative.",
+      "Hadoop is the primary foundation for processing big data tasks – sales planning & business, scientific analytics, and processing huge volumes of sensor data.",
+
+      "Header:Why Hadoop?",
+      [
+        "Capability to store and process enormous volumes of data swiftly: With data increasing daily from various sources such as social media and IoT sensors, Hadoop serves a crucial purpose.",
+        "The power of computing: As Hadoop uses a distributed computing model, it processes data quickly. Increasing computing nodes exponentially increases processing power.",
+        "Zero disruption of work: Data and application processing are protected against hardware failures. If a node fails, jobs are automatically redirected to other nodes to ensure continued operation.",
+        "Flexibility: Traditional databases require data preprocessing before storage. Hadoop eliminates this limitation, allowing storage of structured and unstructured data (text, images, videos) without preprocessing.",
+        "Lower cost: The open-source framework is free and uses commodity hardware to store large volumes of data, reducing expenses.",
+        "Highly scalable: The system can easily scale by adding nodes, requiring minimal administration.",
+      ],
     ],
     sections: [
       {
@@ -2491,48 +2337,47 @@ courseHighlights: [
       },
     ],
     learningPoints: [
-      "Master Hadoop's core components and ecosystem tools",
-      "Implement data processing and analytics solutions using Hadoop",
-      "Gain hands-on experience with real-world projects and case studies",
+      "HDFS and MapReduce Framework",
+      "Architecture of Hadoop 2.x",
+      "Write Complex MapReduce Programs and Set Up Hadoop Cluster",
+      "Work on Data Analytics by using Pig, Hive and Yarn",
+      "Learn Sqoop and Flume for data loading techniques",
+      "Implement integration by HBase and MapReduce",
+      "Implement Indexing and Advanced Usage",
+      "Schedule jobs with the use of Oozie application",
+      "Implement best practices for Hadoop Development Program",
+      "Work on real Life Projects, based on Big Data Analytics",
+    ],
+    whoShouldAttend: [
+      "VR IT solutions is the one Hadoop online training that offers good course support for the candidates throughout the course.",
+      "With the increased demand for big data analytics with the future needs of the information technology, there is scope for every IT enthusiast to look into this newly growing field.",
+      "More than programming, this field is all filled with the purpose of saving and troubleshooting the data.",
+      "VR IT solutions is one such kind of Data Science & Hadoop online course Institute in Hyderabad that offers online courses.",
+      "A typical Hadoop batch is composed of the following set of professionals:",
+      "Data analysts",
+      "Managers",
+      "Business analysts",
+      "Project managers of IT firms",
+      "Software testing professionals",
+      "System Administrators",
+      "Software developers",
+      "Fresh graduates",
+      "Mainframe professionals",
     ],
     whyJoin: {
       course: "Hadoop",
       title: "Why Join This Course?",
       description: [
-        "Hadoop is a rapidly growing platform used by organizations worldwide to manage big data. This course provides a comprehensive understanding of Hadoop, equipping you with the skills needed to excel in your career.",
-        "VR IT Solutions offers a structured and practical approach to Hadoop training, ensuring you gain the skills needed to excel in your career.",
+        "As there are lot of challenges associated with data administration and management due to rapid data explosion, this course digs into the deeper aspects of the Hadoop and tremendously helps programmers, data analytics and other professionals to seek a rewarding career in this area.",
+        "This course lets you brush up the basic concepts in data analytics, for example, basic database knowledge and then slowly apply such concepts to the more advanced level of data science, thereby helping you to get the complete grip of concepts and get started with Hadoop.",
+        "VR IT is one among the few institutes that offer excellent Hadoop online training.",
       ],
       benefits: [
-        {
-          icon: <TrendingUp className="h-6 w-6" />,
-          title: "High Demand",
-          description:
-            "Hadoop skills are highly sought after by companies worldwide, offering numerous job opportunities.",
-        },
-        {
-          icon: <DollarSign className="h-6 w-6" />,
-          title: "Lucrative Salaries",
-          description:
-            "Hadoop professionals command premium salaries due to their specialized skills.",
-        },
-        {
-          icon: <Globe className="h-6 w-6" />,
-          title: "Global Opportunities",
-          description:
-            "Hadoop certifications are recognized globally, opening doors to international career opportunities.",
-        },
-        {
-          icon: <Award className="h-6 w-6" />,
-          title: "Industry Recognition",
-          description:
-            "Hadoop is used by 90% of Fortune 100 companies, making it a highly respected platform.",
-        },
-        {
-          icon: <Zap className="h-6 w-6" />,
-          title: "Career Growth",
-          description:
-            "Hadoop certifications can significantly accelerate your career growth and open up leadership roles.",
-        },
+        "Hadoop skills are highly sought after by companies worldwide, offering numerous job opportunities.",
+        "Hadoop professionals command premium salaries due to their specialized skills.",
+        "Hadoop certifications are recognized globally, opening doors to international career opportunities.",
+        "Hadoop is used by 90% of Fortune 100 companies, making it a highly respected platform.",
+        "Hadoop certifications can significantly accelerate your career growth and open up leadership roles.",
       ],
       testimonials: [
         {
@@ -2561,8 +2406,26 @@ courseHighlights: [
     course: "Data Science",
     link: "data-science",
     image: "/images/courses/data-science.png",
-    description:
-      "Data Science is a multidisciplinary field that combines statistics, programming, and domain expertise to extract insights from data. This comprehensive training program covers data science fundamentals, machine learning, and advanced analytics, equipping you with the skills needed to solve real-world data problems.",
+    description: [
+      "Data science blends scientific methods, processes, algorithms, and systems to generate meaningful knowledge or insights from data in various modes: structured or unstructured.",
+      "The process of extracting meaningful insights becomes even more significant and challenging when data grows exponentially from various sources.",
+      "Data science is all about using this data in creative ways to generate value for business and effective decision-making.",
+
+      "VRIT Solutions is one of the best data science online training providers.",
+      "We offer a data science online course with a well-focused and career-oriented training program in Data Science.",
+      "So, get started by clicking here.",
+
+      "Significance of Data Science in AI",
+      "Data scientists can use a variety of AI tools to generate meaningful insights.",
+      "Though Data Science is an interdisciplinary field encompassing various domains, the beauty of the course is that it does not require any formal degree to enter this field.",
+      "Skills in subjects like mathematics, statistics/operations research, business, or many others can be leveraged with a strong foundation in basic mathematics and computer programming.",
+      "Data scientists may apply quantitative techniques to dive deeper into data mining for generating insights, such as inferential models, segmentation analysis, time series forecasting, synthetic control experiments, and more.",
+      "Data-driven insights are crucial in offering strategic direction.",
+      "Data scientists act as consultants, guiding various business stakeholders on how to act on such inferences for effective decision-making.",
+    ],
+    aboutTheCourse: [
+      "VRIT is one of the few institutes in Hyderabad that offers a data science online course with a well-focused, career-oriented training program in Data Science. Due to rapid data explosion, thousands of jobs are getting generated daily, offering an attractive career proposition for future data science professionals. However, a career-driven course, backed by quality infrastructure and support, is what students require to make a head start in the Data Science field.",
+    ],
     instructor: "VR IT Solutions",
     language: "English",
     hoursContent: "70h",
@@ -2667,49 +2530,34 @@ courseHighlights: [
       },
     ],
     learningPoints: [
-      "Master data science fundamentals and machine learning techniques",
-      "Understand statistical concepts and hypothesis testing",
-      "Build and evaluate predictive models",
-      "Gain hands-on experience with real-world projects and case studies",
+      "Get an overview of business intelligence and business analysis.",
+      "Get hands-on experience with descriptive statistics of data analysis.",
+      "Learn how to work on Tableau, along with a few practical examples.",
+      "Understand R and data exploration in R.",
+      "Learn how to create decision trees with examples.",
+      "Gain expertise in data collection and data mining.",
+      "Get an overview of Big Data Technologies and their significance in the industry.",
+      "Learn how to work on loop functions and debugging tools.",
+      "Learn how to run parametric tests.",
+      "Learn how to mine text data.",
+      "Learn deeper aspects of Python programming and machine learning in Python.",
+      "Learn how to use Hadoop for Data Science.",
+      "Learn how to use Spark for Data Science.",
+      "Know how to deploy methods on Azure.",
+      "Work on a live project to get practical exposure!",
     ],
     whyJoin: {
       course: "Data Science",
       title: "Why Join This Course?",
       description: [
-        "Data Science is one of the most in-demand fields in the tech industry. This course provides a comprehensive understanding of data science, equipping you with the skills needed to excel in your career.",
-        "VR IT Solutions offers a structured and practical approach to data science training, ensuring you gain the skills needed to excel in your career.",
+        "Our Institute is one of the best Institutes in Hyderabad, offering an excellent data science online course. We provide live projects to make you a well-rounded professional. Our training is designed to make you confident in cracking the toughest interviews. Get placed in top data science companies with our expert guidance.",
       ],
       benefits: [
-        {
-          icon: <TrendingUp className="h-6 w-6" />,
-          title: "High Demand",
-          description:
-            "Data Science skills are highly sought after by companies worldwide, offering numerous job opportunities.",
-        },
-        {
-          icon: <DollarSign className="h-6 w-6" />,
-          title: "Lucrative Salaries",
-          description:
-            "Data Science professionals command premium salaries due to their specialized skills.",
-        },
-        {
-          icon: <Globe className="h-6 w-6" />,
-          title: "Global Opportunities",
-          description:
-            "Data Science certifications are recognized globally, opening doors to international career opportunities.",
-        },
-        {
-          icon: <Award className="h-6 w-6" />,
-          title: "Industry Recognition",
-          description:
-            "Data Science is used by 90% of Fortune 100 companies, making it a highly respected field.",
-        },
-        {
-          icon: <Zap className="h-6 w-6" />,
-          title: "Career Growth",
-          description:
-            "Data Science certifications can significantly accelerate your career growth and open up leadership roles.",
-        },
+        "Data Science skills are highly sought after by companies worldwide, offering numerous job opportunities.",
+        "Data Science professionals command premium salaries due to their specialized skills.",
+        "Data Science certifications are recognized globally, opening doors to international career opportunities.",
+        "Data Science is used by 90% of Fortune 100 companies, making it a highly respected field.",
+        "Data Science certifications can significantly accelerate your career growth and open up leadership roles.",
       ],
       testimonials: [
         {
@@ -2734,21 +2582,79 @@ courseHighlights: [
     },
   },
   {
-    title: "Python with Django Training in Hyderabad",
-    course: "Python with Django",
+    title: "Python Training in Hyderabad",
+    course: "Python",
     link: "python-django",
     image: "/images/courses/python-django.png",
-    description:
-      "Django is a high-level Python web framework that enables rapid development of secure and maintainable websites. This comprehensive training program covers Python programming fundamentals, Django framework, and web development concepts, equipping you with the skills needed to build and deploy web applications effectively.",
+    description: [
+      "Python is a high-level programming language, which has a lot of demand in the industry and is favoured by several top brands in the industry including Instagram, YouTube, and Spotify.",
+      "Apart from experienced programmers, even beginners can easily learn and use it quickly.",
+      "Some of the unique features of this language include diversity, adaptability, elegancy, and easy-to-master basics, making it extremely popular and preferable in various domains of computer science including web development, machine learning, data science, scientific computation, and cloud infrastructure.",
+      "Just like any other object-oriented programming language, Python incorporates modules, exceptions, dynamic typing, dynamic data types, and classes.",
+      "It is also usable as an extension language for applications, which require a programmable interface.",
+      "Another unique feature of Python is its portability – it runs on many Unix variants such as Mac and on Windows 2000 and later.",
+    ],
+    aboutTheCourse: [
+      "Python has a very simple and consistent syntax with a large standard library. Apart from that, using Python in an entry-level programming course helps students concentrate on core programming skills such as problem decomposition and data type design. Thus, Python is most suited for students, who can quickly learn the basic concepts such as loops and procedures and even start working on user-defined objects at the very first introductory course.",
+
+      "Moreover, VR IT solutions is one of the best Python training institutes in Hyderabad offering Python courses in both online and classroom modes. The courses are suited to all categories of participants including college students, busy professionals, and even corporate managers, who are looking to switch their careers.",
+
+      "With a focused learning approach and advanced training methodology, we make this course more interesting and interactive to help students quickly grasp the basics within a short period of time. The curriculum is designed specifically by VR IT experts, drawn from academics and industry to ensure that the students get the best out of their learning experience.",
+    ],
     instructor: "VR IT Solutions",
     language: "English",
     hoursContent: "70h",
     category: "Web Development",
     level: "Beginner to Advanced",
-    coursePrerequisites: [
-      "Basic understanding of programming concepts.",
-      "Familiarity with Python is a plus but not mandatory.",
-      "Knowledge of basic web development concepts.",
+    learningPoints: [
+      "By the end of the Python course in Hyderabad, participants will acquire in-depth programming knowledge to develop simple to complex applications. With this course, students will:",
+
+      "Learn how to Implement the basics and advanced Python concepts",
+
+      "Learn how to implement Python core objects and file handling operations",
+
+      "Gain knowledge in advanced analytics and data visualization using Python-pandas",
+
+      "Acquire knowledge about how to develop algorithms and build real-life applications",
+
+      "Acquire knowledge in various object-oriented concepts such as expressions, if statements, loops, functions, data types and more",
+
+      "Understand how to use Python for writing and deploying Pig, UDF and Hive UDF",
+
+      "Acquire knowledge in testing and learn how to debug multiple Python applications",
+
+      "Get first-hand knowledge in regular expression and database interface",
+
+      "Gain expertise in installing packages and XLS, JSON Parsing and Web Scraping.",
+
+      "Learn about Package Installations and XLS, JSON Parsing and Web Scraping",
+
+      "Learn how to debug an entire program and handle errors in Python.",
+
+      "Gain proficiency in doing real-time industry-based projects in Python.",
+    ],
+    whoShouldAttend: [
+      "VR IT being one of the best python online training in Hyderabad, welcomes participants from all age groups and from all walks of life including college students, busy professionals and other top-level managers, who have a passion to redefine their careers.",
+
+      "The following are the typical set of participants:",
+
+      "Analytical professionals",
+
+      "Software engineers, who are interested to switch their careers",
+
+      "Big Data & Hadoop professionals",
+
+      "Marketing & sales professionals",
+
+      "System & network engineers",
+
+      "Fresh graduates with good aptitude in programming",
+
+      "Mid-level managers",
+
+      "Business analysts",
+
+      "Project managers of IT firms",
     ],
     sections: [
       {
@@ -2807,50 +2713,21 @@ courseHighlights: [
         ],
       },
     ],
-    learningPoints: [
-      "Master Python programming and Django framework",
-      "Build and deploy web applications using Django",
-      "Understand web development concepts and best practices",
-      "Gain hands-on experience with real-world projects and case studies",
+    coursePrerequisites: [
+      "There are no specific pre-requisites prescribed for learning this course, though it is preferable to have knowledge in any programming language to appreciate the course better and get a good head start.",
     ],
     whyJoin: {
       course: "Python with Django",
       title: "Why Join This Course?",
       description: [
-        "Django is one of the most popular web frameworks for Python. This course provides a comprehensive understanding of Django, equipping you with the skills needed to excel in your career.",
-        "VR IT Solutions offers a structured and practical approach to Django training, ensuring you gain the skills needed to excel in your career.",
+        "VR IT Solutions is one of the best software training institutes in Hyderabad, offering excellent training in Python, along with live projects to make you a thorough bred professional. Our training is designed to make you confident to crack the toughest of the interviews to get placed in top data science companies.",
       ],
       benefits: [
-        {
-          icon: <TrendingUp className="h-6 w-6" />,
-          title: "High Demand",
-          description:
-            "Django skills are highly sought after by companies worldwide, offering numerous job opportunities.",
-        },
-        {
-          icon: <DollarSign className="h-6 w-6" />,
-          title: "Lucrative Salaries",
-          description:
-            "Django professionals command premium salaries due to their specialized skills.",
-        },
-        {
-          icon: <Globe className="h-6 w-6" />,
-          title: "Global Opportunities",
-          description:
-            "Django certifications are recognized globally, opening doors to international career opportunities.",
-        },
-        {
-          icon: <Award className="h-6 w-6" />,
-          title: "Industry Recognition",
-          description:
-            "Django is used by 90% of Fortune 100 companies, making it a highly respected framework.",
-        },
-        {
-          icon: <Zap className="h-6 w-6" />,
-          title: "Career Growth",
-          description:
-            "Django certifications can significantly accelerate your career growth and open up leadership roles.",
-        },
+        "Django skills are highly sought after by companies worldwide, offering numerous job opportunities.",
+        "Django professionals command premium salaries due to their specialized skills.",
+        "Django certifications are recognized globally, opening doors to international career opportunities.",
+        "Django is used by 90% of Fortune 100 companies, making it a highly respected framework.",
+        "Django certifications can significantly accelerate your career growth and open up leadership roles.",
       ],
       testimonials: [
         {
@@ -2879,8 +2756,10 @@ courseHighlights: [
     course: "Python with AWS",
     link: "python-aws",
     image: "/images/courses/python-aws.jpg",
-    description:
-      "This course provides a comprehensive understanding of Python programming and AWS cloud services. It covers Python fundamentals, AWS services, and how to integrate Python with AWS for automating cloud operations. Whether you're a beginner or an experienced developer, this course will prepare you for real-world cloud automation challenges.",
+    description: [
+      "AWS is a cloud platform with many resources available for almost all use cases related to the IT industry. Sadly, we don't scale up those resources with the click of buttons. We need to use something like Terraform/CloudFormation/Serverless/other third-party SDKs in real time. In general, most of us use Python SDK (boto3 python & AWS python examples) to communicate between the resources for very common needs. In this course, we are going to cover all types of production-ready techniques without leaving basics about the resources.",
+      "VRIT Solutions is one of the best python boto3 Training we offer boto3 python & AWS python examples with a well-focused and career-oriented training program in Python with AWS.",
+    ],
     instructor: "VR IT Solutions",
     language: "English",
     hoursContent: "70h",
@@ -2976,36 +2855,11 @@ courseHighlights: [
         "VR IT Solutions offers a structured and practical approach to Python and AWS training, ensuring you gain the skills needed to excel in your career.",
       ],
       benefits: [
-        {
-          icon: <TrendingUp className="h-6 w-6" />,
-          title: "High Demand",
-          description:
-            "Python and AWS skills are highly sought after by companies worldwide, offering numerous job opportunities.",
-        },
-        {
-          icon: <DollarSign className="h-6 w-6" />,
-          title: "Lucrative Salaries",
-          description:
-            "Python and AWS professionals command premium salaries due to their specialized skills.",
-        },
-        {
-          icon: <Globe className="h-6 w-6" />,
-          title: "Global Opportunities",
-          description:
-            "Python and AWS certifications are recognized globally, opening doors to international career opportunities.",
-        },
-        {
-          icon: <Award className="h-6 w-6" />,
-          title: "Industry Recognition",
-          description:
-            "Python and AWS are used by 90% of Fortune 100 companies, making them highly respected platforms.",
-        },
-        {
-          icon: <Zap className="h-6 w-6" />,
-          title: "Career Growth",
-          description:
-            "Python and AWS certifications can significantly accelerate your career growth and open up leadership roles.",
-        },
+        "Python and AWS skills are highly sought after by companies worldwide, offering numerous job opportunities.",
+        "Python and AWS professionals command premium salaries due to their specialized skills.",
+        "Python and AWS certifications are recognized globally, opening doors to international career opportunities.",
+        "Python and AWS are used by 90% of Fortune 100 companies, making them highly respected platforms.",
+        "Python and AWS certifications can significantly accelerate your career growth and open up leadership roles.",
       ],
       testimonials: [
         {
@@ -3041,6 +2895,11 @@ courseHighlights: [
     hoursContent: "70h",
     category: "SAP, HCM & ERP",
     level: "Beginner to Advanced",
+    aboutTheCourse: [
+      "SAP Basis covers the overall administration of the SAP system and includes various tasks such as installation, configuration, load balancing and performance of SAP applications running on Java stack and SAP ABAP.",
+      "This also includes the maintenance of different services related to database, operating system, application and web servers in SAP system environment and also commencing and stopping the application.",
+      "VR IT Solutions is one of the best SAP GRC TRAINING to offer well-focused and career-oriented training program in SAP GRC training & SAP security training. So, get started by clicking here.",
+    ],
     coursePrerequisites: [
       "Basic understanding of IT infrastructure and networking.",
       "Familiarity with SAP concepts is a plus but not mandatory.",
@@ -3133,49 +2992,48 @@ courseHighlights: [
       },
     ],
     learningPoints: [
-      "Master SAP Basis administration and system management",
-      "Understand SAP system architecture and installation",
-      "Implement advanced security and performance tuning techniques",
-      "Gain hands-on experience with real-world projects and case studies",
+      "Introduction to ERP",
+      "Get an overview of SAP R/3",
+      "Learn about various SAP Versions",
+      "Learn how to use SAP Directory Structure",
+      "Overview of Oracle Directory Structure",
+      "Learn about User Administration",
+      "Get an overview of SAP Profile",
+      "Learn about various operation modes",
+      "Learn advanced concepts in client administration",
+      "Learn advanced concepts in RFC and Transports",
+      "Get an overview of SAP Upgrade (SPAM/SAINT)",
+      "Learn about other upgrades such as Kernel",
+      "Learn how to backup and restore",
+      "Learn about various SADBA/BRTOOLS",
+      "Learn how to System copy/Refresh Live Project",
+    ],
+    learningNotes: [
+      "Note: The syllabus listed above is indicative in nature and may include more topics for comprehensive learning.",
+      "With VR IT Solutions providing the best SAP Basis online training, this course helps professionals to get lucrative jobs in SAP administration, SAP security, and other related jobs.",
+    ],
+    whoShouldAttend: [
+      "SAP functional consultants, who want to get into SAP administration",
+      "System administrators",
+      "Database administrators",
+      "IT security professionals, interested to make a career in SAP Basis",
+      "Software professionals, interested to switch their careers",
+      "Fresh graduates, who want to make a career in SAP Basis",
+      "Learn SAP Basis by real-time experts from VR IT Solutions with practical scenarios and SAP GRC interview questions in-depth explanation of each and every topic.",
     ],
     whyJoin: {
       course: "SAP Basis",
       title: "Why Join This Course?",
       description: [
-        "SAP Basis is a critical skill for managing SAP systems. This course provides a comprehensive understanding of SAP Basis, equipping you with the skills needed to excel in your career.",
-        "VR IT Solutions offers a structured and practical approach to SAP Basis training, ensuring you gain the skills needed to excel in your career.",
+        "With SAP being a huge business application with a lot of intertwined processes, administering an SAP system is a huge challenge and hence professionals trained in this area can find lucrative opportunities as Basis administrators, SAP security consultants, and get into other similar roles. Currently, there is a lot of demand for SAP Basis professionals and hence it is the right time to kick-start this course.",
+        "VR IT Solutions is one of the software training institutes in Hyderabad to offer SAP GRC Access Control training best and balanced training in SAP Basis that is well suited to help you embark on the right path of success. So, get started by clicking here.",
       ],
       benefits: [
-        {
-          icon: <TrendingUp className="h-6 w-6" />,
-          title: "High Demand",
-          description:
-            "SAP Basis skills are highly sought after by companies worldwide, offering numerous job opportunities.",
-        },
-        {
-          icon: <DollarSign className="h-6 w-6" />,
-          title: "Lucrative Salaries",
-          description:
-            "SAP Basis professionals command premium salaries due to their specialized skills.",
-        },
-        {
-          icon: <Globe className="h-6 w-6" />,
-          title: "Global Opportunities",
-          description:
-            "SAP Basis certifications are recognized globally, opening doors to international career opportunities.",
-        },
-        {
-          icon: <Award className="h-6 w-6" />,
-          title: "Industry Recognition",
-          description:
-            "SAP is used by 90% of Fortune 100 companies, making it a highly respected platform.",
-        },
-        {
-          icon: <Zap className="h-6 w-6" />,
-          title: "Career Growth",
-          description:
-            "SAP Basis certifications can significantly accelerate your career growth and open up leadership roles.",
-        },
+        "SAP Basis skills are highly sought after by companies worldwide, offering numerous job opportunities.",
+        "SAP Basis professionals command premium salaries due to their specialized skills.",
+        "SAP Basis certifications are recognized globally, opening doors to international career opportunities.",
+        "SAP is used by 90% of Fortune 100 companies, making it a highly respected platform.",
+        "SAP Basis certifications can significantly accelerate your career growth and open up leadership roles.",
       ],
       testimonials: [
         {
@@ -3212,9 +3070,17 @@ courseHighlights: [
     category: "SAP, HCM & ERP",
     level: "Beginner to Advanced",
     coursePrerequisites: [
-      "Basic understanding of warehouse management concepts.",
-      "Familiarity with SAP concepts is a plus but not mandatory.",
-      "Knowledge of basic logistics and supply chain concepts.",
+      "VR IT Solutions hasn’t prescribed any specific pre-requisites to do this course, however the following list of pre-requisites will help to make a good start.",
+      "Knowledge about SAP products and its ecosystem.",
+      "Basic overview of standard warehouse processes.",
+      "Technical (ABAP) knowledge.",
+    ],
+    aboutTheCourse: [
+      "Extended Warehouse Management (EWM) offers a flexible and automated support for processing various movements of goods and for managing stocks in a warehouse.",
+      "The system supports planned and efficient processing of all logistics processes in a warehouse.",
+      "The beauty of this application is that it offers an option to manage your entire warehouse complex in detail in the system – right up to the storage bin level.",
+      "Not just getting an overview of the entire quantity of a material in the warehouse, you can also predict accurately, where a specific material is currently in your warehouse complex.",
+      "VR IT Solutions is one of the best SAP EWM training to offer a well-focused and career-oriented training program in SAP EWM. So, get started by clicking here.",
     ],
     sections: [
       {
@@ -3276,49 +3142,53 @@ courseHighlights: [
       },
     ],
     learningPoints: [
-      "Master SAP EWM configuration and processes",
-      "Understand warehouse management concepts and SAP EWM architecture",
-      "Implement advanced SAP EWM concepts like wave management and labor management",
-      "Gain hands-on experience with real-world projects and case studies",
+      "Introduction to EWM (Extended Warehouse Management).",
+      "Get an overview of the EWM Structure.",
+      "Learn about Master Data and its uses.",
+      "Get an overview of the integration process.",
+      "Learn some advanced concepts on structural elements and master data.",
+      "Learn about various warehouse process types.",
+      "Learn about Warehouse Monitor.",
+      "Get an overview of RF Framework.",
+      "Goods Receipt and Inbound Process",
+      "Goods Issue and Outbound Process",
+      "Storage Control",
+      "Warehouse Order Creation",
+      "Posting Changes, Stock Transfers, and Replenishment",
+      "Physical Inventory",
+      "Learn about slotting and rearrangement.",
+      "Get an overview of Post Processing Framework (PPF).",
+      "Learn advanced concepts on Material Flow System, Labor Management, and Yard Management.",
+      "Live Project.",
     ],
     whyJoin: {
       course: "SAP EWM",
       title: "Why Join This Course?",
       description: [
-        "SAP EWM is a critical skill for managing warehouse operations. This course provides a comprehensive understanding of SAP EWM, equipping you with the skills needed to excel in your career.",
-        "VR IT Solutions offers a structured and practical approach to SAP EWM training, ensuring you gain the skills needed to excel in your career.",
+        "With logistics and supply chain management being complex business areas and moreover with more number of organizations adopting the automation route, this course is particularly useful for those who want to make a career in supply chain automation.",
+        "EWM offers high-level integration with inventory management and delivery processing.",
+        "Using EWM, you can organize, control, and monitor the movement of goods.",
+        "VR IT Solutions is one of the best software training institutes in Hyderabad to offer the best and balanced SAP EWM Training that is well suited to help you embark on the right path of success. So, get started by clicking here.",
+      ],
+      learningNotes: [
+        "The syllabus listed above is indicative in nature and may include more topics for comprehensive learning.",
+        "With VR IT Solutions providing the best SAP EWM online training, this course helps professionals to manage and process a variety of operations in the supply chain management (SCM) domain in an automated SAP environment.",
+      ],
+      whoShouldAttend: [
+        "SAP MM & SAP WM consultants can learn SAP EWM Functional.",
+        "SAP Functional Consultants and SAP ABAP consultants can learn SAP EWM Technical.",
+        "Software professionals, who want to make a career in SAP.",
+        "Fresh graduates, who are looking for a career in SAP.",
+        "Business Analysts.",
+        "Database consultants.",
+        "Learn SAP EWM in both online and offline modes by real-time experts from VR IT Solutions with practical scenarios and in-depth explanation of each and every topic.",
       ],
       benefits: [
-        {
-          icon: <TrendingUp className="h-6 w-6" />,
-          title: "High Demand",
-          description:
-            "SAP EWM skills are highly sought after by companies worldwide, offering numerous job opportunities.",
-        },
-        {
-          icon: <DollarSign className="h-6 w-6" />,
-          title: "Lucrative Salaries",
-          description:
-            "SAP EWM professionals command premium salaries due to their specialized skills.",
-        },
-        {
-          icon: <Globe className="h-6 w-6" />,
-          title: "Global Opportunities",
-          description:
-            "SAP EWM certifications are recognized globally, opening doors to international career opportunities.",
-        },
-        {
-          icon: <Award className="h-6 w-6" />,
-          title: "Industry Recognition",
-          description:
-            "SAP EWM is used by 90% of Fortune 100 companies, making it a highly respected platform.",
-        },
-        {
-          icon: <Zap className="h-6 w-6" />,
-          title: "Career Growth",
-          description:
-            "SAP EWM certifications can significantly accelerate your career growth and open up leadership roles.",
-        },
+        "SAP EWM skills are highly sought after by companies worldwide, offering numerous job opportunities.",
+        "SAP EWM professionals command premium salaries due to their specialized skills.",
+        "SAP EWM certifications are recognized globally, opening doors to international career opportunities.",
+        "SAP EWM is used by 90% of Fortune 100 companies, making it a highly respected platform.",
+        "SAP EWM certifications can significantly accelerate your career growth and open up leadership roles.",
       ],
       testimonials: [
         {
@@ -3347,17 +3217,19 @@ courseHighlights: [
     course: "SAP SD",
     link: "sap-sd",
     image: "/images/courses/sap-sd.jpg",
-    description:
-      "SAP Sales and Distribution (SD) is a key module in SAP ERP that handles sales, shipping, and billing processes. This comprehensive training program covers SAP SD configuration, processes, and integration with other SAP modules. Whether you're an aspiring SAP SD consultant or a sales professional, this course will prepare you for real-world SAP SD challenges.",
+    description: [
+      "SAP SD (Sales & Distribution) is one of the core modules of SAP ERP. It is used to store the customer and product data of an organization. The main goal of SAP SD is it helps in managing the shipping, billing, selling and transportation of products and services of a company.",
+      "The SAP Logistics module manages customer relationships, right from raising a quotation to sales order and billing of the product or service. This module is interrelated with other modules such as SAP MM and PP.",
+      "VRIT Solutions is one of the few institutes in Hyderabad to offer well focused and career-oriented training program in SAP SD online training.",
+    ],
     instructor: "VR IT Solutions",
     language: "English",
     hoursContent: "70h",
     category: "SAP, HCM & ERP",
     level: "Beginner to Advanced",
     coursePrerequisites: [
-      "Basic understanding of sales and distribution processes.",
-      "Familiarity with SAP concepts is a plus but not mandatory.",
-      "Knowledge of basic business processes and logistics.",
+      "Basic knowledge of how an organization deals with their customers and products",
+      "Prior knowledge of inventory and how to deal with billing and shipping (preferable, but not mandatory)",
     ],
     sections: [
       {
@@ -3432,49 +3304,45 @@ courseHighlights: [
       },
     ],
     learningPoints: [
-      "Master SAP SD configuration and processes",
-      "Understand sales and distribution concepts and SAP SD architecture",
-      "Implement advanced SAP SD concepts like pricing and availability check",
-      "Gain hands-on experience with real-world projects and case studies",
+      "Introduction to SAP Environment",
+      "Basic Pre-requisites",
+      "Enterprise Structure",
+      "Master data (customer, material, conditions and customer material info record)",
+      "Basic Functions (includes account groups, number ranges, partner determination procedure and general settings)",
+      "Sales Documents (includes overview, header level, item level and schedule line level)",
+      "Pricing",
+      "Shipping and Picking",
+      "Billing",
+      "Detailed configuration of sales processes",
+      "Certain advanced topics such as revenue account determination, free goods determination, bill of materials, material determination, cross selling and more",
+      "Live Project",
+      "Learn SAP SD online training and mode by real-time experts from VR IT Solutions with practical scenarios and in-depth explanation of each and every topic.",
     ],
     whyJoin: {
       course: "SAP SD",
       title: "Why Join This Course?",
       description: [
-        "SAP SD is a critical skill for managing sales and distribution processes. This course provides a comprehensive understanding of SAP SD, equipping you with the skills needed to excel in your career.",
-        "VR IT Solutions offers a structured and practical approach to SAP SD training, ensuring you gain the skills needed to excel in your career.",
+        "SAP SD (Sales & Distribution) is one of the core modules of SAP ERP. It is used to store the customer and product data of an organization. The main goal of SAP SD is it helps in managing the shipping, billing, selling and transportation of products and services of a company. The SAP Logistics module manages customer relationships, right from raising a quotation to sales order and billing of the product or service. This module is interrelated with other modules such as SAP MM and PP. VRIT Solutions is one of the few institutes in Hyderabad to offer well focused and career-oriented training program in SAP SD online training. With inventory and materials management being a core area of business, this area of SAP implementation is gaining importance and is making rapid strides in innovation and implementation. This course will be particularly useful for purchase managers, logistics managers and other professionals, who want to foray into this area and also for existing professionals, who are handling a plethora of functions within the sales and distribution domain.",
+        "VRIT Solutions is one of the few institutes in Hyderabad to offer the best and balanced training in SAP SD that is well suited to help you embark on the right path of success.",
+      ],
+      whoShouldAttend: [
+        "SAP SD (Sales & Distribution) is one of the core modules of SAP ERP. It is used to store the customer and product data of an organization. The main goal of SAP SD is it helps in managing the shipping, billing, selling and transportation of products and services of a company.",
+        "The SAP Logistics module manages customer relationships, right from raising a quotation to sales order and billing of the product or service. This module is interrelated with other modules such as SAP MM and PP.",
+        "VRIT Solutions is one of the few institutes in Hyderabad to offer well focused and career-oriented training program in SAP SD online training.",
+        "With inventory and materials management being a core area of business, this area of SAP implementation is gaining importance and is making rapid strides in innovation and implementation. This course will be particularly useful for purchase managers, logistics managers and other professionals, who want to foray into this area and also for existing professionals, who are handling a plethora of functions within the sales and distribution domain.",
+        "VRIT Solutions is one of the few institutes in Hyderabad to offer the best and balanced training in SAP SD that is well suited to help you embark on the right path of success.",
+        "Logistics professionals",
+        "Finance professionals",
+        "Consultants, who would be mainly responsible for implementing sales, billing and transportation of products",
+        "Fresh graduates, with an aim to understand the basics of SAP SD and implement it in practice",
+        "Engineering graduates, looking for a career in SAP Sales & Distribution module",
       ],
       benefits: [
-        {
-          icon: <TrendingUp className="h-6 w-6" />,
-          title: "High Demand",
-          description:
-            "SAP SD skills are highly sought after by companies worldwide, offering numerous job opportunities.",
-        },
-        {
-          icon: <DollarSign className="h-6 w-6" />,
-          title: "Lucrative Salaries",
-          description:
-            "SAP SD professionals command premium salaries due to their specialized skills.",
-        },
-        {
-          icon: <Globe className="h-6 w-6" />,
-          title: "Global Opportunities",
-          description:
-            "SAP SD certifications are recognized globally, opening doors to international career opportunities.",
-        },
-        {
-          icon: <Award className="h-6 w-6" />,
-          title: "Industry Recognition",
-          description:
-            "SAP SD is used by 90% of Fortune 100 companies, making it a highly respected platform.",
-        },
-        {
-          icon: <Zap className="h-6 w-6" />,
-          title: "Career Growth",
-          description:
-            "SAP SD certifications can significantly accelerate your career growth and open up leadership roles.",
-        },
+        "SAP SD skills are highly sought after by companies worldwide, offering numerous job opportunities.",
+        "SAP SD professionals command premium salaries due to their specialized skills.",
+        "SAP SD certifications are recognized globally, opening doors to international career opportunities.",
+        "SAP SD is used by 90% of Fortune 100 companies, making it a highly respected platform.",
+        "SAP SD certifications can significantly accelerate your career growth and open up leadership roles.",
       ],
       testimonials: [
         {
@@ -3510,6 +3378,10 @@ courseHighlights: [
     hoursContent: "70h",
     level: "Beginner to Advanced",
     category: "SAP, HCM & ERP",
+    aboutTheCourse: [
+      "SAP Leonardo is the model of SAP to link business processes with IoT devices. IoT enables the data from other devices which are used in the business enterprise for evaluation, vision, or execute some activities like devices like switch off and on of the street lights, check the status of the products, etc.",
+      "SAP Leonardo is the SAP’s Machine Learning model which offered Smart portfolio services. The services vary from well-structured product exhibitions like SAP HANA Predictive Analytics Library, SAP Predictive Analytics to all the services provided through SAP Leonardo machine learning base. We can implement services using APIs, quickly functional prepared prototypes that can efficiently be used as web services. There are even functional services like machine learning, Big Data, IoT, blockchain, Data Intelligence and advanced analytics.",
+    ],
     coursePrerequisites: [
       "Basic understanding of SAP navigation and concepts.",
       "Familiarity with emerging technologies like IoT, Machine Learning, and Blockchain.",
@@ -3578,34 +3450,34 @@ courseHighlights: [
       course: "SAP Leonardo",
       title: "Why Join This Course?",
       description: [
-        "SAP Leonardo is at the forefront of digital innovation, and mastering it opens up numerous career opportunities in IoT, Machine Learning, and Blockchain.",
-        "This course provides a comprehensive understanding of SAP Leonardo, from basic concepts to advanced applications, ensuring you are job-ready.",
+        "SAP Leonardo – The future of modern technology",
+        "SAP Leonardo is a revolution that helps customers access SAP’s components and products across evolving technologies, such as Machine Learning, Big Data, Internet of Things (IoT) and Blockchain. It is often linked with SAP Cloud Platform services but it’s not limited to this, as it covers anything that fits into modern technologies and includes e.g. predictive competencies in S/4HANA.",
+        "One of the key benefits of SAP Leonardo is that it allows you to integrate multiple SAP products with emerging technologies. For example in the SAP Cloud Platform you can create Fiori apps that use IoT services. When integrated into your business processes as an end user you won’t necessarily know there is Machine Learning behind the scenes and you won’t see anything different but you will experience automatic decision-making or recommendations.",
+        "Products in SAP S/4HANA, such as cash reconciliation and invoicing, already integrate Machine Learning as part of SAP Leonardo and the number of these Machine Learning settings that will become part of S/4HANA.",
+      ],
+      whoShouldAttend: [
+        "Executive managers",
+        "IT professionals",
+        "Solution consultants",
+        "Application developers",
+        "Anyone interested in intelligent technologies and innovation",
+        "Introduction to Predictive Maintenance and Service",
+        "(PdMS) PdMS Application Overview",
+        "Architecture",
+        "Configuration of Equipment",
+        "Master Data Master Data Integration with EAM System",
+        "Indicators and Indicator Configuration",
+        "Analysis Tools and Application Configuration",
+        "CustomAnalysis Tools",
+        "Machine Learning Engine Overview and Configuration",
+        "R for Non Data Scientists",
+        "Custom Data Science Algorithms",
       ],
       benefits: [
-        {
-          icon: "📈",
-          title: "High Demand",
-          description:
-            "SAP Leonardo professionals are in high demand across various industries.",
-        },
-        {
-          icon: "💰",
-          title: "Lucrative Salaries",
-          description:
-            "SAP Leonardo experts command high salaries due to their specialized skills.",
-        },
-        {
-          icon: "🌍",
-          title: "Global Opportunities",
-          description:
-            "SAP Leonardo skills are recognized globally, offering international career opportunities.",
-        },
-        {
-          icon: "🏆",
-          title: "Industry Recognition",
-          description:
-            "SAP Leonardo is used by leading companies worldwide, making it a highly respected platform.",
-        },
+        "SAP Leonardo professionals are in high demand across various industries.",
+        "SAP Leonardo experts command high salaries due to their specialized skills.",
+        "SAP Leonardo skills are recognized globally, offering international career opportunities.",
+        "SAP Leonardo is used by leading companies worldwide, making it a highly respected platform.",
       ],
       testimonials: [
         {
@@ -3624,6 +3496,169 @@ courseHighlights: [
     },
   },
   {
+    title: "SAP FICO Course",
+    course: "SAP FICO",
+    link: "",
+    image: "",
+    description: [
+      "SAP Fico is a specific deployment option for gathering accounting data from SAP ERP systems into one central SAP S/4HANA system. This course provides an overview of the concept, the architecture, and the functionalities of SAP Fico for LOB Finance.",
+    ],
+    aboutTheCourse: [
+      "Difference Between SAP FICO and SAP Simple Finance",
+      "SAP FICO and SAP Simple Finance are related but distinct components of SAP’s financial management solutions.",
+      "SAP FICO: A traditional SAP ERP module for managing financial accounting (FI) and controlling (CO) functions.",
+      "SAP Simple Finance: An advanced financial solution in SAP S/4HANA, integrating real-time financial processing and analytics.",
+      "Deployment: SAP FICO is part of SAP ECC (ERP Central Component), while SAP Simple Finance runs on the SAP HANA database.",
+      "Key Features: SAP FICO handles core financial transactions, reporting, and controlling, whereas SAP Simple Finance offers a simplified data model, real-time insights, and predictive analytics.",
+      "Database: SAP FICO works on traditional databases like Oracle and MS SQL, while SAP Simple Finance is built on SAP HANA for high-speed processing.",
+      "Data Structure: SAP FICO uses multiple tables for financial transactions, while SAP Simple Finance stores all financial data in a single table (ACDOCA).",
+      "Reporting: SAP FICO relies on batch processing, while SAP Simple Finance provides real-time reporting and analytics using SAP HANA.",
+      "User Interface: SAP FICO uses SAP GUI, whereas SAP Simple Finance uses an intuitive Fiori-based UI.",
+      "Speed & Efficiency: SAP FICO relies on periodic financial closing processes, whereas SAP Simple Finance enables real-time financial close and instant insights.",
+      "Which One to Choose?",
+      "If your company is using SAP ECC, SAP FICO remains a critical module.",
+      "If you are moving towards SAP S/4HANA, learning SAP Simple Finance is recommended for real-time financial management and analytics.",
+      "Since finance is a crucial function in any organization, transitioning to SAP Simple Finance can bring significant improvements in efficiency and decision-making.",
+    ],
+    instructor: "VR IT Solutions",
+    language: "English",
+    hoursContent: "80 hours",
+    category: "Finance & Accounting",
+    level: "Beginner to Advanced",
+
+    coursePrerequisites: [
+      "VR IT Solutions haven’t prescribed any specific pre-requisites and this course can be taken up by anyone with little or no financial and accounting experience.",
+      "VR IT Solutions is one of the best SAP Fico training in Hyderabad to offer the best and balanced training in SAP FICO that is well suited to help you embark on the right path of success.",
+      "So, get started by clicking here.",
+    ],
+    sections: [
+      {
+        title: "Introduction to FI/CO",
+        lectures: [
+          { title: "Overview of various modules" },
+          {
+            title:
+              "Global parameters: company, company code, fiscal year, chart of accounts",
+          },
+        ],
+      },
+      {
+        title: "General Ledger and Accounting Parameters",
+        lectures: [
+          { title: "Concepts of G/L and other accounting parameters" },
+        ],
+      },
+      {
+        title: "Accounts Receivables and Payables",
+        lectures: [
+          { title: "Accounts receivables" },
+          { title: "Accounts payables and banking" },
+        ],
+      },
+      {
+        title: "Advanced Accounting Concepts",
+        lectures: [
+          { title: "Asset Accounting" },
+          { title: "Integration with other modules" },
+        ],
+      },
+      {
+        title: "Controlling and Cost Accounting",
+        lectures: [
+          { title: "Cost element accounting" },
+          { title: "Cost center accounting" },
+          { title: "CO-PA and internal orders" },
+        ],
+      },
+      {
+        title: "Product Costing and Material Ledger",
+        lectures: [
+          { title: "Profit center accounting" },
+          { title: "Product costing and material ledger" },
+        ],
+      },
+      {
+        title: "Real-time Concepts and Live Project",
+        lectures: [
+          { title: "SAP methodology and financial statement version" },
+          { title: "Transport request creation & release" },
+          { title: "SAP Query" },
+        ],
+      },
+    ],
+    practicalExecution: [
+      "In order to work on practicals, some basic pre-requisites are required.",
+      "You need a good internet connection, along with the required software that needs to be installed.",
+      "This software can easily run on all operating systems such as Windows OS.",
+    ],
+
+    courseHighlights: [
+      "Comprehensive practical sessions",
+      "Live project for hands-on experience",
+      "Top-notch faculty from reputed institutes",
+      "Industry-relevant curriculum updated every 6 months",
+      "Weekend and weekday batch options",
+    ],
+    learningPoints: [
+      "Introduction to FI/CO and overview of various modules",
+      "Learn about various global parameters such as company, company code, fiscal year, chart of accounts, etc",
+      "Concepts of G/L and other accounting parameters",
+      "Concepts of accounts receivables, account payables and banking",
+      "Advanced concepts in assets accounting",
+      "Advanced concepts in integration and how it integrates with other modules",
+      "Advanced concepts in controlling and cost element accounting",
+      "Advanced concepts in cost center accounting",
+      "Concepts of CO-PA",
+      "Learn about various concepts of internal orders and how to process them",
+      "Advanced concepts in profit center accounting",
+      "Advanced concepts of product costing and material ledger",
+      "Real time concepts including overview of SAP methodology, creation of financial statement version, transport request creation & release and SAP Query",
+      "Live project - apply real-time training with end to end implementation Process",
+    ],
+    learningNotes: [
+      "The syllabus listed above is indicative in nature and may include more topics for comprehensive learning.",
+      "With VRIT Solutions providing the best SAP FICO online training, this course helps professionals to manage and process an array of transactions in finance and accounting in an automated ERP SAP environment.",
+    ],
+    whyJoin: {
+      course: "SAP FICO Training",
+      title: "Why Join This Course?",
+      description: [
+        "This course offers the competence and power of meeting all the accounting and financial requirements of an organization.",
+        "With more and more organizations embarking on financial automation, this course assumes significance within the ERP domain.",
+        "Hence, doing this course offers great benefits for finance and accounting professionals.",
+        "It also benefits other professionals looking for lucrative opportunities in financial automation.",
+      ],
+      whoShouldAttend: [
+        "Fresh graduates with B.A or B.Com background",
+        "Chartered accountants",
+        "Executives, who are currently working as accountants",
+        "Software professionals, who are interested to switch their careers",
+        "SAP professionals, working on other domains, interested to make a career switch.",
+      ],
+
+      benefits: [
+        "Enhance career opportunities in financial automation",
+        "Gain industry-recognized certification",
+        "Increase salary prospects and job opportunities",
+        "Develop expertise in SAP FICO with practical training",
+      ],
+      testimonials: [
+        {
+          quote:
+            "This training helped me land a job in a top company with a great package!",
+          author: "Amit Kumar",
+          role: "SAP FICO Consultant",
+        },
+        {
+          quote:
+            "VR IT Solutions provided excellent training with real-time scenarios and practical learning.",
+          author: "Priya Sharma",
+          role: "Finance Analyst",
+        },
+      ],
+    },
+  },
+  {
     title: "SAP S/4HANA Simple Finance Training in Hyderabad",
     course: "SAP S/4HANA Finance",
     link: "simple-finance-training-in-hyderabad",
@@ -3635,6 +3670,10 @@ courseHighlights: [
     hoursContent: "80h",
     level: "Beginner to Advanced",
     category: "SAP, HCM & ERP",
+    aboutTheCourse: [
+      "SAP S/4HANA Finance, which was previously called SAP Simple Finance, is the first business application developed for the S/4HANA finance platform. It is designed to remove traditional barriers between transactional, analytics, and planning systems to provide instant insights and on-the-fly analysis using all levels of financial data. A business decision maker, for example, can use SAP S/4HANA Finance to model data and create forecasts of potential decisions using real-time financial data from various systems.\n\nThe main advantage SAP S/4HANA Finance has is processing speed combined with integrated features for the various financial functions, such as financial accounting and management accounting. Because of this, SAP S/4HANA Finance allows for a much faster reconciliation of financial processes such as the quarterly close, and provides a single source of financial truth for the organization as a whole, according to SAP.\n\nVR IT Solutions is one of the best simple finance training in Hyderabad we offer S/4 hana online training with well focused and career-oriented training program in s4 hana simple finance.",
+    ],
+
     coursePrerequisites: [
       "Basic understanding of accounting principles.",
       "Familiarity with SAP navigation and basic concepts.",
@@ -3682,11 +3721,17 @@ courseHighlights: [
       },
     ],
     learningPoints: [
-      "Understand the core concepts of SAP S/4HANA Finance and its architecture.",
-      "Master financial accounting processes, including general ledger, accounts payable, and accounts receivable.",
-      "Learn advanced topics like financial closing, reporting, and integration with other SAP modules.",
-      "Gain expertise in real-time financial reporting using SAP Fiori apps.",
-      "Explore advanced topics like multi-entity consolidation and compliance reporting.",
+      "1) What is S/4 HANA and S/4 HANA System Landscape?",
+      "2) Changes in Basic Settings Configuration in SAP Finance and Controlling?",
+      "3) General Ledger:\n   a) Merging of General Ledger Account and Cost Element.\n   b) Why there is no reconciliation between Finance and Controlling?\n   c) Integration between FI and CO in S/4 HANA Finance?",
+      "4) Accounts payable and Accounts Receivable:\n   a) Business Partner configuration- vendor /customer master.",
+      "5) New House Bank Accounting in S/4 HANA by using Fiori Application.",
+      "6) Asset accounting:\n   a) Why Accounting principle is important in Asset Accounting Configuration.\n   b) Parallel Ledger Concept in Asset Accounting.\n   c) New functionalities in Asset Accounting balances uploading.\n   d) New Functionalities in AFAB- Depreciation Run.",
+      "7) Table structure in S/4 HANA and Universal general ledger Concept?",
+      "Cost center Accounting:\n   1) Why Cost Element accounting integrates with GL account?",
+      "2) Product Costing:\n   a) COGS split in Product Costing.\n   b) Variance Split in Product Costing.",
+      "3) COPA new functionalities.",
+      "S4 HANA finance migration:\n   1) Pre requisites for S/4 HANA Migration.\n   2) Pre migration activities.\n   3) During migration activities.\n   4) Post migration activities.",
     ],
     whyJoin: {
       course: "SAP S/4HANA Finance",
@@ -3696,30 +3741,10 @@ courseHighlights: [
         "This course provides a comprehensive understanding of SAP S/4HANA Finance, from basic concepts to advanced configurations, ensuring you are job-ready.",
       ],
       benefits: [
-        {
-          icon: "📈",
-          title: "High Demand",
-          description:
-            "SAP S/4HANA Finance professionals are in high demand across various industries.",
-        },
-        {
-          icon: "💰",
-          title: "Lucrative Salaries",
-          description:
-            "SAP S/4HANA Finance experts command high salaries due to their specialized skills.",
-        },
-        {
-          icon: "🌍",
-          title: "Global Opportunities",
-          description:
-            "SAP S/4HANA Finance skills are recognized globally, offering international career opportunities.",
-        },
-        {
-          icon: "🏆",
-          title: "Industry Recognition",
-          description:
-            "SAP S/4HANA is used by leading companies worldwide, making it a highly respected platform.",
-        },
+        "SAP S/4HANA Finance professionals are in high demand across various industries.",
+        "SAP S/4HANA Finance experts command high salaries due to their specialized skills.",
+        "SAP S/4HANA Finance skills are recognized globally, offering international career opportunities.",
+        "SAP S/4HANA is used by leading companies worldwide, making it a highly respected platform.",
       ],
       testimonials: [
         {
@@ -3749,6 +3774,12 @@ courseHighlights: [
     hoursContent: "70h",
     level: "Beginner to Advanced",
     category: "SAP, HCM & ERP",
+    aboutTheCourse: [
+      "SAP Security is one of the important technical modules in SAP. SAP Security administrators are responsible for development and administration of user access rights in different SAP systems.",
+      "It includes User Administration, Role Administration, Troubleshooting, Restricting access rights and Reporting.",
+      "When we are implementing SAP Security, we should follow Good Governance Practice including SOX and SOD compliance to fulfill audit requirements.",
+      "VR IT Solutions is one of the best SAP GRC training institutes offering a well-focused and career-oriented training program including real-time exposure in SAP Security training and SAP GRC training.",
+    ],
     coursePrerequisites: [
       "Basic understanding of SAP navigation and concepts.",
       "Familiarity with security and compliance principles.",
@@ -3798,34 +3829,15 @@ courseHighlights: [
       course: "SAP Security & GRC",
       title: "Why Join This Course?",
       description: [
-        "SAP Security and GRC are critical for ensuring the security and compliance of SAP systems, and mastering them opens up numerous career opportunities.",
-        "This course provides a comprehensive understanding of SAP Security and GRC, from basic concepts to advanced configurations, ensuring you are job-ready.",
+        "With SAP being a huge business application with a lot of intertwined processes, administering an SAP system is a huge challenge and hence professionals trained in this area can find lucrative opportunities as SAP Security and GRC consultants and get into other similar roles.",
+        "Currently, there is a lot of demand for SAP Security and GRC professionals, and hence it is the right time to kickstart this course.",
+        "VR IT Solutions is one of the software training institutes in Hyderabad to offer SAP Security and SAP GRC Access Controls training, SAP Security online training, SAP GRC online training also.",
       ],
       benefits: [
-        {
-          icon: "📈",
-          title: "High Demand",
-          description:
-            "SAP Security and GRC professionals are in high demand across various industries.",
-        },
-        {
-          icon: "💰",
-          title: "Lucrative Salaries",
-          description:
-            "SAP Security and GRC experts command high salaries due to their specialized skills.",
-        },
-        {
-          icon: "🌍",
-          title: "Global Opportunities",
-          description:
-            "SAP Security and GRC skills are recognized globally, offering international career opportunities.",
-        },
-        {
-          icon: "🏆",
-          title: "Industry Recognition",
-          description:
-            "SAP Security and GRC are used by leading companies worldwide, making them highly respected platforms.",
-        },
+        "SAP Security and GRC professionals are in high demand across various industries.",
+        "SAP Security and GRC experts command high salaries due to their specialized skills.",
+        "SAP Security and GRC skills are recognized globally, offering international career opportunities.",
+        "SAP Security and GRC are used by leading companies worldwide, making them highly respected platforms.",
       ],
       testimonials: [
         {
@@ -3848,17 +3860,19 @@ courseHighlights: [
     course: "SAP S/4HANA Logistics",
     link: "sap-s4Hana-simple-logistics-training",
     image: "/images/courses/sap-s4hana-logistics.png",
-    description:
-      "SAP S/4HANA Simple Logistics is a next-generation logistics solution that leverages the power of SAP HANA for real-time logistics processing and optimization. This training covers the fundamentals of SAP S/4HANA Simple Logistics, including material management, procurement, sales, and distribution. It also delves into advanced topics like production planning, quality management, and warehouse management.",
+    description: [
+      "SAP Simple Logistics, also referred to as SAP S/4 HANA Enterprise Management, consists of all the key modules under SAP ERP Business Suite. The list of modules include Material Management, Supply Chain, Demand Planning, Sourcing and Procurement, Contract Management, and Manufacturing.",
+      "Using S/4 HANA Enterprise Management, the following are the list of business processes that can be managed: Procurement, Inventory Management, Order Management & Billing, Material Requirement Planning.",
+      "In VR IT Solutions, we assure you get the best SAP training support in SAP S/4 HANA Simple Logistics training and are rated as one of the few institutes in Hyderabad to offer well-focused and customized training. So, get started by clicking here.",
+    ],
     instructor: "VR IT Solutions",
     language: "English",
     hoursContent: "80h",
     level: "Beginner to Advanced",
     category: "SAP, HCM & ERP",
     coursePrerequisites: [
-      "Basic understanding of logistics and supply chain management.",
-      "Familiarity with SAP navigation and basic concepts.",
-      "No prior SAP S/4HANA Logistics experience required.",
+      "Must have basic understanding of logistics processes.",
+      "Should have some knowledge of any SAP module.",
     ],
     sections: [
       {
@@ -3904,44 +3918,59 @@ courseHighlights: [
       },
     ],
     learningPoints: [
-      "Understand the core concepts of SAP S/4HANA Simple Logistics and its architecture.",
-      "Master material management, procurement, and inventory processes.",
-      "Learn advanced topics like production planning, quality management, and warehouse management.",
-      "Gain expertise in real-time logistics reporting using SAP Fiori apps.",
-      "Explore advanced topics like IoT integration and predictive analytics.",
+      "Introduction to SAP HANA: Topics include SAP In-Memory Strategy, Architecture Overview and various views (analytic, attribute, calculation, etc)",
+      "SAP S/4 HANA: Topics include S/4 HANA Roadmap, Benefits, introduction to SAP Fiori and deployment options",
+      "Introduction to SAP Activate Methodology: Topics include System Conversion, Landscape transformation and New Implementation",
+      "Overview of SAP HANA Cloud Solutions: Topics include SAP strategy for Cloud and SAP HANA, overview of SAP Cloud Data Centers and SAP HANA Enterprise Cloud",
+      "Key Innovations of SAP Simple Logistics: Topics include inventory management, material requirement planning, material valuation and order management & billing",
+      "Changes in SAP Simple Logistics Processes: Topics include overview of SAP simple logistics processes, SAP Fiori apps related to logistics/supply chain and architectural changes pertaining to product master, supplier information, sourcing & procurement.",
+      "Industry Specific Solutions for Logistics functions for: Engineering & Construction, Aerospace & Defense, Mill Industry, Automotive",
+      "Migration to SAP S/4 HANA: Goals, Scope and impact of the SAP S/4 HANA Materials Management & Operation. Topics include pre-requisites, configuration and perform migration to the SAP S/4 HANA",
+      "Live Project",
+    ],
+    learningNotes: [
+      "The syllabus listed above is indicative in nature and may include more topics for comprehensive learning.",
+    ],
+    whoShouldAttend: [
+      "SAP solution architect",
+      "Application consultant",
+      "Support consultant",
+      "Project manager",
+      "Fresh graduates, looking for a career in this area of expertise",
     ],
     whyJoin: {
       course: "SAP S/4HANA Logistics",
       title: "Why Join This Course?",
       description: [
-        "SAP S/4HANA Simple Logistics is a critical module for logistics and supply chain management, and mastering it opens up numerous career opportunities.",
-        "This course provides a comprehensive understanding of SAP S/4HANA Simple Logistics, from basic concepts to advanced configurations, ensuring you are job-ready.",
+        "SAP Simple Logistics is rated as the best SAP S/4 HANA Simple Logistics training for innovative material management, supply chain management, production planning, and also sales & distribution within medium or large enterprises.",
+        "The above areas being core of business, getting trained in this course would help you reap excellent rewards in SAP. If you are an SAP solution architect, functional consultant, or in any techno-functional role in logistics or supply chain industry, this course enables you to perform better and helps you make the next crucial move in your career.",
+        [
+          "Free Demo sessions to get to know how the course is conducted",
+          "Flexible and customized timings – we plan our schedule as per your convenience, so no need to disturb your regular work schedule",
+          "Easy to follow, since most of the course is practical oriented with live industry cases",
+          "Classes driven by real time experts in SAP industry - experienced professionals across SAP domain, occupying various positions such as middle level managers, experienced faculty from reputed institutes",
+          "Provides notes and recorded videos, so you can follow the course anywhere, anytime without any location hassles",
+          "Complete assistance to help you crack interviews – we provide FAQs, sample resumes and tips",
+          "Get trained in SAP Simple Logistics in just 45 hours - select either weekend or weekday mode",
+          "Industry relevant curriculum - Our curriculum is constantly updated to meet the growing needs of the industry",
+        ],
+        "VR IT Solutions is one of the best software training institutes in Hyderabad to offer well-focused and career-oriented training program in SAP Simple Logistics. So, get started by clicking here.",
+      ],
+      practicalExecution: [
+        "Free Demo sessions to get to know how the course is conducted",
+        "Flexible and customized timings – we plan our schedule as per your convenience, so no need to disturb your regular work schedule",
+        "Easy to follow, since most of the course is practical oriented with live industry cases.",
+        "Classes driven by real time experts in SAP industry -experienced professionals across SAP domain,occupying various positions such as middle level managers,experienced faculty from reputed institutes.",
+        "Provides notes and recorded videos, so you can follow the course anywhere, anytime without any location hassles.",
+        "Complete assistance to help you crack interviews – we provide FAQs, sample resumes and tips.",
+        "Get trained in SAP Simple Logistics in just 45 hours -select either weekend or weekday mode",
+        "Industry relevant curriculum - Our curriculum is constantly updated to meet the growing needs of the industry",
       ],
       benefits: [
-        {
-          icon: "📈",
-          title: "High Demand",
-          description:
-            "SAP S/4HANA Logistics professionals are in high demand across various industries.",
-        },
-        {
-          icon: "💰",
-          title: "Lucrative Salaries",
-          description:
-            "SAP S/4HANA Logistics experts command high salaries due to their specialized skills.",
-        },
-        {
-          icon: "🌍",
-          title: "Global Opportunities",
-          description:
-            "SAP S/4HANA Logistics skills are recognized globally, offering international career opportunities.",
-        },
-        {
-          icon: "🏆",
-          title: "Industry Recognition",
-          description:
-            "SAP S/4HANA is used by leading companies worldwide, making it a highly respected platform.",
-        },
+        "SAP S/4HANA Logistics professionals are in high demand across various industries.",
+        "SAP S/4HANA Logistics experts command high salaries due to their specialized skills.",
+        "SAP S/4HANA Logistics skills are recognized globally, offering international career opportunities.",
+        "SAP S/4HANA is used by leading companies worldwide, making it a highly respected platform.",
       ],
       testimonials: [
         {
@@ -3964,8 +3993,13 @@ courseHighlights: [
     course: "Google Cloud",
     link: "google-cloud-training",
     image: "/images/courses/google-cloud.png",
-    description:
-      "Google Cloud Platform (GCP) is a suite of cloud computing services offered by Google. This training covers the fundamentals of GCP, including compute, storage, networking, and big data services. It also delves into advanced topics like security, DevOps, and migration strategies to GCP.",
+    description: [
+      "Google Cloud Platform or GCP is the proprietary platform of Google and is offered as a suite of cloud computing services.",
+      "It leverages the same infrastructure that Google utilizes for its internal requirements for its end-user products.",
+      "Google Cloud is one of the popular platforms available in the commercial cloud space and is available in various variants - infrastructure as a service, platform as a service, and serverless computing environments.",
+      "According to Canalys estimates, Google Cloud is one of the fastest-growing cloud providers in the industry and is currently enjoying third place in the commercial cloud space.",
+      "As per Gartner Inc., the global end-user spending on public cloud services is expected to rise 18.4% in 2021 to a staggering $304.9 billion - a steep increase from $257.5 billion in 2020.",
+    ],
     instructor: "VR IT Solutions",
     language: "English",
     hoursContent: "70h",
@@ -4012,44 +4046,28 @@ courseHighlights: [
       },
     ],
     learningPoints: [
-      "Understand the core concepts of Google Cloud Platform and its services.",
-      "Master GCP networking, compute, and storage services.",
-      "Learn advanced topics like security, DevOps, and data processing.",
-      "Gain expertise in GCP migration strategies and hybrid cloud models.",
-      "Explore real-world use cases and hands-on projects.",
+      "With booming opportunities in Cloud computing, students and professionals alike must get started in this exciting area of knowledge and become certified professionals.",
+      "Some of the lucrative learning paths that students can choose to specialize in include Cloud infrastructure, application development, API management, Data engineering and Analytics, and Networking & Security.",
+      "With thousands of jobs thrown open in this lucrative segment, we at VRIT Solutions have designed the best online Google Cloud training in Hyderabad.",
+      "This course covers all the requisite concepts and applications needed to become a thoroughbred professional and make you job-ready.",
+      "Make VRIT Solutions your first choice for Google Cloud Platform training in Hyderabad due to its time-tested training methodology coupled with hands-on practical sessions and live projects.",
+      "VRIT solutions offer the best-in-class GCP training and GCP job support to offer the right platform to power your career to the next level.",
+      "So, don't stay behind. Join now for a lucrative career.",
     ],
     whyJoin: {
       course: "Google Cloud",
       title: "Why Join This Course?",
       description: [
-        "Google Cloud Platform is one of the leading cloud service providers, and mastering it opens up numerous career opportunities in cloud computing.",
-        "This course provides a comprehensive understanding of GCP, from basic concepts to advanced configurations, ensuring you are job-ready.",
+        "With booming opportunities in Cloud computing, students and professionals alike must get started in this exciting area of knowledge and become certified professionals. Some of the lucrative learning paths that students can choose to specialize in include Cloud infrastructure, application development, API management, Data engineering and Analytics, and Networking & Security. With thousands of jobs thrown open in this lucrative segment, we at VRIT Solutions have designed the best online Google Cloud training in Hyderabad. This course covers all the requisite concepts and applications needed to become a thoroughbred professional and make you job-ready. Make VRIT Solutions your first choice for Google Cloud Platform training in Hyderabad due to its time-tested training methodology coupled with hands-on practical sessions and live projects.",
+        "VRIT solutions offer the best-in-class GCP training and GCP job support to offer the right platform to power your career to the next level.",
+        "So, don't stay behind. Join now for a lucrative career.",
       ],
+
       benefits: [
-        {
-          icon: "📈",
-          title: "High Demand",
-          description:
-            "GCP professionals are in high demand across various industries.",
-        },
-        {
-          icon: "💰",
-          title: "Lucrative Salaries",
-          description:
-            "GCP experts command high salaries due to their specialized skills.",
-        },
-        {
-          icon: "🌍",
-          title: "Global Opportunities",
-          description:
-            "GCP skills are recognized globally, offering international career opportunities.",
-        },
-        {
-          icon: "🏆",
-          title: "Industry Recognition",
-          description:
-            "Google Cloud is used by leading companies worldwide, making it a highly respected platform.",
-        },
+        "GCP professionals are in high demand across various industries.",
+        "GCP experts command high salaries due to their specialized skills.",
+        "GCP skills are recognized globally, offering international career opportunities.",
+        "Google Cloud is used by leading companies worldwide, making it a highly respected platform.",
       ],
       testimonials: [
         {
@@ -4080,9 +4098,21 @@ courseHighlights: [
     level: "Beginner to Advanced",
     category: "Web Development",
     coursePrerequisites: [
-      "Basic understanding of programming concepts.",
-      "Familiarity with web development basics.",
-      "No prior full-stack development experience required.",
+      "VRIT Solutions hasn’t prescribed any specific pre-requisites for doing this course.",
+      "However, strong knowledge in any object oriented programming like C++ is highly desirable, but not essential.",
+      "If you are looking for full stack developer online training, VRIT Solutions is the right institute for you.",
+    ],
+    whoShouldAttend: [
+      "Software developers, Architects and Web Designers",
+      "Fresh Graduates, who are interested to make a career in Java.",
+    ],
+    aboutTheCourse: [
+      "Java is an object oriented and powerful general language, widely used for developing several applications on web or mobile platform.",
+      "Compared to other languages, this language is quite popular among students and professionals alike, as it is easy to learn, implement, compile and debug.",
+      "Some of the biggest software companies around the world are developing applications in Java, which only reinforces the power and importance of this programming language.",
+      "This training course is designed to develop you into full-fledged full stack professional, ready to take up any real time projects and assignments.",
+      "In addition to that, this course also lets you work on the Angular11 framework or mobile development with Java, which is one of the biggest advantages of being a full stack Developer online training in hyderabad",
+      "VRIT Solutions is one of the few institutes in Hyderabad and Bangalore to offer well focused and career-oriented training program in full stack developer training.",
     ],
     sections: [
       {
@@ -4119,44 +4149,31 @@ courseHighlights: [
       },
     ],
     learningPoints: [
-      "Understand the core concepts of full-stack development and its components.",
-      "Master front-end technologies like HTML, CSS, JavaScript, and Angular/React.",
-      "Learn back-end development with Java, Spring Boot, and database management.",
-      "Gain expertise in building RESTful APIs and microservices architecture.",
-      "Explore advanced topics like DevOps, Docker, and Kubernetes.",
+      "Introduction to programming",
+      "Overview of object oriented programming",
+      "Overview of core Java concepts",
+      "Overview of Inheritance, Threads and Collections",
+      "Learn how to deploy JDBC for connecting various applications",
+      "Overview of Method Overriding and Overloading",
+      "Learn how to use Array and HashMap for storing dynamic data",
+      "Learn advanced concepts about how to create Threads in Java by Implementing Runnable Interface",
+      "Live Project",
+      "Note: The syllabus listed above is indicative in nature and may include more topics for comprehensive learning.",
     ],
     whyJoin: {
       course: "Full Stack Development",
       title: "Why Join This Course?",
       description: [
-        "Full Stack Development is a highly sought-after skill, and mastering it opens up numerous career opportunities in web development.",
-        "This course provides a comprehensive understanding of full-stack development, from basic concepts to advanced configurations, ensuring you are job-ready.",
+        "With more and more companies adopting Java as a primary programming language for implementing cutting edge applications, this course is designed to make you a complete professional.",
+        "This is a full fledged comprehensive course that helps to grow in your software coding career.",
+        "VRIT Solutions offers the best full stack developer online training program to help you learn object-oriented programming concepts, Angular 11, HTML, CSS, Spring, Spring Boot, Spring Boot starters, Spring Boot JPA Postgres, SQL, JOIN, NO SQL, Mongo DB Sample web application to manage a resource & classes, and much more.",
+        "Not just theoretical training, this course is adequately supplemented by practical sessions to let you work on some core assignments including mini projects and a final live project.",
       ],
       benefits: [
-        {
-          icon: "📈",
-          title: "High Demand",
-          description:
-            "Full Stack Developers are in high demand across various industries.",
-        },
-        {
-          icon: "💰",
-          title: "Lucrative Salaries",
-          description:
-            "Full Stack Developers command high salaries due to their specialized skills.",
-        },
-        {
-          icon: "🌍",
-          title: "Global Opportunities",
-          description:
-            "Full Stack Development skills are recognized globally, offering international career opportunities.",
-        },
-        {
-          icon: "🏆",
-          title: "Industry Recognition",
-          description:
-            "Full Stack Developers are essential for building modern web applications, making it a highly respected role.",
-        },
+        "Full Stack Developers are in high demand across various industries.",
+        "Full Stack Developers command high salaries due to their specialized skills.",
+        "Full Stack Development skills are recognized globally, offering international career opportunities.",
+        "Full Stack Developers are essential for building modern web applications, making it a highly respected role.",
       ],
       testimonials: [
         {
@@ -4179,17 +4196,21 @@ courseHighlights: [
     course: "Informatica MDM",
     link: "informatica-mdm-training",
     image: "/images/courses/informatica-mdm.png",
-    description:
-      "Informatica Master Data Management (MDM) is a comprehensive solution for managing and integrating master data across an organization. This training covers the fundamentals of Informatica MDM, including data modeling, data integration, and data governance. It also delves into advanced topics like data matching, merging, and performance tuning.",
+    description: [
+      "The Informatica® master data management product family helps organizations to enhance operations with business-user access to consolidated and reliable business-critical data, even when it’s spread across the enterprise.",
+      "This product enterprise offers true multi-domain master data management, empowering you with limitless opportunities to commence with any type of business-critical data and later add diverse domains as you wish.",
+      "This product suite offers complete support for MDM such as requirements on a single platform, including data integration, profiling, quality and master data management.",
+      "VR IT Solutions is one of the best Informatica MDM training in Hyderabad to offer well focused and career-oriented training program in Informatica MDM.",
+      "So, get started by clicking here.",
+    ],
     instructor: "VR IT Solutions",
     language: "English",
     hoursContent: "80h",
     level: "Beginner to Advanced",
     category: "Data Warehousing & Management",
     coursePrerequisites: [
-      "Basic understanding of data management concepts.",
-      "Familiarity with databases and ETL processes.",
-      "No prior Informatica MDM experience required.",
+      "VR IT Solutions hasn’t prescribed any prerequisites for doing Informatica MDM online training in Hyderabad general.",
+      "However, having knowledge of SQL will be beneficial, but certainly not mandatory.",
     ],
     sections: [
       {
@@ -4226,44 +4247,70 @@ courseHighlights: [
       },
     ],
     learningPoints: [
-      "Understand the core concepts of Informatica MDM and its architecture.",
-      "Master data modeling, integration, and governance in Informatica MDM.",
-      "Learn advanced topics like data matching, merging, and performance tuning.",
-      "Gain expertise in implementing end-to-end MDM solutions.",
-      "Explore real-world use cases and hands-on projects.",
+      "Informatica MDM Version 10.1 Overview and Architecture",
+      "Basic overview of Data Models and Lookups",
+      "Learn how to configure Stage Process",
+      "Learn how to configure Load Process",
+      "Learn how to configure Match and Merge Process",
+      "Acquire advanced knowledge in configuring Data Access",
+      "Overview of Batch Processes",
+      "Learn advanced concepts on Data Stewardship",
+      "Learn about User Exits and Log Files",
+      "Get an overview of Hierarchy Management",
+      "Learn about Users, Resources, Privileges & Roles",
+      "Get an overview of Services Integration Framework (SIF)",
+      "Learn about Informatica Data Director",
+      "Learn how to use Message Queues",
+      "Advanced Topics",
+      "Live Project",
+    ],
+    learningNotes: [
+      "The syllabus listed above is indicative in nature and may include more topics for comprehensive learning.",
+      "With VR IT Solutions providing the best training in Informatica MDM training, this course helps professionals to manage and process a variety of operations in various realms of business domains.",
+    ],
+    whoShouldAttend: [
+      "Professionals involved in managing, implementing, or using Informatica MDM Hub in an organization such as:",
+      "Project managers",
+      "Installers",
+      "Developers",
+      "Administrators",
+      "System integrators",
+      "Database administrators",
+      "Data stewards",
+      "Engineering graduates looking a good career in this field",
+      "Fresh graduates with aptitude to enter into this area.",
     ],
     whyJoin: {
       course: "Informatica MDM",
       title: "Why Join This Course?",
       description: [
-        "Informatica MDM is a critical tool for managing master data, and mastering it opens up numerous career opportunities in data management.",
-        "This course provides a comprehensive understanding of Informatica MDM, from basic concepts to advanced configurations, ensuring you are job-ready.",
+        "The Informatica MDM is a unique trust framework that offers consolidated and reliable business critical data with extensive workflow management.",
+        "VR IT’s training program on Informatica MDM focuses on real time cases, live projects and interactive sessions.",
+        "This course adds value to professionals working in this area, and is also suited for other professionals and fresh graduates, who wish to enter this lucrative area of expertise.",
+        [
+          "Free Demo sessions to get to know how the course is conducted",
+          "Flexible and customized timings – we plan our schedule as per your convenience, so no need to disturb your regular work schedule",
+          "Easy to follow, since most of the course is practical oriented with live industry cases.",
+          "Classes driven by real time experts in SAP industry - experienced professionals across SAP domain, occupying various positions such as middle level managers, experienced faculty from reputed institutes.",
+          "Provides notes and recorded videos, so you can follow the course anywhere, anytime without any location hassles.",
+          "Complete assistance to help you crack interviews – we provide FAQs, sample resumes and tips.",
+          "Get trained in Informatica MDM in just 50 hours - select either weekend or weekday mode.",
+          "Industry relevant curriculum - Our curriculum is constantly updated to meet the growing needs of the industry",
+        ],
+        "VR IT Solutions is one of the software training institute in hyderabad to offer the best and innovative training in informatica mdm training that is well suited to help you get started and embark on a fruitful journey.",
+        "So, get started by clicking here.",
+      ],
+      practicalExecution: [
+        "In order to work on practicals, some basic pre-requisites are required.",
+        "You need a good internet connection, along with the required software that needs to be installed.",
+        "This software can easily run on all operating systems such as Windows, Linux and Unix.",
+        "Please forward these details to your colleagues and friends, who may be interested in upgrading their skills and knowledge for better job opportunities.",
       ],
       benefits: [
-        {
-          icon: "📈",
-          title: "High Demand",
-          description:
-            "Informatica MDM professionals are in high demand across various industries.",
-        },
-        {
-          icon: "💰",
-          title: "Lucrative Salaries",
-          description:
-            "Informatica MDM experts command high salaries due to their specialized skills.",
-        },
-        {
-          icon: "🌍",
-          title: "Global Opportunities",
-          description:
-            "Informatica MDM skills are recognized globally, offering international career opportunities.",
-        },
-        {
-          icon: "🏆",
-          title: "Industry Recognition",
-          description:
-            "Informatica MDM is used by leading companies worldwide, making it a highly respected platform.",
-        },
+        "Informatica MDM professionals are in high demand across various industries.",
+        "Informatica MDM experts command high salaries due to their specialized skills.",
+        "Informatica MDM skills are recognized globally, offering international career opportunities.",
+        "Informatica MDM is used by leading companies worldwide, making it a highly respected platform.",
       ],
       testimonials: [
         {
@@ -4291,12 +4338,24 @@ courseHighlights: [
     instructor: "VR IT Solutions",
     language: "English",
     hoursContent: "60h",
+    aboutTheCourse: [
+      "VR IT Solutions announces EDI online training program in hyderabad. EDI stands for Electronic data interchange. Loosely define as transfer for any business documents like Purchase Orders, Invoices and Shipment notifications. EDI is actually standards and Protocols which needs to be utilized to successfully exchange business documents between enterprises.",
+      "Without EDI one cannot fully automate and control flow of documents which results in slow processing, data errors which directly impacts any business. Errors like overpayments, late / delayed payments that results in Revenue loss and bad customer service experience. Sterling B2B integrator provides all required components to successfully enable EDI for any organization which saves times, minimize errors and improve efficiency. Huge cost savings on labor, Improves data security & Tracking capability.",
+      "VR IT Solutions - IBM sterling integrator we provide expert training on the concepts various enterprises started using EDI to improve their business and reduce cost. We have various EDI Standards like ANSI X12, UNO EDIFACT, ROSETTANET etc. Even today EDI is adopted only by 1/3rd of the businesses alone in US, still 2/3rd organization are yet to adopt EDI which has a huge scope as it can be adopted by any kind of business like retail, manufacturing, Insurance, Banking etc.",
+      "We have huge business documents exchanged between different types of enterprises doing varied business still exchanging information; these business documents can be called as Transaction Sets / Messages in EDI term. More than data format EDI is a system or method for exchanging business documents with external entities and integrating data directly to our internal systems. Without EDI an enterprise risk of Revenue Loss; Opportunity Loss; Reputation Loss.",
+      "EDI will enable business documents to get auto populated into any enterprise ERP and checking for errors while sending or receiving documents.",
+      "Adopting EDI will greatly benefit any organization like Cost Saving; Minimize errors; saving charge back penalties; increasing productivity without labor cost; receipt verification which helps any business to have a significant advantage on those who still lags in implementing EDI.",
+      "To successfully implement EDI there are many tools available out there in the market why still Sterling B2B Integrator stands out because it has all the required key components like document translator; data mapping; secure way of sending and receiving business documents.",
+      "IBM Sterling B2B integrator training is bundled with Translator or mapping software, it has workflows known as BP's which is enhanced XML and a Server which keeps seamlessly manages enterprises with different network protocol requirement and provides required security as per the standards.",
+    ],
     level: "Beginner to Advanced",
     category: "Automation",
     coursePrerequisites: [
-      "Basic understanding of business processes and data exchange.",
-      "Familiarity with IT systems and data formats.",
-      "No prior EDI experience required.",
+      "None.",
+      "Learn Sterling B2B integrator implementing EDI training online modes by real time experts with practical scenarios and in depth explanation of each and every topic.",
+    ],
+    practicalExecution: [
+      "In order to work on practical's, you need a Windows PC and SBI Map editor and notepad++ software which can be procured from IT Software vendor install it on your pc.",
     ],
     sections: [
       {
@@ -4347,30 +4406,10 @@ courseHighlights: [
         "This course provides a comprehensive understanding of EDI, from basic concepts to advanced configurations, ensuring you are job-ready.",
       ],
       benefits: [
-        {
-          icon: "📈",
-          title: "High Demand",
-          description:
-            "EDI professionals are in high demand across various industries.",
-        },
-        {
-          icon: "💰",
-          title: "Lucrative Salaries",
-          description:
-            "EDI experts command high salaries due to their specialized skills.",
-        },
-        {
-          icon: "🌍",
-          title: "Global Opportunities",
-          description:
-            "EDI skills are recognized globally, offering international career opportunities.",
-        },
-        {
-          icon: "🏆",
-          title: "Industry Recognition",
-          description:
-            "EDI is used by leading companies worldwide, making it a highly respected technology.",
-        },
+        "EDI professionals are in high demand across various industries.",
+        "EDI experts command high salaries due to their specialized skills.",
+        "EDI skills are recognized globally, offering international career opportunities.",
+        "EDI is used by leading companies worldwide, making it a highly respected technology.",
       ],
       testimonials: [
         {
@@ -4419,7 +4458,7 @@ const getCategoryIcon = (category) => {
       return <Shield className="w-5 h-5" />;
 
     default:
-      return <Box className="w-5 h-5" />; // Default icon
+      return <Box className="w-5 h-5" />;
   }
 };
 

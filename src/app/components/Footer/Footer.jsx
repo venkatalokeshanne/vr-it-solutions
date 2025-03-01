@@ -109,12 +109,7 @@ const Footer = () => {
           <div className="space-y-6">
             <h3 className="text-white text-2xl font-bold">VR IT Solutions</h3>
             <p className="text-gray-400 leading-relaxed">
-              A premier software training institute in Hyderabad offering
-              comprehensive online and classroom training programs. We've
-              successfully trained and placed thousands of professionals in
-              leading MNCs including Infosys, Wipro, Accenture, Deloitte,
-              Cognizant, and Capgemini, launching countless successful careers
-              in IT.
+            VR IT Solutions is the best software training institute in Hyderabad. We are training professionals online & Class room tainings from Hyderabad. VR IT solutions is trained & placed thousands of people in majour MNC's like Infosys, Wipro, Accenture, Delloite, Cognizent, Cap Gemini ... and other companies as well.
             </p>
             <div className="flex space-x-5">
               {[
@@ -229,10 +224,16 @@ const Footer = () => {
                 Privacy Policy
               </Link>
               <Link
-                href="/terms"
+                href="/terms-and-conditions"
                 className="hover:text-primary transition-colors duration-300"
               >
                 Terms of Service
+              </Link>
+              <Link
+                href="/refund-and-course-rescheduling-policy"
+                className="hover:text-primary transition-colors duration-300"
+              >
+                Refund and Course Rescheduling Policy
               </Link>
             </div>
           </div>

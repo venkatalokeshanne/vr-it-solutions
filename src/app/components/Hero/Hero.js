@@ -2,10 +2,11 @@
 import { protectEmail } from "@/app/util";
 import { MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
 import Image from "next/image";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 import Script from "next/script";
 
 export const Hero = () => {
+  const router = useRouter();
   const stats = [
     { value: "15K+", label: "Students Trained" },
     { value: "95%", label: "Placement Rate" },
@@ -136,7 +137,7 @@ export const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4">
-              <button className="group bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-lg font-medium transition-all duration-200" onClick={()=> redirect("/courses")}>
+              <button className="group bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-lg font-medium transition-all duration-200" onClick={()=> router.push("/courses")}>
                 <div className="flex items-center gap-2">
                   Start Learning
                   <svg
@@ -154,7 +155,7 @@ export const Hero = () => {
                   </svg>
                 </div>
               </button>
-              <button className="group bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg font-medium backdrop-blur-sm transition-all duration-200 border border-white/20" onClick={() => redirect("/contactus")}>
+              <button className="group bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg font-medium backdrop-blur-sm transition-all duration-200 border border-white/20" onClick={() => router.push("/contactus")}>
                 <div className="flex items-center gap-2">
                   Schedule Consultation
                   <svg

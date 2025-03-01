@@ -1,6 +1,30 @@
 import React from "react";
 import TestimonialCarousel from "../../CourseTestimonials/CourseTestimonials";
 import { redirect } from "next/navigation";
+import { Award, DollarSign, Globe, TrendingUp, Zap } from "lucide-react";
+
+const benefitsTitle = [
+  {
+    icon: <TrendingUp className="h-6 w-6" />,
+    title: "High Demand",
+  },
+  {
+    icon: <DollarSign className="h-6 w-6" />,
+    title: "Lucrative Salaries",
+  },
+  {
+    icon: <Globe className="h-6 w-6" />,
+    title: "Global Opportunities",
+  },
+  {
+    icon: <Award className="h-6 w-6" />,
+    title: "Industry Recognition",
+  },
+  {
+    icon: <Zap className="h-6 w-6" />,
+    title: "Career Growth",
+  },
+]
 
 const WhyJoinThisCourse = ({ data }) => {
   return (
@@ -41,7 +65,7 @@ const WhyJoinThisCourse = ({ data }) => {
           {/* Key benefits cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 md:mx-0 lg:mx-0 mx-4">
             {data.benefits.map((benefit, index) => (
-              <BenefitCard key={index} {...benefit} />
+              <BenefitCard key={index} benefits={benefit} indexvalue={index} />
             ))}
             <div className="bg-gradient-to-r from-primary to-primary-hover rounded-xl shadow-lg p-6 text-white flex flex-col justify-center">
               <h3 className="text-xl font-bold mb-4">
@@ -64,14 +88,14 @@ const WhyJoinThisCourse = ({ data }) => {
   );
 };
 
-const BenefitCard = ({ icon, title, description }) => {
+const BenefitCard = ({ benefits, indexvalue}) => {
   return (
     <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition duration-300 border border-gray-100">
       <div className="w-12 h-12 bg-primary-light rounded-lg flex items-center justify-center text-primary mb-4">
-        {icon}
+        {benefitsTitle[indexvalue].icon}
       </div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+      <h3 className="text-lg font-semibold text-gray-900 mb-2">{benefitsTitle[indexvalue].title}</h3>
+      <p className="text-gray-600">{benefits}</p>
     </div>
   );
 };

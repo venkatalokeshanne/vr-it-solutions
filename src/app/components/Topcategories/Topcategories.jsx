@@ -76,8 +76,8 @@ const TopCategories = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between mb-12">
           <div>
-            <h2 className="text-3xl font-bold text-gray-900">Trending Courses</h2>
-            <p className="mt-2 text-gray-600">Master the most in-demand technologies</p>
+            <h2 className="text-3xl font-bold text-gray-900">Trending Software Training Courses</h2>
+            <p className="mt-2 text-gray-600">Are you looking to start a new learning journey? If yes, one should surely take Best Software Training Courses in Hyderabad at VR IT solutions to get the best job support & placement in reputed companies.</p>
           </div>
           <Link 
             href="/courses" 

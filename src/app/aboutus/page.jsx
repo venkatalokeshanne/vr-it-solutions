@@ -102,13 +102,13 @@ const AboutPage = () => {
           <div className="prose prose-lg mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Corporate Training</h2>
             <p>
-              What was relevant a few years back is now obsolete, considering that the technology is fast changing and evolving rapidly to scale new heights to make our lives better and simpler. Organizations are also slowly adapting to the latest technologies in sync with their market demands and expect their associates to keep abreast with the latest technologies.
+            What was relevant a few years back is now obsolete, considering that the technology is fast changing and evolving rapidly to scale new heights to make our lives better and simpler. Organizations are also slowly adapting to the latest technologies in sync with their market demands and expect their associates to keep abreast with the latest technologies. However, most of the corporates are not well-equipped to offer proper training, considering their time & resource constraints, lack of good trainers and confused about how to proceed and what topics need to be covered in the training programs.
             </p>
             <p>
-              This gap is slowly widening and Institutes such as VR IT is well placed to fill the gap faced by corporate employees. With good experience in imparting training for companies of all sizes, there is no exaggeration that many reputed MNCs approach for customized training programs for their employees.
+            This gap is slowly widening and Institutes such as VR IT is well placed to fill the gap faced by corporate employees. With good experience in imparting training for companies of all sizes, there is no exaggeration that many reputed MNCs approach for customized training programs for their employees. Thus, our corporate programs are designed keeping in mind the requirements of the industry, specific learning outcomes of associates and above all the overall budget of the companies.
             </p>
             <p>
-              The offered mode of training is both online and classroom based, suiting the specific needs of the companies. Right from freshers to experienced veterans, our training programs are targeted across varied learning groups to meet the specific industry demands.
+            The offered mode of training is both online and classroom based, suiting the specific needs of the companies. Right from freshers to experienced veterans, our training programs are targeted across varied learning groups to meet the specific industry demands. We adopt industry endorsed best training practices, unique mentoring, and structured course material that is designed in simple language with easy to understand illustrations and hands-on practice sessions. And the best part is our training programs are quite affordable, as compared to the costs that they might incur if they organize in-house training programs.
             </p>
           </div>
         </div>
@@ -120,11 +120,9 @@ const AboutPage = () => {
           <div className="prose prose-lg mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">About our team</h2>
             <p>
-              Our team is dynamic, passionate and above all highly experienced, drawn from renowned institutes like IIT, NIT and from other reputed universities. With a commitment to offer the best possible training, we ensure that our training adheres to the best practices, aimed to assimilate the theoretical knowledge with hands-on exercises and practical training.
+            Our team is dynamic, passionate and above all highly experienced, drawn from renowned institutes like IIT, NIT and from other reputed universities. With a commitment to offer the best possible training, we ensure that our training adheres to the best practices, aimed to assimilate the theoretical knowledge with hands-on exercises and practical training. This is complimented by the state-of-the-art infrastructure including audio-visual kits, learning material and spacious classrooms for those who intend to opt for classroom training.
             </p>
-            <p>
-              This is complimented by the state-of-the-art infrastructure including audio-visual kits, learning material and spacious classrooms for those who intend to opt for classroom training.
-            </p>
+
           </div>
         </div>
       </section>

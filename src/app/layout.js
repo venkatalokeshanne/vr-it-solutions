@@ -3,6 +3,9 @@ import "./globals.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import StickyContact from "./components/StickyContact/StickyContact";
+import WhatsAppChat from "./components/WhatsAppChat/WhatsAppChat";
+import AnnouncementBanner from "./components/AnnouncementBanner/AnnouncementBanner";
+import { RelatedCourses } from "./components/RelatedCourses/RelatedCourses";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -101,11 +104,14 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden w-full`}
       >
+        <AnnouncementBanner />
         <div className="relative w-full mt-20 md:mt-0">
           <Navbar />
           {children}
+          <RelatedCourses />
           <Footer />
           <StickyContact />
+          <WhatsAppChat />
         </div>
       </body>
     </html>
