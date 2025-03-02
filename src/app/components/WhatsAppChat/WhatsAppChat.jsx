@@ -12,7 +12,7 @@ export default function WhatsAppChat() {
   const inputRef = useRef(null);
   
   // Replace with your WhatsApp number (international format without + or spaces)
-  const whatsappNumber = "33758208661"; // Change to your number
+  const whatsappNumber = "919032734343"; // Change to your number
   
   // Auto-open the chat after a delay when site loads
   useEffect(() => {
@@ -45,7 +45,7 @@ export default function WhatsAppChat() {
     if (!message.trim()) return;
     
     // Format the message to include name and contact
-    const formattedMessage = `New message from website:\nName: ${name || 'Not provided'}\nPhone: ${phone || 'Not provided'}\nMessage: ${message}`;
+    const formattedMessage = `Name: ${name || 'Not provided'}\nPhone: ${phone || 'Not provided'}\nMessage: ${message}`;
     
     // Create WhatsApp URL with pre-filled message
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(formattedMessage)}`;

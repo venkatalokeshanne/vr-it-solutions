@@ -199,7 +199,7 @@ const ContactPage = () => {
                     ></textarea>
                   </div>
                   {/* Hidden fields for recipient */}
-                  <input type="hidden" name="to_email" value="avlokesh8@gmail.com" />
+                  <input type="hidden" name="to_email" value="info@vritsol.com" />
                   <input type="hidden" name="subject" value={`Contact Form: ${formState.firstName} ${formState.lastName}`} />
                   
                   <button
