@@ -4,14 +4,14 @@ import CourseDetails from "../components/CourseDetails/CourseDetails";
 import courses from "@/data/courses";
 import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   return courses.map((course) => ({
     category: course.link,
   }));
 }
 
-export async function generateMetadata({ params }) {
-  const category = await params.category;
+export function generateMetadata({ params }) {
+  const category = params.category;
   const course = courses.find(course => course.link === category);
 
   if (!course) {

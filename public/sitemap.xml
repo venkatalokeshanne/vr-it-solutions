@@ -2,49 +2,93 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://vr-it-solutions.vercel.app/src\app\</loc>
-    <lastmod>2025-02-22T10:43:12.881Z</lastmod>
+    <lastmod>2025-03-02T00:02:22.335Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://vr-it-solutions.vercel.app/src\app\\x</loc>
-    <lastmod>2025-02-22T10:43:12.881Z</lastmod>
+    <lastmod>2025-03-02T00:02:22.336Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://vr-it-solutions.vercel.app/src\app\terms-and-conditions\x</loc>
+    <lastmod>2025-03-02T00:02:22.336Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://vr-it-solutions.vercel.app/src\app\services\x</loc>
-    <lastmod>2025-02-22T10:43:12.881Z</lastmod>
+    <lastmod>2025-03-02T00:02:22.336Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc
+      >https://vr-it-solutions.vercel.app/src\app\refund-and-course-rescheduling-policy\</loc
+    >
+    <lastmod>2025-03-02T00:02:22.336Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://vr-it-solutions.vercel.app/src\app\privacy\x</loc>
+    <lastmod>2025-03-02T00:02:22.336Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://vr-it-solutions.vercel.app/src\app\placements\x</loc>
-    <lastmod>2025-02-22T10:43:12.881Z</lastmod>
+    <lastmod>2025-03-02T00:02:22.336Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://vr-it-solutions.vercel.app/src\app\courses\x</loc>
-    <lastmod>2025-02-22T10:43:12.881Z</lastmod>
+    <lastmod>2025-03-02T00:02:22.336Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://vr-it-solutions.vercel.app/src\app\contactus\x</loc>
-    <lastmod>2025-02-22T10:43:12.881Z</lastmod>
+    <lastmod>2025-03-02T00:02:22.336Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://vr-it-solutions.vercel.app/src\app\blogs\x</loc>
+    <lastmod>2025-03-02T00:02:22.336Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://vr-it-solutions.vercel.app/src\app\blogs\\x</loc>
+    <lastmod>2025-03-02T00:02:22.336Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://vr-it-solutions.vercel.app/src\app\blogs\create\x</loc>
+    <lastmod>2025-03-02T00:02:22.336Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://vr-it-solutions.vercel.app/src\app\aboutus\x</loc>
-    <lastmod>2025-02-22T10:43:12.881Z</lastmod>
+    <lastmod>2025-03-02T00:02:22.336Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

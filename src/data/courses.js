@@ -3498,8 +3498,8 @@ const courses = [
   {
     title: "SAP FICO Course",
     course: "SAP FICO",
-    link: "",
-    image: "",
+    link: "sap-fico",
+    image: "/images/courses/sap-leonardo.jpg",
     description: [
       "SAP Fico is a specific deployment option for gathering accounting data from SAP ERP systems into one central SAP S/4HANA system. This course provides an overview of the concept, the architecture, and the functionalities of SAP Fico for LOB Finance.",
     ],
