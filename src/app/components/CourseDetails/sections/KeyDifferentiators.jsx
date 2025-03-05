@@ -1,11 +1,65 @@
 "use client";
 import { useState } from 'react';
 import Script from 'next/script';
-import { TerminalSquare, Users, Clock, BarChart2, Briefcase, CheckCircle } from 'lucide-react';
-import { redirect } from 'next/navigation';
+import { TerminalSquare, Users, Clock, BarChart2, Briefcase, CheckCircle, X } from 'lucide-react';
+import Link from 'next/link'; // Import Link component
+import { createCourseRequestParams, initEmailService, sendParameterEmail } from "@/app/util";
+import { useEffect } from 'react';
 
-export default function KeyDifferentiators({data}) {
+export default function KeyDifferentiators({data, handleDownload}) {
   const [hoveredCard, setHoveredCard] = useState(null);
+  const [showPopup, setShowPopup] = useState(false);
+  const [formData, setFormData] = useState({
+    from_name: "",
+    from_email: "",
+    from_phone: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState(null);
+  
+  // Initialize EmailJS
+  useEffect(() => {
+    initEmailService();
+  }, []);
+
+  const handlePopupOpen = () => {
+    setShowPopup(true);
+  };
+
+  const handlePopupClose = () => {
+    setShowPopup(false);
+    setSubmitError(null);
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmitForm = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitError(null);
+
+    try {
+      // Use the utility functions to create params and send email
+      const templateParams = createCourseRequestParams(formData, data);
+      await sendParameterEmail(templateParams);
+      
+      setIsSubmitting(false);
+      handlePopupClose();
+      
+      // Call the original download function after form submission
+      handleDownload();
+    } catch (err) {
+      console.error("Failed to send email:", err);
+      setSubmitError("There was a problem submitting your information. Please try again.");
+      setIsSubmitting(false);
+    }
+  };
   
   const differentiators = [
     {
@@ -197,10 +251,11 @@ export default function KeyDifferentiators({data}) {
               Join our comprehensive training program designed for real-world success.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors duration-300 shadow-lg hover:shadow-xl" onClick={()=> redirect("/contactus")}>
+              {/* Changed from redirect to Link component */}
+              <Link href="/contactus" className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors duration-300 shadow-lg hover:shadow-xl inline-block text-center">
                 Enroll Now
-              </button>
-              <button className="bg-transparent text-white border-2 border-white border-opacity-30 px-8 py-3 rounded-lg font-semibold hover:bg-white hover:bg-opacity-10 transition-all duration-300" onClick={()=> redirect("/courses")}>
+              </Link>
+              <button className="bg-transparent text-white border-2 border-white border-opacity-30 px-8 py-3 rounded-lg font-semibold hover:bg-white hover:bg-opacity-10 transition-all duration-300" onClick={handlePopupOpen}>
                 View Curriculum
               </button>
             </div>
@@ -225,6 +280,98 @@ export default function KeyDifferentiators({data}) {
         ))}
       </div>
     </div>
+    
+    {/* Contact Form Popup */}
+    {showPopup && (
+      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+        <div className="bg-white rounded-lg shadow-xl max-w-md w-full relative">
+          <button 
+            onClick={handlePopupClose}
+            className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+            aria-label="Close"
+          >
+            <X className="h-5 w-5" />
+          </button>
+          
+          <div className="p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-1">Download Course Curriculum</h2>
+            <p className="text-gray-600 mb-6">
+              Please fill this form to download the complete course curriculum for {data.title || data.course}
+            </p>
+            
+            {submitError && (
+              <div className="bg-red-50 border-l-4 border-red-500 p-4 mb-6">
+                <p className="text-red-700">{submitError}</p>
+              </div>
+            )}
+            
+            <form onSubmit={handleSubmitForm} className="space-y-4">
+              <div>
+                <label htmlFor="from_name" className="block text-sm font-medium text-gray-700 mb-1">
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  id="from_name"
+                  name="from_name"
+                  value={formData.from_name}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary/20 focus:border-primary text-gray-900"
+                  placeholder="Enter your full name"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="from_email" className="block text-sm font-medium text-gray-700 mb-1">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  id="from_email"
+                  name="from_email"
+                  value={formData.from_email}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary/20 focus:border-primary text-gray-900"
+                  placeholder="Enter your email address"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="from_phone" className="block text-sm font-medium text-gray-700 mb-1">
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  id="from_phone"
+                  name="from_phone"
+                  value={formData.from_phone}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary/20 focus:border-primary text-gray-900"
+                  placeholder="Enter your phone number"
+                />
+              </div>
+              
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className={`w-full py-3 px-4 rounded-md text-white font-medium ${
+                  isSubmitting ? "bg-primary/70" : "bg-primary hover:bg-primary-hover"
+                } transition-colors duration-200`}
+              >
+                {isSubmitting ? "Please wait..." : "Download Curriculum"}
+              </button>
+            </form>
+            
+            <p className="text-xs text-gray-500 mt-4 text-center">
+              By submitting this form, you agree to receive information about our courses and services.
+            </p>
+          </div>
+        </div>
+      </div>
+    )}
   </section>
   );
 }

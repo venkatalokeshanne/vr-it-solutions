@@ -1,9 +1,10 @@
 "use client";
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Users, Star, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
-import courses from '@/data/courses';
+import { client } from "@/lib/sanity.client";
+import { urlForImage } from '../urlForImage';
 
 const CategoryCard = ({ name, students, image, ranking, link }) => (
   <Link href={link}>
@@ -58,18 +59,37 @@ const CategoryCard = ({ name, students, image, ranking, link }) => (
 );
 
 const TopCategories = () => {
-  // Filter and sort courses by trending property
-  const topCategories = courses
-    .filter(course => course.trending)
-    .sort((a, b) => a.trending - b.trending)
-    .slice(0, 4)
-    .map(course => ({
-      name: course.course,
-      students: course.students || "10K+",
-      ranking: course.trending,
-      image: course.image || "https://images.unsplash.com/photo-1649180556628-9ba704115795?w=500&q=80",
-      link: course.link
-    }));
+  const [topCategories, setTopCategories] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchTrendingCourses() {
+      try {
+        setIsLoading(true);
+        // Query trending courses from Sanity
+        const query = `*[_type == "courseImage" && trending != null] | order(trending asc)[0...4]`;
+        const result = await client.fetch(query);
+        
+        if (result && result.length > 0) {
+          const formattedCategories = result.map(course => ({
+            name: course.courseName || course.title,
+            students: "10K+", // Default value since Sanity doesn't have this field
+            ranking: course.trending,
+            image: course.image ? urlForImage(course.image).url() : "https://via.placeholder.com/400x300?text=No+Image", // Add () to call the url method
+            link: `/${course.link}`
+          }));
+          
+          setTopCategories(formattedCategories);
+        }
+      } catch (err) {
+        console.error("Error fetching trending courses:", err);
+      } finally {
+        setIsLoading(false);
+      }
+    }
+    
+    fetchTrendingCourses();
+  }, []);
 
   return (
     <section className="py-8 bg-gray-50">
@@ -88,11 +108,29 @@ const TopCategories = () => {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {topCategories.map((category) => (
-            <CategoryCard key={category.name} {...category} />
-          ))}
-        </div>
+        {isLoading ? (
+          // Loading skeleton
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[1, 2, 3, 4].map((i) => (
+              <div key={i} className="rounded-2xl bg-white border border-gray-100 shadow-md animate-pulse">
+                <div className="h-48 bg-gray-200"></div>
+                <div className="p-6">
+                  <div className="h-6 bg-gray-200 rounded w-3/4 mb-4"></div>
+                  <div className="flex items-center justify-between">
+                    <div className="h-4 bg-gray-200 rounded w-1/3"></div>
+                    <div className="h-4 bg-gray-200 rounded w-1/6"></div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {topCategories.map((category) => (
+              <CategoryCard key={category.name + category.ranking} {...category} />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

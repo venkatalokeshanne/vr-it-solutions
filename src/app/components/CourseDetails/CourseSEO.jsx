@@ -1,6 +1,7 @@
 import { NextSeo, CourseJsonLd } from 'next-seo';
 
 const CourseSEO = ({ courseData }) => {
+  console.log("saibaba",courseData);
   const keywords = [
     courseData.title,
     courseData.course,

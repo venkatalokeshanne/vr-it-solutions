@@ -10,8 +10,6 @@ export const Map = () => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -25,8 +23,6 @@ export const Map = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {/* Map iframe */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
             className="w-full h-[400px] rounded-2xl overflow-hidden shadow-lg"
           >
             <iframe
@@ -42,8 +38,6 @@ export const Map = () => {
 
           {/* Contact Information */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
             className="bg-gradient-to-r from-primary/15 via-primary/10 to-transparent backdrop-blur-sm rounded-2xl p-8 border border-primary/5 shadow-lg"
           >
             <div className="space-y-6">

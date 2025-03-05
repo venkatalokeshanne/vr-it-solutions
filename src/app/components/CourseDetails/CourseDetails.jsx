@@ -1,4 +1,5 @@
 "use client";
+import React, { useState, useEffect } from "react";
 import Script from "next/script";
 import LearningSection from "./sections/LearningSection";
 import Prerequisites from "./sections/Prerequisites";
@@ -13,7 +14,9 @@ import PracticalExecution from "./sections/PracticalExecution";
 import CourseHighlights from "./sections/CourseHighlights";
 import CareerOpportunities from "./sections/CareerOpportunities";
 import CourseSEO from "./CourseSEO";
+import { client } from "@/lib/sanity.client";
 
+// Keep the static files as fallback
 export const courseFiles = [
   {
     name: "AWS & DevOps",
@@ -134,7 +137,9 @@ const CourseDetails = ({ courseData }) => {
     "@context": "https://schema.org",
     "@type": "Course",
     name: courseData.title,
-    description: courseData.description,
+    description: Array.isArray(courseData.description) && courseData.description.length > 0
+      ? courseData.description.join(' ')
+      : courseData.description || '',
     provider: {
       "@type": "Organization",
       name: "VR IT Solutions",
@@ -148,6 +153,7 @@ const CourseDetails = ({ courseData }) => {
       courseMode: ["online", "onsite"],
     },
   };
+
   // Add structured data for course content
   const courseContentStructuredData = {
     "@context": "https://schema.org",
@@ -201,7 +207,10 @@ const CourseDetails = ({ courseData }) => {
         )}
         <header>
           {/* Header is mandatory as it contains essential course info */}
-          <CourseHero courseData={courseData} handleDownload={handleDownload} />
+          <CourseHero 
+            courseData={courseData} 
+            handleDownload={handleDownload} 
+          />
         </header>
         <div itemScope itemProp="hasCourseInstance">
           {courseData.learningPoints?.length > 0 && (
@@ -218,10 +227,6 @@ const CourseDetails = ({ courseData }) => {
 
           {courseData.courseIncludes && (
             <CourseIncludes courseData={courseData} />
-          )}
-
-          {courseData.sections?.length > 0 && (
-            <CourseContent courseData={courseData} />
           )}
 
           {courseData.whyJoin && (
@@ -244,7 +249,14 @@ const CourseDetails = ({ courseData }) => {
             <WhoShouldAttend data={courseData.whoShouldAttend} />
           )}
 
-          <KeyDifferentiators data={courseData} />
+          <KeyDifferentiators
+            data={courseData}
+            handleDownload={handleDownload}
+          />
+
+          {courseData.sections?.length > 0 && (
+            <CourseContent courseData={courseData} />
+          )}
         </div>
       </article>
     </main>

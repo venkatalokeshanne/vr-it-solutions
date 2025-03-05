@@ -4,46 +4,60 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Check } from 'lucide-react';
-import coursesData from '@/data/courses';
+import { client } from "@/lib/sanity.client";
+import { urlForImage } from '../urlForImage';
 
-export const RelatedCourses = () => {
+export const RelatedCourses = ({ currentCourseId }) => {
   const pathname = usePathname();
   const [courses, setCourses] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const scrollContainerRef = useRef(null);
   
-  // Extract current course slug/id from the URL if we're on a course page
-  const getCurrentCourseSlug = () => {
-    // Assuming course URLs are in format /courses/[slug]
-    const match = pathname.match(/\/courses\/([a-z0-9-]+)/i);
-    return match ? match[1] : null;
+  // Get the current course link from pathname
+  const getCurrentCourseLink = () => {
+    // For paths like "/course-name", extract "course-name"
+    return pathname.substring(1);
   };
   
   useEffect(() => {
-    // Filter out the current course if we're on a course page
-    const currentSlug = getCurrentCourseSlug();
-    
-    // Get courses, excluding the current one
-    let availableCourses = currentSlug 
-      ? coursesData.filter(course => course.slug !== currentSlug)
-      : coursesData;
-      
-    // Make sure we have enough items for a continuous scroll
-    if (availableCourses.length < 6) {
-      const multiplier = Math.ceil(6 / availableCourses.length);
-      let extendedCourses = [];
-      for (let i = 0; i < multiplier; i++) {
-        extendedCourses = [...extendedCourses, ...availableCourses];
+    async function fetchCourses() {
+      try {
+        setIsLoading(true);
+        const currentLink = getCurrentCourseLink();
+        
+        // Fetch all courses except the current one
+        const query = `*[_type == "courseImage" && link != $currentLink] | order(title asc)`;
+        const result = await client.fetch(query, { currentLink });
+        
+        if (result && result.length > 0) {
+          // Make sure we have enough items for a continuous scroll
+          let availableCourses = [...result];
+          
+          if (availableCourses.length < 6) {
+            const multiplier = Math.ceil(6 / availableCourses.length);
+            let extendedCourses = [];
+            for (let i = 0; i < multiplier; i++) {
+              extendedCourses = [...extendedCourses, ...availableCourses];
+            }
+            availableCourses = extendedCourses;
+          } else {
+            // Just duplicate once for smooth looping
+            availableCourses = [...availableCourses, ...availableCourses];
+          }
+          
+          setCourses(availableCourses);
+        }
+      } catch (err) {
+        console.error("Error fetching related courses:", err);
+      } finally {
+        setIsLoading(false);
       }
-      availableCourses = extendedCourses;
-    } else {
-      // Just duplicate once for smooth looping
-      availableCourses = [...availableCourses, ...availableCourses];
     }
     
-    setCourses(availableCourses);
+    fetchCourses();
   }, [pathname]);
 
-  // Auto-scrolling effect
+  // Auto-scrolling effect (keeping your existing implementation)
   useEffect(() => {
     if (!scrollContainerRef.current || courses.length === 0) return;
     
@@ -117,6 +131,45 @@ export const RelatedCourses = () => {
     };
   }, [courses]);
   
+  if (isLoading) {
+    return (
+      <section className="bg-gray-50 overflow-hidden py-12">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold mb-2">Explore Our Popular Courses</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
+              Enhance your career with our industry-focused training programs
+            </p>
+          </div>
+          
+          <div className="flex gap-5 pb-2 overflow-hidden">
+            {[1, 2, 3, 4, 5].map((item) => (
+              <div 
+                key={item} 
+                className="flex-shrink-0 w-[260px] md:w-[300px] bg-white rounded-lg shadow-md overflow-hidden animate-pulse"
+              >
+                <div className="h-36 bg-gray-200"></div>
+                <div className="p-4">
+                  <div className="h-5 bg-gray-200 rounded w-3/4 mb-3"></div>
+                  <div className="h-4 bg-gray-200 rounded w-full mb-3"></div>
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="h-3 bg-gray-200 rounded w-1/3"></div>
+                    <div className="h-3 bg-gray-200 rounded w-1/3"></div>
+                  </div>
+                  <div className="h-8 bg-gray-200 rounded"></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
+  
+  if (courses.length === 0) {
+    return null; // Don't show the section if there are no courses
+  }
+  
   return (
     <section className="bg-gray-50 overflow-hidden">
       <div className="container mx-auto px-4">
@@ -138,29 +191,51 @@ export const RelatedCourses = () => {
         >
           {courses.map((course, index) => (
             <div 
-              key={`${course.id}-${index}`} 
+              key={`${course._id}-${index}`} 
               className="flex-shrink-0 w-[260px] md:w-[300px] bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-1 hover:shadow-lg"
             >
-              <div className="relative h-36">
-                <Image 
-                  src={course.image || '/images/courses/default-course.jpg'} 
-                  alt={course.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              {/* Make image clickable */}
+              <Link 
+                href={`/${course.link}`}
+                className="relative block h-36 overflow-hidden group"
+              >
+                {course.image ? (
+                  <Image 
+                    src={urlForImage(course.image).url()} 
+                    alt={course.title}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+                    <span className="text-gray-400 text-sm">No image available</span>
+                  </div>
+                )}
+                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-opacity duration-300"></div>
+              </Link>
+              
               <div className="p-4">
-                <h3 className="font-bold text-lg mb-1 text-gray-900 line-clamp-1">{course.title}</h3>
-                <p className="text-gray-600 mb-3 text-sm line-clamp-1">{course.description}</p>
+                {/* Make title clickable */}
+                <Link href={`/${course.link}`} className="block">
+                  <h3 className="font-bold text-lg mb-1 text-gray-900 line-clamp-1 hover:text-primary transition-colors">
+                    {course.title}
+                  </h3>
+                </Link>
+                
+                <p className="text-gray-600 mb-3 text-sm line-clamp-1">
+                  {Array.isArray(course.description) && course.description.length > 0
+                    ? course.description[0]
+                    : "No description available"}
+                </p>
                 
                 <div className="flex items-center justify-between mb-3 text-xs">
                   <div className="flex items-center">
                     <Check size={14} className="text-primary mr-1 flex-shrink-0" />
-                    <span className="text-gray-700">{course.hoursContent}</span>
+                    <span className="text-gray-700">{course.hoursContent || "N/A"}</span>
                   </div>
                   <div className="flex items-center">
                     <Check size={14} className="text-primary mr-1 flex-shrink-0" />
-                    <span className="text-gray-700">{course.level}</span>
+                    <span className="text-gray-700">{course.level || "All Levels"}</span>
                   </div>
                 </div>
                 

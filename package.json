@@ -17,6 +17,7 @@
     "@emotion/styled": "^11.14.0",
     "@mui/material": "^6.4.2",
     "@portabletext/react": "^3.2.1",
+    "@sanity/client": "^6.28.2",
     "@sanity/code-input": "^5.1.2",
     "@sanity/vision": "^3.77.2",
     "framer-motion": "^12.4.7",
@@ -30,6 +31,7 @@
     "react-icons": "^5.4.0",
     "react-quill-new": "^3.3.3",
     "sanity": "^3.77.2",
+    "slugify": "^1.6.6",
     "uuid": "^11.1.0"
   },
   "devDependencies": {

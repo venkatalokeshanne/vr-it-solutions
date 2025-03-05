@@ -1,12 +1,14 @@
 "use client";
 import { motion } from "framer-motion";
 import { Clock, Target, ArrowRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Script from "next/script";
+import { urlForImage } from "../urlForImage";
 
 const AllCourses = ({ courses }) => {
-  const router = useRouter(); // Use the router hook instead of redirect
+  const router = useRouter();
   
   const courseListSchema = {
     "@context": "https://schema.org",
@@ -17,7 +19,9 @@ const AllCourses = ({ courses }) => {
       item: {
         "@type": "Course",
         name: course.title,
-        description: course.description,
+        description: Array.isArray(course.description) 
+          ? course.description.join(' ') 
+          : course.description || '',
         provider: {
           "@type": "Organization",
           name: "VR IT Solutions",
@@ -53,11 +57,18 @@ const AllCourses = ({ courses }) => {
                 className="relative h-48 overflow-hidden cursor-pointer" 
                 onClick={() => handleCourseClick(course.link)}
               >
-                <img
-                  src={course.image}
-                  alt={course.title}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                />
+                {course.image ? (
+                  <Image
+                    src={urlForImage(course.image).url()} 
+                    alt={course.title || "Course Image"}
+                    fill
+                    className="object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+                    <span className="text-gray-400">No image available</span>
+                  </div>
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent" />
               </div>
 
@@ -70,18 +81,20 @@ const AllCourses = ({ courses }) => {
                 </h3>
 
                 <p className="text-sm text-gray-600 line-clamp-2 mb-4">
-                  {course.description}
+                  {Array.isArray(course.description) && course.description.length > 0
+                    ? course.description[0]
+                    : course.description || "No description available"}
                 </p>
 
                 <div className="flex-1 flex flex-col justify-end mt-auto">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-2 text-sm text-gray-600">
                       <Clock className="w-4 h-4" />
-                      <span>{course.hoursContent}</span>
+                      <span>{course.hoursContent || "N/A"}</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-gray-600">
                       <Target className="w-4 h-4" />
-                      <span>{course.level}</span>
+                      <span>{course.level || "All Levels"}</span>
                     </div>
                   </div>
 

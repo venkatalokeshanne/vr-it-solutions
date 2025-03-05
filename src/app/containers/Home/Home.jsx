@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import AdvantageOfVRITSolutions from "@/app/components/Advantages/Advantages";
 import Testimonials from "@/app/components/Testimonials/Testimonials";
@@ -13,28 +12,22 @@ import { PlacementAssistance } from "@/app/components/PlacementAssistance/Placem
 import FeaturedBlogs from "@/app/components/FeaturedBlogs/FeaturedBlogs";
 
 const VRITSolutions = () => {
-
   return (
     <div className="min-h-screen bg-white">
+      
       {/* Hero Section */}
       <Hero />
-      {/* Trusted Companies */}
+      {/* Rest of your component */}
       <Welcome />
-      {/* Top Categories */}
       <TopCategories />
       <Proficiencies />
-      {/* Advantages */}
       <AdvantageOfVRITSolutions />
       <PlacementAssistance />
-      {/* Featured Courses */}
       <FeaturedCourses />
-      {/* Features Section */}
       <Features />
-      {/* Testimonials */}
       <Testimonials />
       <FeaturedBlogs />
       <Map />
-      {/* Footer */}
     </div>
   );
 };

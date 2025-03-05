@@ -1,16 +1,41 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Clock, Target } from "lucide-react";
 import Script from "next/script";
 import Link from "next/link";
-import courses from "@/data/courses";
+import { client } from "@/lib/sanity.client";
+import { urlForImage } from "../urlForImage";
 
 const FeaturedCourses = () => {
+  const [courses, setCourses] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
   const coursesPerSlide = 4;
 
-  // Create structured data for course list
+  // Fetch courses from Sanity
+  useEffect(() => {
+    async function fetchCourses() {
+      try {
+        setIsLoading(true);
+        // Query featured and trending courses
+        const query = `*[_type == "courseImage"]`;
+        const result = await client.fetch(query);
+        
+        if (result && result.length > 0) {
+          setCourses(result);
+        }
+      } catch (err) {
+        console.error("Error fetching featured courses:", err);
+      } finally {
+        setIsLoading(false);
+      }
+    }
+    
+    fetchCourses();
+  }, []);
+
+  // Generate structured data only when courses are loaded
   const courseListStructuredData = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -20,7 +45,9 @@ const FeaturedCourses = () => {
       "item": {
         "@type": "Course",
         "name": course.title,
-        "description": course.description,
+        "description": Array.isArray(course.description) 
+          ? course.description.join(" ") 
+          : course.description || "",
         "provider": {
           "@type": "Organization",
           "name": "VR IT Solutions",
@@ -29,7 +56,7 @@ const FeaturedCourses = () => {
         "timeRequired": course.hoursContent,
         "educationalLevel": course.level,
         "url": `https://vr-it-solutions.vercel.app/${course.link}`,
-        "image": `https://vr-it-solutions.vercel.app${course.image}`,
+        "image": course.image ? urlForImage(course.image).url() : "",
         "offers": {
           "@type": "Offer",
           "availability": "https://schema.org/InStock",
@@ -84,7 +111,7 @@ const FeaturedCourses = () => {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <motion.div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           className="flex justify-between items-center mb-12"
@@ -123,72 +150,107 @@ const FeaturedCourses = () => {
           </div>
         </motion.div>
 
-        <AnimatePresence mode="wait">
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            {visibleCourses.map((course, index) => (
-              <motion.div
-                key={course.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="group relative bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden flex flex-col h-full"
+        {isLoading ? (
+          // Loading state
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[1, 2, 3, 4].map((item) => (
+              <div 
+                key={item} 
+                className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden animate-pulse h-[400px]"
               >
-                <Link href={`/${course.link}`}>
-                  {/* Image Section */}
-                  <div className="relative h-48 overflow-hidden">
-                    <img
-                      src={course.image}
-                      alt={course.title}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent" />
-                  </div>
-
-                  {/* Content Section */}
-                  <div className="p-6 flex flex-col flex-1">
-                    <h3 className="font-bold text-lg text-gray-900 group-hover:text-primary transition-colors mb-2">
-                      {course.title}
-                    </h3>
-
-                    <p className="text-sm text-gray-600 line-clamp-2 mb-4">
-                      {course.description}
-                    </p>
-
-                    <div className="flex-1 flex flex-col justify-end mt-auto">
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="flex items-center gap-2 text-sm text-gray-600">
-                          <Clock className="w-4 h-4" />
-                          <span>{course.hoursContent}</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-sm text-gray-600">
-                          <Target className="w-4 h-4" />
-                          <span>{course.level}</span>
-                        </div>
-                      </div>
-
-                      <span
-                        className="w-full py-3 px-4 bg-primary/10 text-primary font-medium rounded-lg 
-                          transition-all duration-300 
-                          hover:bg-primary hover:text-white 
-                          group-hover:bg-primary group-hover:text-white
-                          text-center"
-                      >
-                        Explore Course
-                      </span>
+                <div className="h-48 bg-gray-200"></div>
+                <div className="p-6">
+                  <div className="h-6 bg-gray-200 rounded w-3/4 mb-4"></div>
+                  <div className="h-4 bg-gray-200 rounded w-full mb-2"></div>
+                  <div className="h-4 bg-gray-200 rounded w-full mb-4"></div>
+                  <div className="mt-auto pt-8">
+                    <div className="flex justify-between mb-4">
+                      <div className="h-4 bg-gray-200 rounded w-1/3"></div>
+                      <div className="h-4 bg-gray-200 rounded w-1/3"></div>
                     </div>
+                    <div className="h-12 bg-gray-200 rounded w-full"></div>
                   </div>
-                </Link>
-              </motion.div>
+                </div>
+              </div>
             ))}
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        ) : (
+          // Loaded courses
+          <AnimatePresence mode="wait">
+            <motion.div
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              {visibleCourses.map((course, index) => (
+                <motion.div
+                  key={course._id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  className="group relative bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden flex flex-col h-full"
+                >
+                  <Link href={`/${course.link}`}>
+                    {/* Image Section */}
+                    <div className="relative h-48 overflow-hidden">
+                      {course.image ? (
+                        <img
+                          src={urlForImage(course.image).url()}
+                          alt={course.title}
+                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+                          <span className="text-gray-400">No image</span>
+                        </div>
+                      )}
+                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent" />
+                    </div>
+
+                    {/* Content Section */}
+                    <div className="p-6 flex flex-col flex-1">
+                      <h3 className="font-bold text-lg text-gray-900 group-hover:text-primary transition-colors mb-2">
+                        {course.title}
+                      </h3>
+
+                      <p className="text-sm text-gray-600 line-clamp-2 mb-4">
+                        {Array.isArray(course.description) && course.description.length > 0
+                          ? course.description[0]
+                          : "No description available"}
+                      </p>
+
+                      <div className="flex-1 flex flex-col justify-end mt-auto">
+                        <div className="flex items-center justify-between mb-4">
+                          <div className="flex items-center gap-2 text-sm text-gray-600">
+                            <Clock className="w-4 h-4" />
+                            <span>{course.hoursContent || "N/A"}</span>
+                          </div>
+                          <div className="flex items-center gap-2 text-sm text-gray-600">
+                            <Target className="w-4 h-4" />
+                            <span>{course.level || "All Levels"}</span>
+                          </div>
+                        </div>
+
+                        <span
+                          className="w-full py-3 px-4 bg-primary/10 text-primary font-medium rounded-lg 
+                            transition-all duration-300 
+                            hover:bg-primary hover:text-white 
+                            group-hover:bg-primary group-hover:text-white
+                            text-center"
+                        >
+                          Explore Course
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
+            </motion.div>
+          </AnimatePresence>
+        )}
       </div>
     </section>
   );

@@ -15,7 +15,7 @@ const courses = [
     course: "Salesforce",
     link: "salesforce",
     trending: 1,
-    image: "/images/courses/salesforce.png",
+    image: "https://vr-it-solutions.vercel.app/images/courses/salesforce.png",
     description: [
       "VRIT Solutions distinguished itself as the leading Salesforce Training institute in Hyderabad and Salesforce Online Trainings.",
       "Our trainers are highly qualified and have extensive experience in providing quality classroom and online training on Salesforce.",
@@ -26,8 +26,7 @@ const courses = [
       "Our trainers are experienced professionals who will teach you everything you need to know about this powerful CRM system.",
       "VR IT Solutions is one of the best Salesforce training providers in Hyderabad, offering a well-focused and career-oriented training program in Salesforce.",
     ],
-    instructor: "VR IT Solutions",
-    language: "English",
+
     hoursContent: "70h",
     category: "DevOps & Cloud",
     level: "Beginner to Advanced",
@@ -353,13 +352,12 @@ const courses = [
     title: "Azure DevOps Training in Hyderabad",
     course: "Azure DevOps",
     link: "azure-devops",
-    image: "/images/courses/azure-devops.png",
+    image: "https://vr-it-solutions.vercel.app/images/courses/azure-devops.png",
     trending: 2,
     category: "DevOps & Cloud",
     description:
       "VRIT Solutions is recognized for providing Realtime Azure Devops Training in Hyderabad and Azure Devops Online Training throughout world.\n\nVR IT Solutions is one of the best software training institute in Hyderabad. Azure Devops (previously known as Visual Studio Team Services (VSTS) or Visual Studio Online) is the cloud based Devops dashboard and provided by Microsoft. Azure Devops captures over 15 years of investment and learnings in providing tools to support software development teams.",
-    instructor: "VR IT Solutions",
-    language: "English",
+
     hoursContent: "70h",
     level: "Beginner to Advanced",
     coursePrerequisites: [
@@ -693,7 +691,7 @@ const courses = [
     course: "ServiceNow",
     link: "servicenow",
     trending: 3,
-    image: "/images/courses/servicenow.png",
+    image: "https://vr-it-solutions.vercel.app/images/courses/servicenow.png",
     description: [
       "VRIT Solutions is a prominent name in Hyderabad's best ServiceNow training. We are a one-stop solution for people looking for top and best ServiceNow Training.",
       "Our trainers are highly qualified and experienced in providing high-quality training in Hyderabad.",
@@ -708,8 +706,7 @@ const courses = [
       "This platform is continuously evolving and has a promising future in the long term.",
       "VR IT Solutions is one of the best ServiceNow training providers, offering a well-focused and career-oriented training program in ServiceNow. So, get started by clicking here.",
     ],
-    instructor: "VR IT Solutions",
-    language: "English",
+
     hoursContent: "70h",
     category: "DevOps & Cloud",
     level: "Beginner to Advanced",
@@ -870,7 +867,7 @@ const courses = [
     title: "Pega Training in Hyderabad",
     course: "Pega",
     link: "pega",
-    image: "/images/courses/pega.png",
+    image: "https://vr-it-solutions.vercel.app/images/courses/pega.png",
     trending: 4,
     description: [
       "VRIT Solutions is a prominent name among Hyderabad's best PEGA training institutes.",
@@ -879,8 +876,7 @@ const courses = [
       "The Certified Expert Group has created our content and curriculum for PEGA based on current industry needs.",
       "This allows students to become industry-ready professionals, capable of handling most real-time scenarios.",
     ],
-    instructor: "VR IT Solutions",
-    language: "English",
+
     hoursContent: "70h",
     category: "Automation",
     level: "Beginner to Advanced",
@@ -1032,11 +1028,10 @@ const courses = [
     course: "DevOps",
     link: "devops",
     trending: 5,
-    image: "/images/courses/devops.png",
+    image: "https://vr-it-solutions.vercel.app/images/courses/devops.png",
     description:
       "DevOps is a set of practices that combines software development (Dev) and IT operations (Ops) to shorten the development lifecycle and deliver high-quality software continuously. This comprehensive training program covers DevOps principles, tools, and practices, equipping you with the skills needed to implement CI/CD pipelines, automate infrastructure, and manage cloud environments effectively.",
-    instructor: "VR IT Solutions",
-    language: "English",
+
     aboutTheCourse: [
       "DevOps is considered as the practice that accentuates the collaboration and communication of both software developers as well as IT Professionals. It computerizes the process of infrastructure and software delivery changes.",
       "DevOps combines cultural philosophies, practices and tools that enhances a company’s ability to offer applications and services at a greater agility and at the same time, lets in evolving and enhancing products at a brisker pace, compared to traditional software engineering practices. More precisely, in the DevOps model, both development and operations team work in tandem, where the engineers work across the entire lifecycle, right from development, testing, deployment to operations; and develop skill sets, which are not limited to a specific function.",
@@ -1337,7 +1332,7 @@ const courses = [
     course: "MuleSoft",
     link: "mulesoft",
     trending: 6,
-    image: "/images/courses/mulesoft.png",
+    image: "https://vr-it-solutions.vercel.app/images/courses/mulesoft.png",
     description: [
       "VRIT Solutions distinguished itself as the leading MuleSoft Training institute in Hyderabad and MuleSoft Online Trainings. Our Trainers are highly qualified and have high experience in providing quality classroom and online training on MuleSoft.",
       "Mule the prominent section at MuleSoft. As it is an event based architecture, the actions in the Mule Network are generated through the actions taking place in Mule or through external systems. Payload is the data from each event. In order to connect applications, devices, and data from around the world, MuleSoft allows you to easily connect anything with the Anypoint platform.",
@@ -1348,8 +1343,7 @@ const courses = [
       "MuleSoft’s Anypoint Platform™ is the world’s leading integration platform for SOA, SaaS and APIs. Mulesoft offers exceptional business agility to organizations by easily integrating applications, services and managing events in real time with universal connectivity in both the modes – on premise and in the cloud, which is executed with an API-led approach. Using this platform, organizations can re-architect their SOA infrastructure from legacy systems, proprietary platforms and customer integration code to generate business agility. Organizations can also migrate technology infrastructure to the public or private cloud and prioritize adoption of SaaS applications and other cloud based technologies.",
       "VR IT Solutions is one of the best Mulesoft training in Hyderabad to offer well focused and career-oriented training program in MuleSoft. So, get started by clicking here.",
     ],
-    instructor: "VR IT Solutions",
-    language: "English",
+
     hoursContent: "70h",
     category: "Integration & API Management",
     level: "Beginner to Advanced",
@@ -1600,11 +1594,10 @@ const courses = [
     title: "Workday Training in Hyderabad",
     course: "Workday",
     link: "workday",
-    image: "/images/courses/workday.png",
+    image: "https://vr-it-solutions.vercel.app/images/courses/workday.png",
     description:
       "Workday is a leading cloud-based Human Capital Management (HCM) platform that helps organizations manage HR, payroll, and financial processes. This comprehensive training program covers both Workday Functional and Technical aspects, equipping you with the skills needed to manage and customize Workday applications effectively. Whether you're an aspiring HR professional or a technical specialist, this course will prepare you for real-world scenarios and help you achieve Workday certification.",
-    instructor: "VR IT Solutions",
-    language: "English",
+
     hoursContent: "70h",
     category: "SAP, HCM & ERP",
     level: "Beginner to Advanced",
@@ -1788,11 +1781,10 @@ const courses = [
     title: "Snowflake Training in Hyderabad",
     course: "Snowflake",
     link: "snowflake",
-    image: "/images/courses/snowflake.png",
+    image: "https://vr-it-solutions.vercel.app/images/courses/snowflake.png",
     description:
       "Snowflake is a leading cloud-based data warehousing platform that helps organizations store, analyze, and share data efficiently. This comprehensive training program covers Snowflake's architecture, data warehousing, and advanced features, equipping you with the skills needed to manage and optimize data solutions effectively. Whether you're an aspiring data engineer or a data analyst, this course will prepare you for real-world scenarios and help you achieve Snowflake certification.",
-    instructor: "VR IT Solutions",
-    language: "English",
+
     hoursContent: "70h",
     aboutTheCourse: [
       "Cloud computing and cloud storage has revolutionized the way mundane data sources are managed and maintained.",
@@ -2034,12 +2026,12 @@ const courses = [
     title: "Machine Learning with Python Training in Hyderabad",
     course: "Machine Learning with Python",
     link: "machine-learning-with-python",
-    image: "/images/courses/machine-learning-python.png",
+    image:
+      "https://vr-it-solutions.vercel.app/images/courses/machine-learning-python.png",
     description: [
       "Arthur Samuel, a pioneer in the field of artificial intelligence and computer gaming, coined the term 'Machine Learning'. He defined machine learning as – 'Field of study that gives computers the capability to learn without being explicitly programmed'. In a very layman manner, Machine Learning (ML) can be explained as automating and improving the learning process of computers based on their experiences without being actually programmed, i.e., without any human assistance. The process starts with feeding good quality data and then training our machines (computers) by building machine learning models using the data and different algorithms. The choice of algorithms depends on what type of data we have and what kind of task we are trying to automate.",
     ],
-    instructor: "VR IT Solutions",
-    language: "English",
+
     hoursContent: "70h",
     category: "Data Science & Machine Learning",
     level: "Beginner to Advanced",
@@ -2230,11 +2222,10 @@ const courses = [
     title: "Hadoop Online Training",
     course: "Hadoop",
     link: "hadoop",
-    image: "/images/courses/hadoop.jpg",
+    image: "https://vr-it-solutions.vercel.app/images/courses/hadoop.jpg",
     description:
       "Hadoop is a leading big data framework that helps organizations store, process, and analyze large datasets efficiently. This comprehensive training program covers Hadoop's core components, ecosystem tools, and advanced concepts, equipping you with the skills needed to manage big data solutions effectively.",
-    instructor: "VR IT Solutions",
-    language: "English",
+
     hoursContent: "70h",
     category: "Big Data & Analytics",
     level: "Beginner to Advanced",
@@ -2405,7 +2396,7 @@ const courses = [
     title: "Data Science Training in Hyderabad",
     course: "Data Science",
     link: "data-science",
-    image: "/images/courses/data-science.png",
+    image: "https://vr-it-solutions.vercel.app/images/courses/data-science.png",
     description: [
       "Data science blends scientific methods, processes, algorithms, and systems to generate meaningful knowledge or insights from data in various modes: structured or unstructured.",
       "The process of extracting meaningful insights becomes even more significant and challenging when data grows exponentially from various sources.",
@@ -2426,8 +2417,7 @@ const courses = [
     aboutTheCourse: [
       "VRIT is one of the few institutes in Hyderabad that offers a data science online course with a well-focused, career-oriented training program in Data Science. Due to rapid data explosion, thousands of jobs are getting generated daily, offering an attractive career proposition for future data science professionals. However, a career-driven course, backed by quality infrastructure and support, is what students require to make a head start in the Data Science field.",
     ],
-    instructor: "VR IT Solutions",
-    language: "English",
+
     hoursContent: "70h",
     category: "Data Science & Machine Learning",
     level: "Beginner to Advanced",
@@ -2585,7 +2575,8 @@ const courses = [
     title: "Python Training in Hyderabad",
     course: "Python",
     link: "python-django",
-    image: "/images/courses/python-django.png",
+    image:
+      "https://vr-it-solutions.vercel.app/images/courses/python-django.png",
     description: [
       "Python is a high-level programming language, which has a lot of demand in the industry and is favoured by several top brands in the industry including Instagram, YouTube, and Spotify.",
       "Apart from experienced programmers, even beginners can easily learn and use it quickly.",
@@ -2601,8 +2592,7 @@ const courses = [
 
       "With a focused learning approach and advanced training methodology, we make this course more interesting and interactive to help students quickly grasp the basics within a short period of time. The curriculum is designed specifically by VR IT experts, drawn from academics and industry to ensure that the students get the best out of their learning experience.",
     ],
-    instructor: "VR IT Solutions",
-    language: "English",
+
     hoursContent: "70h",
     category: "Web Development",
     level: "Beginner to Advanced",
@@ -2755,13 +2745,12 @@ const courses = [
     title: "Python with AWS Training",
     course: "Python with AWS",
     link: "python-aws",
-    image: "/images/courses/python-aws.jpg",
+    image: "https://vr-it-solutions.vercel.app/images/courses/python-aws.jpg",
     description: [
       "AWS is a cloud platform with many resources available for almost all use cases related to the IT industry. Sadly, we don't scale up those resources with the click of buttons. We need to use something like Terraform/CloudFormation/Serverless/other third-party SDKs in real time. In general, most of us use Python SDK (boto3 python & AWS python examples) to communicate between the resources for very common needs. In this course, we are going to cover all types of production-ready techniques without leaving basics about the resources.",
       "VRIT Solutions is one of the best python boto3 Training we offer boto3 python & AWS python examples with a well-focused and career-oriented training program in Python with AWS.",
     ],
-    instructor: "VR IT Solutions",
-    language: "English",
+
     hoursContent: "70h",
     category: "DevOps & Cloud",
     level: "Beginner to Advanced",
@@ -2887,11 +2876,10 @@ const courses = [
     title: "SAP Basis Online Training",
     course: "SAP Basis",
     link: "sap-basis",
-    image: "/images/courses/sap-basis.jpg",
+    image: "https://vr-it-solutions.vercel.app/images/courses/sap-basis.jpg",
     description:
       "SAP Basis is the technical foundation that enables SAP applications to function. This comprehensive training program covers SAP system administration, installation, configuration, and performance tuning. Whether you're an aspiring SAP Basis administrator or an IT professional, this course will prepare you for real-world SAP Basis challenges.",
-    instructor: "VR IT Solutions",
-    language: "English",
+
     hoursContent: "70h",
     category: "SAP, HCM & ERP",
     level: "Beginner to Advanced",
@@ -3061,11 +3049,10 @@ const courses = [
     title: "SAP EWM Online Training",
     course: "SAP EWM",
     link: "sap-ewm",
-    image: "/images/courses/sap-ewm.jpg",
+    image: "https://vr-it-solutions.vercel.app/images/courses/sap-ewm.jpg",
     description:
       "SAP Extended Warehouse Management (EWM) is a comprehensive solution for managing warehouse operations. This training program covers SAP EWM configuration, processes, and integration with other SAP modules. Whether you're an aspiring SAP EWM consultant or a warehouse manager, this course will prepare you for real-world SAP EWM challenges.",
-    instructor: "VR IT Solutions",
-    language: "English",
+
     hoursContent: "70h",
     category: "SAP, HCM & ERP",
     level: "Beginner to Advanced",
@@ -3216,14 +3203,13 @@ const courses = [
     title: "SAP SD Online Training in Hyderabad",
     course: "SAP SD",
     link: "sap-sd",
-    image: "/images/courses/sap-sd.jpg",
+    image: "https://vr-it-solutions.vercel.app/images/courses/sap-sd.jpg",
     description: [
       "SAP SD (Sales & Distribution) is one of the core modules of SAP ERP. It is used to store the customer and product data of an organization. The main goal of SAP SD is it helps in managing the shipping, billing, selling and transportation of products and services of a company.",
       "The SAP Logistics module manages customer relationships, right from raising a quotation to sales order and billing of the product or service. This module is interrelated with other modules such as SAP MM and PP.",
       "VRIT Solutions is one of the few institutes in Hyderabad to offer well focused and career-oriented training program in SAP SD online training.",
     ],
-    instructor: "VR IT Solutions",
-    language: "English",
+
     hoursContent: "70h",
     category: "SAP, HCM & ERP",
     level: "Beginner to Advanced",
@@ -3370,11 +3356,10 @@ const courses = [
     title: "SAP Leonardo Training in Hyderabad",
     course: "SAP Leonardo",
     link: "sap-leonardo-training-hyderabad",
-    image: "/images/courses/sap-leonardo.jpg",
+    image: "https://vr-it-solutions.vercel.app/images/courses/sap-leonardo.jpg",
     description:
       "SAP Leonardo is a digital innovation system that integrates emerging technologies like IoT, Machine Learning, Blockchain, and Big Data. This training covers the fundamentals of SAP Leonardo, including its architecture, deployment models, and integration with SAP Cloud Platform and S/4HANA. It also delves into advanced topics like IoT data management, machine learning models, and blockchain applications.",
-    instructor: "VR IT Solutions",
-    language: "English",
+
     hoursContent: "70h",
     level: "Beginner to Advanced",
     category: "SAP, HCM & ERP",
@@ -3499,7 +3484,7 @@ const courses = [
     title: "SAP FICO Course",
     course: "SAP FICO",
     link: "sap-fico",
-    image: "/images/courses/sap-leonardo.jpg",
+    image: "https://vr-it-solutions.vercel.app/images/courses/sap-leonardo.jpg",
     description: [
       "SAP Fico is a specific deployment option for gathering accounting data from SAP ERP systems into one central SAP S/4HANA system. This course provides an overview of the concept, the architecture, and the functionalities of SAP Fico for LOB Finance.",
     ],
@@ -3520,8 +3505,7 @@ const courses = [
       "If you are moving towards SAP S/4HANA, learning SAP Simple Finance is recommended for real-time financial management and analytics.",
       "Since finance is a crucial function in any organization, transitioning to SAP Simple Finance can bring significant improvements in efficiency and decision-making.",
     ],
-    instructor: "VR IT Solutions",
-    language: "English",
+
     hoursContent: "80 hours",
     category: "Finance & Accounting",
     level: "Beginner to Advanced",
@@ -3662,11 +3646,11 @@ const courses = [
     title: "SAP S/4HANA Simple Finance Training in Hyderabad",
     course: "SAP S/4HANA Finance",
     link: "simple-finance-training-in-hyderabad",
-    image: "/images/courses/sap-s4hana-finance.jpg",
+    image:
+      "https://vr-it-solutions.vercel.app/images/courses/sap-s4hana-finance.jpg",
     description:
       "SAP S/4HANA Finance is a next-generation financial management solution that leverages the power of SAP HANA for real-time financial processing and reporting. This training covers the fundamentals of SAP S/4HANA Finance, including general ledger accounting, accounts payable, accounts receivable, and asset accounting. It also delves into advanced topics like financial closing, reporting, and integration with other SAP modules.",
-    instructor: "VR IT Solutions",
-    language: "English",
+
     hoursContent: "80h",
     level: "Beginner to Advanced",
     category: "SAP, HCM & ERP",
@@ -3766,11 +3750,10 @@ const courses = [
     title: "SAP Security and SAP GRC Training",
     course: "SAP Security & GRC",
     link: "sap-security-training",
-    image: "/images/courses/sap-security.jpg",
+    image: "https://vr-it-solutions.vercel.app/images/courses/sap-security.jpg",
     description:
       "SAP Security and GRC (Governance, Risk, and Compliance) are critical for ensuring the security and compliance of SAP systems. This training covers the fundamentals of SAP Security, including user administration, role management, and troubleshooting access issues. It also delves into advanced topics like SAP GRC Access Control, risk analysis, and emergency access management.",
-    instructor: "VR IT Solutions",
-    language: "English",
+
     hoursContent: "70h",
     level: "Beginner to Advanced",
     category: "SAP, HCM & ERP",
@@ -3859,14 +3842,14 @@ const courses = [
     title: "SAP S/4HANA Simple Logistics Training",
     course: "SAP S/4HANA Logistics",
     link: "sap-s4Hana-simple-logistics-training",
-    image: "/images/courses/sap-s4hana-logistics.png",
+    image:
+      "https://vr-it-solutions.vercel.app/images/courses/sap-s4hana-logistics.png",
     description: [
       "SAP Simple Logistics, also referred to as SAP S/4 HANA Enterprise Management, consists of all the key modules under SAP ERP Business Suite. The list of modules include Material Management, Supply Chain, Demand Planning, Sourcing and Procurement, Contract Management, and Manufacturing.",
       "Using S/4 HANA Enterprise Management, the following are the list of business processes that can be managed: Procurement, Inventory Management, Order Management & Billing, Material Requirement Planning.",
       "In VR IT Solutions, we assure you get the best SAP training support in SAP S/4 HANA Simple Logistics training and are rated as one of the few institutes in Hyderabad to offer well-focused and customized training. So, get started by clicking here.",
     ],
-    instructor: "VR IT Solutions",
-    language: "English",
+
     hoursContent: "80h",
     level: "Beginner to Advanced",
     category: "SAP, HCM & ERP",
@@ -3992,7 +3975,7 @@ const courses = [
     title: "Google Cloud Platform Training",
     course: "Google Cloud",
     link: "google-cloud-training",
-    image: "/images/courses/google-cloud.png",
+    image: "https://vr-it-solutions.vercel.app/images/courses/google-cloud.png",
     description: [
       "Google Cloud Platform or GCP is the proprietary platform of Google and is offered as a suite of cloud computing services.",
       "It leverages the same infrastructure that Google utilizes for its internal requirements for its end-user products.",
@@ -4000,8 +3983,7 @@ const courses = [
       "According to Canalys estimates, Google Cloud is one of the fastest-growing cloud providers in the industry and is currently enjoying third place in the commercial cloud space.",
       "As per Gartner Inc., the global end-user spending on public cloud services is expected to rise 18.4% in 2021 to a staggering $304.9 billion - a steep increase from $257.5 billion in 2020.",
     ],
-    instructor: "VR IT Solutions",
-    language: "English",
+
     hoursContent: "70h",
     level: "Beginner to Advanced",
     category: "DevOps & Cloud",
@@ -4089,11 +4071,10 @@ const courses = [
     title: "Full Stack Developer Training in Hyderabad",
     course: "Full Stack Development",
     link: "full-stack-developer-training-in-hyderabad",
-    image: "/images/courses/full-stack.png",
+    image: "https://vr-it-solutions.vercel.app/images/courses/full-stack.png",
     description:
       "Full Stack Development involves building both the front-end and back-end of web applications. This training covers the fundamentals of full-stack development, including HTML, CSS, JavaScript, Java, Spring Boot, and database management. It also delves into advanced topics like microservices, RESTful APIs, and DevOps.",
-    instructor: "VR IT Solutions",
-    language: "English",
+
     hoursContent: "100h",
     level: "Beginner to Advanced",
     category: "Web Development",
@@ -4195,7 +4176,8 @@ const courses = [
     title: "Informatica MDM Training",
     course: "Informatica MDM",
     link: "informatica-mdm-training",
-    image: "/images/courses/informatica-mdm.png",
+    image:
+      "https://vr-it-solutions.vercel.app/images/courses/informatica-mdm.png",
     description: [
       "The Informatica® master data management product family helps organizations to enhance operations with business-user access to consolidated and reliable business-critical data, even when it’s spread across the enterprise.",
       "This product enterprise offers true multi-domain master data management, empowering you with limitless opportunities to commence with any type of business-critical data and later add diverse domains as you wish.",
@@ -4203,8 +4185,7 @@ const courses = [
       "VR IT Solutions is one of the best Informatica MDM training in Hyderabad to offer well focused and career-oriented training program in Informatica MDM.",
       "So, get started by clicking here.",
     ],
-    instructor: "VR IT Solutions",
-    language: "English",
+
     hoursContent: "80h",
     level: "Beginner to Advanced",
     category: "Data Warehousing & Management",
@@ -4332,11 +4313,10 @@ const courses = [
     title: "EDI Training",
     course: "EDI",
     link: "edi-training",
-    image: "/images/courses/edi.png",
+    image: "https://vr-it-solutions.vercel.app/images/courses/edi.png",
     description:
       "Electronic Data Interchange (EDI) is a key technology for automating business transactions. This training covers the fundamentals of EDI, including standards, components, and mapping. It also delves into advanced topics like EDI integration, security, and future trends.",
-    instructor: "VR IT Solutions",
-    language: "English",
+
     hoursContent: "60h",
     aboutTheCourse: [
       "VR IT Solutions announces EDI online training program in hyderabad. EDI stands for Electronic data interchange. Loosely define as transfer for any business documents like Purchase Orders, Invoices and Shipment notifications. EDI is actually standards and Protocols which needs to be utilized to successfully exchange business documents between enterprises.",

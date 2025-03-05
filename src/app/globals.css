@@ -32,13 +32,15 @@
 
 /* Add this at the end of your globals.css file */
 /* Replace the announcement-ticker CSS with this marquee animation */
+/* Add this to your global CSS file */
 .marquee-container {
-  width: 100%;
   overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 
 .marquee-content {
-  display: inline-flex;
+  display: inline-block;
   white-space: nowrap;
   animation: marquee 30s linear infinite;
 }
@@ -52,7 +54,7 @@
   }
 }
 
-/* Pause on hover */
+/* Optional: Pause animation on hover */
 .marquee-container:hover .marquee-content {
   animation-play-state: paused;
 }

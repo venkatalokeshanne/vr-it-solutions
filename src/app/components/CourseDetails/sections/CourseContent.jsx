@@ -9,12 +9,7 @@ const CourseContent = ({ courseData }) => {
       <h2 className="text-2xl font-bold mb-4">Course content</h2>
       <div className="mb-4">
         <span className="text-sm text-gray-600">
-          {courseData.sections.length} sections •{" "}
-          {courseData.sections.reduce(
-            (acc, section) => acc + section.lectures.length,
-            0
-          )}{" "}
-          lectures • {courseData.hoursContent} total length
+          {courseData.hoursContent} total length
         </span>
       </div>
       <div className="border rounded-lg">
@@ -34,9 +29,6 @@ const CourseContent = ({ courseData }) => {
                 )}
                 <span className="font-medium">{section.title}</span>
               </div>
-              <span className="text-sm text-gray-600">
-                {section.lectures.length} lectures
-              </span>
             </button>
             {selectedSection === index && (
               <div className="bg-gray-50 px-6 py-2">
@@ -46,7 +38,6 @@ const CourseContent = ({ courseData }) => {
                     className="flex items-center justify-between py-3 text-sm"
                   >
                     <div className="flex items-center">
-                      <Play className="h-4 w-4 mr-2" />
                       <span>{lecture.title}</span>
                     </div>
                   </div>

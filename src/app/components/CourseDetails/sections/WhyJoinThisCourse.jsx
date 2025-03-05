@@ -1,6 +1,6 @@
 import React from "react";
 import TestimonialCarousel from "../../CourseTestimonials/CourseTestimonials";
-import { redirect } from "next/navigation";
+import Link from "next/link"; // Changed from redirect to Link
 import { Award, DollarSign, Globe, TrendingUp, Zap } from "lucide-react";
 
 const benefitsTitle = [
@@ -74,9 +74,13 @@ const WhyJoinThisCourse = ({ data }) => {
               <p className="mb-6">
                 Join our next batch and start your {data.course} journey today.
               </p>
-              <button className="bg-white text-primary font-medium py-2 px-6 rounded-lg mt-auto hover:bg-primary-light transition duration-300" onClick={()=> redirect("/contactus")}>
+              {/* Changed from redirect to Link component */}
+              <Link 
+                href="/contactus" 
+                className="bg-white text-primary font-medium py-2 px-6 rounded-lg mt-auto hover:bg-primary-light transition duration-300 inline-block text-center"
+              >
                 Enroll Now
-              </button>
+              </Link>
             </div>
           </div>
 

@@ -30,7 +30,7 @@ const Navbar = () => {
             {/* Logo and Categories */}
             <div className="flex items-center space-x-8">
               <Link href="/" onClick={handleMenuItemClick}>
-                <img src="/logo.png" alt="Logo" className="h-8" />
+                <img src="/logo.png" alt="Logo" className="h-12" /> {/* Increased from h-8 to h-12 */}
               </Link>
               <div className="relative group">
                 <button className="flex items-center space-x-1 text-sm text-gray-700 hover:text-primary">
@@ -120,7 +120,7 @@ const Navbar = () => {
               )}
             </button>
             <Link href="/" onClick={handleMenuItemClick}>
-              <img src="/logo.png" alt="Logo" className="h-8" />
+              <img src="/logo.png" alt="Logo" className="h-10" /> {/* Increased from h-8 to h-10 */}
             </Link>
             <Link 
               href="/contactus"

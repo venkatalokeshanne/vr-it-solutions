@@ -105,7 +105,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden w-full`}
       >
         <AnnouncementBanner />
-        <div className="relative w-full mt-20 md:mt-0">
+        <div className="relative w-full md:mt-0">
           <Navbar />
           {children}
           <RelatedCourses />

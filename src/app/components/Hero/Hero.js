@@ -1,9 +1,9 @@
 "use client";
-import { protectEmail } from "@/app/util";
 import { MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Script from "next/script";
+import { useState, useEffect } from 'react';
+import { client } from "@/lib/sanity.client";
 
 export const Hero = () => {
   const router = useRouter();
@@ -13,6 +13,75 @@ export const Hero = () => {
     { value: "20+", label: "Expert Trainers" },
     { value: "50+", label: "Corporate Clients" },
   ];
+
+  // State for headline data
+  const [headlines, setHeadlines] = useState([]);
+  const [subheadlines, setSubheadlines] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+  
+  // Fetch headlines and subheadlines from Sanity
+  useEffect(() => {
+    async function fetchHeroContent() {
+      try {
+        // Fetch hero content from Sanity
+        const query = `*[_type == "heroContent"]`;
+        const result = await client.fetch(query);
+        
+        if (result) {
+          const headlinesList = result[0].headlines;
+          const subheadlinesList = result[0].subheadlines;
+          console.log("Hero content saibaba:", result[0], headlinesList, subheadlinesList);
+          setHeadlines(headlinesList);
+          setSubheadlines(subheadlinesList);
+        } else {
+          // Fallback data if no content is found in Sanity
+          setHeadlines([
+            "Transform Your Career with Expert-Led Training",
+            "Accelerate Your Growth with Industry-Ready Skills"
+          ]);
+          setSubheadlines([
+            "Gain in-demand skills with our industry-focused courses.",
+            "Master cutting-edge technologies with hands-on training."
+          ]);
+        }
+      } catch (err) {
+        console.error("Error fetching hero content:", err);
+        // Fallback data in case of error
+        setHeadlines([
+          "Transform Your Career with Expert-Led Training",
+          "Accelerate Your Growth with Industry-Ready Skills"
+        ]);
+        setSubheadlines([
+          "Gain in-demand skills with our industry-focused courses.",
+          "Master cutting-edge technologies with hands-on training."
+        ]);
+      } finally {
+        setIsLoading(false);
+      }
+    }
+    
+    fetchHeroContent();
+  }, []);
+  
+  // Text rotation effect - only start once content is loaded
+  useEffect(() => {
+    if (isLoading || headlines.length === 0) return;
+    
+    const interval = setInterval(() => {
+      setIsAnimating(true);
+      
+      // After fade-out animation completes, update the text
+      setTimeout(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % headlines.length);
+        setIsAnimating(false);
+      }, 500); // Half a second for fade out
+      
+    }, 5000); // Change every 5 seconds
+    
+    return () => clearInterval(interval);
+  }, [isLoading, headlines.length]);
 
   // Organization structured data
   const organizationSchema = {
@@ -76,6 +145,18 @@ export const Hero = () => {
     }))
   };
 
+  // Function to split headline for styling "with" part
+  const splitHeadline = (headline) => {
+    if (!headline) return { first: '', second: '' };
+    if (!headline.includes(' with ')) return { first: headline, second: '' };
+    
+    const parts = headline.split(' with ');
+    return {
+      first: parts[0],
+      second: `with ${parts[1]}`
+    };
+  };
+
   return (
     <div className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-primary/90 min-h-[85vh] flex items-center">
       <Script
@@ -87,7 +168,8 @@ export const Hero = () => {
         id="stats-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(statsSchema) }}
-      />{/* Background Effects */}
+      />
+      {/* Background Effects */}
       <div className="absolute inset-0 bg-grid-white/[0.05] bg-grid-16" />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-900/50" />
 
@@ -118,22 +200,44 @@ export const Hero = () => {
                 </div>
               </div>
 
-              {/* Main Heading */}
-              <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
-                Transform Your Career with{" "}
-                <span className="relative">
-                  <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-hover">
-                    Expert-Led Training
-                  </span>
-                  <span className="absolute inset-x-0 bottom-0 h-3 bg-primary/10 -rotate-1"></span>
-                </span>
-              </h1>
+              {/* Main Heading with animation */}
+              <div className="min-h-[80px]">
+                {isLoading ? (
+                  <div className="animate-pulse h-16 bg-white/10 rounded-lg w-full"></div>
+                ) : headlines.length > 0 ? (
+                  <h1 className={`text-4xl md:text-6xl font-bold text-white leading-tight transition-opacity duration-500 ${isAnimating ? 'opacity-0' : 'opacity-100'}`}>
+                    {splitHeadline(headlines[currentIndex]).first}{" "}
+                    {splitHeadline(headlines[currentIndex]).second && (
+                      <span className="relative">
+                        <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-hover">
+                          {splitHeadline(headlines[currentIndex]).second}
+                        </span>
+                        <span className="absolute inset-x-0 bottom-0 h-3 bg-primary/10 -rotate-1"></span>
+                      </span>
+                    )}
+                  </h1>
+                ) : (
+                  <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
+                    Transform Your Career with Training
+                  </h1>
+                )}
+              </div>
             </div>
 
-            <p className="text-lg md:text-xl text-gray-300 max-w-xl">
-              Gain in-demand skills with our industry-focused courses. Join
-              thousands of successful professionals who trust VR IT Solutions.
-            </p>
+            {/* Subheadline with animation */}
+            <div className="min-h-[80px]">
+              {isLoading ? (
+                <div className="animate-pulse h-10 bg-white/10 rounded-lg w-3/4"></div>
+              ) : subheadlines.length > 0 ? (
+                <p className={`text-lg md:text-xl text-gray-300 max-w-xl transition-opacity duration-500 ${isAnimating ? 'opacity-0' : 'opacity-100'}`}>
+                  {subheadlines[currentIndex]}
+                </p>
+              ) : (
+                <p className="text-lg md:text-xl text-gray-300 max-w-xl">
+                  Gain in-demand skills with our industry-focused courses. Join thousands of successful professionals.
+                </p>
+              )}
+            </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4">
@@ -175,7 +279,6 @@ export const Hero = () => {
               </button>
             </div>
 
-            {/* Contact Details */}
             {/* Contact Details */}
             <div className="pt-8 border-t border-white/10">
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300">

@@ -3,48 +3,93 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import AllCourses from "@/app/components/AllCourses/AllCourses";
 import { Search, BookOpen, Users, Target } from "lucide-react";
-import courses from "@/data/courses";
-import Link from "next/link";
+import { client } from "@/lib/sanity.client";
 
 export default function Page() {
-  // Get unique categories from courses
-  const categories = ["All", ...new Set(courses.map(course => course.category))];
+  const [courses, setCourses] = useState([]);
+  const [categories, setCategories] = useState(["All"]);
+  const [isLoading, setIsLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [filteredCourses, setFilteredCourses] = useState(courses);
+  const [filteredCourses, setFilteredCourses] = useState([]);
 
   const stats = [
-    { icon: <BookOpen className="w-5 h-5" />, label: "20+ Courses", description: "Comprehensive curriculum" },
-    { icon: <Users className="w-5 h-5" />, label: "Expert Trainers", description: "Industry professionals" },
-    { icon: <Target className="w-5 h-5" />, label: "Job Ready", description: "Practical skills" },
+    {
+      icon: <BookOpen className="w-5 h-5" />,
+      label: "20+ Courses",
+      description: "Comprehensive curriculum",
+    },
+    {
+      icon: <Users className="w-5 h-5" />,
+      label: "Expert Trainers",
+      description: "Industry professionals",
+    },
+    {
+      icon: <Target className="w-5 h-5" />,
+      label: "Job Ready",
+      description: "Practical skills",
+    },
   ];
+
+  // Fetch courses from Sanity
+  useEffect(() => {
+    async function fetchCourses() {
+      try {
+        setIsLoading(true);
+        // Query all courses from Sanity
+        const query = `*[_type == "courseImage"] | order(title asc)`;
+        const result = await client.fetch(query);
+        
+        if (result && result.length > 0) {
+          setCourses(result);
+          
+          // Extract unique categories
+          const uniqueCategories = ["All", ...new Set(result.map(course => course.category))];
+          setCategories(uniqueCategories);
+          
+          // Initialize filtered courses with all courses
+          setFilteredCourses(result);
+        }
+      } catch (err) {
+        console.error("Error fetching courses:", err);
+      } finally {
+        setIsLoading(false);
+      }
+    }
+    
+    fetchCourses();
+  }, []);
 
   // Filter courses based on search query and selected category
   useEffect(() => {
-    console.log("@saibaba", selectedCategory)
-    let result = courses;
+    if (courses.length === 0) return;
     
+    let result = [...courses];
+
     if (selectedCategory !== "All") {
-      result = result.filter(course => course.category === selectedCategory);
+      result = result.filter((course) => course.category === selectedCategory);
     }
-    
+
     if (searchQuery) {
       const query = searchQuery.toLowerCase();
-      result = result.filter(course => 
-        course.title.toLowerCase().includes(query) ||
-        course.description.toLowerCase().includes(query)
+      result = result.filter(
+        (course) =>
+          course.title.toLowerCase().includes(query) ||
+          (Array.isArray(course.description) && 
+            course.description.some(desc => 
+              typeof desc === 'string' && desc.toLowerCase().includes(query)
+            ))
       );
     }
-    console.log("@saibaba", selectedCategory, result.length)
     setFilteredCourses(result);
-  }, [searchQuery, selectedCategory]);
+  }, [searchQuery, selectedCategory, courses]);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-primary/30 text-white py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(#ffffff10_1px,transparent_1px)] [background-size:20px_20px] opacity-20" />
-        
+
         {/* Animated Background Shapes */}
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
@@ -70,7 +115,8 @@ export default function Page() {
               Transform Your Career
             </h1>
             <p className="text-lg text-gray-300 mb-6">
-              Master the latest technologies with our industry-focused training programs
+              Master the latest technologies with our industry-focused training
+              programs
             </p>
 
             {/* Search Bar */}
@@ -115,9 +161,10 @@ export default function Page() {
               key={`${category}-${index}`}
               onClick={() => setSelectedCategory(category)}
               className={`px-6 py-2 rounded-full border transition-all duration-300 
-                ${selectedCategory === category 
-                  ? 'bg-primary text-white border-primary' 
-                  : 'bg-white text-gray-600 border-gray-200 hover:bg-primary hover:text-white hover:border-primary'
+                ${
+                  selectedCategory === category
+                    ? "bg-primary text-white border-primary"
+                    : "bg-white text-gray-600 border-gray-200 hover:bg-primary hover:text-white hover:border-primary"
                 }`}
             >
               {category}
@@ -126,8 +173,27 @@ export default function Page() {
         </div>
       </div>
 
-      {/* All Courses Section */}
-      <AllCourses courses={filteredCourses} />
+      {/* Loading State */}
+      {isLoading ? (
+        <div className="max-w-7xl mx-auto px-4 py-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[1, 2, 3, 4, 5, 6].map((item) => (
+              <div key={item} className="bg-white rounded-lg shadow-lg overflow-hidden animate-pulse">
+                <div className="h-48 bg-gray-200"></div>
+                <div className="p-6">
+                  <div className="h-6 bg-gray-200 rounded w-3/4 mb-4"></div>
+                  <div className="h-4 bg-gray-200 rounded w-full mb-2"></div>
+                  <div className="h-4 bg-gray-200 rounded w-full mb-2"></div>
+                  <div className="h-4 bg-gray-200 rounded w-2/3"></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ) : (
+        /* All Courses Section */
+        <AllCourses courses={filteredCourses} />
+      )}
     </div>
   );
 }
