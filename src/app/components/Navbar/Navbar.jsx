@@ -11,6 +11,7 @@ import {
   X,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image"; // Added Image import
 import { getFormattedCategories } from "@/data/courses";
 
 const Navbar = () => {
@@ -30,7 +31,17 @@ const Navbar = () => {
             {/* Logo and Categories */}
             <div className="flex items-center space-x-8">
               <Link href="/" onClick={handleMenuItemClick}>
-                <img src="/logo.png" alt="Logo" className="h-12" /> {/* Increased from h-8 to h-12 */}
+                {/* Changed from img to Image component */}
+                <div className="relative h-12 w-[160px]">
+                  <Image
+                    src="/logo.png"
+                    alt="VR IT Solutions Logo"
+                    fill
+                    sizes="160px"
+                    priority
+                    className="object-contain"
+                  />
+                </div>
               </Link>
               <div className="relative group">
                 <button className="flex items-center space-x-1 text-sm text-gray-700 hover:text-primary">
@@ -120,7 +131,17 @@ const Navbar = () => {
               )}
             </button>
             <Link href="/" onClick={handleMenuItemClick}>
-              <img src="/logo.png" alt="Logo" className="h-10" /> {/* Increased from h-8 to h-10 */}
+              {/* Changed from img to Image component */}
+              <div className="relative h-10 w-[130px]">
+                <Image
+                  src="/logo.png"
+                  alt="VR IT Solutions Logo"
+                  fill
+                  sizes="130px"
+                  priority
+                  className="object-contain"
+                />
+              </div>
             </Link>
             <Link 
               href="/contactus"

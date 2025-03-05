@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image'; // Added Next.js Image import
 import { Laptop, Users, Briefcase } from 'lucide-react';
 
 const ServicesPage = () => {
@@ -86,13 +87,16 @@ const ServicesPage = () => {
                 </Link>
               </div>
 
-              {/* Service Image */}
+              {/* Service Image - Updated to Next.js Image */}
               <div className="flex-1">
-                <div className="aspect-video bg-gray-100 rounded-xl overflow-hidden">
-                  <img
+                <div className="aspect-video bg-gray-100 rounded-xl overflow-hidden relative">
+                  <Image
                     src={`/support${index}.jpg`}
-                    alt={service.title}
-                    className="w-full h-full object-cover"
+                    alt={`${service.title} service illustration`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
+                    priority={index === 0} // Only prioritize the first image
                   />
                 </div>
               </div>

@@ -162,7 +162,7 @@ export default async function BlogPage({ searchParams }) {
                       src={posts[0].mainImage?.asset.url || '/images/placeholder-blog.jpg'} 
                       alt={posts[0].mainImage?.alt || posts[0].title}
                       fill
-                      className="object-cover"
+                      className="mx-auto h-full w-auto object-contain"
                       priority
                     />
                   </div>

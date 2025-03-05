@@ -204,7 +204,7 @@ export const RelatedCourses = ({ currentCourseId }) => {
                     src={urlForImage(course.image).url()} 
                     alt={course.title}
                     fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                    className="mx-auto h-full w-auto object-contain transition-transform duration-300 group-hover:scale-110"
                   />
                 ) : (
                   <div className="w-full h-full bg-gray-200 flex items-center justify-center">

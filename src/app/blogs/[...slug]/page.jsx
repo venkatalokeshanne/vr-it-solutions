@@ -4,14 +4,16 @@ import Link from 'next/link';
 import { PortableText } from '@portabletext/react';
 import { CalendarIcon, ClockIcon, UserIcon, ArrowLeft } from 'lucide-react';
 import { createClient } from 'next-sanity';
+import Script from 'next/script';
+import ShareButton from '@/app/components/ShareButton/ShareButton';
 
 // Initialize the Sanity client
 const client = createClient({
-    projectId: "lkk4d792",
-    dataset: 'production',
-    apiVersion: '2023-05-03',
-    useCdn: true,
-  });
+  projectId: "lkk4d792",
+  dataset: 'production',
+  apiVersion: '2023-05-03',
+  useCdn: true,
+});
 
 // Format date for blog posts
 const formatDate = (dateString) => {
@@ -29,6 +31,14 @@ const getReadingTime = (text) => {
   const words = text?.split(/\s+/).length || 0;
   return Math.ceil(words / wordsPerMinute);
 };
+
+// Generate static params for all blog posts
+export async function generateStaticParams() {
+  const posts = await client.fetch(`*[_type == "post"] { 'slug': slug.current }`);
+  return posts.map((post) => ({
+    slug: [post.slug],
+  }));
+}
 
 // Fetch a single blog post using GROQ
 async function getBlogPost(slug) {
@@ -72,40 +82,106 @@ async function getBlogPost(slug) {
     }
   }`;
   
-  return await client.fetch(query, { slug });
+  return await client.fetch(query, { slug }, { next: { revalidate: 3600 } }); // Revalidate once per hour
+}
+
+// Generate metadata for SEO
+export async function generateMetadata({ params }) {
+  // Extract slug from URL parameters
+  const slug = params.slug[params.slug.length - 1];
+  const post = await getBlogPost(slug);
+  
+  if (!post) {
+    return {
+      title: 'Blog Post Not Found',
+      description: 'The blog post you are looking for does not exist.',
+    };
+  }
+
+  const canonicalUrl = `https://vr-it-solutions.vercel.app/blogs/${slug}`;
+  
+  return {
+    title: `${post.title} | VR IT Solutions Blog`,
+    description: post.excerpt || 
+      `Read about ${post.title} on VR IT Solutions blog. Expert insights and tips on IT training and technology.`,
+    keywords: [
+      ...(post.tags || []),
+      ...(post.categories?.map(cat => cat.title) || []),
+      'IT training', 'tech blog', 'software development', 'VR IT Solutions'
+    ].join(', '),
+    authors: post.author ? [{ name: post.author }] : undefined,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: canonicalUrl,
+      siteName: 'VR IT Solutions Blog',
+      images: [
+        {
+          url: post.mainImage?.asset?.url || '/images/placeholder-blog.jpg',
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        }
+      ],
+      locale: 'en_US',
+      type: 'article',
+      publishedTime: post.publishedAt,
+      modifiedTime: post.updatedAt || post.publishedAt,
+      authors: post.author ? [post.author] : undefined,
+      tags: post.tags,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      images: [post.mainImage?.asset?.url || '/images/placeholder-blog.jpg'],
+    },
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+  };
 }
 
 // Components for rendering rich text with PortableText
 const portableTextComponents = {
   types: {
     image: ({ value }) => {
-        // Check if we have an asset with a URL
-        if (!value?.asset?._ref && !value?.asset?.url) {
-          return null;
-        }
-  
-        // Get the URL - handle both formats that might come from Sanity
-        const imageUrl = value.asset.url || 
-          `https://cdn.sanity.io/images/lkk4d792/production/${value.asset._ref
-            .replace('image-', '')
-            .replace('-jpg', '.jpg')
-            .replace('-png', '.png')
-            .replace('-webp', '.webp')
-            .replace('-gif', '.gif')
-            .replace('-svg', '.svg')}`;
-  
-        return (
-          <div className="my-8 relative">
-            <Image 
-              src={imageUrl}
-              alt={value.alt || 'Blog image'} 
-              width={800}
-              height={500}
-              className="rounded-lg mx-auto object-cover"
-            />
-          </div>
-        );
-      },
+      // Check if we have an asset with a URL
+      if (!value?.asset?._ref && !value?.asset?.url) {
+        return null;
+      }
+
+      // Get the URL - handle both formats that might come from Sanity
+      const imageUrl = value.asset.url || 
+        `https://cdn.sanity.io/images/lkk4d792/production/${value.asset._ref
+          .replace('image-', '')
+          .replace('-jpg', '.jpg')
+          .replace('-png', '.png')
+          .replace('-webp', '.webp')
+          .replace('-gif', '.gif')
+          .replace('-svg', '.svg')}`;
+
+      return (
+        <figure className="my-8 relative">
+          <Image 
+            src={imageUrl}
+            alt={value.alt || 'Blog image'} 
+            width={800}
+            height={500}
+            className="rounded-lg mx-auto object-cover"
+          />
+          {value.caption && (
+            <figcaption className="text-center text-sm text-gray-500 mt-2">
+              {value.caption}
+            </figcaption>
+          )}
+        </figure>
+      );
+    },
     code: ({ value }) => {
       return (
         <div className="bg-gray-900 rounded-lg p-4 my-6 overflow-x-auto">
@@ -166,33 +242,6 @@ const portableTextComponents = {
   },
 };
 
-// Generate metadata for SEO
-export async function generateMetadata({ params }) {
-  // Extract slug from URL parameters
-  const slug = params.slug[params.slug.length - 1];
-  const post = await getBlogPost(slug);
-  
-  if (!post) {
-    return {
-      title: 'Blog Post Not Found',
-      description: 'The blog post you are looking for does not exist.',
-    };
-  }
-  
-  return {
-    title: post.title,
-    description: post.excerpt,
-    openGraph: {
-      images: [post.mainImage?.asset?.url || '/images/placeholder-blog.jpg'],
-      type: 'article',
-      publishedTime: post.publishedAt,
-      modifiedTime: post.updatedAt || post.publishedAt,
-      authors: [post.author],
-      tags: post.tags,
-    },
-  };
-}
-
 export default async function BlogPost({ params }) {
   // Extract slug from URL parameters
   const slug = params.slug[params.slug.length - 1];
@@ -217,9 +266,49 @@ export default async function BlogPost({ params }) {
     };
     return colorMap[category.color] || 'bg-primary/10 text-primary';
   };
+
+  // Create structured data for article
+  const articleStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    'headline': post.title,
+    'description': post.excerpt,
+    'image': post.mainImage?.asset?.url || '/images/placeholder-blog.jpg',
+    'datePublished': post.publishedAt,
+    'dateModified': post.updatedAt || post.publishedAt,
+    'author': {
+      '@type': 'Person',
+      'name': post.author || 'VR IT Solutions Team'
+    },
+    'publisher': {
+      '@type': 'Organization',
+      'name': 'VR IT Solutions',
+      'logo': {
+        '@type': 'ImageObject',
+        'url': 'https://vr-it-solutions.vercel.app/logo.png'
+      }
+    },
+    'mainEntityOfPage': {
+      '@type': 'WebPage',
+      '@id': `https://vr-it-solutions.vercel.app/blogs/${slug}`
+    },
+    'keywords': post.tags?.join(', ') || '',
+    'articleSection': post.categories?.map(cat => cat.title).join(', ') || 'Technology',
+    'wordCount': post.estimatedReadingTime ? post.estimatedReadingTime * 200 : 500
+  };
   
+  // URL for client-side sharing functionality
+  const postUrl = `https://vr-it-solutions.vercel.app/blogs/${slug}`;
+  const shareImageUrl = post.mainImage?.asset?.url || '/images/placeholder-blog.jpg';
   return (
     <div className="bg-gray-50 min-h-screen pt-24 pb-16">
+      {/* Add structured data for SEO */}
+      <Script
+        id="blog-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleStructuredData) }}
+      />
+      
       <div className="container mx-auto px-4">
         {/* Back to blogs link */}
         <div className="max-w-4xl mx-auto mb-8">
@@ -229,7 +318,7 @@ export default async function BlogPost({ params }) {
           </Link>
         </div>
         
-        <article className="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+        <article itemScope itemType="https://schema.org/Article" className="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
           {/* Featured image */}
           {post.mainImage && post.mainImage.asset && (
             <div className="relative h-64 md:h-96 w-full">
@@ -237,8 +326,10 @@ export default async function BlogPost({ params }) {
                 src={post.mainImage.asset.url} 
                 alt={post.mainImage.alt || post.title} 
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
                 className="object-cover" 
                 priority
+                itemProp="image"
               />
             </div>
           )}
@@ -259,7 +350,7 @@ export default async function BlogPost({ params }) {
             )}
             
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h1 itemProp="headline" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               {post.title}
             </h1>
             
@@ -268,14 +359,16 @@ export default async function BlogPost({ params }) {
               {post.author && (
                 <div className="flex items-center">
                   <UserIcon size={16} className="mr-1" />
-                  <span>{post.author}</span>
+                  <span itemProp="author">{post.author}</span>
                 </div>
               )}
               
               {post.publishedAt && (
                 <div className="flex items-center">
                   <CalendarIcon size={16} className="mr-1" />
-                  <span>{formatDate(post.publishedAt)}</span>
+                  <time itemProp="datePublished" dateTime={new Date(post.publishedAt).toISOString()}>
+                    {formatDate(post.publishedAt)}
+                  </time>
                 </div>
               )}
               
@@ -285,10 +378,29 @@ export default async function BlogPost({ params }) {
                   <span>{post.estimatedReadingTime} min read</span>
                 </div>
               )}
+              
+              {/* Social sharing - Using client component */}
+              <div className="flex items-center ml-auto">
+                <ShareButton 
+                  title={post.title}
+                  text={post.excerpt || `Read about ${post.title} on VR IT Solutions blog`}
+                  url={postUrl}
+                  image={shareImageUrl}
+                />
+              </div>
             </div>
             
+            {/* Add excerpt as a summary/intro */}
+            {post.excerpt && (
+              <div className="mb-8">
+                <p className="text-lg text-gray-600 font-medium border-l-4 border-primary pl-4 italic" itemProp="description">
+                  {post.excerpt}
+                </p>
+              </div>
+            )}
+            
             {/* Blog content */}
-            <div className="prose prose-lg max-w-none">
+            <div className="prose prose-lg max-w-none" itemProp="articleBody">
               <PortableText 
                 value={post.body} 
                 components={portableTextComponents}
@@ -301,12 +413,13 @@ export default async function BlogPost({ params }) {
                 <h2 className="text-sm font-semibold text-gray-900 mb-3">Tags:</h2>
                 <div className="flex flex-wrap gap-2">
                   {post.tags.map((tag, index) => (
-                    <span 
-                      key={index} 
-                      className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-xs"
+                    <Link 
+                      key={index}
+                      href={`/blogs/tag/${tag.toLowerCase().replace(/\s+/g, '-')}`} 
+                      className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-xs hover:bg-gray-200 transition-colors"
                     >
                       {tag}
-                    </span>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -316,7 +429,7 @@ export default async function BlogPost({ params }) {
         
         {/* Related posts */}
         {post.relatedPosts && post.relatedPosts.length > 0 && (
-          <div className="max-w-4xl mx-auto mt-16">
+          <section className="max-w-4xl mx-auto mt-16">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {post.relatedPosts.map((relatedPost) => (
@@ -330,6 +443,7 @@ export default async function BlogPost({ params }) {
                       src={relatedPost.mainImage?.asset.url || '/images/placeholder-blog.jpg'} 
                       alt={relatedPost.title} 
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 320px"
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
@@ -344,7 +458,7 @@ export default async function BlogPost({ params }) {
                 </Link>
               ))}
             </div>
-          </div>
+          </section>
         )}
       </div>
     </div>

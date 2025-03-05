@@ -28,6 +28,7 @@
     "next-sitemap": "^4.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-helmet": "^6.1.0",
     "react-icons": "^5.4.0",
     "react-quill-new": "^3.3.3",
     "sanity": "^3.77.2",

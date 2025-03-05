@@ -9,7 +9,7 @@ import {
   GraduationCap,
   Brain,
 } from "lucide-react";
-import { redirect } from "next/navigation";
+import Link from "next/link"; // Changed from redirect to Link
 
 export const Welcome = () => {
   const highlights = [
@@ -119,9 +119,13 @@ export const Welcome = () => {
                 of your investment.
               </p>
               <div className="flex justify-center">
-                <button className="bg-primary hover:bg-primary-dark text-white px-6 md:px-8 py-2 md:py-3 rounded-lg transition-colors w-full md:w-auto" onClick={()=> redirect("/contactus")}>
+                {/* Changed from button with redirect to Link */}
+                <Link 
+                  href="/contactus"
+                  className="bg-primary hover:bg-primary-dark text-white px-6 md:px-8 py-2 md:py-3 rounded-lg transition-colors w-full md:w-auto text-center"
+                >
                   Start Your Journey Today
-                </button>
+                </Link>
               </div>
             </div>
           </motion.div>
@@ -180,7 +184,7 @@ export const Welcome = () => {
             <ul className="space-y-4 mt-4 md:mt-0">
               <li className="flex items-start gap-2 md:gap-3 text-black">
                 <Trophy className="h-5 w-5 md:h-6 md:w-6 text-primary shrink-0 mt-1" />
-                <span className="text-sm md:text-base">No defined frontiers – learn from anywhere, anytime.s</span>
+                <span className="text-sm md:text-base">No defined frontiers – learn from anywhere, anytime.</span>
               </li>
               <li className="flex items-start gap-2 md:gap-3 text-black">
                 <Building className="h-5 w-5 md:h-6 md:w-6 text-primary shrink-0 mt-1" />

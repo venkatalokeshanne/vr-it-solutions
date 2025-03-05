@@ -1,84 +1,136 @@
-"use client";
-import { useState, useEffect, use } from "react";
-import { notFound, useRouter } from "next/navigation";
-import dynamic from "next/dynamic";
+import { notFound } from "next/navigation";
 import { client } from "@/lib/sanity.client";
+import CourseDetails from "@/app/components/CourseDetails/CourseDetails";
+import { urlForImage } from "@/app/components/urlForImage";
+import { Metadata, ResolvingMetadata } from 'next';
 
-const CourseDetails = dynamic(
-  () => import("@/app/components/CourseDetails/CourseDetails"),
-  { ssr: false } // Changed to false since we're doing client-side data fetching
-);
+// 1. Generate static paths for all courses
+export async function generateStaticParams() {
+  const courses = await client.fetch(`*[_type == "courseImage"] { link }`);
+  return courses.map((course) => ({
+    category: course.link,
+  }));
+}
 
-export default function Page({ params }) {
-  const router = useRouter();
-  const [course, setCourse] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
+// 2. Generate metadata for SEO
+export async function generateMetadata({ params }, parent) {
+  const { category } = params;
   
-  // Use React.use to unwrap params if it's a Promise
-  const resolvedParams = typeof params.then === 'function' ? use(params) : params;
-  const category = resolvedParams.category;
+  // Fetch course data
+  const course = await client.fetch(
+    `*[_type == "courseImage" && link == $category][0]`,
+    { category }
+  );
+  
+  if (!course) {
+    return {
+      title: 'Course Not Found',
+      description: 'The requested course could not be found',
+    };
+  }
 
-  useEffect(() => {
-    async function fetchCourse() {
-      try {
-        setIsLoading(true);
-        // Query to find a course by its link
-        const query = `*[_type == "courseImage" && link == $category][0]`;
-        const result = await client.fetch(query, { category });
-        
-        if (!result) {
-          // Course not found
-          notFound();
-          return;
-        }
-        console.log("Course data saibaba:", result);
-        setCourse(result);
-      } catch (err) {
-        console.error("Error fetching course:", err);
-        setError("Failed to load course data");
-      } finally {
-        setIsLoading(false);
-      }
+  // Base metadata from parent
+  const previousImages = (await parent).openGraph?.images || [];
+
+  // Calculate reading time
+  const description = Array.isArray(course.description) 
+    ? course.description.join(' ')
+    : course.description || '';
+  
+  // Extract main skills (for keywords)
+  const skills = course.skills?.map(skill => skill.trim()) || [];
+  
+  return {
+    title: `${course.title} Course | VR IT Solutions`,
+    description: description.substring(0, 160) + (description.length > 160 ? '...' : ''),
+    keywords: [
+      course.title,
+      'IT training',
+      'software course',
+      'technology education',
+      'online learning',
+      'VR IT Solutions',
+      'Hyderabad',
+      'India',
+      'skills training',
+      'banglore',
+      'mumbai',
+      'pune',
+      'chennai',
+      'delhi',
+      'kolkata',
+      course.description,
+      ...skills
+    ].join(', '),
+    openGraph: {
+      title: `${course.title} - Learn from Industry Experts | VR IT Solutions`,
+      description: description.substring(0, 160) + (description.length > 160 ? '...' : ''),
+      url: `https://vr-it-solutions.vercel.app/${course.link}`,
+      siteName: 'VR IT Solutions',
+      images: course.image 
+        ? [{
+            url: urlForImage(course.image).url(),
+            width: 1200,
+            height: 630,
+            alt: course.title,
+          }, ...previousImages]
+        : previousImages,
+      locale: 'en_US',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: course.title,
+      description: description.substring(0, 160) + (description.length > 160 ? '...' : ''),
+      images: course.image ? [urlForImage(course.image).url()] : [],
+    },
+    alternates: {
+      canonical: `https://vr-it-solutions.vercel.app/${course.link}`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+    // Add structured data for courses
+    other: {
+      'script:ld+json': JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Course',
+        name: course.title,
+        description: description,
+        provider: {
+          '@type': 'Organization',
+          name: 'VR IT Solutions',
+          sameAs: 'https://vr-it-solutions.vercel.app'
+        },
+        educationalLevel: course.level || 'Beginner to Advanced',
+        ...(course.image && {
+          image: urlForImage(course.image).url()
+        }),
+      }),
+    },
+  };
+}
+
+// 3. Page component with static rendering
+export default async function Page({ params }) {
+  const { category } = params;
+  
+  try {
+    // Fetch course data with ISR caching
+    const course = await client.fetch(
+      `*[_type == "courseImage" && link == $category][0]`,
+      { category },
+      { next: { revalidate: 3600 } } // Revalidate once per hour
+    );
+    
+    if (!course) {
+      notFound();
     }
     
-    if (category) {
-      fetchCourse();
-    }
-  }, [category]);
-
-  // Show loading state
-  if (isLoading) {
-    return (
-      <div className="flex justify-center items-center min-h-screen">
-        <div className="animate-pulse flex flex-col items-center">
-          <div className="h-8 bg-gray-200 rounded w-1/4 mb-4"></div>
-          <div className="h-4 bg-gray-200 rounded w-1/2 mb-2"></div>
-          <div className="h-4 bg-gray-200 rounded w-1/3"></div>
-        </div>
-      </div>
-    );
+    return <CourseDetails courseData={course} />;
+  } catch (error) {
+    console.error("Error fetching course:", error);
+    throw new Error('Failed to load course data');
   }
-
-  // Show error state
-  if (error) {
-    return (
-      <div className="flex justify-center items-center min-h-screen">
-        <div className="text-center">
-          <h2 className="text-2xl font-bold text-red-600 mb-2">Error</h2>
-          <p className="text-gray-700">{error}</p>
-          <button 
-            onClick={() => router.refresh()}
-            className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-          >
-            Try Again
-          </button>
-        </div>
-      </div>
-    );
-  }
-
-  // If course was not found, Next.js notFound() will have redirected already
-
-  return course ? <CourseDetails courseData={course} /> : null;
 }

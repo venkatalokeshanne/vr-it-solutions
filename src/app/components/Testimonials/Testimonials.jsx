@@ -1,6 +1,7 @@
 import courses from "@/data/courses";
 import React from "react";
 import { createAvatar } from "@dicebear/core";
+import Image from "next/image"; // Added Next.js Image import
 
 const Testimonials = () => {
   // Get all testimonials from all courses
@@ -15,6 +16,7 @@ const Testimonials = () => {
   };
 
   const selectedTestimonials = getRandomTestimonials(allTestimonials, 3);
+  
   return (
     <section className="py-16 bg-gradient-to-r from-primary/15 via-primary/10 to-transparent backdrop-blur-sm relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-50" />
@@ -34,11 +36,16 @@ const Testimonials = () => {
                   className="flex items-start mb-4"
                   style={{ minHeight: "120px" }}
                 >
-                  <img
-                    src="https://s.udemycdn.com/browse_components/student-quote-unit/quote.svg"
-                    alt="Quote"
-                    className="w-6 h-6 mr-2"
-                  />
+                  {/* Replaced img with Next.js Image component */}
+                  <div className="relative w-6 h-6 mr-2 flex-shrink-0">
+                    <Image
+                      src="https://s.udemycdn.com/browse_components/student-quote-unit/quote.svg"
+                      alt="Quote icon"
+                      fill
+                      sizes="24px"
+                      className="object-contain"
+                    />
+                  </div>
                   <p className="text-base text-gray-700 font-medium">
                     {testimonial.quote}
                   </p>

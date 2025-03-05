@@ -1,6 +1,8 @@
 "use client";
 import { useState } from 'react';
 import { Building2, Award, TrendingUp, Users } from 'lucide-react';
+import Image from 'next/image'; // Added Next.js Image import
+import Link from 'next/link'; // Added for better navigation
 
 const PlacementsPage = () => {
   const [activeTab, setActiveTab] = useState('all');
@@ -168,13 +170,18 @@ const PlacementsPage = () => {
               .map((company) => (
                 <div
                   key={company.name}
-                  className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                  className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex items-center justify-center"
                 >
-                  <img
-                    src={company.logo}
-                    alt={company.name}
-                    className="w-full h-12 object-contain"
-                  />
+                  {/* Changed from img to Image component */}
+                  <div className="relative w-full h-12">
+                    <Image
+                      src={company.logo}
+                      alt={`${company.name} logo`}
+                      fill
+                      sizes="(max-width: 768px) 33vw, (max-width: 1200px) 20vw, 160px"
+                      className="object-contain"
+                    />
+                  </div>
                 </div>
               ))}
           </div>
@@ -185,40 +192,44 @@ const PlacementsPage = () => {
       <div className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center mb-12">Success Stories</h2>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-  {testimonials.map((testimonial) => (
-    <div
-      key={testimonial.name}
-      className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
-    >
-      <div className="flex items-start mb-4">
-
-        <div>
-          <h3 className="font-semibold text-gray-900">{testimonial.name}</h3>
-          <p className="text-sm text-gray-600">{testimonial.role}</p>
-          <div className="flex items-center mt-1">
-            <img
-              src={`/companies/${testimonial.company.toLowerCase()}.png`}
-              alt={testimonial.company}
-              className="h-4 object-contain"
-            />
-            <span className="text-sm text-gray-500 ml-2">{testimonial.company}</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonials.map((testimonial) => (
+              <div
+                key={testimonial.name}
+                className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
+              >
+                <div className="flex items-start mb-4">
+                  <div>
+                    <h3 className="font-semibold text-gray-900">{testimonial.name}</h3>
+                    <p className="text-sm text-gray-600">{testimonial.role}</p>
+                    <div className="flex items-center mt-1">
+                      {/* Changed from img to Image component */}
+                      <div className="relative h-4 w-16">
+                        <Image
+                          src={`/companies/${testimonial.company.toLowerCase()}.png`}
+                          alt={`${testimonial.company} logo`}
+                          fill
+                          sizes="64px"
+                          className="object-contain object-left"
+                        />
+                      </div>
+                      <span className="text-sm text-gray-500 ml-2">{testimonial.company}</span>
+                    </div>
+                  </div>
+                </div>
+                <p className="text-gray-600 mb-4 italic">{testimonial.content}</p>
+                <div className="flex justify-between items-center pt-4 border-t border-gray-100">
+                  <div className="text-sm">
+                    <span className="text-gray-500">Course: </span>
+                    <span className="text-primary font-medium">{testimonial.course}</span>
+                  </div>
+                  <div className="bg-primary/10 px-3 py-1 rounded-full">
+                    <span className="text-primary font-semibold">{testimonial.package}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-        </div>
-      </div>
-      <p className="text-gray-600 mb-4 italic">{testimonial.content}</p>
-      <div className="flex justify-between items-center pt-4 border-t border-gray-100">
-        <div className="text-sm">
-          <span className="text-gray-500">Course: </span>
-          <span className="text-primary font-medium">{testimonial.course}</span>
-        </div>
-        <div className="bg-primary/10 px-3 py-1 rounded-full">
-          <span className="text-primary font-semibold">{testimonial.package}</span>
-        </div>
-      </div>
-    </div>
-  ))}
-</div>
         </div>
       </div>
 
@@ -231,12 +242,13 @@ const PlacementsPage = () => {
           <p className="text-xl text-gray-600 mb-8">
             Join VR IT and take the first step towards your dream career
           </p>
-          <a
+          {/* Changed from a tag to Link component */}
+          <Link
             href="/contactus"
             className="inline-block bg-primary text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-primary-dark transition-colors duration-200"
           >
             Apply Now
-          </a>
+          </Link>
         </div>
       </div>
     </div>

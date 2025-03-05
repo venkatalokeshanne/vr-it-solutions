@@ -1,5 +1,5 @@
 "use client";
-import { redirect } from 'next/navigation';
+import Link from 'next/link';
 import React from 'react';
 
 const AboutPage = () => {
@@ -131,9 +131,9 @@ const AboutPage = () => {
       <section className="py-16 bg-primary/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-xl text-gray-600 mb-8">Let success redefine your career path and we at VR IT solutions will help realize your dreams!</p>
-          <button className="bg-primary text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-primary-dark transition-colors duration-200" onClick={() => redirect("/contact")}>
+          <Link href="/contactus" className="inline-block bg-primary text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-primary-dark transition-colors duration-200">
             Get Started Today
-          </button>
+          </Link>
         </div>
       </section>
     </div>

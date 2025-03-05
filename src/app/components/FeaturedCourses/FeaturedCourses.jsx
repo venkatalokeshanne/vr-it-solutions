@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Clock, Target } from "lucide-react";
 import Script from "next/script";
 import Link from "next/link";
+import Image from "next/image"; // Added Next.js Image component import
 import { client } from "@/lib/sanity.client";
 import { urlForImage } from "../urlForImage";
 
@@ -193,21 +194,25 @@ const FeaturedCourses = () => {
                   className="group relative bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden flex flex-col h-full"
                 >
                   <Link href={`/${course.link}`}>
-                    {/* Image Section */}
+                    {/* Image Section - Changed to Next.js Image component */}
                     <div className="relative h-48 overflow-hidden">
                       {course.image ? (
-                        <img
-                          src={urlForImage(course.image).url()}
-                          alt={course.title}
-                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                          loading="lazy"
-                        />
+                        <div className="relative w-full h-full">
+                          <Image
+                            src={urlForImage(course.image).url()}
+                            alt={course.title}
+                            fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                            className="object-contain group-hover:scale-110 transition-transform duration-300"
+                            priority={index < 2} // Only prioritize loading the first couple of images
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent" />
+                        </div>
                       ) : (
                         <div className="w-full h-full bg-gray-200 flex items-center justify-center">
                           <span className="text-gray-400">No image</span>
                         </div>
                       )}
-                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent" />
                     </div>
 
                     {/* Content Section */}

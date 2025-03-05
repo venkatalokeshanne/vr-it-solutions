@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Users, Star, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image'; // Added Next.js Image import
 import { client } from "@/lib/sanity.client";
 import { urlForImage } from '../urlForImage';
 
@@ -22,12 +23,14 @@ const CategoryCard = ({ name, students, image, ranking, link }) => (
         </div>
       </div>
 
-      {/* Image Container */}
+      {/* Image Container - Changed to Next.js Image */}
       <div className="relative h-48 overflow-hidden">
-        <img 
+        <Image 
           src={image} 
           alt={name}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+          className="object-cover transition-transform duration-500 group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent opacity-60 group-hover:opacity-50 transition-opacity" />
       </div>

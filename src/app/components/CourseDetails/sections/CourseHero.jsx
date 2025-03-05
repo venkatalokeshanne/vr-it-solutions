@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Star, X, Play, Youtube } from "lucide-react";
 import Image from "next/image";
-import { redirect } from "next/navigation";
+import Link from "next/link"; // Changed from redirect to Link
 import SocialShare from "./SocialShare";
 import {
   createCourseRequestParams,
@@ -178,25 +178,26 @@ const CourseHero = ({ courseData, handleDownload }) => {
             <div className="lg:hidden mt-8">
               <div className="bg-white text-gray-900 rounded-lg shadow-lg overflow-hidden">
               <div className="relative">
-  <div className="relative h-[200px] w-full"> {/* Standardized height */}
-    <Image
-      src={urlForImage(courseData.image).url()} 
-      alt="Course Image"
-      width={400}
-      height={200}
-      className="mx-auto h-full w-auto object-contain"
-      priority
-    />
-  </div>
-</div>
+                <div className="relative h-[200px] w-full"> {/* Standardized height */}
+                  <Image
+                    src={urlForImage(courseData.image).url()} 
+                    alt="Course Image"
+                    width={400}
+                    height={200}
+                    className="mx-auto h-full w-auto object-contain"
+                    priority
+                  />
+                </div>
+              </div>
                 <div className="p-4">
                   <div className="flex flex-col gap-3">
-                    <button
-                      className="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-primary-hover transition-colors duration-200"
-                      onClick={() => redirect("/contactus")}
+                    {/* Changed from button with redirect to Link */}
+                    <Link
+                      href="/contactus"
+                      className="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-primary-hover transition-colors duration-200 flex items-center justify-center"
                     >
                       Enroll now
-                    </button>
+                    </Link>
                     <button
                       onClick={handlePopupOpen}
                       className="w-full bg-white text-primary border-2 border-primary py-3 rounded-lg font-medium hover:bg-primary/5 transition-colors duration-200"
@@ -252,24 +253,25 @@ const CourseHero = ({ courseData, handleDownload }) => {
           <div className="hidden lg:block lg:col-span-5">
             <div className="bg-white text-gray-900 rounded-lg shadow-lg p-6">
             <div className="relative mb-4">
-  <div className="relative h-[240px] w-full rounded overflow-hidden"> {/* Standardized height */}
-    <Image
-      src={urlForImage(courseData.image).url()} 
-      alt="Course Image"
-      width={480}
-      height={240}
-      className="mx-auto h-full w-auto object-contain"
-      priority
-    />
-  </div>
-</div>
+              <div className="relative h-[240px] w-full rounded overflow-hidden"> {/* Standardized height */}
+                <Image
+                  src={urlForImage(courseData.image).url()} 
+                  alt="Course Image"
+                  width={480}
+                  height={240}
+                  className="mx-auto h-full w-auto object-contain"
+                  priority
+                />
+              </div>
+            </div>
               <div className="space-y-4">
-                <button
-                  className="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-primary-hover transition-colors duration-200"
-                  onClick={() => redirect("/contactus")}
+                {/* Changed from button with redirect to Link */}
+                <Link
+                  href="/contactus"
+                  className="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-primary-hover transition-colors duration-200 flex items-center justify-center"
                 >
                   Enroll now
-                </button>
+                </Link>
                 <div className="grid grid-cols-2 gap-4">
                   <button
                     onClick={handlePopupOpen}

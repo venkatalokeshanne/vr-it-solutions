@@ -62,7 +62,7 @@ const AllCourses = ({ courses }) => {
                     src={urlForImage(course.image).url()} 
                     alt={course.title || "Course Image"}
                     fill
-                    className="object-cover"
+                    className="mx-auto h-full w-auto object-contain"
                   />
                 ) : (
                   <div className="w-full h-full bg-gray-200 flex items-center justify-center">
