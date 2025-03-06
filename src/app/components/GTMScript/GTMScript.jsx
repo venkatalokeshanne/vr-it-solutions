@@ -1,23 +1,40 @@
 "use client";
 import { useEffect } from 'react';
 import Script from 'next/script';
-import { usePathname, useSearchParams } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
-export default function GTMScript({ gtmId, ga4Id }) {
+export default function GTMScript({ gtmId }) {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
   
-  // Set up tracking objects globally
+  // Set up VRIT tracking object globally
   useEffect(() => {
-    console.log("🚀 Initializing GTM and GA4 tracking...");
+    console.log("🚀 Initializing GTM and VRIT tracking object...");
     
-    // Initialize dataLayer
-    window.dataLayer = window.dataLayer || [];
+    // Create a proxy for dataLayer to log all pushes
+    const originalDataLayer = window.dataLayer || [];
     
-    // Initialize VRIT tracking object
+    // Override the push method to log events
+    const dataLayerProxy = new Proxy(originalDataLayer, {
+      get(target, prop) {
+        const value = target[prop];
+        
+        // If accessing the push method, wrap it with logging
+        if (prop === 'push') {
+          return function(...args) {
+            console.log(`📊 GTM dataLayer.push:`, ...args);
+            return value.apply(target, args);
+          };
+        }
+        
+        return value;
+      }
+    });
+    
+    // Initialize tracking objects
+    window.dataLayer = dataLayerProxy;
     window.VRIT = window.VRIT || {};
     
-    // Define GTM tracking functions
+    // Define tracking functions with logging
     window.VRIT.trackPageView = function() {
       console.log(`🔍 VRIT.trackPageView called on: ${window.location.pathname}`);
       
@@ -67,82 +84,150 @@ export default function GTMScript({ gtmId, ga4Id }) {
       
       // Push to dataLayer
       window.dataLayer.push(pageData);
-      
-      // Direct GA4 tracking if available
-      if (window.gtag) {
-        window.gtag('event', 'page_view', {
-          page_title: document.title,
-          page_location: window.location.href,
-          page_path: window.location.pathname,
-          send_to: ga4Id
-        });
-      }
     };
     
-    // Define more tracking functions...
-    // ...
+    // Course tracking with logging
+    window.VRIT.trackCourseView = function(courseData) {
+      console.log(`🎓 VRIT.trackCourseView called with:`, courseData);
+      
+      window.dataLayer.push({
+        event: 'view_item',
+        ecommerce: {
+          items: [{
+            item_name: courseData.title,
+            item_id: courseData.id || courseData.link || '',
+            item_category: courseData.category || 'IT Training',
+            item_variant: courseData.mode || 'online'
+          }]
+        }
+      });
+    };
+    
+    // Download course brochure tracking with logging
+    window.VRIT.trackBrochureDownload = function(courseData) {
+      console.log(`📥 VRIT.trackBrochureDownload called with:`, courseData);
+      
+      window.dataLayer.push({
+        event: 'download_brochure',
+        course_title: courseData.title || '',
+        course_id: courseData.link || '',
+        download_time: new Date().toISOString(),
+        file_type: 'pdf'
+      });
+    };
+    
+    // Contact form submission tracking with logging
+    window.VRIT.trackFormSubmission = function(formData) {
+      console.log(`📝 VRIT.trackFormSubmission called with:`, formData);
+      
+      window.dataLayer.push({
+        event: 'form_submission',
+        form_id: formData.formId || 'contact_form',
+        form_name: formData.formName || 'Contact Form',
+        form_location: window.location.pathname,
+      });
+    };
+    
+    // Blog post view tracking with logging
+    window.VRIT.trackBlogView = function(blogData) {
+      console.log(`📰 VRIT.trackBlogView called with:`, blogData);
+      
+      window.dataLayer.push({
+        event: 'blog_view',
+        blog_title: blogData.title || '',
+        blog_id: blogData.id || '',
+        blog_category: blogData.category || '',
+        author: blogData.author || ''
+      });
+    };
+
+    // Set up click tracking for downloads
+    const setupClickTracking = () => {
+      console.log(`🖱️ Setting up click tracking for downloads...`);
+      
+      document.addEventListener('click', function(e) {
+        // Find closest link or button
+        const target = e.target.closest('a, button');
+        if (!target) return;
+        
+        // Check for download buttons/links
+        if (
+          target.textContent.toLowerCase().includes('download') ||
+          target.getAttribute('href')?.includes('.pdf') ||
+          target.getAttribute('data-download') === 'true'
+        ) {
+          console.log(`📥 Download click detected on:`, target);
+          
+          // Get course title from context if possible
+          let courseTitle = '';
+          // Check for closest heading
+          const heading = target.closest('section')?.querySelector('h1, h2, h3');
+          if (heading) courseTitle = heading.innerText;
+          
+          const eventData = {
+            event: 'download_brochure',
+            course_title: courseTitle || document.title,
+            download_type: 'button_click',
+            download_time: new Date().toISOString()
+          };
+          
+          console.log(`📝 Download data being pushed:`, eventData);
+          
+          window.dataLayer.push(eventData);
+        }
+      });
+    };
+
+    // Wait until DOM is fully loaded to set up click tracking
+    if (document.readyState === 'complete') {
+      setupClickTracking();
+    } else {
+      window.addEventListener('load', setupClickTracking);
+    }
     
     console.log(`🔍 Tracking initial page view...`);
     // Track the initial page view
-    setTimeout(() => {
-      window.VRIT.trackPageView();
-    }, 500); // Small delay to ensure gtag is loaded
+    window.VRIT.trackPageView();
     
     // Return cleanup function
     return () => {
-      console.log(`🧹 Cleaning up GTM and GA4 event listeners...`);
+      window.removeEventListener('load', setupClickTracking);
+      console.log(`🧹 Cleaning up GTM event listeners...`);
     };
-  }, [ga4Id]);
+  }, []);
   
   // Track page views on route change
   useEffect(() => {
     if (window.VRIT) {
       console.log(`🔄 Route changed to: ${pathname}, tracking page view...`);
-      
-      // Small timeout to ensure the page has loaded properly
-      setTimeout(() => {
-        window.VRIT.trackPageView();
-      }, 100);
+      window.VRIT.trackPageView();
+    } else {
+      console.warn(`⚠️ Route changed but window.VRIT is not available yet`);
     }
-  }, [pathname, searchParams]);
+  }, [pathname]);
 
   return (
     <>
-      {/* GTM Init Script */}
+      {/* Log when GTM scripts are being rendered */}
+      <Script
+        id="gtm-debug-log"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `console.log("🏁 GTM initialization starting...");`
+        }}
+      />
+      
+      {/* GTM Init Script - Load first */}
       <Script
         id="gtm-init-script"
         strategy="beforeInteractive"
         dangerouslySetInnerHTML={{
           __html: `
+            console.log("⚡ Initializing dataLayer array");
             window.dataLayer = window.dataLayer || [];
           `
         }}
       />
-      
-      {/* GA4 Script */}
-      {ga4Id && (
-        <>
-          <Script
-            strategy="afterInteractive"
-            src={`https://www.googletagmanager.com/gtag/js?id=${ga4Id}`}
-          />
-          <Script
-            id="google-analytics"
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${ga4Id}', {
-                  page_path: window.location.pathname,
-                  send_page_view: false
-                });
-              `
-            }}
-          />
-        </>
-      )}
       
       {/* GTM Main Script */}
       <Script
@@ -150,11 +235,29 @@ export default function GTMScript({ gtmId, ga4Id }) {
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
+            console.log("🚀 Loading GTM script with ID: ${gtmId}");
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','${gtmId}');
+            console.log("✅ GTM script loaded and initialized");
+          `
+        }}
+      />
+      
+      {/* Final initialization confirmation */}
+      <Script
+        id="gtm-verify-init"
+        strategy="lazyOnload"
+        dangerouslySetInnerHTML={{
+          __html: `
+            console.log("🔍 Verifying GTM installation...");
+            if (window.google_tag_manager && window.google_tag_manager['${gtmId}']) {
+              console.log("✅ GTM container ${gtmId} successfully loaded");
+            } else {
+              console.warn("⚠️ GTM container ${gtmId} not found. Check installation.");
+            }
           `
         }}
       />
