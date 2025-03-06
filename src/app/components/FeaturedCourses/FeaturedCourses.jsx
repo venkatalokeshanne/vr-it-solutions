@@ -132,6 +132,7 @@ const FeaturedCourses = () => {
               }`}
               onClick={handlePrevSlide}
               disabled={currentSlide === 0}
+              aria-label="Previous courses"
             >
               <ChevronLeft className="h-5 w-5" />
             </button>
@@ -145,6 +146,7 @@ const FeaturedCourses = () => {
               disabled={
                 currentSlide >= Math.ceil(courses.length / coursesPerSlide) - 1
               }
+              aria-label="Next courses"
             >
               <ChevronRight className="h-5 w-5" />
             </button>

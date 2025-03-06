@@ -24,7 +24,8 @@ const Footer = () => {
       name: course.course,
       students: course.students || "10K+",
       ranking: course.trending,
-      image: course.image ||
+      image:
+        course.image ||
         "https://images.unsplash.com/photo-1649180556628-9ba704115795?w=500&q=80",
       link: course.link,
     }));
@@ -33,60 +34,63 @@ const Footer = () => {
   const organizationStructuredData = {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
-    "name": "VR IT Solutions",
-    "description": "A premier software training institute in Hyderabad offering comprehensive online and classroom training programs.",
-    "url": "https://vr-it-solutions.vercel.app",
-    "logo": "https://vr-it-solutions.vercel.app/logo.png",
-    "address": {
+    name: "VR IT Solutions",
+    description:
+      "A premier software training institute in Hyderabad offering comprehensive online and classroom training programs.",
+    url: "https://vr-it-solutions.vercel.app",
+    logo: "https://vr-it-solutions.vercel.app/logo.png",
+    address: {
       "@type": "PostalAddress",
-      "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet",
-      "addressLocality": "Hyderabad",
-      "postalCode": "500016",
-      "addressCountry": "IN"
+      streetAddress:
+        "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet",
+      addressLocality: "Hyderabad",
+      postalCode: "500016",
+      addressCountry: "IN",
     },
-    "contactPoint": {
+    contactPoint: {
       "@type": "ContactPoint",
-      "telephone": "+91-9032734343",
-      "contactType": "customer service",
-      "email": "info@vritsol.com"
+      telephone: "+91-9032734343",
+      contactType: "customer service",
+      email: "info@vritsol.com",
     },
-    "sameAs": [
+    sameAs: [
       "https://www.facebook.com/vritsolutions/",
       "https://twitter.com/vritsolutions",
-      "https://www.youtube.com/channel/UCNbaPhgRjVUDcJSh70X-ZtA"
+      "https://www.youtube.com/channel/UCNbaPhgRjVUDcJSh70X-ZtA",
     ],
-    "makesOffer": topCategories.map(course => ({
+    makesOffer: topCategories.map((course) => ({
       "@type": "Course",
-      "name": course.name,
-      "url": `https://vr-it-solutions.vercel.app/${course.link}`,
-      "provider": {
+      name: course.name,
+      url: `https://vr-it-solutions.vercel.app/${course.link}`,
+      provider: {
         "@type": "EducationalOrganization",
-        "name": "VR IT Solutions"
-      }
-    }))
+        name: "VR IT Solutions",
+      },
+    })),
   };
 
   // Local business structured data
   const localBusinessStructuredData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "VR IT Solutions",
-    "image": "https://vr-it-solutions.vercel.app/logo.png",
-    "address": {
+    name: "VR IT Solutions",
+    image: "https://vr-it-solutions.vercel.app/logo.png",
+    address: {
       "@type": "PostalAddress",
-      "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet",
-      "addressLocality": "Hyderabad",
-      "postalCode": "500016",
-      "addressCountry": "IN"
+      streetAddress:
+        "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet",
+      addressLocality: "Hyderabad",
+      postalCode: "500016",
+      addressCountry: "IN",
     },
-    "geo": {
+    geo: {
       "@type": "GeoCoordinates",
-      "latitude": "17.4374",
-      "longitude": "78.4487"
+      latitude: "17.4374",
+      longitude: "78.4487",
     },
-    "url": "https://vr-it-solutions.vercel.app",
-    "telephone": "+91-9032734343",
-    "openingHours": "Mo-Sa 09:00-18:00"
+    url: "https://vr-it-solutions.vercel.app",
+    telephone: "+91-9032734343",
+    openingHours: "Mo-Sa 09:00-18:00",
   };
 
   return (
@@ -94,13 +98,18 @@ const Footer = () => {
       <Script
         id="organization-structured-data"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationStructuredData) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(organizationStructuredData),
+        }}
       />
       <Script
         id="local-business-structured-data"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessStructuredData) }}
-      />{/* Background Pattern */}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(localBusinessStructuredData),
+        }}
+      />
+      {/* Background Pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(#ffffff10_1px,transparent_1px)] [background-size:20px_20px] opacity-20" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -109,28 +118,41 @@ const Footer = () => {
           <div className="space-y-6">
             <h3 className="text-white text-2xl font-bold">VR IT Solutions</h3>
             <p className="text-gray-400 leading-relaxed">
-            VR IT Solutions is the best software training institute in Hyderabad. We are training professionals online & Class room tainings from Hyderabad. VR IT solutions is trained & placed thousands of people in majour MNC's like Infosys, Wipro, Accenture, Delloite, Cognizent, Cap Gemini ... and other companies as well.
+              VR IT Solutions is the best software training institute in
+              Hyderabad. We are training professionals online & Class room
+              tainings from Hyderabad. VR IT solutions is trained & placed
+              thousands of people in majour MNC's like Infosys, Wipro,
+              Accenture, Delloite, Cognizent, Cap Gemini ... and other companies
+              as well.
             </p>
             <div className="flex space-x-5">
               {[
                 {
                   icon: <Facebook />,
                   href: "https://www.facebook.com/vritsolutions/",
+                  label: "Facebook",
                 },
                 {
                   icon: <Twitter />,
                   href: "https://twitter.com/vritsolutions",
+                  label: "Twitter",
                 },
-                { icon: <Linkedin />, href: "#" },
+                {
+                  icon: <Linkedin />,
+                  href: "#",
+                  label: "LinkedIn",
+                },
                 {
                   icon: <Youtube />,
                   href: "https://www.youtube.com/channel/UCNbaPhgRjVUDcJSh70X-ZtA",
+                  label: "YouTube",
                 },
               ].map((social, index) => (
                 <Link
                   key={index}
                   href={social.href}
                   className="transform hover:scale-110 hover:text-primary transition-all duration-300"
+                  aria-label={`Visit our ${social.label} page`}
                 >
                   {social.icon}
                 </Link>
@@ -202,7 +224,7 @@ const Footer = () => {
               <li className="flex items-center space-x-3 group">
                 <Mail className="h-5 w-5 text-primary" />
                 <span className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                info@vritsol.com
+                  info@vritsol.com
                 </span>
               </li>
             </ul>

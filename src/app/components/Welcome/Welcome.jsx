@@ -77,9 +77,9 @@ export const Welcome = () => {
             className="mb-4 md:mb-2"
           >
             <div className="bg-gray-50 rounded-2xl p-4 md:p-8">
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-2 text-left md:text-center">
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-2 text-left md:text-center">
                 Our Training Programs
-              </h3>
+              </h2>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4">
                 {[
                   "Hadoop",
