@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Award, CheckCircle, Book, BadgeCheck, Lightbulb, Users, Trophy, FileCheck } from "lucide-react";
 

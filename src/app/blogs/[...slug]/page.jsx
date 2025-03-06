@@ -6,6 +6,8 @@ import { CalendarIcon, ClockIcon, UserIcon, ArrowLeft } from 'lucide-react';
 import { createClient } from 'next-sanity';
 import Script from 'next/script';
 import ShareButton from '@/app/components/ShareButton/ShareButton';
+import { trackBlogView } from '@/app/GMT';
+// import { useEffect } from 'react';
 
 // Initialize the Sanity client
 const client = createClient({
@@ -247,6 +249,15 @@ export default async function BlogPost({ params }) {
   const slug = params.slug[params.slug.length - 1];
   const post = await getBlogPost(slug);
   
+  // useEffect(() => {
+  //   trackBlogView({
+  //     title: blogData.title,
+  //     id: blogData.slug,
+  //     category: blogData.category,
+  //     author: blogData.author
+  //   });
+  // }, [blogData]);
+
   if (!post) {
     notFound();
   }

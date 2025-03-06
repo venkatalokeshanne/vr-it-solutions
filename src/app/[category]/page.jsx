@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
 import { client } from "@/lib/sanity.client";
-import CourseDetails from "@/app/components/CourseDetails/CourseDetails";
-import { urlForImage } from "@/app/components/urlForImage";
-import { Metadata, ResolvingMetadata } from 'next';
+import { urlForImage } from "../components/urlForImage";
+import CourseDetailsWrapper from "../components/CourseDetailsWrapper/CourseDetailsWrapper";
+// Import CourseDetailsWrapper instead of the direct component
 
 // 1. Generate static paths for all courses
 export async function generateStaticParams() {
@@ -13,7 +13,7 @@ export async function generateStaticParams() {
 }
 
 // 2. Generate metadata for SEO
-export async function generateMetadata({ params }, parent) {
+export async function generateMetadata({ params }) {
   const { category } = params;
   
   // Fetch course data
@@ -29,9 +29,6 @@ export async function generateMetadata({ params }, parent) {
     };
   }
 
-  // Base metadata from parent
-  const previousImages = (await parent).openGraph?.images || [];
-
   // Calculate reading time
   const description = Array.isArray(course.description) 
     ? course.description.join(' ')
@@ -39,7 +36,7 @@ export async function generateMetadata({ params }, parent) {
   
   // Extract main skills (for keywords)
   const skills = course.skills?.map(skill => skill.trim()) || [];
-  
+
   return {
     title: `${course.title} Course | VR IT Solutions`,
     description: description.substring(0, 160) + (description.length > 160 ? '...' : ''),
@@ -53,15 +50,14 @@ export async function generateMetadata({ params }, parent) {
       'Hyderabad',
       'India',
       'skills training',
-      'banglore',
+      'bangalore',
       'mumbai',
       'pune',
       'chennai',
       'delhi',
       'kolkata',
-      course.description,
       ...skills
-    ].join(', '),
+    ].filter(Boolean).join(', '),
     openGraph: {
       title: `${course.title} - Learn from Industry Experts | VR IT Solutions`,
       description: description.substring(0, 160) + (description.length > 160 ? '...' : ''),
@@ -73,8 +69,8 @@ export async function generateMetadata({ params }, parent) {
             width: 1200,
             height: 630,
             alt: course.title,
-          }, ...previousImages]
-        : previousImages,
+          }]
+        : [],
       locale: 'en_US',
       type: 'website',
     },
@@ -90,25 +86,7 @@ export async function generateMetadata({ params }, parent) {
     robots: {
       index: true,
       follow: true,
-    },
-    // Add structured data for courses
-    other: {
-      'script:ld+json': JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'Course',
-        name: course.title,
-        description: description,
-        provider: {
-          '@type': 'Organization',
-          name: 'VR IT Solutions',
-          sameAs: 'https://vr-it-solutions.vercel.app'
-        },
-        educationalLevel: course.level || 'Beginner to Advanced',
-        ...(course.image && {
-          image: urlForImage(course.image).url()
-        }),
-      }),
-    },
+    }
   };
 }
 
@@ -127,8 +105,106 @@ export default async function Page({ params }) {
     if (!course) {
       notFound();
     }
+
+    // Prepare course schema for script tag
+    const courseSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'Course',
+      name: course.title,
+      description: Array.isArray(course.description) 
+        ? course.description.join(' ')
+        : course.description || '',
+      provider: {
+        '@type': 'Organization',
+        name: 'VR IT Solutions',
+        sameAs: 'https://vr-it-solutions.vercel.app'
+      },
+      educationalLevel: course.level || 'Beginner to Advanced',
+      ...(course.image && {
+        image: urlForImage(course.image).url()
+      }),
+    };
     
-    return <CourseDetails courseData={course} />;
+    // Prepare breadcrumb schema
+    const breadcrumbSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': 'Home',
+          'item': 'https://vr-it-solutions.vercel.app/'
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': 'Courses',
+          'item': 'https://vr-it-solutions.vercel.app/courses'
+        },
+        {
+          '@type': 'ListItem',
+          'position': 3,
+          'name': course.title,
+          'item': `https://vr-it-solutions.vercel.app/${course.link}`
+        }
+      ]
+    };
+
+    // Create enhanced FAQs schema
+    const faqsSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: `What are the prerequisites for ${course.title}?`,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: course.coursePrerequisites?.join(", ") || "Basic knowledge in the field and fundamental computer skills."
+          }
+        },
+        {
+          '@type': 'Question',
+          name: `What will I learn in the ${course.title} course?`,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: course.learningPoints?.join(". ") || `Comprehensive skills and knowledge in ${course.title} including practical implementation.`
+          }
+        },
+        {
+          '@type': 'Question',
+          name: `Is the ${course.title} course available online?`,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: `Yes, ${course.title} is available in both online and classroom training formats with expert instructors.`
+          }
+        }
+      ]
+    };
+    
+    return (
+      <>
+        {/* Move structured data scripts to page level to avoid client-component issues */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqsSchema) }}
+        />
+        
+        {/* Use the wrapper component instead of direct client component */}
+        <CourseDetailsWrapper courseData={course} />
+      </>
+    );
   } catch (error) {
     console.error("Error fetching course:", error);
     throw new Error('Failed to load course data');

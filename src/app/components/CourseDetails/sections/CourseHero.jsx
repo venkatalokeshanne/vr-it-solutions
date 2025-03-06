@@ -127,7 +127,7 @@ const CourseHero = ({ courseData, handleDownload }) => {
   };
 
   return (
-    <div className="bg-gray-900 text-white mt-14 md:mt-0">
+    <div className="bg-gray-900 text-white ">
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Left side - Course Header */}

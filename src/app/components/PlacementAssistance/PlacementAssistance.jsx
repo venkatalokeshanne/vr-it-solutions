@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Briefcase, CheckCircle, Users } from "lucide-react";
 

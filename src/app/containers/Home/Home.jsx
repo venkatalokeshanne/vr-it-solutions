@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import AdvantageOfVRITSolutions from "@/app/components/Advantages/Advantages";
 import Testimonials from "@/app/components/Testimonials/Testimonials";
@@ -10,68 +11,8 @@ import { Map } from "@/app/components/Map/Map";
 import { Proficiencies } from "@/app/components/Proficiencies/Proficiencies";
 import { PlacementAssistance } from "@/app/components/PlacementAssistance/PlacementAssistance";
 import FeaturedBlogs from "@/app/components/FeaturedBlogs/FeaturedBlogs";
-import { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
-import { Helmet } from "react-helmet"; // You might need to install this
-
-// Define metadata for home page
-export const metadata = {
-  title:
-    "VR IT Solutions | Best IT Training Institute Online & Offline in Hyderabad",
-  description:
-    "VR IT Solutions offers premier IT training courses both online and offline. Expert-led software training with placement assistance and job support in Hyderabad.",
-  keywords: [
-    "IT training institute",
-    "online IT courses",
-    "offline IT training",
-    "software training in Hyderabad",
-    "best IT training",
-    "software courses",
-    "IT certification",
-    "placement assistance",
-    "job support",
-    "VR IT Solutions",
-  ].join(", "),
-  alternates: {
-    canonical: "https://vr-it-solutions.vercel.app/",
-  },
-  openGraph: {
-    title: "VR IT Solutions | Premier IT Training Institute in Hyderabad",
-    description:
-      "Expert-led online & offline software training with placement assistance. Start your IT career with the best courses in Hyderabad.",
-    url: "https://vr-it-solutions.vercel.app/",
-    siteName: "VR IT Solutions",
-    images: [
-      {
-        url: "https://vr-it-solutions.vercel.app/og-image.jpg", // Create this image for social sharing
-        width: 1200,
-        height: 630,
-        alt: "VR IT Solutions - Best IT Training Institute",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "VR IT Solutions | Best IT Training Institute Online & Offline",
-    description:
-      "Expert-led software training with placement assistance. Start your IT career journey today!",
-    images: ["https://vr-it-solutions.vercel.app/og-image.jpg"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-};
 
 // JSON-LD structured data for organization
 const organizationSchema = {

@@ -1,3 +1,4 @@
+"use client";
 import courses from "@/data/courses";
 import React from "react";
 import { createAvatar } from "@dicebear/core";
