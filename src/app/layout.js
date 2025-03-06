@@ -12,7 +12,7 @@ import DebugScript from "./components/GTMScript/DebugScript";
 import TestControls from "./components/GTMScript/TestControls";
 
 // Set your actual GTM ID here
-const GTM_ID = "GTM-PT63D72L";
+const GTM_ID = "GTM-TNZPLN7H";
 
 // Optimize web fonts for performance
 const geistSans = Geist({
