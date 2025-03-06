@@ -11,6 +11,7 @@ import GTMScript from "./components/GTMScript/GTMScript";
 import DebugScript from "./components/GTMScript/DebugScript";
 import TestControls from "./components/GTMScript/TestControls";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 // Set your actual GTM ID here
 const GTM_ID = "GTM-TNZPLN7H";
@@ -164,6 +165,7 @@ export default function RootLayout({ children }) {
           }}
         />
         <Analytics />
+        <SpeedInsights />
         <AnnouncementBanner />
         <div className="relative w-full md:mt-0">
           <Navbar />
