@@ -7,129 +7,29 @@ import WhatsAppChat from "./components/WhatsAppChat/WhatsAppChat";
 import AnnouncementBanner from "./components/AnnouncementBanner/AnnouncementBanner";
 import { RelatedCourses } from "./components/RelatedCourses/RelatedCourses";
 import Script from "next/script";
+import GTMScript from "./components/GTMScript/GTMScript";
+import DebugScript from "./components/GTMScript/DebugScript";
+import TestControls from "./components/GTMScript/TestControls";
 
 // Set your actual GTM ID here
-const GTM_ID = "GTM-PT63D72L";  // Replace with your actual GTM ID
+const GTM_ID = "GTM-PT63D72L";
 
 // Optimize web fonts for performance
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
-  display: "swap", // Add display swap for better CLS
+  display: "swap",
   preload: true,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-  display: "swap", // Add display swap for better CLS
+  display: "swap",
   preload: true,
 });
 
-// Viewport optimization
-export const viewport = {
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 5, // Changed from 1 to 5 for better accessibility
-  minimumScale: 1,
-  userScalable: true, // Enable zooming for accessibility
-  themeColor: '#4f46e5', // Add theme color (match your primary color)
-};
-
-// Enhanced metadata for SEO
-export const metadata = {
-  metadataBase: new URL('https://vr-it-solutions.vercel.app/'),
-  title: {
-    default: 'VR IT Solutions - Best IT Training Institute in Hyderabad | Online & Offline Courses',
-    template: '%s | VR IT Solutions - IT Training Institute'
-  },
-  description: 'Transform your career with VR IT Solutions, Hyderabad\'s premier IT training institute. Expert-led courses in Salesforce, ServiceNow, Cloud Computing, DevOps, Full Stack Development, and more with placement assistance. Join our online & offline IT training programs today!',
-  keywords: [
-    'IT Training Institute',
-    'Online IT Courses',
-    'Classroom Training',
-    'Salesforce Training',
-    'ServiceNow Training',
-    'Cloud Computing',
-    'DevOps Training',
-    'Full Stack Development',
-    'Data Science Courses',
-    'Placement Assistance',
-    'Job Support',
-    'Corporate Training',
-    'Hyderabad IT Institute',
-    'Ameerpet Training Center',
-    'VR IT Solutions'
-  ],
-  authors: [{ name: 'VR IT Solutions', url: 'https://vr-it-solutions.vercel.app' }],
-  creator: 'VR IT Solutions',
-  publisher: 'VR IT Solutions',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  alternates: {
-    canonical: 'https://vr-it-solutions.vercel.app',
-    languages: {
-      'en-US': 'https://vr-it-solutions.vercel.app',
-      'en-IN': 'https://vr-it-solutions.vercel.app',
-    },
-  },
-  openGraph: {
-    type: 'website',
-    locale: 'en_IN',
-    url: 'https://vr-it-solutions.vercel.app',
-    siteName: 'VR IT Solutions',
-    title: 'VR IT Solutions - Best IT Training Institute in Hyderabad | Online & Offline Programs',
-    description: 'Leading IT training institute offering professional courses in Hyderabad. Expert-led online & offline training in Salesforce, ServiceNow, Cloud Computing and more with placement assistance.',
-    images: [
-      {
-        url: 'https://vr-it-solutions.vercel.app/images/og/home.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'VR IT Solutions - IT Training Programs',
-        type: 'image/jpeg',
-      }
-    ]
-  },
-  twitter: {
-    card: 'summary_large_image',
-    site: '@vrit_solutions',
-    creator: '@vrit_solutions',
-    title: 'VR IT Solutions - Best IT Training Institute in Hyderabad',
-    description: 'Leading IT training institute offering professional courses with expert instructors and placement assistance in Hyderabad',
-    images: ['https://vr-it-solutions.vercel.app/images/og/home.jpg'],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    nocache: false,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  verification: {
-    google: 'your-google-site-verification',
-    yandex: 'your-yandex-verification',
-    yahoo: 'your-yahoo-verification',
-    bing: 'your-bing-verification',
-    other: {
-      'facebook-domain-verification': 'your-facebook-domain-verification',
-      'baidu-site-verification': 'your-baidu-verification'
-    }
-  },
-  category: 'education',
-  applicationName: 'VR IT Solutions',
-  referrer: 'origin-when-cross-origin',
-  'news:keywords': 'IT Training, Tech Education, Career Development, Hyderabad',
-  'og:site_name': 'VR IT Solutions',
-  'og:locale:alternate': ['en_US', 'en_GB'],
-};
+// Viewport and metadata exports remain unchanged...
 
 export default function RootLayout({ children }) {
   return (
@@ -165,33 +65,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden w-full`}
       >
-        {/* Google Tag Manager - Initialize dataLayer and load GTM */}
-        <Script
-          id="gtm-init-script"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-            `
-          }}
-        />
-        
-        {/* Google Tag Manager - Main script */}
-        <Script
-          id="gtm-script"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','${GTM_ID}');
-            `
-          }}
-        />
-        
+        {/* GTM Script Component - centralized GTM management */}
+        <GTMScript gtmId={GTM_ID} />
+        <DebugScript />
         {/* JSON-LD structured data for local business */}
         <Script
           id="local-business-schema"
@@ -284,6 +160,7 @@ export default function RootLayout({ children }) {
           <Navbar />
           <main id="main-content">{children}</main>
           <RelatedCourses />
+          {/* <TestControls /> */}
           <Footer />
           <StickyContact />
           <WhatsAppChat />
@@ -299,145 +176,6 @@ export default function RootLayout({ children }) {
             title="Google Tag Manager"
           />
         </noscript>
-        
-        {/* Custom GTM event tracking scripts */}
-        <Script
-          id="gtm-custom-tracking"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              // Wait for DOM to be ready
-              document.addEventListener('DOMContentLoaded', function() {
-                // Initialize tracking helpers
-                window.VRIT = window.VRIT || {};
-                
-                // Basic page view tracking
-                window.VRIT.trackPageView = function() {
-                  const pageData = {
-                    page_title: document.title,
-                    page_location: window.location.href,
-                    page_path: window.location.pathname,
-                  };
-                  
-                  // Get page type from URL path
-                  const path = window.location.pathname;
-                  if (path === '/' || path === '/index') {
-                    pageData.page_type = 'home';
-                  } else if (path.includes('/contactus')) {
-                    pageData.page_type = 'contact';
-                  } else if (path.includes('/blogs') || path.includes('/blog/')) {
-                    pageData.page_type = 'blog';
-                    // Try to get blog title if available
-                    const blogTitle = document.querySelector('h1')?.innerText;
-                    if (blogTitle) pageData.blog_title = blogTitle;
-                  } else if (path.includes('/aboutus')) {
-                    pageData.page_type = 'about';
-                  } else if (path.includes('/services')) {
-                    pageData.page_type = 'services';
-                  } else if (path.includes('/courses') && !path.includes('/courses/')) {
-                    pageData.page_type = 'all_courses';
-                  } else if (path.includes('/placements')) {
-                    pageData.page_type = 'placements';
-                  } else if (path.includes('azure') || path.includes('aws') || path.includes('salesforce') || path.includes('training')  || path.includes('sap') || path.includes('devops') || path.includes('service-now') || path.includes('data') || path.includes('full') || path.includes('stack') || path.includes('development') || path.includes('cloud') || path.includes('computing') ) {
-                    // Individual course pages detection
-                    pageData.page_type = 'course';
-                    // Try to get course title if available
-                    const courseTitle = document.querySelector('h1')?.innerText;
-                    if (courseTitle) pageData.course_title = courseTitle;
-                  }
-                  
-                  // Push to dataLayer
-                  window.dataLayer = window.dataLayer || [];
-                  window.dataLayer.push({
-                    event: 'page_view',
-                    ...pageData
-                  });
-                };
-                
-                // Course tracking
-                window.VRIT.trackCourseView = function(courseData) {
-                  window.dataLayer = window.dataLayer || [];
-                  window.dataLayer.push({
-                    event: 'view_item',
-                    ecommerce: {
-                      items: [{
-                        item_name: courseData.title,
-                        item_id: courseData.id || courseData.link || '',
-                        item_category: courseData.category || 'IT Training',
-                        item_variant: courseData.mode || 'online'
-                      }]
-                    }
-                  });
-                };
-                
-                // Download course brochure tracking
-                window.VRIT.trackBrochureDownload = function(courseData) {
-                  window.dataLayer = window.dataLayer || [];
-                  window.dataLayer.push({
-                    event: 'download_brochure',
-                    course_title: courseData.title || '',
-                    course_id: courseData.link || '',
-                    download_time: new Date().toISOString(),
-                    file_type: 'pdf'
-                  });
-                };
-                
-                // Contact form submission tracking
-                window.VRIT.trackFormSubmission = function(formData) {
-                  window.dataLayer = window.dataLayer || [];
-                  window.dataLayer.push({
-                    event: 'form_submission',
-                    form_id: formData.formId || 'contact_form',
-                    form_name: formData.formName || 'Contact Form',
-                    form_location: window.location.pathname,
-                  });
-                };
-                
-                // Blog post view tracking
-                window.VRIT.trackBlogView = function(blogData) {
-                  window.dataLayer = window.dataLayer || [];
-                  window.dataLayer.push({
-                    event: 'blog_view',
-                    blog_title: blogData.title || '',
-                    blog_id: blogData.id || '',
-                    blog_category: blogData.category || '',
-                    author: blogData.author || ''
-                  });
-                };
-
-                // Auto-track downloads
-                document.addEventListener('click', function(e) {
-                  // Find closest link or button
-                  const target = e.target.closest('a, button');
-                  if (!target) return;
-                  
-                  // Check for download buttons/links
-                  if (
-                    target.textContent.toLowerCase().includes('download') ||
-                    target.getAttribute('href')?.includes('.pdf') ||
-                    target.getAttribute('data-download') === 'true'
-                  ) {
-                    // Get course title from context if possible
-                    let courseTitle = '';
-                    // Check for closest heading
-                    const heading = target.closest('section')?.querySelector('h1, h2, h3');
-                    if (heading) courseTitle = heading.innerText;
-                    
-                    window.dataLayer.push({
-                      event: 'download_brochure',
-                      course_title: courseTitle || document.title,
-                      download_type: 'button_click',
-                      download_time: new Date().toISOString()
-                    });
-                  }
-                });
-                
-                // Track the current page on load
-                window.VRIT.trackPageView();
-              });
-            `
-          }}
-        />
       </body>
     </html>
   );

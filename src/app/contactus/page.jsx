@@ -3,34 +3,11 @@ import { useState, useEffect, useRef } from 'react';
 import { Mail, Phone, MapPin, Clock, Check } from 'lucide-react';
 import { initEmailService, sendFormEmail } from '../util';
 import Script from 'next/script';
-import Head from 'next/head';
-// Remove react-helmet import
-// import { Helmet } from 'react-helmet'; 
+// Remove Head import - it's not compatible with App Router in client components
+// import Head from 'next/head';
 
-// Client-side metadata component
-function ContactMeta() {
-  return (
-    <Head>
-      <title>Contact Us | VR IT Solutions - IT Training Institute in Hyderabad</title>
-      <meta name="description" content="Get in touch with VR IT Solutions, the leading IT training institute in Hyderabad. Reach out for course inquiries, corporate training, or visit our office in Ameerpet." />
-      <meta name="keywords" content="contact VR IT Solutions, IT training contact, Hyderabad IT institute contact, Ameerpet training center, reach VR IT Solutions, course inquiry" />
-      <link rel="canonical" href="https://vr-it-solutions.vercel.app/contactus" />
-      
-      {/* Open Graph Tags */}
-      <meta property="og:title" content="Contact VR IT Solutions - IT Training Institute in Hyderabad" />
-      <meta property="og:description" content="Reach out to VR IT Solutions for inquiries about our IT training programs, corporate training, or visit our office in Ameerpet, Hyderabad." />
-      <meta property="og:url" content="https://vr-it-solutions.vercel.app/contactus" />
-      <meta property="og:type" content="website" />
-      <meta property="og:image" content="https://vr-it-solutions.vercel.app/images/contact-og.jpg" />
-      
-      {/* Twitter Card Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Contact VR IT Solutions - IT Training Institute" />
-      <meta name="twitter:description" content="Reach out for IT course inquiries, corporate training, or visit us in Ameerpet, Hyderabad." />
-      <meta name="twitter:image" content="https://vr-it-solutions.vercel.app/images/contact-og.jpg" />
-    </Head>
-  );
-}
+// Remove the ContactMeta component since we can't use Head in client components
+// with the App Router. We'll move metadata to a separate metadata.js file
 
 // JSON-LD structured data for local business
 const localBusinessSchema = {
@@ -214,8 +191,7 @@ const ContactPage = () => {
 
   return (
     <>
-      {/* Use Head instead of Helmet */}
-      <ContactMeta />
+      {/* Remove ContactMeta component */}
       
       {/* Structured Data */}
       <Script
